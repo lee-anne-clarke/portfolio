@@ -1,0 +1,131 @@
+/*---------------------------------------------------
+	Contact
+---------------------------------------------------*/
+
+.contact {
+	padding-bottom: 3em;
+}
+
+.form {
+	padding-top: 1em;
+
+	@media (min-width: 900px) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.form__group {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	vertical-align: top;
+	z-index: 1;
+
+	input,
+	textarea {
+		padding: 1em 0.5em 1em 2.4em;
+	}
+	
+	input {
+		margin-bottom: 2em;
+	}
+	
+	textarea {
+		font-family: inherit;
+		line-height: 1.2;
+		margin-bottom: 1.6em;
+		overflow-y: auto;
+		resize: none;
+	}
+}
+
+.form__field {
+	position: relative;
+	float: right;
+	display: block;
+	width: 100%;
+	background-color: white;
+	font-size: 1.2em;
+	color: #6a6c6a;
+	border-radius: 0.3em;
+	overflow: hidden;
+
+	border: 2px solid #e5e9e9;
+	&:focus {border-color: #46badb;}
+	-webkit-appearance: none; /* to remove input shadow in iOS */
+	-webkit-transition: background-color 0.25s, border-color 0.25s;
+	transition: background-color 0.25s, border-color 0.25s;
+}
+
+.form__label {
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	padding: 0 1.25em 1em;
+	pointer-events: none;
+	overflow: hidden;
+}
+
+.form__label__icon,
+.form__label__text { 
+	display: inline-block;
+	-webkit-transform: translate3d(-2.5em, 0, 0);
+	transform: translate3d(-2.5em, 0, 0);
+}
+
+.form__label__text {
+	position: relative;
+	width: auto;
+	color: #9d9c9d;
+	padding-left: 0.4em;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.form__label__icon {
+	color: #46badb;
+	font-size: 1.4em;
+	line-height: 1;
+	margin-top: 0.9em;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+}
+
+.form__field:focus + .form__label .form__label__text,
+.form__field--filled + .form__label .form__label__text {
+	opacity: 0;
+	-webkit-transform: translate3d(100px, 0, 0);
+	transform: translate3d(100px, 0, 0);
+}
+
+.form__label__text,
+.form__label__icon,
+.form__field:focus + .form__label .form__label__text,
+.form__field--filled + .form__label .form__label__text {
+	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.form__field:focus + .form__label .form__label__icon,
+.form__field--filled + .form__label .form__label__icon, {
+	-webkit-transform: translate3d(-0.4em, 0, 0);
+	transform: translate3d(-0.4em, 0, 0);
+}
+
+
+/*************** Feedback messages ***************/
+
+.form__msg {
+	display: none;
+	text-align: center;
+}
+
+.form__msg--valid {
+	font-size: 1.5em;
+}
+
+.form__msg--invalid {
+	color: red;
+	font-size: 1em;
+}
