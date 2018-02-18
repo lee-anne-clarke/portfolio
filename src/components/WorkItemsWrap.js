@@ -232,16 +232,13 @@ function ModalContent4() {
           
       <p>One-page microsite created for <a href="http://www.bracco.com/" target="_blank">Bracco</a> while on assignment at <a href="http://www.baileygp.com/" target="_blank">Bailey Brand Consulting</a>. Built with Bootstrap from Photoshop comps provided by client. jQuery used for Case Studies and bar graph carousel. CSS created with Sass and compiled with <a href="http://koala-app.com/" target="_blank">Koala</a>.</p>
       
-  <a className="viewproject" href="/work/bracco/" target="_blank"><i className="fa fa-external-link"></i>view project</a>
+      <a className="viewproject" href="/work/bracco/" target="_blank">
+        <i className="fa fa-external-link"></i>view project</a>
       <br /><br /><br />
-      <a className="viewproject" href="https://github.com/lee-anne-clarke/codes/blob/master/css/bracco_variables.scss" target="_blank"><i className="fa fa-file-code-o"></i>
-  Sass partial file - variables and mixins</a>
-      <br /><br /><br />
-      <a className="viewproject" href="https://github.com/lee-anne-clarke/codes/blob/master/css/bracco_custom.scss" target="_blank"><i className="fa fa-file-code-o"></i>
-  main Sass file</a>
-      <br /><br /><br />
-      <a className="viewproject" href="https://github.com/lee-anne-clarke/codes/blob/master/javascript/bracco_custom.js" target="_blank"><i className="fa fa-file-code-o"></i>
-  JS file</a>
+
+      <a className="viewproject" href="https://github.com/lee-anne-clarke/bracco" target="_blank">
+        <i className="fa fa-file-code-o"></i>view the repo
+      </a>
     </div>
   );
 }
@@ -288,9 +285,9 @@ function ModalContent7() {
         
       <a className="viewproject" href="/work/freshgrocer/" target="_blank"><i className="fa fa-external-link"></i>view project</a>
       <br /><br /><br />
-      <a className="viewproject" href="https://github.com/lee-anne-clarke/codes/blob/master/css/freshgrocer_styles.scss" target="_blank"><i className="fa fa-file-code-o"></i>Sass file</a>
-      <br /><br /><br />
-      <a className="viewproject" href="https://github.com/lee-anne-clarke/codes/tree/master/javascript/freshgrocer" target="_blank"><i className="fa fa-file-code-o"></i>React JS files</a>
+      <a className="viewproject" href="https://github.com/lee-anne-clarke/freshgrocer" target="_blank">
+        <i className="fa fa-file-code-o"></i>view the repo
+      </a>
     </div>
   );
 }
@@ -334,6 +331,11 @@ function ModalContent10() {
       <p>Based on a homepage prototype created for a government SharePoint 2010 website while on contract with <a href="http://www.bixal.com/" target="_blank">Bixal</a>. <a href="http://cameronspear.com/blog/bootstrap-dropdown-on-hover-plugin/" target="_blank">Dropdown on hover plugin</a> used for primary navigation links. CSS3  @font-face used for all fonts. <a href="http://kenwheeler.github.io/slick/" target="_blank">Slick</a> used for video carousel. &nbsp;jQuery used for Calendar and "Chat With Us" box.</p>
 
       <a className="viewproject" href="/work/cityhospital/" target="_blank"><i className="fa fa-external-link"></i>view project</a>
+      <br /><br /><br />
+
+      <a className="viewproject" href="https://github.com/lee-anne-clarke/cityhospital" target="_blank">
+        <i className="fa fa-file-code-o"></i>view the repo
+      </a>
     </div>
   );
 }
@@ -346,11 +348,14 @@ function ModalContent11() {
           
       <p>Company employee page prototype created for a client while on contract at <a href="http://www.modernsignal.com/" target="_blank">Modern Signal</a>. Built with Bootstrap. Responsive lightbox created with jQuery. <a href="https://mixitup.kunkalabs.com/" target="_blank">MixItUp</a> jQuery plugin used for sorting. Comps provided by client. CSS created with Sass and compiled with <a href="http://koala-app.com/" target="_blank">Koala</a>.</p>
       
-      <a className="viewproject" href="/work/teampage/" target="_blank"><i className="fa fa-external-link"></i>view project</a>
+      <a className="viewproject" href="/work/teampage/" target="_blank">
+        <i className="fa fa-external-link"></i>view project
+      </a>
       <br /><br /><br />
-      <a className="viewproject" href="https://github.com/lee-anne-clarke/codes/blob/master/css/teampage_styles.scss" target="_blank"><i className="fa fa-file-code-o"></i>Sass file</a>
-      <br /><br /><br />
-      <a className="viewproject" href="https://github.com/lee-anne-clarke/codes/blob/master/javascript/teampage_lightbox.js" target="_blank"><i className="fa fa-file-code-o"></i>JS file for lightbox</a>
+
+      <a className="viewproject" href="https://github.com/lee-anne-clarke/teampage" target="_blank">
+        <i className="fa fa-file-code-o"></i>view the repo
+      </a>
     </div>
   );
 }
@@ -431,11 +436,11 @@ class WorkItemsWrap extends Component {
       i += 1;
     
       return (
-        <div className={'work__item sort' + ' ' + item.sortClasses} key={item.id}>
+        <div className={`work__item sort ${item.sortClasses}`} key={item.id}>
     
-          <input className="modal-checkbox" type="checkbox" name={'workItem' + i} id={'workItem' + i} />
+          <input className="modal-checkbox" type="checkbox" name={`workItem${i}`} id={`workItem${i}`} />
           
-          <label className="modal-label modal-open" htmlFor={'workItem' + i}>
+          <label className="modal-label modal-open" htmlFor={`workItem${i}`}>
             <figure className="work__item__fig">
             <img src={item.src} alt={item.title} />
       
@@ -450,7 +455,7 @@ class WorkItemsWrap extends Component {
           <div className="modal-overlay" role="dialog">
             <div className="modal-content">
 
-              <label className="modal-label modal-close" htmlFor={'workItem' + i}>
+              <label className="modal-label modal-close" htmlFor={`workItem${i}`}>
                 <i className="fa fa-close"></i>CLOSE
               </label>
 
@@ -459,7 +464,7 @@ class WorkItemsWrap extends Component {
               
               {item.modalContent}
 
-              <label className="modal-label modal-close modal-close--bottom" htmlFor={'workItem' + i}>
+              <label className="modal-label modal-close modal-close--bottom" htmlFor={`workItem${i}`}>
                 <i className="fa fa-close"></i>CLOSE
               </label>
             </div>
