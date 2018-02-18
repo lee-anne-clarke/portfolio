@@ -185,11 +185,6 @@ function ModalContent1() {
       <p>Website created for the NAHB International Builders' Show<sup>&reg;</sup> while on contract at <a href="http://www.modernsignal.com/" target="_blank">Modern Signal</a>. Built with Bootstrap. jQuery used for search bar dropdown. <a href="https://jquerymobile.com/" target="_blank">jQuery Mobile</a> used for swipe support on image carousels. <a href="http://www.smartmenus.org/" target="_blank">SmartMenus plugin</a> used for primary navigation. <a href="https://select2.github.io/" target="_blank">Select2 plugin</a> used for customized select boxes. <a href="http://kenwheeler.github.io/slick/" target="_blank">Slick plugin</a> used for image carousels. Comps provided by client. CSS created with Sass and compiled with <a href="http://koala-app.com/" target="_blank">Koala</a>.</p>
 
       <a className="viewproject" href="http://www.buildersshow.com/" target="_blank"><i className="fa fa-external-link"></i>view project</a>
-
-      <br /><br /><br />
-
-      <a className="viewproject" href="https://github.com/lee-anne-clarke/codes/blob/master/javascript/ibs_main.js" target="_blank"><i className="fa fa-file-code-o"></i>
-  main JS file</a>
     </div>
   );
 }
