@@ -12,7 +12,6 @@ import '../styles.css'
 //Necessary for React Scroll package
 let Element = Scroll.Element;
 
-
 class Main extends Component {
 	render() {
 		return (
