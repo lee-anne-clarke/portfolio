@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Nav from './components/Nav'
-import Header from './components/Header'
-import Main from './components/MainSection'
+import Nav from './js/Nav'
+import Header from './js/Header'
+import Main from './js/MainSection'
 import './normalize.min.css'
 import './styles.css'
 
