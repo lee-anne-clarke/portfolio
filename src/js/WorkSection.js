@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import WorkItemsWrap from './WorkItemsWrap'
 import WorkSorting from './WorkSorting'
+import WorkItemsGrid from './WorkItemsGrid'
 import '../normalize.min.css'
 import '../styles.css'
 
@@ -15,7 +15,7 @@ class WorkSection extends Component {
 					<p>A selection of projects I have worked on.</p>
 
 					<WorkSorting />
-					<WorkItemsWrap />
+					<WorkItemsGrid />
 				</div>
 
 				<div className="divider">
