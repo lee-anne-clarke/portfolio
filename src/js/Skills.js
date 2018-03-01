@@ -3,7 +3,7 @@ import '../normalize.min.css'
 import '../styles.css'
 
 
-function SkillsSection() {
+function Skills() {
 	return (  
 		<section className="skills">
 			<h2>Skills</h2> 
@@ -90,4 +90,4 @@ function SkillsSection() {
 }
 
 
-export default SkillsSection
+export default Skills

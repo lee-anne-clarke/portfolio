@@ -2,7 +2,7 @@ import React from 'react'
 import '../normalize.min.css'
 import '../styles.css'
 
-class ContactSection extends React.Component {
+class Contact extends React.Component {
 
   componentDidMount() {
   	//Adds the ".form__field--filled" class to a form field if it's filled in
@@ -139,4 +139,4 @@ class ContactSection extends React.Component {
 
 
 
-export default ContactSection
+export default Contact

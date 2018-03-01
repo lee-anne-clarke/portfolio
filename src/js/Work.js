@@ -5,7 +5,7 @@ import '../normalize.min.css'
 import '../styles.css'
 
 
-class WorkSection extends Component {
+class Work extends Component {
 	render() {
 		return (
 			<section className="work">
@@ -27,4 +27,4 @@ class WorkSection extends Component {
 }
 
 
-export default WorkSection
+export default Work

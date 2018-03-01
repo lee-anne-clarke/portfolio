@@ -3,7 +3,7 @@ import '../normalize.min.css'
 import '../styles.css'
 
 
-function EducationSection() {
+function Education() {
   return (  
     <section className="edu">
       <h3 className="edu__title">Education</h3>
@@ -34,5 +34,5 @@ function EducationSection() {
 }
 
 
-export default EducationSection
+export default Education
 

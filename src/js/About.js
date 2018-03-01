@@ -5,7 +5,7 @@ import '../styles.css'
 import reactlogo from '../img/react-logo.png'
 
 
-function AboutSection() {
+function About() {
 	let styles = {
 		width: 22
 	}
@@ -25,4 +25,4 @@ function AboutSection() {
 }
 
 
-export default AboutSection
+export default About
