@@ -50,7 +50,6 @@
 	color: #6a6c6a;
 	border-radius: 0.3em;
 	overflow: hidden;
-
 	border: 2px solid #e5e9e9;
 	&:focus {border-color: #46badb;}
 	-webkit-appearance: none; /* to remove input shadow in iOS */
@@ -67,14 +66,14 @@
 	overflow: hidden;
 }
 
-.form__label__icon,
-.form__label__text { 
+.form__label-icon,
+.form__label-text { 
 	display: inline-block;
 	-webkit-transform: translate3d(-2.5em, 0, 0);
 	transform: translate3d(-2.5em, 0, 0);
 }
 
-.form__label__text {
+.form__label-text {
 	position: relative;
 	width: auto;
 	color: #9d9c9d;
@@ -83,7 +82,7 @@
 	transition: transform 0.3s, opacity 0.3s;
 }
 
-.form__label__icon {
+.form__label-icon {
 	color: #46badb;
 	font-size: 1.4em;
 	line-height: 1;
@@ -92,29 +91,29 @@
 	transition: transform 0.3s;
 }
 
-.form__field:focus + .form__label .form__label__text,
-.form__field--filled + .form__label .form__label__text {
+.form__field:focus + .form__label .form__label-text,
+.form__field--filled + .form__label .form__label-text {
 	opacity: 0;
 	-webkit-transform: translate3d(100px, 0, 0);
 	transform: translate3d(100px, 0, 0);
 }
 
-.form__label__text,
-.form__label__icon,
-.form__field:focus + .form__label .form__label__text,
-.form__field--filled + .form__label .form__label__text {
+.form__label-text,
+.form__label-icon,
+.form__field:focus + .form__label .form__label-text,
+.form__field--filled + .form__label .form__label-text {
 	-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 
-.form__field:focus + .form__label .form__label__icon,
-.form__field--filled + .form__label .form__label__icon, {
+.form__field:focus + .form__label .form__label-icon,
+.form__field--filled + .form__label .form__label-icon, {
 	-webkit-transform: translate3d(-0.4em, 0, 0);
 	transform: translate3d(-0.4em, 0, 0);
 }
 
 
-/*************** Feedback messages ***************/
+/*************** Validation messages ***************/
 
 .form__msg {
 	display: none;

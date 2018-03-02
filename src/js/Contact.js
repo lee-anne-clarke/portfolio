@@ -4,7 +4,6 @@ import '../styles.css'
 
 
 class Contact extends React.Component {
-
   componentDidMount() {
     const formFields = document.querySelectorAll(".form__field");
 
@@ -76,8 +75,8 @@ class Contact extends React.Component {
 							onChange={this.handleInputChange} />
 
 				    <label className="form__label" htmlFor="contactName">
-			        <i className="fa fa-fw fa-user form__label__icon"></i>
-			        <span className="form__label__text">Name *</span>
+			        <i className="fa fa-fw fa-user form__label-icon"></i>
+			        <span className="form__label-text">Name *</span>
 				    </label>
 					</div>
 
@@ -91,8 +90,8 @@ class Contact extends React.Component {
 							onChange={this.handleInputChange} />
 
 						<label className="form__label" htmlFor="contactEmail">
-							<i className="fa fa-fw fa-envelope form__label__icon"></i>
-							<span className="form__label__text">Email *</span>
+							<i className="fa fa-fw fa-envelope form__label-icon"></i>
+							<span className="form__label-text">Email *</span>
 						</label>
 					</div>
 
@@ -104,8 +103,8 @@ class Contact extends React.Component {
 							id="contactWebsite" />
 
 						<label className="form__label" htmlFor="contactWebsite">
-							<i className="fa fa-fw fa-globe form__label__icon"></i>
-							<span className="form__label__text">Website</span>
+							<i className="fa fa-fw fa-globe form__label-icon"></i>
+							<span className="form__label-text">Website</span>
 						</label>
 					</div>   
 
@@ -120,8 +119,8 @@ class Contact extends React.Component {
 						</textarea>
 
 						<label className="form__label" htmlFor="contactMsg">
-							<i className="fa fa-fw fa-pencil form__label__icon"></i>
-							<span className="form__label__text">Message *</span>
+							<i className="fa fa-fw fa-pencil form__label-icon"></i>
+							<span className="form__label-text">Message *</span>
 						</label>
 					</div>
 					         
