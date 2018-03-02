@@ -15,8 +15,6 @@ import {
 	ModalSummaryChanel,
 	ModalSummaryBea
 } from './ModalSummary'
-import '../normalize.min.css'
-import '../styles.css'
 
 
 class WorkItemsGrid extends Component {

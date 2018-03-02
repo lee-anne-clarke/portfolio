@@ -69,7 +69,6 @@
 
 @media (min-width: 600px) {	
 	.work__item__fig img {
-		-webkit-transition: opacity 0.35s;
 		transition: opacity 0.35s;
 	}
 
@@ -79,27 +78,13 @@
 		width: 101%;
 		height: 5em;
 		padding: 0.5em;
-		-webkit-transition: -webkit-transform 0.35s;
 		transition: transform 0.35s;
-		-webkit-transform: translate3d(0,100%,0);
 		transform: translate3d(0,100%,0);
-		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
 	}
 
 	.work__item__fig:hover {
 		/****** background color ******/
-		/* FF3.6+ */ 
-		background: -moz-linear-gradient(top, rgba(31,172,212,0) 0%, rgba(31,172,212,0) 0%, rgba(31,172,212,0.8) 75%);
-		/* Chrome, Safari4+ */ 
-		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(31,172,212,0)), color-stop(0%, rgba(31,172,212,0)), color-stop(75%, rgba(31,172,212,0.8)));
-		/* Chrome10+,Safari5.1+ */
-		background: -webkit-linear-gradient(top, rgba(31,172,212,0) 0%, rgba(31,172,212,0) 0%, rgba(31,172,212,0.8) 75%);
-		/* Opera 11.10+ */
-		background: -o-linear-gradient(top, rgba(31,172,212,0) 0%, rgba(31,172,212,0) 0%, rgba(31,172,212,0.8) 75%);
-		/* IE 10+ */
-		background: -ms-linear-gradient(top, rgba(31,172,212,0) 0%, rgba(31,172,212,0) 0%, rgba(31,172,212,0.8) 75%);
-		/* W3C */
 		background: linear-gradient(to bottom, rgba(31,172,212,0) 0%, rgba(31,172,212,0) 0%, rgba(31,172,212,0.8) 75%);
 		/* IE6-9 */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1facd4', endColorstr='#1facd4', GradientType=0 );
@@ -109,7 +94,6 @@
 		}
 
 		.work__item__caption {
-			-webkit-transform: translate3d(0,0,0);
 			transform: translate3d(0,0,0);
 		}
 	}
@@ -158,18 +142,13 @@
 	right: 0;
 	top: 0;
 	z-index: -800;
-
 	background-color: #e4f4f9;
 	color: #2d2d2d;
 	text-align: center;
 	padding-left: 2em;
 	padding-right: 2em;
 	overflow-y: auto;
-
-	-webkit-transform: scale(0.5);
-	-ms-transform: scale(0.5);
 	transform: scale(0.5);
-	-webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
 	transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
 	
 	h3 {
@@ -185,10 +164,7 @@
 .work__item input:checked ~ .modal-overlay {
 	opacity: 1;
 	z-index: 9000;
-	-webkit-transform: scale(1);
-	-ms-transform: scale(1);
 	transform: scale(1);
-	-webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
 	transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);  
 }
 

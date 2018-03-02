@@ -2,7 +2,7 @@
 	Variables & Mixins
 ---------------------------------------------------*/
 
-.skillsImgs {
+@mixin skillsImgs {
 	content: '';
 	background-repeat: no-repeat;
 }

@@ -1,7 +1,5 @@
 import React from 'react'
 import SkillsButton from './SkillsButton'
-import '../normalize.min.css'
-import '../styles.css'
 
 
 function Skills() {

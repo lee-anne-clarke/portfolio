@@ -2,6 +2,8 @@
 	Skills
 ---------------------------------------------------*/	
 
+@import '../variables.scss';
+
 .skills__set {
 	padding-bottom: 3em;
 	clear: both;
@@ -33,25 +35,16 @@
 	text-align: center;
 	padding: 1em;
 	margin-bottom: 3em;
-	
 	border: none;
 	border-radius: 0.3em;
 	box-shadow: 0 0.3em #e5ecf4;
 	overflow: hidden;
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
-	-webkit-transition: all 0.3s;
-	-moz-transition: all 0.3s;
 	transition: all 0.3s;
 	
 	&::before {
 		display: inline-block;
 		font-size: 2.5em;
-		-webkit-transition: all 0.3s;
-		-webkit-backface-visibility: hidden;
-		-moz-transition: all 0.3s;
-		-moz-backface-visibility: hidden;
 		transition: all 0.3s;
 		backface-visibility: hidden;
 	}
@@ -60,8 +53,6 @@
 		content: '';
 		position: absolute;
 		z-index: -1;
-		-webkit-transition: all 0.3s;
-		-moz-transition: all 0.3s;
 		transition: all 0.3s;
 	}
 
@@ -73,9 +64,6 @@
 		height: 100%;
 		font-family: Lato, Arial, Helvetica, sans-serif;
 		line-height: 4.5;
-		
-		-webkit-transition: all 0.3s;
-		-moz-transition: all 0.3s;
 		transition: all 0.3s;
 	}
 
@@ -84,9 +72,6 @@
 	}
 
 	&:hover:before {
-		-webkit-transform: translateY(300%);
-		-moz-transform: translateY(300%);
-		-ms-transform: translateY(300%);
 		transform: translateY(300%);
 	}
 	
@@ -119,7 +104,7 @@
 	&::before {
 		background-image: url(../img/skills/less-logo.png);
 		width: 86px;
-		.skillsImgs;		
+		@include skillsImgs;		
 	}
 }
 
@@ -128,7 +113,7 @@
 	&::before {
 		background-image: url(../img/skills/sass-logo.png);
 		width: 50px;
-		.skillsImgs;
+		@include skillsImgs;
 	}
 }
 
@@ -148,7 +133,7 @@
 	&::before {
 		background-image: url(../img/skills/react-logo.png);
 		width: 44px;
-		.skillsImgs;		
+		@include skillsImgs;		
 	}
 }
 
@@ -158,7 +143,7 @@
 	&::before {
 		background-image: url(../img/skills/foundation-logo.png);
 		width: 49px;
-		.skillsImgs;		
+		@include skillsImgs;		
 	}
 }
 
@@ -167,7 +152,7 @@
 	&::before {
 		background-image: url(../img/skills/bootstrap-logo.png);
 		width: 39px;
-		.skillsImgs;		
+		@include skillsImgs;		
 	}
 }
 
@@ -176,7 +161,7 @@
 	&::before {
 		background-image: url(../img/skills/vue-logo.png);
 		width: 39px;	
-		.skillsImgs;		
+		@include skillsImgs;		
 	}
 }
 
@@ -203,9 +188,7 @@
 	
 	&:hover span {
 		z-index: 1;
-		-webkit-transform: rotate3d(0, 0, 1, 0deg);
 		transform: rotate3d(0, 0, 1, 0deg);
-		-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 		transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);	
 	}
 }
@@ -232,7 +215,7 @@
 		background-size: 100%;
 		width: 44px;
 		height: 44px;
-		.skillsImgs;
+		@include skillsImgs;
 	}
 	span {
 		background-color: #c1271e;
@@ -246,7 +229,7 @@
 		background-size: 100%;
 		width: 44px;
 		height: 44px;
-		.skillsImgs;
+		@include skillsImgs;
 	}
 	span {
 		background-color: #0072c6;

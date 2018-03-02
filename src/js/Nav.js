@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import Scroll from 'react-scroll'
-import '../normalize.min.css'
-import '../styles.css'
 
 
 //Variables necessary for React Scroll package

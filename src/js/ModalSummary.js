@@ -1,9 +1,7 @@
 import React from 'react'
-import '../normalize.min.css'
-import '../styles.css'
 
 
-// SFCs containing the summary for each Work item modal
+// ** SFCs containing the summary for each Work item modal **
 
 function ModalSummaryNAHB() {
   return (

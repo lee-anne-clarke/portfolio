@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import WorkSorting from './WorkSorting'
 import WorkItemsGrid from './WorkItemsGrid'
-import '../normalize.min.css'
-import '../styles.css'
 
 
 class Work extends Component {

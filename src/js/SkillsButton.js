@@ -1,6 +1,4 @@
 import React from 'react'
-import '../normalize.min.css'
-import '../styles.css'
 
 
 function SkillsButton(props) {

@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import '../normalize.min.css'
-import '../styles.css'
 
 
 class WorkSorting extends Component {

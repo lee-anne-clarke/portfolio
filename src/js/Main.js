@@ -5,8 +5,6 @@ import Skills from './Skills'
 import Work from './Work'
 import Contact from './Contact'
 import Scroll from 'react-scroll'
-import '../normalize.min.css'
-import '../styles.css'
 
 
 //Necessary for React Scroll package

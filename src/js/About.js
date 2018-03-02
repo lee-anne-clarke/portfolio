@@ -1,7 +1,5 @@
 import React from 'react'
 import reactlogo from '../img/react-logo.png'
-import '../normalize.min.css'
-import '../styles.css'
 
 
 function About() {
