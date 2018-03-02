@@ -1,8 +1,7 @@
 import React from 'react'
+import reactlogo from '../img/react-logo.png'
 import '../normalize.min.css'
 import '../styles.css'
-
-import reactlogo from '../img/react-logo.png'
 
 
 function About() {
