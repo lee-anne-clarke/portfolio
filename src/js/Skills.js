@@ -1,4 +1,5 @@
 import React from 'react'
+import SkillsButton from './SkillsButton'
 import '../normalize.min.css'
 import '../styles.css'
 
@@ -12,47 +13,19 @@ function Skills() {
 				<h3 className="skills__set-title">Programming &amp; Design</h3>
 
 				<div className="skills__set-left">
-					<button className="fa fa-html5 skills__btn skills__btn--prog skills__btn--html5">
-						<span>HTML5</span>
-					</button>
-
-					<button className="skills__btn skills__btn--prog skills__btn--less">
-						<span>Less</span>
-					</button>
-
-					<button className="skills__btn skills__btn--prog skills__btn--js">
-						<span>JavaScript</span>
-					</button>
-
-					<button className="skills__btn skills__btn--prog skills__btn--fd">
-						<span>Foundation</span>
-					</button>
-
-					<button className="skills__btn skills__btn--prog skills__btn--vue">
-						<span>Vue.js</span>
-					</button>
+					<SkillsButton text="HTML5" classes="fa fa-html5 skills__btn--prog skills__btn--html5" />
+					<SkillsButton text="Less" classes="skills__btn--prog skills__btn--less" />
+					<SkillsButton text="JavaScript" classes="skills__btn--prog skills__btn--js" />
+					<SkillsButton text="Foundation" classes="skills__btn--prog skills__btn--fd" />
+					<SkillsButton text="Vue.js" classes="skills__btn--prog skills__btn--vue" />
 				</div>
 
 				<div className="skills__set-right">
-					<button className="fa fa-css3 skills__btn skills__btn--prog skills__btn--css3">
-						<span>CSS3</span>
-					</button>
-
-					<button className="skills__btn skills__btn--prog skills__btn--sass">
-						<span>Sass</span>
-					</button>
-
-					<button className="skills__btn skills__btn--prog skills__btn--react">
-						<span>React</span>
-					</button>
-
-					<button className="skills__btn skills__btn--prog skills__btn--bs">
-						<span>Bootstrap</span>
-					</button>
-
-					<button className="skills__btn skills__btn--prog skills__btn--ps">
-						<span>Photoshop</span>
-					</button>
+					<SkillsButton text="CSS3" classes="fa fa-css3 skills__btn--prog skills__btn--css3" />
+					<SkillsButton text="Sass" classes="skills__btn--prog skills__btn--sass" />
+					<SkillsButton text="React" classes="skills__btn--prog skills__btn--react" />
+					<SkillsButton text="Bootstrap" classes="skills__btn--prog skills__btn--bs" />
+					<SkillsButton text="Photoshop" classes="skills__btn--prog skills__btn--ps" />
 				</div>
 			</section>
 
@@ -61,23 +34,13 @@ function Skills() {
 				<h3 className="skills__set-title">Content Management Systems</h3>
 
 				<div className="skills__set-left">
-					<button className="fa fa-wordpress skills__btn skills__btn--cms skills__btn--wordpress">
-						<span>WordPress</span>
-					</button>
-
-					<button className="skills__btn skills__btn--cms skills__btn--sitecore">
-						<span>Sitecore</span>
-					</button>
+					<SkillsButton text="WordPress" classes="fa fa-wordpress skills__btn--cms skills__btn--wordpress" />
+					<SkillsButton text="Sitecore" classes="skills__btn--cms skills__btn--sitecore" />
 				</div>
 
 				<div className="skills__set-right">
-					<button className="fa fa-drupal skills__btn skills__btn--cms skills__btn--drupal">
-						<span>Drupal</span>
-					</button>
-
-					<button className="skills__btn skills__btn--cms skills__btn--sp">
-						<span>SharePoint</span>
-					</button>
+					<SkillsButton text="Drupal" classes="fa fa-drupal skills__btn--cms skills__btn--drupal" />
+					<SkillsButton text="SharePoint" classes="skills__btn--cms skills__btn--sp" />
 				</div>
 			</section>
 
