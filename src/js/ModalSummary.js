@@ -59,7 +59,7 @@ function ModalSummarySilver() {
 function ModalSummaryFresh() {
   return (
     <p className="u-text-left">
-	    Mock website redesign. Built with React and compiled for production using npm. Packages used include <a href="https://github.com/RRutsche/react-parallax" target="blank">react-parallax</a> for parallax images, <a href="https://github.com/fisshy/react-scroll" target="blank">react-scroll</a> for smooth scrolling anchor links, <a href="https://github.com/jlmakes/scrollreveal" target="blank">ScrollReveal</a> for fade-in on scroll effect, and <a href="https://github.com/negomi/react-burger-menu" target="blank">react-burger-menu</a> for mobile navigation. CSS created with Sass and compiled with <a href="http://koala-app.com/" target="_blank">Koala</a>. Free stock photos from <a href="https://unsplash.com/" target="_blank">Unsplash</a>.
+	    Mock website redesign. Built with React and compiled for production using npm. Packages used include <a href="https://github.com/RRutsche/react-parallax" target="blank">react-parallax</a> for parallax images, <a href="https://github.com/fisshy/react-scroll" target="blank">react-scroll</a> for smooth scrolling anchor links, <a href="https://github.com/jlmakes/scrollreveal" target="blank">ScrollReveal</a> for fade-in on scroll effect, and <a href="https://github.com/negomi/react-burger-menu" target="blank">react-burger-menu</a> for mobile navigation. CSS created with Sass and compiled with <a href="https://www.npmjs.com/package/node-sass-chokidar" target="_blank">node-sass-chokidar</a>. Free stock photos from <a href="https://unsplash.com/" target="_blank">Unsplash</a>.
 	  </p>
   );
 }
