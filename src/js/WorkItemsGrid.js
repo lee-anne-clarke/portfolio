@@ -131,9 +131,9 @@ class WorkItemsGrid extends Component {
 			    modalImgOneSrc: require("../img/upserve-full.jpg"),
 			    modalImgOneAlt: "Upserve marketing landing page template screen cap - full",
 			    modalSummary: <ModalSummaryUpserve />,
-			    projTempURLOne: "/work/upserve/upserve1.html/",
-			    projTempURLTwo: "/work/upserve/upserve2.html/",
-			    projTempURLThree: "/work/upserve/upserve3.html/",
+			    projTempURLOne: "/work/upserve/upserve1.html",
+			    projTempURLTwo: "/work/upserve/upserve2.html",
+			    projTempURLThree: "/work/upserve/upserve3.html",
 			  },
 
 			  {

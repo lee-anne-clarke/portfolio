@@ -16,64 +16,64 @@ class WorkSorting extends Component {
 		const sortEmailsBtn = document.getElementById('sortEmailsBtn');
 
 		sortAllBtn.addEventListener('click', () => {
-	    	for (let i of sortAll) {
-		        i.style.display = 'inline-block';  
+    	for (let i of sortAll) {
+				i.style.display = 'inline-block';  
+    	}
+
+    	for (let j of sortBtns) {
+    		if ( j === sortAllBtn ) {
+    			sortAllBtn.classList.add('btn-sort--active');
+    		} else {
+    			j.classList.remove('btn-sort--active');
+    		}
+    	}
+    });
+
+    function sortItems(theClassName, theBtn) {
+    	for (let i of sortAll) {
+    		if ( i.classList.contains(theClassName) ) {
+	        	i.style.display = 'inline-block';
+	    	} else {
+	    		i.style.display = 'none';
 	    	}
+    	}
 
-	    	for (let j of sortBtns) {
-	    		if ( j === sortAllBtn ) {
-	    			sortAllBtn.classList.add('btn-sort--active');
-	    		} else {
-	    			j.classList.remove('btn-sort--active');
-	    		}
-	    	}
-	    });
+    	for (let j of sortBtns) {
+    		if ( j === theBtn ) {
+    			theBtn.classList.add('btn-sort--active');
+    		} else {
+    			j.classList.remove('btn-sort--active');
+    		}
+    	}
+    }
 
-	    function sortItems(theClassName, theBtn) {
-	    	for (let i of sortAll) {
-	    		if ( i.classList.contains(theClassName) ) {
-		        	i.style.display = 'inline-block';
-		    	} else {
-		    		i.style.display = 'none';
-		    	}
-	    	}
+    sortWpBtn.addEventListener('click', () => {
+    	sortItems('sort-wp', sortWpBtn);
+    });
 
-	    	for (let j of sortBtns) {
-	    		if ( j === theBtn ) {
-	    			theBtn.classList.add('btn-sort--active');
-	    		} else {
-	    			j.classList.remove('btn-sort--active');
-	    		}
-	    	}
-	    }
+    sortDrupalBtn.addEventListener('click', () => {
+    	sortItems('sort-drupal', sortDrupalBtn);
+    });
 
-	    sortWpBtn.addEventListener('click', () => {
-	    	sortItems('sort-wp', sortWpBtn);
-	    });
+    sortVueBtn.addEventListener('click', () => {
+    	sortItems('sort-vue', sortVueBtn);
+    });
 
-	    sortDrupalBtn.addEventListener('click', () => {
-	    	sortItems('sort-drupal', sortDrupalBtn);
-	    });
-
-	    sortVueBtn.addEventListener('click', () => {
-	    	sortItems('sort-vue', sortVueBtn);
-	    });
-
-	    sortReactBtn.addEventListener('click', () => {
-	    	sortItems('sort-react', sortReactBtn);
-	    });
+    sortReactBtn.addEventListener('click', () => {
+    	sortItems('sort-react', sortReactBtn);
+    });
 
 		sortBootstrapBtn.addEventListener('click', () => {
-	    	sortItems('sort-bs', sortBootstrapBtn);
-	    });
+    	sortItems('sort-bs', sortBootstrapBtn);
+    });
 
 		sortFoundationBtn.addEventListener('click', () => {
-	    	sortItems('sort-foundation', sortFoundationBtn);
-	    });
+    	sortItems('sort-foundation', sortFoundationBtn);
+    });
 
 		sortEmailsBtn.addEventListener('click', () => {
-	    	sortItems('sort-emails', sortEmailsBtn);
-	    });
+    	sortItems('sort-emails', sortEmailsBtn);
+    });
 	}
 
 	render() {
