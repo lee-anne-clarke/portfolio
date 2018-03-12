@@ -109,13 +109,13 @@ class WorkItemsGrid extends Component {
 
 			  {
 			  	id: 7,
-				  title: "Fresh Grocer",
-				  titleFull: "Fresh Grocer",
+				  title: "The Fresh Grocer",
+				  titleFull: "The Fresh Grocer",
 				  itemImgSrc: require("../img/freshgrocer.jpg"),
 				  description: "mock website redesign",
 				  sortClasses: "sort-react",
 			    modalImgOneSrc: require("../img/freshgrocer-full.jpg"),
-			    modalImgOneAlt: "Fresh Grocer screen cap - full",
+			    modalImgOneAlt: "The Fresh Grocer screen cap - full",
 			    modalSummary: <ModalSummaryFresh />,
 			    projectURL: "/work/freshgrocer/",
 			    projectRepo: "freshgrocer"
