@@ -127,6 +127,14 @@ function ModalSummaryBea() {
   );
 }
 
+function ModalSummaryLAC() {
+  return (
+    <p className="u-text-left">
+	    Built with React and compiled for production using npm. CSS3 animation used for navigation buttons. <a href="https://github.com/fisshy/react-scroll" target="blank">react-scroll</a> for smooth scrolling navigation links. CSS created with Sass and compiled with <a href="https://www.npmjs.com/package/node-sass-chokidar" target="_blank">node-sass-chokidar</a>. 
+	  </p>
+  );
+}
+
 
 export {
   ModalSummaryNAHB,
@@ -142,5 +150,6 @@ export {
 	ModalSummaryModSig,
 	ModalSummaryITSLEmail,
 	ModalSummaryChanel,
-	ModalSummaryBea
+	ModalSummaryBea,
+	ModalSummaryLAC
 }

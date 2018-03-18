@@ -170,6 +170,89 @@ a:hover {
 a:focus {
   outline: #4ac3e5; }
 
+/********** Nav **********/
+.btn-nav {
+  position: relative;
+  z-index: 1;
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+  color: white;
+  font-size: 1.1em;
+  text-align: center;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.05em white;
+  cursor: pointer;
+  transition: transform ease-out 0.1s,  background 0.2s; }
+  .btn-nav::before {
+    display: block;
+    line-height: 1.9em;
+    speak: none; }
+  .btn-nav:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-sizing: content-box;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+    transform: scale(0.9);
+    pointer-events: none; }
+  .btn-nav:hover:after {
+    animation: sonarEffect 1.3s ease-out 85ms; }
+  .btn-nav:focus {
+    outline: none; }
+  .btn-nav span {
+    /* Hide screen reader text */
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px); }
+  @media (min-width: 320px) {
+    .btn-nav {
+      font-size: 1.3em; } }
+  @media (min-width: 375px) {
+    .btn-nav {
+      font-size: 1.5em; } }
+
+@keyframes sonarEffect {
+  0% {
+    opacity: 0.3; }
+  40% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #f0f5f6, 0 0 0 10px rgba(255, 255, 255, 0.5); }
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #f0f5f6, 0 0 0 10px rgba(255, 255, 255, 0.5);
+    transform: scale(1.5);
+    opacity: 0; } }
+
+@media (min-width: 1025px) {
+  .btn-nav {
+    overflow: hidden;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s; }
+    .btn-nav:after {
+      display: none; }
+    .btn-nav:hover {
+      background-color: white;
+      color: #1abdda;
+      box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.3); }
+    .btn-nav:hover:before {
+      animation: toBottomFromTop 0.3s forwards; }
+  @keyframes toBottomFromTop {
+    49% {
+      transform: translateY(100%); }
+    50% {
+      opacity: 0;
+      transform: translateY(-100%); }
+    51% {
+      opacity: 1; } } }
+
 /********** Work - sort buttons **********/
 .btn-sort {
   width: 7em;
@@ -267,13 +350,10 @@ a:focus {
   text-align: center;
   padding: 0.5em 0;
   white-space: nowrap; }
-  .nav span {
-    display: none; }
 
 .nav__list {
   padding: 0.5em 0 0;
-  margin: 0;
-  /* END OF a */ }
+  margin: 0; }
   @media (min-width: 375px) {
     .nav__list {
       padding: 0.3em 0 0; } }
@@ -288,89 +368,16 @@ a:focus {
     @media (min-width: 600px) {
       .nav__list li {
         margin-right: 2em; } }
-  .nav__list a {
-    position: relative;
-    z-index: 1;
-    width: 2em;
-    height: 2em;
-    color: white;
-    font-size: 1.1em;
-    text-align: center;
-    border-radius: 50%;
-    box-shadow: 0 0 0 0.05em white;
-    cursor: pointer;
-    transition: transform ease-out 0.1s, background 0.2s; }
-    .nav__list a::before {
-      display: block;
-      line-height: 1.9em;
-      speak: none; }
-    .nav__list a:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 0;
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      box-sizing: content-box;
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
-      transform: scale(0.9);
-      pointer-events: none; }
-    .nav__list a:hover:after {
-      animation: sonarEffect 1.3s ease-out 85ms; }
-    @media (min-width: 320px) {
-      .nav__list a {
-        font-size: 1.3em; } }
-    @media (min-width: 375px) {
-      .nav__list a {
-        font-size: 1.5em; } }
 
-/* END OF .nav__list */
-@keyframes sonarEffect {
-  0% {
-    opacity: 0.3; }
-  40% {
-    opacity: 0.5;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #f0f5f6, 0 0 0 10px rgba(255, 255, 255, 0.5); }
-  100% {
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px #f0f5f6, 0 0 0 10px rgba(255, 255, 255, 0.5);
-    transform: scale(1.5);
-    opacity: 0; } }
-
-li.btn--home {
+li.nav-li-home {
   display: none; }
+  @media (min-width: 600px) {
+    li.nav-li-home {
+      display: inline-block; } }
 
 @media (min-width: 600px) {
-  li.btn--edu {
+  li.nav-li-edu {
     display: none; } }
-
-@media (min-width: 600px) {
-  li.btn--home {
-    display: inline-block; } }
-
-@media (min-width: 1025px) {
-  .nav__list a {
-    overflow: hidden;
-    transition: background 0.3s, color 0.3s, box-shadow 0.3s; }
-    .nav__list a:after {
-      display: none; }
-    .nav__list a:hover {
-      background-color: white;
-      color: #1abdda;
-      box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.3); }
-    .nav__list a:hover:before {
-      animation: toBottomFromTop 0.3s forwards; }
-  /* END OF .nav__list a */
-  @keyframes toBottomFromTop {
-    49% {
-      transform: translateY(100%); }
-    50% {
-      opacity: 0;
-      transform: translateY(-100%); }
-    51% {
-      opacity: 1; } } }
 
 /*---------------------------------------------------
 	Header
@@ -749,41 +756,41 @@ li.btn--home {
     .work__item {
       padding: 0.5em 3em; } }
 
-.work__item__fig {
+.work-item-fig {
   position: relative;
   overflow: hidden;
   max-width: 100%;
   text-align: center;
   margin: 0; }
-  .work__item__fig img {
+  .work-item-fig img {
     max-width: 100%;
     height: auto;
     border: 0.05em solid #f3f3f3;
     border-radius: 0.3em;
     box-shadow: 0 .3em #e5ecf4; }
 
-.work__item__caption {
+.work-item-caption {
   background-color: white;
   padding-top: 0.3em;
   padding-bottom: 0.3em; }
-  .work__item__caption h3, .work__item__caption p {
+  .work-item-caption h3, .work-item-caption p {
     margin: 0; }
-  .work__item__caption h3 {
+  .work-item-caption h3 {
     color: #2488ce;
     font-weight: 400; }
-  .work__item__caption p {
+  .work-item-caption p {
     text-transform: uppercase; }
   @media (min-width: 900px) and (max-width: 1000px) {
-    .work__item__caption {
+    .work-item-caption {
       height: 4.5em; }
-      .work__item__caption h3 {
+      .work-item-caption h3 {
         font-size: 1.5em; } }
 
 /********** Work item hover effects **********/
 @media (min-width: 600px) {
-  .work__item__fig img {
+  .work-item-fig img {
     transition: opacity 0.35s; }
-  .work__item__caption {
+  .work-item-caption {
     position: absolute;
     bottom: 0;
     width: 101%;
@@ -792,14 +799,14 @@ li.btn--home {
     transition: transform 0.35s;
     transform: translate3d(0, 100%, 0);
     backface-visibility: hidden; }
-  .work__item__fig:hover {
+  .work-item-fig:hover {
     /****** background color ******/
     background: linear-gradient(to bottom, rgba(31, 172, 212, 0) 0%, rgba(31, 172, 212, 0) 0%, rgba(31, 172, 212, 0.8) 75%);
     /* IE6-9 */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1facd4', endColorstr='#1facd4', GradientType=0 ); }
-    .work__item__fig:hover img {
+    .work-item-fig:hover img {
       opacity: 0.3; }
-    .work__item__fig:hover .work__item__caption {
+    .work-item-fig:hover .work-item-caption {
       transform: translate3d(0, 0, 0); } }
 
 /********** Work items sorting **********/
@@ -818,15 +825,7 @@ li.btn--home {
         width: 25%; } }
 
 /********** Work modals **********/
-.modal-checkbox {
-  position: absolute;
-  z-index: -10;
-  visibility: hidden; }
-
-.modal-label {
-  cursor: pointer; }
-
-.modal-overlay {
+.work__modal {
   opacity: 0;
   position: fixed;
   bottom: 0;
@@ -842,13 +841,21 @@ li.btn--home {
   overflow-y: auto;
   transform: scale(0.5);
   transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1); }
-  .modal-overlay h3 {
+  .work__modal h3 {
     font-weight: 500; }
-  .modal-overlay a {
+  .work__modal a {
     color: #2d2d2d;
     border-bottom: 1px solid #616161; }
 
-.work__item input:checked ~ .modal-overlay {
+.modal-checkbox {
+  position: absolute;
+  z-index: -10;
+  visibility: hidden; }
+
+.modal-label {
+  cursor: pointer; }
+
+.work__item input:checked ~ .work__modal {
   opacity: 1;
   z-index: 9000;
   transform: scale(1);
@@ -910,7 +917,7 @@ li.btn--home {
     margin-bottom: 5em; }
   .work__inner {
     max-width: 68em; }
-  .work__item__caption p {
+  .work-item-caption p {
     font-size: 1em;
     font-weight: 400; } }
 

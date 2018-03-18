@@ -21,7 +21,7 @@
 	}
 }
 
-.work__item__fig {
+.work-item-fig {
 	position: relative;
 	overflow: hidden;
 	max-width: 100%;
@@ -37,7 +37,7 @@
 	}
 }
 
-.work__item__caption {
+.work-item-caption {
 	background-color: white;
 	padding-top: 0.3em;
 	padding-bottom: 0.3em;
@@ -68,11 +68,11 @@
 /********** Work item hover effects **********/
 
 @media (min-width: 600px) {	
-	.work__item__fig img {
+	.work-item-fig img {
 		transition: opacity 0.35s;
 	}
 
-	.work__item__caption {
+	.work-item-caption {
 		position: absolute;
 		bottom: 0;
 		width: 101%;
@@ -83,7 +83,7 @@
 		backface-visibility: hidden;
 	}
 
-	.work__item__fig:hover {
+	.work-item-fig:hover {
 		/****** background color ******/
 		background: linear-gradient(to bottom, rgba(31,172,212,0) 0%, rgba(31,172,212,0) 0%, rgba(31,172,212,0.8) 75%);
 		/* IE6-9 */
@@ -93,7 +93,7 @@
 			opacity: 0.3;
 		}
 
-		.work__item__caption {
+		.work-item-caption {
 			transform: translate3d(0,0,0);
 		}
 	}
@@ -124,17 +124,7 @@
 
 /********** Work modals **********/
 
-.modal-checkbox {
-	position: absolute;
-  	z-index: -10;
-	visibility: hidden;
-}
-
-.modal-label {
-	cursor: pointer;
-}
-
-.modal-overlay {
+.work__modal {
 	opacity: 0;
 	position: fixed;
 	bottom: 0;
@@ -161,7 +151,17 @@
 	}
 }
 
-.work__item input:checked ~ .modal-overlay {
+.modal-checkbox {
+	position: absolute;
+  	z-index: -10;
+	visibility: hidden;
+}
+
+.modal-label {
+	cursor: pointer;
+}
+
+.work__item input:checked ~ .work__modal {
 	opacity: 1;
 	z-index: 9000;
 	transform: scale(1);
@@ -256,7 +256,7 @@
 		max-width: 68em;
 	}
 
-	.work__item__caption p {
+	.work-item-caption p {
 		font-size: 1em; 
 		font-weight: 400;
 	}

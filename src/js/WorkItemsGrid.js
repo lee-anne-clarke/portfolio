@@ -13,7 +13,8 @@ import {
 	ModalSummaryModSig,
 	ModalSummaryITSLEmail,
 	ModalSummaryChanel,
-	ModalSummaryBea
+	ModalSummaryBea,
+	ModalSummaryLAC
 } from './ModalSummary'
 
 
@@ -77,8 +78,36 @@ class WorkItemsGrid extends Component {
 			    projectRepo: "bracco"
 			  },
 
+
 			  {
 			  	id: 5,
+				  title: "Lee-Anne-Clarke.com",
+				  titleFull: "Lee-Anne-Clarke.com",
+				  itemImgSrc: require("../img/portfolio.jpg"),
+				  description: "my portfolio",
+				  sortClasses: "sort-react",
+			    modalImgOneSrc: require("../img/portfolio-full.jpg"),
+			    modalImgOneAlt: "Lee-Anne-Clarke.com screen cap - full",
+			    modalSummary: <ModalSummaryLAC />,
+			    projectRepo: "portfolio"
+			  },
+
+			  {
+			  	id: 6,
+				  title: "The Fresh Grocer",
+				  titleFull: "The Fresh Grocer",
+				  itemImgSrc: require("../img/freshgrocer.jpg"),
+				  description: "mock website redesign",
+				  sortClasses: "sort-react",
+			    modalImgOneSrc: require("../img/freshgrocer-full.jpg"),
+			    modalImgOneAlt: "The Fresh Grocer screen cap - full",
+			    modalSummary: <ModalSummaryFresh />,
+			    projectURL: "/work/freshgrocer/",
+			    projectRepo: "freshgrocer"
+			  },
+
+			  {
+			  	id: 7,
 			    title: "Fiservices",
 			    titleFull: "Fiservices",
 			    itemImgSrc: require("../img/fiservices.jpg"),
@@ -93,7 +122,7 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			  	id: 6,
+			  	id: 8,
 			    title: "Silver Spark Jewelry",
 			    titleFull: "Silver Spark Jewelry",
 			    itemImgSrc: require("../img/silverspark.jpg"),
@@ -108,21 +137,7 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			  	id: 7,
-				  title: "The Fresh Grocer",
-				  titleFull: "The Fresh Grocer",
-				  itemImgSrc: require("../img/freshgrocer.jpg"),
-				  description: "mock website redesign",
-				  sortClasses: "sort-react",
-			    modalImgOneSrc: require("../img/freshgrocer-full.jpg"),
-			    modalImgOneAlt: "The Fresh Grocer screen cap - full",
-			    modalSummary: <ModalSummaryFresh />,
-			    projectURL: "/work/freshgrocer/",
-			    projectRepo: "freshgrocer"
-			  },
-
-			  {
-			  	id: 8,
+			  	id: 9,
 			    title: "Upserve",
 			    titleFull: "Upserve",
 			    itemImgSrc: require("../img/upserve.jpg"),
@@ -137,7 +152,7 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			  	id: 9,
+			  	id: 10,
 			    title: "itslearning, inc.",
 			    titleFull: "itslearning, inc.",
 			    itemImgSrc: require("../img/itslearning-cp.jpg"),
@@ -150,7 +165,7 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			  	id: 10,
+			  	id: 11,
 					title: "City Hospital",
 					titleFull: "City Hospital",
 					itemImgSrc: require("../img/cityhospital.jpg"),
@@ -164,7 +179,7 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			  	id: 11,
+			  	id: 12,
 			    title: "Modern Signal",
 			    titleFull: "Modern Signal",
 			    itemImgSrc: require("../img/teampage.jpg"),
@@ -178,7 +193,7 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			  	id: 12,
+			  	id: 13,
 			    title: "itslearning, inc.",
 			    titleFull: "itslearning, inc.",
 			    itemImgSrc: require("../img/itslearning-email.jpg"),
@@ -192,7 +207,7 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			    id: 13,
+			    id: 14,
 			    title: "Chanel",
 			    titleFull: "Chanel",
 			    itemImgSrc: require("../img/chanel.jpg"),
@@ -207,7 +222,7 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			    id: 14,
+			    id: 15,
 					title: "Beatrice's Salon",
 					titleFull: "Beatrice's Spa and Beauty Salon",
 					itemImgSrc: require("../img/beatrice.jpg"),
@@ -248,7 +263,6 @@ class WorkItemsGrid extends Component {
 
 	eachWorkItem(item, i) {
 
-		// ** Hide project/image links as needed **
 		let modalViewProjStyle,
 				modalImgTwoStyle,
 				modalViewRepoStyle,
@@ -256,11 +270,17 @@ class WorkItemsGrid extends Component {
 				modalViewTempTwoStyle,
 				modalViewTempThreeStyle
 
+		// ** Hide project images/links as needed **
+
 	  if (item.modalImgTwoSrc) {
 	  	modalImgTwoStyle = {display: 'inline'}
 	  } else {
 	  	modalImgTwoStyle = {display: 'none'}
 	  }
+
+		if (!item.projectURL) {
+			modalViewProjStyle = {display: 'none'}
+		}
 
 	  if (item.projectRepo) {
 			modalViewRepoStyle = {
@@ -304,22 +324,20 @@ class WorkItemsGrid extends Component {
 	  i += 1; //start index at 1 instead of 0
 
 		return (
-			<div key={i} index={i} className={`work__item sort ${item.sortClasses}`}>
+			<div key={i} className={`work__item sort ${item.sortClasses}`}>
 	      <input className="modal-checkbox" type="checkbox" name={`workItem${i}`} id={`workItem${i}`} />
 	      
 	      <label className="modal-label modal-open" htmlFor={`workItem${i}`}>
-	        <figure className="work__item__fig">
-	        <img src={item.itemImgSrc} alt={item.titleFull} />
-	  
-	        <figcaption className="work__item__caption">
-	          <h3>{item.title}</h3>
-	          <p>{item.description}</p>                                        
-	        </figcaption>
-	  
+	        <figure className="work-item-fig">
+		        <img src={item.itemImgSrc} alt={item.titleFull} />
+		        <figcaption className="work-item-caption">
+		          <h3>{item.title}</h3>
+		          <p>{item.description}</p>                                        
+		        </figcaption>
 	        </figure>
 	      </label>
 
-	      <div className="modal-overlay" role="dialog">
+	      <div className="work__modal" role="dialog">
 	        <div className="modal-content">
 
 	          <label className="modal-label modal-close" htmlFor={`workItem${i}`}>

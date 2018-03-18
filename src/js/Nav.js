@@ -49,28 +49,28 @@ class Nav extends Component {
 		return (
 			<nav className="nav">
 				<ul className="nav__list">
-					<li className="btn--home">
-						<a className="fa fa-home" onClick={this.scrollToTop}><span>Home</span></a>
+					<li className="nav-li-home">
+						<button className="btn-nav fa fa-home" onClick={this.scrollToTop}><span>Home</span></button>
 					</li>
 
 					<li>
-						<a className="fa fa-user" onClick={this.scrollToAbout}><span>About</span></a>
+						<button className="btn-nav fa fa-user" onClick={this.scrollToAbout}><span>About</span></button>
 					</li>
 
-					<li className="btn--edu">
-						<a className="fa fa-graduation-cap" onClick={this.scrollToEdu}><span>Education</span></a>
+					<li className="nav-li-edu">
+						<button className="btn-nav fa fa-graduation-cap" onClick={this.scrollToEdu}><span>Education</span></button>
 					</li>
 
 					<li>
-						<a className="fa fa-wrench" onClick={this.scrollToSkills}><span>Skills</span></a>
+						<button className="btn-nav fa fa-wrench" onClick={this.scrollToSkills}><span>Skills</span></button>
 					</li>
 
 					<li> 
-						<a className="fa fa-diamond" onClick={this.scrollToWork}><span>Work</span></a>
+						<button className="btn-nav fa fa-diamond" onClick={this.scrollToWork}><span>Work</span></button>
 					</li>
 
 					<li>
-						<a className="fa fa-paper-plane-o" onClick={this.scrollToContact}><span>Contact</span></a>
+						<button className="btn-nav fa fa-paper-plane-o" onClick={this.scrollToContact}><span>Contact</span></button>
 					</li>
 				</ul>
 			</nav>
