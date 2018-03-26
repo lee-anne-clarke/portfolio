@@ -135,6 +135,12 @@ function ModalSummaryLAC() {
   );
 }
 
+function ModalSummaryPhotoSearch() {
+  return (
+    <p className="u-text-left">A simple Flickr photo search. Photos fetched from Flickr API through its <a href="https://www.flickr.com/services/feeds/docs/photos_public/" target="_blank">public feed</a> by utilizing jQuery and AJAX. CSS3 transitions used for form label, submit button, text input focus, and image hovers. CSS3 gradients and transformations used for submit button. CSS created with SASS and compiled with <a href="http://koala-app.com/" target="_blank">Koala</a>.</p>
+  );
+}
+
 
 export {
   ModalSummaryNAHB,
@@ -151,5 +157,6 @@ export {
 	ModalSummaryITSLEmail,
 	ModalSummaryChanel,
 	ModalSummaryBea,
-	ModalSummaryLAC
+	ModalSummaryLAC,
+	ModalSummaryPhotoSearch
 }

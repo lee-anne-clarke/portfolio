@@ -14,7 +14,8 @@ import {
 	ModalSummaryITSLEmail,
 	ModalSummaryChanel,
 	ModalSummaryBea,
-	ModalSummaryLAC
+	ModalSummaryLAC,
+	ModalSummaryPhotoSearch
 } from './ModalSummary'
 
 
@@ -207,7 +208,21 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			    id: 14,
+			  	id: 14,
+			    title: "Flickr photo search",
+			    titleFull: "Flickr photo search",
+			    itemImgSrc: require("../img/photosearch.jpg"),
+			    description: "independent project",
+			    sortClasses: "sort-emails",
+			    modalImgOneSrc: require("../img/photosearch-full.jpg"),
+			    modalImgOneAlt: "Flickr photo search screen cap - full",
+			    modalSummary: <ModalSummaryPhotoSearch />,
+			    projectURL: "/work/photosearch/",
+			    projectRepo: "photosearch"
+			  },
+
+			  {
+			    id: 15,
 			    title: "Chanel",
 			    titleFull: "Chanel",
 			    itemImgSrc: require("../img/chanel.jpg"),
@@ -222,7 +237,7 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			    id: 15,
+			    id: 16,
 					title: "Beatrice's Salon",
 					titleFull: "Beatrice's Spa and Beauty Salon",
 					itemImgSrc: require("../img/beatrice.jpg"),
