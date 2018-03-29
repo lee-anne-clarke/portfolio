@@ -103,7 +103,7 @@
 .skills__btn--less {
 	background-color: #5473a2;
 	&::before {
-		background-image: url(../img/skills/less-logo.png);
+		background-image: url(./img/skills/less-logo.png);
 		width: 86px;
 		@include skillsImgs;		
 	}
@@ -112,7 +112,7 @@
 .skills__btn--sass {
 	background-color: #cd679a;
 	&::before {
-		background-image: url(../img/skills/sass-logo.png);
+		background-image: url(./img/skills/sass-logo.png);
 		width: 50px;
 		@include skillsImgs;
 	}
@@ -132,7 +132,7 @@
 	color: #61dafb; 
 	background-color: #383838;
 	&::before {
-		background-image: url(../img/skills/react-logo.png);
+		background-image: url(./img/skills/react-logo.png);
 		width: 44px;
 		@include skillsImgs;		
 	}
@@ -142,7 +142,7 @@
 	color: #07609d; 
 	background-color: #eee;
 	&::before {
-		background-image: url(../img/skills/foundation-logo.png);
+		background-image: url(./img/skills/foundation-logo.png);
 		width: 49px;
 		@include skillsImgs;		
 	}
@@ -151,7 +151,7 @@
 .skills__btn--bs {
 	background-color: #644190;
 	&::before {
-		background-image: url(../img/skills/bootstrap-logo.png);
+		background-image: url(./img/skills/bootstrap-logo.png);
 		width: 39px;
 		@include skillsImgs;		
 	}
@@ -160,7 +160,7 @@
 .skills__btn--vue {
 	background-color: #028559;
 	&::before {
-		background-image: url(../img/skills/vue-logo.png);
+		background-image: url(./img/skills/vue-logo.png);
 		width: 39px;	
 		@include skillsImgs;		
 	}
@@ -212,7 +212,7 @@
 
 .skills__btn--sitecore {
 	&::before {
-		background-image: url(../img/skills/sitecore-logo.png);
+		background-image: url(./img/skills/sitecore-logo.png);
 		background-size: 100%;
 		width: 44px;
 		height: 44px;
@@ -226,7 +226,7 @@
 
 .skills__btn--sp {
 	&::before {
-		background-image: url(../img/skills/sharepoint-logo.png);
+		background-image: url(./img/skills/sharepoint-logo.png);
 		background-size: 100%;
 		width: 44px;
 		height: 44px;
