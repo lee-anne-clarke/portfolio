@@ -2,7 +2,9 @@
 	Base styles
 ---------------------------------------------------*/
 
-*, *:after, *:before {
+*, 
+*::after, 
+*::before {
 	box-sizing: border-box;
 }
 

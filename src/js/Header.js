@@ -10,7 +10,7 @@ function Header() {
 
 			<div className="divider">
 				<a className="btn-header" href="https://github.com/lee-anne-clarke/" target="blank">
-					<i className="fa fa-github"><span>Github</span></i>
+					<i className="fa fa-github btn-header-fa"><span>Github</span></i>
 				</a>			
 			</div>
 		</header>

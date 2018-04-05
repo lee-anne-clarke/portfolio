@@ -2,8 +2,8 @@
 	Utilities
 ---------------------------------------------------*/
 
-.u-clearfix:before, 
-.u-clearfix:after {
+.u-clearfix::before, 
+.u-clearfix::after {
 	display: table;
 	content: '';
 }

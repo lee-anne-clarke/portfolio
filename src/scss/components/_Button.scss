@@ -150,15 +150,15 @@
 		opacity: 1;
 	}
 
-	.fa:before {
-		font-size: 1.8em;
-	}
-
 	span {
 		display: block;
 		font-family: 'Raleway',Arial,Helvetica,sans-serif;
 		font-size: 0.65em;
 	}
+}
+
+.btn-header-fa::before {
+	font-size: 1.8em;
 }
 
 
