@@ -11,15 +11,20 @@
 		 url('./fonts/CaviarDreams.ttf') format('truetype'); /* Safari, Android, iOS */
 }	
 
-h1, 
-h2, 
-.myemail {
-	text-align: center;
+body {
+	background-color: #fafafa;
+	font-family: 'Raleway', Arial, Helvetica, sans-serif;
+	color: $bodyText;
+	font-size: 100%;
+	font-weight: 400;
+	line-height: 1;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
 }
 
 h1 {
 	font-family: CaviarDreams, Arial, Helvetica, sans-serif;
-	color: white;
+	color: $white;
 	font-weight: normal;
 	font-size: 3.5em;
 	line-height: 1;
@@ -32,25 +37,73 @@ h1 {
 }
 
 h2 {
-    font-size: 2.8em;
+	font-size: 2.8em;
 	font-weight: 500;
+	text-align: center;
 	padding-bottom: 0.2em;
 	margin-top: 0;
 	margin-bottom: 0.8em;
 	border-bottom: 2px solid #46badb;
+
+	@media (min-width: 600px) {
+		letter-spacing: 0.5em;
+	}
 }
 
 h3 {
-    font-size: 1.8em;
-	font-weight: 300;
+	font-size: 1.8em;
 	line-height: 1.3em;
 	margin-top: 0.5em;
 	margin-bottom: 0;
 }
 
-h4, h5, h6 {
-    font-weight: 300;
-    color: #333;
+.h3-workitem {
+	color: #2488ce;
+	font-weight: 400;
+	margin: 0;
+
+	@media (min-width: 900px) and (max-width: 1000px) {
+		font-size: 1.5em;
+	}
+}
+
+.h3-modal {
+	font-weight: 500;
+}
+
+.h3-edu,
+.h3-skillsset {
+	font-weight: 400;
+	margin-bottom: 0.5em;
+	border-bottom: 1px solid #1abdda;
+
+	@media (min-width: 600px) {
+		text-align: center;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+	@media (min-width: 900px) {	
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.h3-skillsset {
+	@media (min-width: 600px) {
+		margin-bottom: 1em;
+	}
+}
+
+h4 {
+	color: #333;
+	font-weight: 500;
+	line-height: 1.4;
+}
+
+h5,
+h6 {
+	font-weight: 300;
 }
 
 p, 
@@ -66,16 +119,22 @@ p,
 	}
 }
 
-.edu__title,
-.skills__set-title {
-	font-weight: 400;
-	margin-bottom: 0.5em;
-	border-bottom: 1px solid #1abdda;
+.fa-ul {
+	margin-left: 0;
+}
+
+/********** Header **********/
+
+.jobtitle,
+.myemail {
+	color: $white;
+	line-height: 1;
+	margin-top: 0;
 }
 
 .jobtitle {
-	font-size: 1.8em;
-	border: none;
+	font-size: 1.7em;
+	letter-spacing: 0;
 
 	@media (min-width: 375px) {
 		font-size: 2em;
@@ -87,18 +146,89 @@ p,
 	letter-spacing: 0.2em;
 }
 
-.divider {
-	color: #b7e5e7;
-	font-size: 2em;
-	text-align: center;
-	padding-top: 1em;
-	padding-bottom: 1em;
-	clear: both;
+
+/********** Education **********/
+
+.edu__degree {
+	color: #319bb9;
+	font-weight: 500;
 }
 
-.main h2 {
-	@media (min-width: 600px) {
-		letter-spacing: 0.5em;
+.edu__icon-flag {
+	display: none;
+
+	@media (min-width: 320px) {
+		display: inline-block;
+		left: -1.5em;
+		width: 1.8em;
+		height: 1.8em;
+		background-color: #8bcadc;
+		color: $white;
+		font-size: 1.2em;
+		text-align: center;
+		padding: 0.4em 0 0.4em 0.1em;
+		border-radius: 50%;
+		box-shadow: 0 0 0 .1em #cce2e8;
+	}
+
+	@media (min-width: 375px) {
+		font-size: 1.4em;
+	}
+
+	@media (min-width: 700px) {	
+		left: -1.3em;
+		font-size: 1.8em;
+	}
+
+	@media (min-width: 900px) {
+		left: -1em;
 	}
 }
 
+.edu__icon-uni {
+	color: #aeaeae;
+}
+
+
+/********** Work **********/
+
+.workitem__caption {
+	background-color: $white;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+
+	@media (min-width: 900px) and (max-width: 1000px) {
+		height: 4.5em;
+	}
+}
+
+.workitem__caption p {
+	text-transform: uppercase;
+	margin: 0;
+
+	@media (min-width: 900px) {
+		font-size: 1em; 
+		font-weight: 400;
+	}
+}
+
+
+/********** Modals **********/
+
+.modal-content p {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	color: $black;
+	font-size: 100%;
+	line-height: 2;
+	text-align: left;
+	margin-bottom: 1.6em;
+
+	@media (min-width: 600px) {
+		margin-bottom: 2em;
+	}
+}
+
+.modal-fa {
+	margin-right: 0.3em;
+}

@@ -143,7 +143,7 @@ class WorkItemsGrid extends Component {
 			    titleFull: "Upserve",
 			    itemImgSrc: require("../img/upserve.jpg"),
 			    description: "landing page templates",
-			    sortClasses: "",
+			    sortClasses: "sort-other",
 			    modalImgOneSrc: require("../img/upserve-full.jpg"),
 			    modalImgOneAlt: "Upserve marketing landing page template screen cap - full",
 			    modalSummary: <ModalSummaryUpserve />,
@@ -185,7 +185,7 @@ class WorkItemsGrid extends Component {
 			    titleFull: "Modern Signal",
 			    itemImgSrc: require("../img/teampage.jpg"),
 			    description: "client employee page",
-			    sortClasses: "",
+			    sortClasses: "sort-other",
 			    modalImgOneSrc: require("../img/teampage-full.jpg"),
 			    modalImgOneAlt: "Modern Signal client employee page screen cap - full",
 			    modalSummary: <ModalSummaryModSig />,
@@ -213,7 +213,7 @@ class WorkItemsGrid extends Component {
 			    titleFull: "Flickr photo search",
 			    itemImgSrc: require("../img/photosearch.jpg"),
 			    description: "independent project",
-			    sortClasses: "sort-emails",
+			    sortClasses: "sort-other",
 			    modalImgOneSrc: require("../img/photosearch-full.jpg"),
 			    modalImgOneAlt: "Flickr photo search screen cap - full",
 			    modalSummary: <ModalSummaryPhotoSearch />,
@@ -300,7 +300,7 @@ class WorkItemsGrid extends Component {
 	  if (item.projectRepo) {
 			modalViewRepoStyle = {
 				display: 'block',
-				marginTop: '2rem'
+				marginTop: '2em'
 			}
 	  } else {
 	  	modalViewRepoStyle = {display: 'none'}
@@ -309,7 +309,7 @@ class WorkItemsGrid extends Component {
 	  if (item.projTempURLOne) {
 			modalViewTempOneStyle = {
 				display: 'block',
-				marginTop: '2rem'
+				marginTop: '2em'
 			}
 			modalViewProjStyle = {display: 'none'}
 	  } else {
@@ -319,7 +319,7 @@ class WorkItemsGrid extends Component {
 	  if (item.projTempURLTwo) {
 			modalViewTempTwoStyle = {
 				display: 'block',
-				marginTop: '2rem'
+				marginTop: '2em'
 			}
 	  } else {
 	  	modalViewTempTwoStyle = {display: 'none'}
@@ -328,7 +328,7 @@ class WorkItemsGrid extends Component {
 	  if (item.projTempURLThree) {
 			modalViewTempThreeStyle = {
 				display: 'block',
-				marginTop: '2rem'
+				marginTop: '2em'
 			}
 	  } else {
 	  	modalViewTempThreeStyle = {display: 'none'}
@@ -339,61 +339,65 @@ class WorkItemsGrid extends Component {
 	  i += 1; //start index at 1 instead of 0
 
 		return (
-			<div key={i} className={`work__item sort ${item.sortClasses}`}>
+			<div key={i} className={`workitem sort ${item.sortClasses}`}>
 	      <input className="modal-checkbox" type="checkbox" name={`workItem${i}`} id={`workItem${i}`} />
 	      
 	      <label className="modal-label modal-open" htmlFor={`workItem${i}`}>
-	        <figure className="work-item-fig">
-		        <img src={item.itemImgSrc} alt={item.titleFull} />
-		        <figcaption className="work-item-caption">
-		          <h3>{item.title}</h3>
-		          <p>{item.description}</p>                                        
+	        <figure className="workitem__fig">
+		        <img className="workitem__img" src={item.itemImgSrc} alt={item.titleFull} />
+		        
+		        <figcaption className="workitem__caption">
+		          <h3 className="h3-workitem">{item.title}</h3>
+		          <p>{item.description}</p>                 
 		        </figcaption>
+
 	        </figure>
 	      </label>
 
-	      <div className="work__modal" role="dialog">
+
+	      <div className="modal" role="dialog">
 	        <div className="modal-content">
 
 	          <label className="modal-label modal-close" htmlFor={`workItem${i}`}>
-	            <i className="fa fa-close"></i>CLOSE
+	            <i className="fa fa-close modal-fa"></i>CLOSE
 	          </label>
 
-	          <h3>{item.titleFull}</h3>
+	          <h3 className="h3-modal">{item.titleFull}</h3>
 	          <h4>{item.description}</h4> 
 
-			      <img src={item.modalImgOneSrc} alt={item.modalImgOneAlt} />
-			      <img style={modalImgTwoStyle} src={item.modalImgTwoSrc} alt={item.modalImgTwoAlt} />
+			      <img className="modal-img" src={item.modalImgOneSrc} alt={item.modalImgOneAlt} />
+			      <img className="modal-img" style={modalImgTwoStyle} src={item.modalImgTwoSrc} alt={item.modalImgTwoAlt} />
 
 	          {item.modalSummary}
 
-	          <div style={modalViewProjStyle} className="modal-viewproject">
-	          	<a href={item.projectURL} target="_blank"><i className="fa fa-external-link"></i>view project</a>
+	          <div style={modalViewProjStyle}>
+	          	<a className="btn btn--viewproject" href={item.projectURL} target="_blank"><i className="fa fa-external-link modal-fa"></i>view project</a>
 	          </div>
 
-	          <div style={modalViewRepoStyle} className="modal-viewproject">
-							<a href={`https://github.com/lee-anne-clarke/${item.projectRepo}`} target="_blank"><i className="fa fa-file-code-o"></i>view the repo</a>
+	          <div style={modalViewRepoStyle}>
+							<a className="btn btn--viewproject" href={`https://github.com/lee-anne-clarke/${item.projectRepo}`} target="_blank"><i className="fa fa-file-code-o modal-fa"></i>view the repo</a>
 	          </div>
 
-	          <div style={modalViewTempOneStyle} className="modal-viewproject">
-							<a href={item.projTempURLOne} target="_blank"><i className="fa fa-tint"></i>template 1</a>
+	          <div style={modalViewTempOneStyle}>
+							<a className="btn btn--viewproject" href={item.projTempURLOne} target="_blank"><i className="fa fa-tint modal-fa"></i>template 1</a>
 	          </div>
 
-	          <div style={modalViewTempTwoStyle} className="modal-viewproject">
-							<a href={item.projTempURLTwo} target="_blank"><i className="fa fa-tint"></i>template 2</a>
+	          <div style={modalViewTempTwoStyle}>
+							<a className="btn btn--viewproject" href={item.projTempURLTwo} target="_blank"><i className="fa fa-tint modal-fa"></i>template 2</a>
 	          </div>
 
-	          <div style={modalViewTempThreeStyle} className="modal-viewproject">
-							<a href={item.projTempURLThree} target="_blank"><i className="fa fa-tint"></i>template 3</a>
+	          <div style={modalViewTempThreeStyle}>
+							<a className="btn btn--viewproject" href={item.projTempURLThree} target="_blank"><i className="fa fa-tint modal-fa"></i>template 3</a>
 	          </div>
 
 	          <label className="modal-label modal-close modal-close--bottom" htmlFor={`workItem${i}`}>
-	            <i className="fa fa-close"></i>CLOSE
+	            <i className="fa fa-close modal-fa"></i>CLOSE
 	          </label>
+
 	        </div>
 	      </div>
 
-	    </div>
+	    </div> // END .workitem
 		)
 	}
 

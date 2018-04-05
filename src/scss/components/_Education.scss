@@ -2,100 +2,47 @@
 	Education
 ---------------------------------------------------*/
 
-.edu .fa-ul {
-	margin-left: 0;
-
-	li {
-		line-height: 1.5em;
-		padding-top: 0.3em;
-		padding-left: 0;
-		margin-bottom: 2em;
-		& > .fa {display: none;}
+.edu {
+	@media (min-width: 900px) {
+		width: 49em;
 	}
 }
 
-.edu__degree {
-	color: #319bb9;
-	font-weight: 500;
-}
-
-.fa-university {
-	color: #aeaeae;
-}
-
-
-/*************** MEDIA QUERIES ***************/
-
-@media (min-width: 320px) {		
-	.edu .fa-ul {
+.edu__list {
+	@media (min-width: 320px) {		
 		margin-left: 2em;
-
-		li {
-			padding-left: 1.2em;
-			& > .fa {display: inline-block;}
-		}
 	}
 
-	.edu__icon {
-		left: -1.5em;
-		width: 1.8em;
-		height: 1.8em;
-		background-color: #8bcadc;
-		color: white;
-		font-size: 1.2em;
-		text-align: center;
-		padding: 0.4em 0 0.4em 0.1em;
-		border-radius: 50%;
-		box-shadow: 0 0 0 .1em #cce2e8;
-		cursor: default;
-	}
-}
-
-@media (min-width: 375px) {
-	.edu .fa-ul li {
-		padding-left: 1.4em;
-	}
-	
-	.edu__icon {
-		font-size: 1.4em;
-	}
-}
-
-@media (min-width: 425px) {
-	.edu__br {
-		display: none;
-	}
-}
-
-@media (min-width: 600px) and (max-width: 900px) {
-	.edu .fa-ul {
+	@media (min-width: 600px) and (max-width: 900px) {
 		margin-left: 4em;
 	}
 }
+	
+.edu__li {
+	line-height: 1.5em;
+	padding-top: 0.3em;
+	padding-left: 0;
+	margin-bottom: 2em;
 
-@media (min-width: 700px) {
-	.edu .fa-ul li {
+	@media (min-width: 320px) {		
+		padding-left: 1.2em;
+	}
+
+	@media (min-width: 375px) {
+		padding-left: 1.4em;
+	}
+
+	@media (min-width: 700px) {
 		padding-left: 2.2em;
 	}
-	
-	.edu__icon {
-		left: -1.3em;
-		font-size: 1.8em;
-	}
-}
 
-@media (min-width: 900px) {
-	.edu {
-		width: 49em;
-	}
-	
-	.edu .fa-ul li {
+	@media (min-width: 900px) {
 		padding-left: 3em;
 	}
-	
-	.edu__icon {
-		left: -1em;
-	}
 }
 
-
+.edu__br {
+	@media (min-width: 425px) {
+		display: none;
+	}
+}

@@ -60,7 +60,11 @@ class Contact extends React.Component {
 			<section className="contact">
 				<h2>Contact</h2>
 
-	      <form className="form" action="mail.php" method="post" id="contactForm" 
+	      <form 
+	      	className="form" 
+	      	action="mail.php" 
+	      	method="post" 
+	      	id="contactForm" 
 					onSubmit={this.handleSubmit}>
 	      
 					<div className="form__group">
@@ -76,7 +80,8 @@ class Contact extends React.Component {
 			        <i className="fa fa-fw fa-user form__label-icon"></i>
 			        <span className="form__label-text">Name *</span>
 				    </label>
-					</div>
+					</div> {/* END .form__group */}
+
 
 					<div className="form__group">
 						<input 
@@ -91,7 +96,8 @@ class Contact extends React.Component {
 							<i className="fa fa-fw fa-envelope form__label-icon"></i>
 							<span className="form__label-text">Email *</span>
 						</label>
-					</div>
+					</div> {/* END .form__group */}
+
 
 					<div className="form__group">
 						<input 
@@ -104,11 +110,12 @@ class Contact extends React.Component {
 							<i className="fa fa-fw fa-globe form__label-icon"></i>
 							<span className="form__label-text">Website</span>
 						</label>
-					</div>   
+					</div> {/* END .form__group */}
+
 
 					<div className="form__group">
 						<textarea 
-							className="form__field" 
+							className="form__field form__field--ta" 
 							rows="7" 
 							name="contactMsg" 
 							id="contactMsg"
@@ -120,7 +127,8 @@ class Contact extends React.Component {
 							<i className="fa fa-fw fa-pencil form__label-icon"></i>
 							<span className="form__label-text">Message *</span>
 						</label>
-					</div>
+					</div> {/* END .form__group */}
+					         
 					         
 					<div className="form__msg form__msg--invalid" id="formInvalidMsg">
 						Please fill in all required fields.

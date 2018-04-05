@@ -2,23 +2,19 @@
 	Base styles
 ---------------------------------------------------*/
 
-body {
-	background-color: #fafafa;
-	font-family: 'Raleway', Arial, Helvetica, sans-serif;
-	color: #706a6a;
-	font-size: 100%;
-	font-weight: 400;
-	line-height: 1;
-	word-wrap: break-word;
-	overflow-wrap: break-word;
-}
-
 *, *:after, *:before {
 	box-sizing: border-box;
 }
 
+.divider {
+	color: #b7e5e7;
+	font-size: 2em;
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	clear: both;
+}
 
-/********** Main content **********/
 
 .main,
 .main__inner,
@@ -42,7 +38,6 @@ body {
 	padding-top: 4em;
 }
 
-
 .about,
 .skills,
 .work,
@@ -52,17 +47,8 @@ body {
 	}
 }
 
-.edu__title,
-.skills__set-title {
-	@media (min-width: 600px) {
-		text-align: center;
-		margin-left: 5%;
-		margin-right: 5%;
-	}
-}
-
 .skills__set,
-.contact form {
+.form {
 	@media (min-width: 900px) {	
 		width: 49.2em;
 	}
@@ -75,13 +61,3 @@ body {
 		margin-right: auto;
 	}
 }
-
-.edu__title,
-.skills__set-title {
-	@media (min-width: 900px) {	
-		margin-left: 0;
-		margin-right: 0;
-	}
-}
-
-

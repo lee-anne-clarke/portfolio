@@ -21,22 +21,10 @@
 	width: 100%;
 	vertical-align: top;
 	z-index: 1;
+	padding-bottom: 1.2em;
 
-	input,
-	textarea {
-		padding: 1em 0.5em 1em 2.4em;
-	}
-	
-	input {
-		margin-bottom: 2em;
-	}
-	
-	textarea {
-		font-family: inherit;
-		line-height: 1.2;
-		margin-bottom: 1.6em;
-		overflow-y: auto;
-		resize: none;
+	@media (min-width: 900px) {
+		padding-bottom: 2em;
 	}
 }
 
@@ -45,15 +33,27 @@
 	float: right;
 	display: block;
 	width: 100%;
-	background-color: white;
-	font-size: 1.2em;
+	background-color: $white;
 	color: #6a6c6a;
+	font-size: 1.2em;
+	padding: 1em 0.5em 1em 2.4em;
 	border-radius: 0.3em;
 	overflow: hidden;
 	border: 2px solid #e5e9e9;
-	&:focus {border-color: #46badb;}
 	-webkit-appearance: none; /* to remove input shadow in iOS */
 	transition: background-color 0.25s, border-color 0.25s;
+
+	&:focus {
+		border-color: #46badb;
+	}
+}
+
+/* Textarea */
+.form__field--ta {
+	font-family: inherit;
+	line-height: 1.2;
+	overflow-y: auto;
+	resize: none;
 }
 
 .form__label {
@@ -86,6 +86,8 @@
 	margin-top: 0.9em;
 	transition: transform 0.3s;
 }
+
+/*************** Form field focus animation ***************/
 
 .form__field:focus + .form__label .form__label-text,
 .form__field--filled + .form__label .form__label-text {

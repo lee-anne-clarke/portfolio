@@ -8,7 +8,7 @@ function Skills() {
 			<h2>Skills</h2> 
 
 			<section className="skills__set">
-				<h3 className="skills__set-title">Programming &amp; Design</h3>
+				<h3 className="h3-skillsset">Programming &amp; Design</h3>
 
 				<div className="skills__set-left">
 					<SkillsButton text="HTML5" classes="fa fa-html5 skills__btn--prog skills__btn--html5" />
@@ -29,7 +29,7 @@ function Skills() {
 
 
 			<section className="skills__set">
-				<h3 className="skills__set-title">Content Management Systems</h3>
+				<h3 className="h3-skillsset">Content Management Systems</h3>
 
 				<div className="skills__set-left">
 					<SkillsButton text="WordPress" classes="fa fa-wordpress skills__btn--cms skills__btn--wordpress" />

@@ -84,7 +84,7 @@
 /******************************* Programming & Design *******************************/
 
 .skills__btn--prog {
-	color: white;
+	color: $white;
 
 	&::before {
 		background-size: 100%;
@@ -174,7 +174,7 @@
 		font-weight: 700;
 	}
 	span {
-		color: white;
+		color: $white;
 	}
 }
 
@@ -184,7 +184,7 @@
 	background-color: #f6f3f3;
 
 	span {
-		color: white;
+		color: $white;
 	}
 	
 	&:hover span {
@@ -260,10 +260,6 @@
 }
 
 @media (min-width: 600px) {
-	.skills__set-title {
-		margin-bottom: 1em;
-	}
-	
 	.skills__btn {
 		margin-bottom: 5em;
 	}

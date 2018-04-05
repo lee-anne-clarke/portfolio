@@ -2,22 +2,22 @@
 	Buttons and Hyperlinks
 ---------------------------------------------------*/
 
-a,
-a:active,
-a:focus {
-	color: #2488ce;
+.btn {
+	color: $black;
+	line-height: 1.6;
 	text-decoration: none;
-}
+	transition: border-bottom 0.2s;
 
-a:hover {
-	color: #4ac3e5;
-	text-decoration: none;
-}
+	&, 
+	&:active, 
+	&:focus {
+		border-bottom: 1px dashed #616161;
+	}
 
-a:focus {
-	outline: #4ac3e5;
+	&:hover {
+		border-bottom: 1px dashed transparent;
+	}
 }
-
 
 
 /********** Nav **********/
@@ -25,15 +25,16 @@ a:focus {
 .btn-nav {
 	position: relative;
 	z-index: 1;
+	display: inline-block;
 	width: 2em;
 	height: 2em;
 	background-color: transparent;
-	color: white;
+	color: $white;
 	font-size: 1.1em;
 	text-align: center;
 	border: none;
 	border-radius: 50%;
-	box-shadow: 0 0 0 0.05em white;
+	box-shadow: 0 0 0 0.05em $white;
 	cursor: pointer;
 	transition: 
 		transform ease-out 0.1s, 
@@ -67,14 +68,6 @@ a:focus {
 
 	&:focus {
 		outline: none;
-	}
-
-	span { /* Hide screen reader text */
-		position: absolute !important;
-		width: 1px;
-		height: 1px;
-		overflow: hidden;
-		clip: rect(1px, 1px, 1px, 1px);
 	}
 
 	@media (min-width: 320px) {		
@@ -114,7 +107,7 @@ a:focus {
 		}
 
 		&:hover {
-			background-color: white;
+			background-color: $white;
 			color: #1abdda;
 			box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.3);
 		}
@@ -140,30 +133,58 @@ a:focus {
 }
 
 
+/********** Header **********/
+
+.btn-header {
+	display: inline-block;
+	color: $white;
+	transition: opacity 0.3s;
+
+	&, 
+	&:active, 
+	&:focus {
+		opacity: 0.65;
+	}
+
+	&:hover {
+		opacity: 1;
+	}
+
+	.fa:before {
+		font-size: 1.8em;
+	}
+
+	span {
+		display: block;
+		font-family: 'Raleway',Arial,Helvetica,sans-serif;
+		font-size: 0.65em;
+	}
+}
+
 
 /********** Work - sort buttons **********/
 
 .btn-sort {
 	width: 7em;
-	background-color: white;
+	background-color: $white;
 	padding: 0.5em 0;
 	border: none;
 	border-radius: 0.3em;
 	box-shadow: 0 0.15em #e5ecf4;
 	transition: background-color 0.15s, color 0.15s;
-}
-
-.btn-sort--active {
-	background-color: #22afd4;
-	color: white;
+	
+	&.active {
+		background-color: $cerulean;
+		color: $white;
+	}
 }
 
 /********** Contact - submit button **********/
 
 .btn-submit {
 	display: block;
-	background-color: #22afd4;
-	color: white;
+	background-color: $cerulean;
+	color: $white;
 	font-family: inherit;
 	font-size: 1.2em;
 	letter-spacing: 1px;
@@ -186,7 +207,7 @@ a:focus {
 		position: absolute;
 		left: 2%;
 		width: 40%;
-		color: white;
+		color: $white;
 		font-size: 120%;
 		line-height: 0.8;
 	}
@@ -200,7 +221,7 @@ a:focus {
 }
 
 .btn-submit--clicked {
-	background-color: #22afd4;
+	background-color: $cerulean;
 	animation: fadeOutText 0.5s;
 	
 	&::before {
@@ -208,11 +229,10 @@ a:focus {
 	}
 }
 
-
 @keyframes fadeOutText {
 	0% { color: transparent; }
 	80% { color: transparent; }
-	100% { color: white; }
+	100% { color: $white; }
 }
 
 @keyframes zoomRight {
@@ -222,4 +242,13 @@ a:focus {
 	83% { opacity: 0; transform: translateX(-50%); }
 	84% { opacity: 1; transform: translateX(-50%);  }
 	100% { transform: translateX(0%); }
+}
+
+
+/********** Modals **********/
+
+.btn--viewproject {
+	@media (min-width: 600px) {
+		font-size: 1.2em;
+	}
 }

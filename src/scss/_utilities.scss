@@ -19,3 +19,12 @@
 .u-text-left {
 	text-align: left;
 }
+
+// Text for screen readers 
+.u-sr {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+}

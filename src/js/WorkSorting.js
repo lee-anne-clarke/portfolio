@@ -6,73 +6,87 @@ class WorkSorting extends Component {
 		const sortAll = document.querySelectorAll('.sort');
 		const sortBtns = document.querySelectorAll('.btn-sort');
 
-		const sortAllBtn = document.getElementById('sortAllBtn');
-		const sortWpBtn = document.getElementById('sortWpBtn');
-		const sortDrupalBtn = document.getElementById('sortDrupalBtn');
-		const sortVueBtn = document.getElementById('sortVueBtn');
-		const sortReactBtn = document.getElementById('sortReactBtn');
-		const sortBootstrapBtn = document.getElementById('sortBootstrapBtn');
-		const sortFoundationBtn = document.getElementById('sortFoundationBtn');
-		const sortEmailsBtn = document.getElementById('sortEmailsBtn');
+		// Buttons
+		const btnSortAll = document.getElementById('btnSortAll');
+		const btnSortWP = document.getElementById('btnSortWP');
+		const btnSortDrupal = document.getElementById('btnSortDrupal');
+		const btnSortVue = document.getElementById('btnSortVue');
+		const btnSortReact = document.getElementById('btnSortReact');
+		const btnSortBootstrap = document.getElementById('btnSortBootstrap');
+		const btnSortFoundation = document.getElementById('btnSortFoundation');
+		const btnSortEmails = document.getElementById('btnSortEmails');
+		const btnSortOther = document.getElementById('btnSortOther');
 
-		sortAllBtn.addEventListener('click', () => {
+
+		// Sort all
+		btnSortAll.addEventListener('click', () => {
     	for (let i of sortAll) {
 				i.style.display = 'inline-block';  
     	}
 
+    	// Add the active class to the button
     	for (let j of sortBtns) {
-    		if ( j === sortAllBtn ) {
-    			sortAllBtn.classList.add('btn-sort--active');
+    		if ( j === btnSortAll ) {
+    			btnSortAll.classList.add('active');
     		} else {
-    			j.classList.remove('btn-sort--active');
+    			j.classList.remove('active');
     		}
     	}
     });
 
+		
+		// Sort individual categories
     function sortItems(theClassName, theBtn) {
     	for (let i of sortAll) {
     		if ( i.classList.contains(theClassName) ) {
-	        	i.style.display = 'inline-block';
+					i.style.display = 'inline-block';
 	    	} else {
 	    		i.style.display = 'none';
 	    	}
     	}
 
+    	// Add the active class to the active button
     	for (let j of sortBtns) {
     		if ( j === theBtn ) {
-    			theBtn.classList.add('btn-sort--active');
+    			theBtn.classList.add('active');
     		} else {
-    			j.classList.remove('btn-sort--active');
+    			j.classList.remove('active');
     		}
     	}
     }
 
-    sortWpBtn.addEventListener('click', () => {
-    	sortItems('sort-wp', sortWpBtn);
+
+    // Button events
+    btnSortWP.addEventListener('click', () => {
+    	sortItems('sort-wp', btnSortWP);
     });
 
-    sortDrupalBtn.addEventListener('click', () => {
-    	sortItems('sort-drupal', sortDrupalBtn);
+    btnSortDrupal.addEventListener('click', () => {
+    	sortItems('sort-drupal', btnSortDrupal);
     });
 
-    sortVueBtn.addEventListener('click', () => {
-    	sortItems('sort-vue', sortVueBtn);
+    btnSortVue.addEventListener('click', () => {
+    	sortItems('sort-vue', btnSortVue);
     });
 
-    sortReactBtn.addEventListener('click', () => {
-    	sortItems('sort-react', sortReactBtn);
+    btnSortReact.addEventListener('click', () => {
+    	sortItems('sort-react', btnSortReact);
     });
 
-		sortBootstrapBtn.addEventListener('click', () => {
-    	sortItems('sort-bs', sortBootstrapBtn);
+		btnSortBootstrap.addEventListener('click', () => {
+    	sortItems('sort-bs', btnSortBootstrap);
     });
 
-		sortFoundationBtn.addEventListener('click', () => {
-    	sortItems('sort-foundation', sortFoundationBtn);
+		btnSortFoundation.addEventListener('click', () => {
+    	sortItems('sort-foundation', btnSortFoundation);
     });
 
-		sortEmailsBtn.addEventListener('click', () => {
-    	sortItems('sort-emails', sortEmailsBtn);
+		btnSortEmails.addEventListener('click', () => {
+    	sortItems('sort-emails', btnSortEmails);
+    });
+
+		btnSortOther.addEventListener('click', () => {
+    	sortItems('sort-other', btnSortOther);
     });
 	}
 
@@ -80,35 +94,39 @@ class WorkSorting extends Component {
 		return (
 			<ul className="work__sorting">
 				<li>
-					<button className="btn-sort btn-sort--active" id="sortAllBtn">All</button>
+					<button className="btn-sort active" id="btnSortAll">All</button>
 				</li>
 
 				<li>
-					<button className="btn-sort" id="sortWpBtn">WordPress</button>
+					<button className="btn-sort" id="btnSortWP">WordPress</button>
 				</li>
 
 				<li>
-					<button className="btn-sort" id="sortDrupalBtn">Drupal</button>
+					<button className="btn-sort" id="btnSortDrupal">Drupal</button>
 				</li>
 
 				<li>
-					<button className="btn-sort" id="sortVueBtn">Vue.js</button>
+					<button className="btn-sort" id="btnSortVue">Vue.js</button>
 				</li>
 
 				<li>
-					<button className="btn-sort" id="sortReactBtn">React</button>
+					<button className="btn-sort" id="btnSortReact">React</button>
 				</li>
 
 				<li>
-					<button className="btn-sort" id="sortBootstrapBtn">Bootstrap</button>
+					<button className="btn-sort" id="btnSortBootstrap">Bootstrap</button>
 				</li>
 
 				<li>
-					<button className="btn-sort" id="sortFoundationBtn">Foundation</button>
+					<button className="btn-sort" id="btnSortFoundation">Foundation</button>
 				</li>
 
 				<li>
-					<button className="btn-sort" id="sortEmailsBtn">Emails</button>
+					<button className="btn-sort" id="btnSortEmails">Emails</button>
+				</li>
+
+				<li>
+					<button className="btn-sort" id="btnSortOther">Other</button>
 				</li>
 			</ul>
 		);
