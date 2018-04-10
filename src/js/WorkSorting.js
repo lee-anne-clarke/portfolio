@@ -4,9 +4,9 @@ import React, { Component } from 'react'
 class WorkSorting extends Component {
 	componentDidMount() {
 		const sortAll = document.querySelectorAll('.sort');
-		const sortBtns = document.querySelectorAll('.btn-sort');
 
 		// Buttons
+		const sortBtns = document.querySelectorAll('.btn-sort');
 		const btnSortAll = document.getElementById('btnSortAll');
 		const btnSortWP = document.getElementById('btnSortWP');
 		const btnSortDrupal = document.getElementById('btnSortDrupal');
@@ -33,7 +33,6 @@ class WorkSorting extends Component {
     		}
     	}
     });
-
 		
 		// Sort individual categories
     function sortItems(theClassName, theBtn) {
@@ -54,7 +53,6 @@ class WorkSorting extends Component {
     		}
     	}
     }
-
 
     // Button events
     btnSortWP.addEventListener('click', () => {

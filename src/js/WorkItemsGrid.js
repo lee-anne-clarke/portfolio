@@ -339,7 +339,7 @@ class WorkItemsGrid extends Component {
 	  i += 1; //start index at 1 instead of 0
 
 		return (
-			<div key={i} className={`workitem sort ${item.sortClasses}`}>
+			<div className={`workitem sort ${item.sortClasses}`} key={i}>
 	      <input className="modal-checkbox" type="checkbox" name={`workItem${i}`} id={`workItem${i}`} />
 	      
 	      <label className="modal-label modal-open" htmlFor={`workItem${i}`}>
