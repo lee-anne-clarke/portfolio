@@ -17,35 +17,34 @@
 	white-space: nowrap;
 }
 
-.nav__list {
+.nav-list {
 	padding: 0.5em 0 0;
 	margin: 0;
 
 	@media (min-width: 375px) {
 		padding: 0.3em 0 0;
 	}
-	
-	li {
-		display: inline-block;
-		margin-right: 1em;
+}
 
-		&:last-child {
-			margin-right: 0;
-		}
+.nav-li {
+	display: inline-block;
+	margin-right: 1em;
 
-		@media (min-width: 375px) {
-			margin-right: 1.5em;
-		}
-
-		@media (min-width: 600px) {
-			margin-right: 2em;
-		}
+	&:last-child {
+		margin-right: 0;
 	}
-	
+
+	@media (min-width: 375px) {
+		margin-right: 1.5em;
+	}
+
+	@media (min-width: 600px) {
+		margin-right: 2em;
+	}
 }
 
 
-li.nav-li-home {
+.nav-li--home {
 	display: none;
 
 	@media (min-width: 600px) {
@@ -53,7 +52,8 @@ li.nav-li-home {
 	}
 }
 
-li.nav-li-edu {
+
+.nav-li--edu {
 	@media (min-width: 600px) {
 		display: none;
 	}

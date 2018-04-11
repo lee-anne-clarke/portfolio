@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import uuid from 'uuid'
 import Scroll from 'react-scroll'
-
+import NavItem from './NavItem'
 
 //Variables necessary for React Scroll package
 let Events     = Scroll.Events;
@@ -11,7 +12,7 @@ let scroller   = Scroll.scroller;
 
 class Nav extends Component {
 	
-	//Functions necessary for React Scroll
+	/* Functions necessary for React Scroll */
 	componentDidMount() {
 		scrollSpy.update();
 	}
@@ -48,30 +49,56 @@ class Nav extends Component {
 	render() {
 		return (
 			<nav className="nav">
-				<ul className="nav__list">
-					<li className="nav-li-home">
-						<a className="btn-nav fa fa-home" onClick={this.scrollToTop}><span className="u-sr">Home</span></a>
-					</li>
+				<ul className="nav-list">
 
-					<li>
-						<a className="btn-nav fa fa-user" onClick={this.scrollToAbout}><span className="u-sr">About</span></a>
-					</li>
+					<NavItem 
+						liClass=" nav-li--home"
+						id={uuid()}
+						faClass="fa-home"
+						clickEvent={this.scrollToTop}
+						srText="Home"
+					/>
 
-					<li className="nav-li-edu">
-						<a className="btn-nav fa fa-graduation-cap" onClick={this.scrollToEdu}><span className="u-sr">Education</span></a>
-					</li>
+					<NavItem 
+						liClass=""
+						id={uuid()}
+						faClass="fa-user"
+						clickEvent={this.scrollToAbout}
+						srText="About"
+					/>
 
-					<li>
-						<a className="btn-nav fa fa-wrench" onClick={this.scrollToSkills}><span className="u-sr">Skills</span></a>
-					</li>
+					<NavItem 
+						liClass=" nav-li--edu"
+						id={uuid()}
+						faClass="fa-graduation-cap"
+						clickEvent={this.scrollToEdu}
+						srText="Education"
+					/>
 
-					<li> 
-						<a className="btn-nav fa fa-diamond" onClick={this.scrollToWork}><span className="u-sr">Work</span></a>
-					</li>
+					<NavItem 
+						liClass=""
+						id={uuid()}
+						faClass="fa-wrench"
+						clickEvent={this.scrollToSkills}
+						srText="Skills"
+					/>
 
-					<li>
-						<a className="btn-nav fa fa-paper-plane-o" onClick={this.scrollToContact}><span className="u-sr">Contact</span></a>
-					</li>
+					<NavItem 
+						liClass=""
+						id={uuid()}
+						faClass="fa-briefcase"
+						clickEvent={this.scrollToWork}
+						srText="Work"
+					/>
+
+					<NavItem 
+						liClass=""
+						id={uuid()}
+						faClass="fa-paper-plane-o"
+						clickEvent={this.scrollToContact}
+						srText="Contact"
+					/>
+
 				</ul>
 			</nav>
 		);

@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function SkillsButton(props) {
+function SkillButton(props) {
 	return (
 		<button className={`skills__btn ${props.classes}`}>
 			<span>{props.text}</span>
@@ -10,4 +10,4 @@ function SkillsButton(props) {
 }
 
 
-export default SkillsButton
+export default SkillButton

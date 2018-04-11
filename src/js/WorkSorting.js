@@ -1,7 +1,70 @@
 import React, { Component } from 'react'
+import uuid from 'uuid'
 
 
 class WorkSorting extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      btnListItems: [
+			{ 
+				id: uuid(), 
+				btnClass: 'active',
+				btnID: 'btnSortAll',
+				btnText: 'All',
+			},
+			{ 
+				id: uuid(), 
+				btnClass: '',
+				btnID: 'btnSortWP',
+				btnText: 'WordPress',
+			},
+			{ 
+				id: uuid(), 
+				btnClass: '',
+				btnID: 'btnSortDrupal',
+				btnText: 'Drupal',
+			},
+			{ 
+				id: uuid(), 
+				btnClass: '',
+				btnID: 'btnSortVue',
+				btnText: 'Vue.js',
+			},
+			{ 
+				id: uuid(), 
+				btnClass: '',
+				btnID: 'btnSortReact',
+				btnText: 'React',
+			},
+			{ 
+				id: uuid(), 
+				btnClass: '',
+				btnID: 'btnSortBootstrap',
+				btnText: 'Bootstrap',
+			},
+			{ 
+				id: uuid(), 
+				btnClass: '',
+				btnID: 'btnSortFoundation',
+				btnText: 'Foundation',
+			},
+			{ 
+				id: uuid(), 
+				btnClass: '',
+				btnID: 'btnSortEmails',
+				btnText: 'Emails',
+			},
+			{ 
+				id: uuid(), 
+				btnClass: '',
+				btnID: 'btnSortOther',
+				btnText: 'Other',
+			},
+     ],
+    }
+  }
+
 	componentDidMount() {
 		const sortAll = document.querySelectorAll('.sort');
 
@@ -89,43 +152,17 @@ class WorkSorting extends Component {
 	}
 
 	render() {
+		const { btnListItems } = this.state
+
 		return (
 			<ul className="work__sorting">
-				<li>
-					<button className="btn-sort active" id="btnSortAll">All</button>
-				</li>
-
-				<li>
-					<button className="btn-sort" id="btnSortWP">WordPress</button>
-				</li>
-
-				<li>
-					<button className="btn-sort" id="btnSortDrupal">Drupal</button>
-				</li>
-
-				<li>
-					<button className="btn-sort" id="btnSortVue">Vue.js</button>
-				</li>
-
-				<li>
-					<button className="btn-sort" id="btnSortReact">React</button>
-				</li>
-
-				<li>
-					<button className="btn-sort" id="btnSortBootstrap">Bootstrap</button>
-				</li>
-
-				<li>
-					<button className="btn-sort" id="btnSortFoundation">Foundation</button>
-				</li>
-
-				<li>
-					<button className="btn-sort" id="btnSortEmails">Emails</button>
-				</li>
-
-				<li>
-					<button className="btn-sort" id="btnSortOther">Other</button>
-				</li>
+				{btnListItems.map(({ id, btnClass, btnID, btnText }) => (
+					<li key={id}>
+						<button className={`btn-sort ${btnClass}`} id={btnID}>
+							{btnText}
+						</button>
+					</li>
+				))}
 			</ul>
 		);
 	}
