@@ -157,7 +157,7 @@ class WorkSorting extends Component {
 		return (
 			<ul className="work__sorting">
 				{btnListItems.map(({ id, btnClass, btnID, btnText }) => (
-					<li key={id}>
+					<li className="ws-li" key={id}>
 						<button className={`btn-sort ${btnClass}`} id={btnID}>
 							{btnText}
 						</button>

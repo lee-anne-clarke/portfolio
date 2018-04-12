@@ -28,14 +28,6 @@
 	max-width: 100%;
 	text-align: center;
 	margin: 0;
-
-	img {
-		max-width: 100%;
-		height: auto;
-		border: 0.05em solid #f3f3f3;
-		border-radius: 0.3em;
-		box-shadow: 0 .3em #e5ecf4;
-	}
 }
 
 .workitem__img {
@@ -43,11 +35,11 @@
 	height: auto;
 	border: 0.05em solid #f3f3f3;
 	border-radius: 0.3em;
-	box-shadow: 0 .3em #e5ecf4;
+	box-shadow: 0 0.3em #e5ecf4;
 }
 
 
-/********** Work item hover effects **********/
+/********** Work item hover effects (desktop only) **********/
 
 @media (min-width: 600px) {	
 	.workitem__img {
@@ -106,15 +98,16 @@
 	list-style-type: none;
 	padding-left: 0;
 	margin-top: 3em;
+}
 
-	li {
-		display: inline-block;
-		width: 50%;
+.ws-li {
+	display: inline-block;
+	width: 50%;
+	padding-bottom: 1.5em;
+
+	@media (min-width: 600px) {
+		width: 25%;
 		padding-bottom: 3em;
-
-		@media (min-width: 600px) {
-			width: 25%;
-		}
 	}
 }
 

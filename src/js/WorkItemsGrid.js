@@ -13,9 +13,9 @@ import {
 	ModalSummaryModSig,
 	ModalSummaryITSLEmail,
 	ModalSummaryChanel,
-	ModalSummaryBea,
 	ModalSummaryLAC,
-	ModalSummaryPhotoSearch
+	ModalSummaryPhotoSearch,
+	ModalSummaryGDC
 } from './ModalSummary'
 
 
@@ -25,7 +25,6 @@ class WorkItemsGrid extends Component {
 		this.state = {
 			workItems: [
 			  {
-			    id: 1,
 			    title: "NAHB Int'l Builders' Show",
 			    titleFull: "NAHB International Builders' Show 2017",
 			    itemImgSrc: require("../img/buildersshow.jpg"),
@@ -40,7 +39,6 @@ class WorkItemsGrid extends Component {
 			  },
 
 		    {
-			    id: 2,
 			    title: "Grandstand",
 			    titleFull: "Grandstand",
 			    itemImgSrc: require("../img/grandstand.jpg"),
@@ -53,7 +51,6 @@ class WorkItemsGrid extends Component {
 		  	},
 
 			  {
-			    id: 3,
 			    title: "Viable",
 			    titleFull: "Viable",
 			    itemImgSrc: require("../img/viable.jpg"),
@@ -66,35 +63,21 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			  	id: 4,
-			    title: "Bracco",
-			    titleFull: "Bracco: Learn the Truth",
-			    itemImgSrc: require("../img/bracco.jpg"),
-			    description: "microsite",
-			    sortClasses: "sort-bs",
-			    modalImgOneSrc: require("../img/bracco-full.jpg"),
-			    modalImgOneAlt: "Grandstand landing page screen cap - full",
-			    modalSummary: <ModalSummaryBracco />,
-			    projectURL: "/work/bracco/",
-			    projectRepo: "bracco"
-			  },
-
-
-			  {
-			  	id: 5,
-				  title: "Lee-Anne-Clarke.com",
-				  titleFull: "Lee-Anne-Clarke.com",
-				  itemImgSrc: require("../img/portfolio.jpg"),
-				  description: "my portfolio",
-				  sortClasses: "sort-react",
-			    modalImgOneSrc: require("../img/portfolio-full.jpg"),
-			    modalImgOneAlt: "Lee-Anne-Clarke.com screen cap - full",
-			    modalSummary: <ModalSummaryLAC />,
-			    projectRepo: "portfolio"
+			    title: "Great Design Co.",
+			    titleFull: "Great Design Co.",
+			    itemImgSrc: require("../img/gdc.jpg"),
+			    description: "mock design agency",
+			    sortClasses: "sort-react",
+			    modalImgOneSrc: require("../img/gdc-full-1.jpg"),
+			    modalImgOneAlt: "Great Design Co. screen cap - homepage",
+			    modalImgTwoSrc: require("../img/gdc-full-2.jpg"),
+			    modalImgTwoAlt: "Great Design Co. screen cap - project page",
+			    modalSummary: <ModalSummaryGDC />,
+			    projectURL: "/work/greatdesignco/",
+			    projectRepo: "greatdesignco"
 			  },
 
 			  {
-			  	id: 6,
 				  title: "The Fresh Grocer",
 				  titleFull: "The Fresh Grocer",
 				  itemImgSrc: require("../img/freshgrocer.jpg"),
@@ -108,37 +91,31 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			  	id: 7,
-			    title: "Fiservices",
-			    titleFull: "Fiservices",
-			    itemImgSrc: require("../img/fiservices.jpg"),
-			    description: "mock financial services website",
-			    sortClasses: "sort-wp",
-			    modalImgOneSrc: require("../img/fiservices-full-1.jpg"),
-			    modalImgOneAlt: "Fiservices screen cap - homepage",
-					modalImgTwoSrc: require("../img/fiservices-full-2.jpg"),
-			    modalImgTwoAlt: "Fiservices screen cap - inside page",
-			    modalSummary: <ModalSummaryFiserv />,
-			    projectURL: "/work/fiservices/"
+				  title: "Lee-Anne-Clarke.com",
+				  titleFull: "Lee-Anne-Clarke.com",
+				  itemImgSrc: require("../img/portfolio.jpg"),
+				  description: "my portfolio",
+				  sortClasses: "sort-react",
+			    modalImgOneSrc: require("../img/portfolio-full.jpg"),
+			    modalImgOneAlt: "Lee-Anne-Clarke.com screen cap - full",
+			    modalSummary: <ModalSummaryLAC />,
+			    projectRepo: "portfolio"
 			  },
 
 			  {
-			  	id: 8,
-			    title: "Silver Spark Jewelry",
-			    titleFull: "Silver Spark Jewelry",
-			    itemImgSrc: require("../img/silverspark.jpg"),
-			    description: "mock business website",
-			    sortClasses: "sort-wp",
-			    modalImgOneSrc: require("../img/silverspark-full-1.jpg"),
-			    modalImgOneAlt: "Silver Spark Jewelry screen cap - homepage",
-					modalImgTwoSrc: require("../img/silverspark-full-2.jpg"),
-			    modalImgTwoAlt: "Silver Spark Jewelry screen cap - inside page",
-			    modalSummary: <ModalSummarySilver />,
-			    projectURL: "/work/silverspark/"
+			    title: "Bracco",
+			    titleFull: "Bracco: Learn the Truth",
+			    itemImgSrc: require("../img/bracco.jpg"),
+			    description: "microsite",
+			    sortClasses: "sort-bs",
+			    modalImgOneSrc: require("../img/bracco-full.jpg"),
+			    modalImgOneAlt: "Grandstand landing page screen cap - full",
+			    modalSummary: <ModalSummaryBracco />,
+			    projectURL: "/work/bracco/",
+			    projectRepo: "bracco"
 			  },
 
 			  {
-			  	id: 9,
 			    title: "Upserve",
 			    titleFull: "Upserve",
 			    itemImgSrc: require("../img/upserve.jpg"),
@@ -153,7 +130,6 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			  	id: 10,
 			    title: "itslearning, inc.",
 			    titleFull: "itslearning, inc.",
 			    itemImgSrc: require("../img/itslearning-cp.jpg"),
@@ -166,7 +142,6 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			  	id: 11,
 					title: "City Hospital",
 					titleFull: "City Hospital",
 					itemImgSrc: require("../img/cityhospital.jpg"),
@@ -180,7 +155,6 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			  	id: 12,
 			    title: "Modern Signal",
 			    titleFull: "Modern Signal",
 			    itemImgSrc: require("../img/teampage.jpg"),
@@ -194,7 +168,6 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			  	id: 13,
 			    title: "itslearning, inc.",
 			    titleFull: "itslearning, inc.",
 			    itemImgSrc: require("../img/itslearning-email.jpg"),
@@ -208,21 +181,6 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			  	id: 14,
-			    title: "Flickr photo search",
-			    titleFull: "Flickr photo search",
-			    itemImgSrc: require("../img/photosearch.jpg"),
-			    description: "independent project",
-			    sortClasses: "sort-other",
-			    modalImgOneSrc: require("../img/photosearch-full.jpg"),
-			    modalImgOneAlt: "Flickr photo search screen cap - full",
-			    modalSummary: <ModalSummaryPhotoSearch />,
-			    projectURL: "/work/photosearch/",
-			    projectRepo: "photosearch"
-			  },
-
-			  {
-			    id: 15,
 			    title: "Chanel",
 			    titleFull: "Chanel",
 			    itemImgSrc: require("../img/chanel.jpg"),
@@ -237,19 +195,45 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			    id: 16,
-					title: "Beatrice's Salon",
-					titleFull: "Beatrice's Spa and Beauty Salon",
-					itemImgSrc: require("../img/beatrice.jpg"),
-					description: "mock business website",
-			    sortClasses: "sort-drupal",
-			    modalImgOneSrc: require("../img/beatrice-full-1.jpg"),
-			    modalImgOneAlt: "Beatrice Spa and Beauty Salon screen cap - homepage",
-			    modalImgTwoSrc: require("../img/beatrice-full-2.jpg"),
-			    modalImgTwoAlt: "Beatrice Spa and Beauty Salon screen cap - inside page",
-			    modalSummary: <ModalSummaryBea />,
-			    projectURL: "/work/beatrice/"
-			  }
+			    title: "Fiservices",
+			    titleFull: "Fiservices",
+			    itemImgSrc: require("../img/fiservices.jpg"),
+			    description: "mock financial services website",
+			    sortClasses: "sort-wp",
+			    modalImgOneSrc: require("../img/fiservices-full-1.jpg"),
+			    modalImgOneAlt: "Fiservices screen cap - homepage",
+					modalImgTwoSrc: require("../img/fiservices-full-2.jpg"),
+			    modalImgTwoAlt: "Fiservices screen cap - inside page",
+			    modalSummary: <ModalSummaryFiserv />,
+			    projectURL: "/work/fiservices/"
+			  },
+
+			  {
+			    title: "Silver Spark Jewelry",
+			    titleFull: "Silver Spark Jewelry",
+			    itemImgSrc: require("../img/silverspark.jpg"),
+			    description: "mock business website",
+			    sortClasses: "sort-wp",
+			    modalImgOneSrc: require("../img/silverspark-full-1.jpg"),
+			    modalImgOneAlt: "Silver Spark Jewelry screen cap - homepage",
+					modalImgTwoSrc: require("../img/silverspark-full-2.jpg"),
+			    modalImgTwoAlt: "Silver Spark Jewelry screen cap - inside page",
+			    modalSummary: <ModalSummarySilver />,
+			    projectURL: "/work/silverspark/"
+			  },
+
+			  {
+			    title: "Flickr photo search",
+			    titleFull: "Flickr photo search",
+			    itemImgSrc: require("../img/photosearch.jpg"),
+			    description: "independent project",
+			    sortClasses: "sort-other",
+			    modalImgOneSrc: require("../img/photosearch-full.jpg"),
+			    modalImgOneAlt: "Flickr photo search screen cap - full",
+			    modalSummary: <ModalSummaryPhotoSearch />,
+			    projectURL: "/work/photosearch/",
+			    projectRepo: "photosearch"
+			  },
 			]
 		}
 
