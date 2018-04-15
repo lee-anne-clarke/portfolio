@@ -59,7 +59,8 @@ function ModalSummarySilver() {
 function ModalSummaryFresh() {
   return (
     <p>
-	    Built with React and compiled for production using npm. Packages used include <a className="btn" href="https://github.com/RRutsche/react-parallax" target="blank">react-parallax</a> for parallax images, <a className="btn" href="https://github.com/fisshy/react-scroll" target="blank">react-scroll</a> for smooth scrolling anchor links, <a className="btn" href="https://github.com/jlmakes/scrollreveal" target="blank">ScrollReveal</a> for fade-in on scroll effect, and <a className="btn" href="https://github.com/negomi/react-burger-menu" target="blank">react-burger-menu</a> for mobile navigation. CSS created with Sass and compiled with <a className="btn" href="https://www.npmjs.com/package/node-sass-chokidar" target="_blank">node-sass-chokidar</a>. Free stock photos from <a className="btn" href="https://unsplash.com/" target="_blank">Unsplash</a>.
+	    Built with React and compiled for production using <a className="btn" href="https://github.com/facebook/create-react-app" target="blank">Create React App</a>. <a className="btn" href="https://github.com/ReactTraining/react-router" target="blank">React Router</a> used for navigation. <a className="btn" href="https://github.com/RRutsche/react-parallax" target="blank">react-parallax</a> used for parallax images. <a className="btn" href="https://github.com/negomi/react-burger-menu" target="blank">react-burger-menu</a> used for mobile navigation menu. <a className="btn" href="https://github.com/fisshy/react-scroll" target="blank">React Scroll</a> used for smooth-scrolling links. <a className="btn" href="https://github.com/jlmakes/scrollreveal" target="blank">ScrollReveal</a> used for scroll effects. CSS created with Sass and compiled with <a className="btn" href="http://koala-app.com/" target="_blank">Koala</a>. Free stock photos from <a className="btn" href="https://unsplash.com/" target="_blank">Unsplash</a>.
+
 	  </p>
   );
 }
@@ -130,7 +131,7 @@ function ModalSummaryBea() {
 function ModalSummaryLAC() {
   return (
     <p>
-	    Built with React and compiled for production using npm. CSS3 animation used for navigation buttons. <a className="btn" href="https://github.com/fisshy/react-scroll" target="blank">react-scroll</a> used for smooth scrolling navigation links. CSS created with Sass and compiled with <a className="btn" href="https://www.npmjs.com/package/node-sass-chokidar" target="_blank">node-sass-chokidar</a>. 
+	    Built with React and compiled for production using <a className="btn" href="https://github.com/facebook/create-react-app" target="blank">Create React App</a>. <a className="btn" href="https://github.com/fisshy/react-scroll" target="blank">React Scroll</a> used for smooth-scrolling navigation links. CSS3 animation used for navigation buttons. CSS created with Sass and compiled with <a className="btn" href="https://www.npmjs.com/package/node-sass-chokidar" target="_blank">node-sass-chokidar</a>. 
 	  </p>
   );
 }
@@ -144,7 +145,7 @@ function ModalSummaryPhotoSearch() {
 function ModalSummaryGDC() {
   return (
     <p>
-	    Built with React and compiled for production using npm. CSS3 animation used for navigation buttons. <a className="btn" href="https://github.com/fisshy/react-scroll" target="blank">react-scroll</a> used for smooth scrolling sub-navigation links. <a className="btn" href="https://github.com/akiran/react-slick" target="_blank">react-slick</a> used for image carousels. <a className="btn" href="https://github.com/jlmakes/scrollreveal" target="_blank">ScrollReveal</a> used for page transition animations. <a className="btn" href="https://github.com/tajo/react-portal" target="_blank">react-portal</a> used for "Contact Us" modal. <a className="btn" href="https://github.com/brigade/react-waypoint" target="_blank">react-waypoint</a> used for primary navigation transition on scroll. CSS created with Sass and compiled with <a className="btn" href="http://koala-app.com/" target="_blank">Koala</a>. 
+	    Built with React and compiled for production using <a className="btn" href="https://github.com/facebook/create-react-app" target="blank">Create React App</a>. <a className="btn" href="https://github.com/ReactTraining/react-router" target="blank">React Router</a> used for navigation. <a className="btn" href="https://github.com/fisshy/react-scroll" target="blank">React Scroll</a> used for smooth-scrolling sub-navigation links. <a className="btn" href="https://github.com/akiran/react-slick" target="_blank">react-slick</a> used for image carousels. <a className="btn" href="https://github.com/jlmakes/scrollreveal" target="_blank">ScrollReveal</a> used for page transition animations. <a className="btn" href="https://github.com/tajo/react-portal" target="_blank">react-portal</a> used for "Contact Us" modal. <a className="btn" href="https://github.com/brigade/react-waypoint" target="_blank">react-waypoint</a> used for primary navigation transition on scroll. CSS3 animation used for navigation buttons. CSS created with Sass and compiled with <a className="btn" href="http://koala-app.com/" target="_blank">Koala</a>. 
 	  </p>
   );
 }

@@ -3,19 +3,27 @@
 ---------------------------------------------------*/
 
 .btn {
-	color: $black;
-	line-height: 1.6;
+	font-weight: 600;
 	text-decoration: none;
-	transition: border-bottom 0.2s;
 
-	&, 
-	&:active, 
+	&,
 	&:focus {
-		border-bottom: 1px dashed #616161;
+		color: $black;
+		transition: color 0.25s ease-in-out;
 	}
 
-	&:hover {
-		border-bottom: 1px dashed transparent;
+	&:hover,
+	&:active {
+		color: $linkColor;
+	}
+}
+
+
+/********** Work modals **********/
+
+.btn--viewproject {
+	@media (min-width: 600px) {
+		font-size: 1.2em;
 	}
 }
 
@@ -96,7 +104,7 @@
 }
 
 
-// Animated links for desktop
+// Hover effects (desktop only)
 @media (min-width: 1025px) {
 	.btn-nav {
 		overflow: hidden;
@@ -179,6 +187,7 @@
 	}
 }
 
+
 /********** Contact - submit button **********/
 
 .btn-submit {
@@ -244,11 +253,3 @@
 	100% { transform: translateX(0%); }
 }
 
-
-/********** Modals **********/
-
-.btn--viewproject {
-	@media (min-width: 600px) {
-		font-size: 1.2em;
-	}
-}
