@@ -58,7 +58,7 @@
 	padding: 1em 2em;
 	margin-top: 2em;
 	cursor: pointer;
-	transition: color 0.2s;
+	transition: color 0.2s ease-in-out;
 
 	&, 
 	&:active, 

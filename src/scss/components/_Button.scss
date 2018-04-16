@@ -3,25 +3,39 @@
 ---------------------------------------------------*/
 
 .btn {
-	font-weight: 600;
+	color: $black;
 	text-decoration: none;
+	transition: border-bottom 0.2s ease-in-out;
 
 	&,
 	&:focus {
-		color: $black;
-		transition: color 0.25s ease-in-out;
+		border-bottom: 2px solid $bodyColor;
+		padding-bottom: 1px;
 	}
 
 	&:hover,
 	&:active {
-		color: $linkColor;
+		border-bottom: 2px solid $linkColor;
 	}
 }
 
 
 /********** Work modals **********/
 
-.btn--viewproject {
+.btn-viewproject {
+	text-decoration: none;
+	transition: color 0.2s ease-in-out;
+
+	&, 
+	&:active, 
+	&:focus {
+		color: $black;
+	}
+
+	&:hover {
+		color: $linkColor;
+	}
+
 	@media (min-width: 600px) {
 		font-size: 1.2em;
 	}
