@@ -355,23 +355,23 @@ class WorkItemsGrid extends Component {
 	          {item.modalSummary}
 
 	          <div style={modalViewProjStyle}>
-	          	<a className="btn-viewproject" href={item.projectURL} target="_blank"><i className="fa fa-external-link modal-fa"></i>view project</a>
+	          	<a className="btn-viewproject" href={item.projectURL} target="_blank" rel="noreferrer noopener"><i className="fa fa-external-link modal-fa"></i>view project</a>
 	          </div>
 
 	          <div style={modalViewRepoStyle}>
-							<a className="btn-viewproject" href={`https://github.com/lee-anne-clarke/${item.projectRepo}`} target="_blank"><i className="fa fa-file-code-o modal-fa"></i>view the repo</a>
+							<a className="btn-viewproject" href={`https://github.com/lee-anne-clarke/${item.projectRepo}`} target="_blank" rel="noreferrer noopener"><i className="fa fa-file-code-o modal-fa"></i>view the repo</a>
 	          </div>
 
 	          <div style={modalViewTempOneStyle}>
-							<a className="btn-viewproject" href={item.projTempURLOne} target="_blank"><i className="fa fa-tint modal-fa"></i>template 1</a>
+							<a className="btn-viewproject" href={item.projTempURLOne} target="_blank" rel="noreferrer noopener"><i className="fa fa-tint modal-fa"></i>template 1</a>
 	          </div>
 
 	          <div style={modalViewTempTwoStyle}>
-							<a className="btn-viewproject" href={item.projTempURLTwo} target="_blank"><i className="fa fa-tint modal-fa"></i>template 2</a>
+							<a className="btn-viewproject" href={item.projTempURLTwo} target="_blank" rel="noreferrer noopener"><i className="fa fa-tint modal-fa"></i>template 2</a>
 	          </div>
 
 	          <div style={modalViewTempThreeStyle}>
-							<a className="btn-viewproject" href={item.projTempURLThree} target="_blank"><i className="fa fa-tint modal-fa"></i>template 3</a>
+							<a className="btn-viewproject" href={item.projTempURLThree} target="_blank" rel="noreferrer noopener"><i className="fa fa-tint modal-fa"></i>template 3</a>
 	          </div>
 
 	          <label className="modal-label modal-close modal-close--bottom" htmlFor={`workItem${i}`}>
