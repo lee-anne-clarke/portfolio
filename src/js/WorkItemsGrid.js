@@ -242,7 +242,7 @@ class WorkItemsGrid extends Component {
 
 
   componentDidMount() {
-    //Add "u-no-overflow" class to body element when modal is open; remove when closed
+    //Add ".u-no-overflow" to <body> when modal is opened; remove when it's closed
     let openModal = document.querySelectorAll('.modal-open');
     let closeModal = document.querySelectorAll('.modal-close');
 

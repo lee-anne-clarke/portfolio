@@ -7,56 +7,47 @@ class WorkSorting extends Component {
     super(props);
     this.state = {
       btnListItems: [
-			{ 
-				id: uuid(), 
+			{
 				btnClass: 'active',
 				btnID: 'btnSortAll',
 				btnText: 'All',
 			},
-			{ 
-				id: uuid(), 
+			{
 				btnClass: '',
 				btnID: 'btnSortWP',
 				btnText: 'WordPress',
 			},
-			{ 
-				id: uuid(), 
+			{
 				btnClass: '',
 				btnID: 'btnSortDrupal',
 				btnText: 'Drupal',
 			},
-			{ 
-				id: uuid(), 
+			{
 				btnClass: '',
 				btnID: 'btnSortVue',
 				btnText: 'Vue.js',
 			},
-			{ 
-				id: uuid(), 
+			{
 				btnClass: '',
 				btnID: 'btnSortReact',
 				btnText: 'React',
 			},
-			{ 
-				id: uuid(), 
+			{
 				btnClass: '',
 				btnID: 'btnSortBootstrap',
 				btnText: 'Bootstrap',
 			},
-			{ 
-				id: uuid(), 
+			{
 				btnClass: '',
 				btnID: 'btnSortFoundation',
 				btnText: 'Foundation',
 			},
-			{ 
-				id: uuid(), 
+			{
 				btnClass: '',
 				btnID: 'btnSortEmails',
 				btnText: 'Emails',
 			},
-			{ 
-				id: uuid(), 
+			{
 				btnClass: '',
 				btnID: 'btnSortOther',
 				btnText: 'Other',
@@ -157,7 +148,7 @@ class WorkSorting extends Component {
 		return (
 			<ul className="work__sorting">
 				{btnListItems.map(({ id, btnClass, btnID, btnText }) => (
-					<li className="ws-li" key={id}>
+					<li className="ws-li" key={uuid()}>
 						<button className={`btn-sort ${btnClass}`} id={btnID}>
 							{btnText}
 						</button>
