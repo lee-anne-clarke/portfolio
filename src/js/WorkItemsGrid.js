@@ -24,20 +24,6 @@ class WorkItemsGrid extends Component {
 		super(props);
 		this.state = {
 			workItems: [
-			  {
-			    title: "NAHB Int'l Builders' Show",
-			    titleFull: "NAHB International Builders' Show 2017",
-			    itemImgSrc: require("../img/buildersshow.jpg"),
-			    description: "site relaunch",
-			    sortClasses: "sort-bs",
-			    modalImgOneSrc: require("../img/buildersshow-full-1.jpg"),
-			    modalImgOneAlt: "NAHB International Builders' Show 2017 screen cap - homepage",
-			    modalImgTwoSrc: require("../img/buildersshow-full-2.jpg"),
-			    modalImgTwoAlt: "NAHB International Builders' Show 2017 screen cap - inside page",
-			    modalSummary: <ModalSummaryNAHB />,
-			    projectURL: "http://www.buildersshow.com/"
-			  },
-
 		    {
 			    title: "Grandstand",
 			    titleFull: "Grandstand",
@@ -60,6 +46,19 @@ class WorkItemsGrid extends Component {
 			    modalImgOneAlt: "Viable landing page screen cap - full",
 			    modalSummary: <ModalSummaryViable />,
 			    projectURL: "https://viable.af/"
+			  },
+
+			  {
+			    title: "NAHB Int'l Builders' Show",
+			    titleFull: "NAHB International Builders' Show 2017",
+			    itemImgSrc: require("../img/buildersshow.jpg"),
+			    description: "site relaunch",
+			    sortClasses: "sort-bs",
+			    modalImgOneSrc: require("../img/buildersshow-full-1.jpg"),
+			    modalImgOneAlt: "NAHB International Builders' Show 2017 screen cap - homepage",
+			    modalImgTwoSrc: require("../img/buildersshow-full-2.jpg"),
+			    modalImgTwoAlt: "NAHB International Builders' Show 2017 screen cap - inside page",
+			    modalSummary: <ModalSummaryNAHB />
 			  },
 
 			  {
