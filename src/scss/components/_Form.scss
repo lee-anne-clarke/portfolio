@@ -1,0 +1,121 @@
+/*---------------------------------------------------
+	Forms
+---------------------------------------------------*/
+
+.form {
+	padding-top: 1em;
+
+	@media (min-width: 900px) {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.form__group {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	vertical-align: top;
+	z-index: 1;
+	padding-bottom: 1.2em;
+
+	@media (min-width: 900px) {
+		padding-bottom: 2em;
+	}
+}
+
+.form__field {
+	position: relative;
+	float: right;
+	display: block;
+	width: 100%;
+	background-color: $white;
+	color: #6a6c6a;
+	font-size: 1.2em;
+	padding: 1em 0.5em 1em 2.4em;
+	border-radius: 0.3em;
+	overflow: hidden;
+	border: 2px solid #e5e9e9;
+	-webkit-appearance: none; /* to remove input shadow in iOS */
+	transition: background-color 0.25s, border-color 0.25s;
+
+	&:focus {
+		border-color: #46badb;
+	}
+}
+
+/* Textarea */
+.form__field--ta {
+	font-family: inherit;
+	line-height: 1.2;
+	overflow-y: auto;
+	resize: none;
+}
+
+.form__label {
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	padding: 0 1.25em 1em;
+	pointer-events: none;
+	overflow: hidden;
+}
+
+.form__label-icon,
+.form__label-text { 
+	display: inline-block;
+	transform: translate3d(-2.5em, 0, 0);
+}
+
+.form__label-text {
+	position: relative;
+	width: auto;
+	color: #9d9c9d;
+	padding-left: 0.4em;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.form__label-icon {
+	color: #46badb;
+	font-size: 1.4em;
+	line-height: 1;
+	margin-top: 0.9em;
+	transition: transform 0.3s;
+}
+
+/*************** Form field focus animation ***************/
+
+.form__field:focus + .form__label .form__label-text,
+.form__field--filled + .form__label .form__label-text {
+	opacity: 0;
+	transform: translate3d(100px, 0, 0);
+}
+
+.form__label-text,
+.form__label-icon,
+.form__field:focus + .form__label .form__label-text,
+.form__field--filled + .form__label .form__label-text {
+	transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.form__field:focus + .form__label .form__label-icon,
+.form__field--filled + .form__label .form__label-icon, {
+	transform: translate3d(-0.4em, 0, 0);
+}
+
+
+/*************** Validation messages ***************/
+
+.form__msg {
+	display: none;
+	text-align: center;
+}
+
+.form__msg--valid {
+	font-size: 1.5em;
+}
+
+.form__msg-invalid {
+	color: red;
+	font-size: 1em;
+}

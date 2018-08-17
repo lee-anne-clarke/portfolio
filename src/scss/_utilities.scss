@@ -8,7 +8,7 @@
 	content: '';
 }
 
-.u-clearfix:after {
+.u-clearfix::after {
 	clear: both;
 }
 

@@ -4,10 +4,17 @@ import React from 'react'
 class Contact extends React.Component {
   componentDidMount() {
     const formFields = document.querySelectorAll(".form__field");
-
-		// ** Add a special class to a form field if it's filled in **
+    const formInvalidMsg = document.getElementById('formInvalidMsg');
+		
 		for (let field of formFields) {
+			// ** Hide invalid message on form field focus ** 
+			field.addEventListener('focus', () => {
+				formInvalidMsg.style.display = 'none';
+			});	
+
+			// ** Add a special class to form field if it's filled in ** 
 			field.addEventListener('blur', () => {
+
 				if (field.value) {
 					field.classList.add('form__field--filled');
 				} else {
@@ -130,8 +137,8 @@ class Contact extends React.Component {
 					</div> {/* END .form__group */}
 					         
 					         
-					<div className="form__msg form__msg--invalid" id="formInvalidMsg">
-						Please fill in all required fields.
+					<div className="form__msg" id="formInvalidMsg">
+						<p className="form__msg-invalid">Please fill in all required fields.</p>
 					</div>
 
 					<button className="fa fa-paper-plane-o btn-submit" type="submit">Submit</button>
