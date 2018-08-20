@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-// ** SFCs containing the summary for each Work item modal **
+// ** SFCs containing the content for each Work item modal **
 
 function ModalSummaryNAHB() {
   return (
