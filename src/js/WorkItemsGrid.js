@@ -243,7 +243,7 @@ class WorkItemsGrid extends Component {
   componentDidMount() {
     //Add ".u-no-overflow" to <body> when modal is opened; remove when it's closed
     let openModalBtn = document.querySelectorAll('.modal-open');
-    let closeModalBtn = document.querySelectorAll('.modal-close');
+    let closeModalBtn = document.querySelectorAll('.btn-modal-close');
 
     for (let i of openModalBtn) {
       i.addEventListener('click', () => {
@@ -328,7 +328,7 @@ class WorkItemsGrid extends Component {
 	      
 	      <label className="modal-label modal-open" htmlFor={`workItem${i}`}>
 	        <figure className="workitem__fig">
-		        <img className="workitem__img" src={item.imgSource} alt={item.titleLong} />
+		        <img className="workitem__img" src={item.imgSource} alt={`${item.titleLong} screen cap`} />
 		        
 		        <figcaption className="workitem__caption">
 		          <h3 className="h3-workitem">{item.titleShort}</h3>
@@ -341,7 +341,7 @@ class WorkItemsGrid extends Component {
 	      <div className="modal" role="dialog">
 	        <div className="modal-content">
 
-	          <label className="modal-label modal-close" htmlFor={`workItem${i}`}>
+	          <label className="btn-modal-close" htmlFor={`workItem${i}`}>
 	            <i className="fa fa-close modal-fa"></i>CLOSE
 	          </label>
 
@@ -384,7 +384,7 @@ class WorkItemsGrid extends Component {
 							<a className="btn-viewproject" href={item.projTempURLThree} target="_blank" rel="noreferrer noopener"><i className="fa fa-tint modal-fa"></i>template 3</a>
 	          </div>
 
-	          <label className="modal-label modal-close modal-close--bottom" htmlFor={`workItem${i}`}>
+	          <label className="btn-modal-close btn-modal-close--bottom" htmlFor={`workItem${i}`}>
 	            <i className="fa fa-close modal-fa"></i>CLOSE
 	          </label>
 
