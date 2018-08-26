@@ -1,16 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 
 function Header() {
 	return (  
 		<header className="header">
 			<h1>Lee-Anne Clarke</h1>
-			<p className="jobtitle">Front-End Web Developer</p>
-			<p className="myemail">lac @ lee-anne-clarke.com</p>
+			<p className="header-jobtitle">Front-End Web Developer</p>
+			<p className="header-email">lac @ lee-anne-clarke.com</p>
 
 			<div className="divider">
 				<a className="btn-header" href="https://github.com/lee-anne-clarke/" target="blank">
-					<i className="fa fa-github btn-header-fa"><span>Github</span></i>
+					<FontAwesomeIcon className="btn-header-icon" icon={faGithub} />
+					<span>Github</span>
 				</a>			
 			</div>
 		</header>
@@ -18,4 +21,4 @@ function Header() {
 }
 
 
-export default Header
+export default Header;

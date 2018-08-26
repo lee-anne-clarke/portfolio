@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import About from './About'
-import Education from './Education'
-import Skills from './Skills'
-import Work from './Work'
-import Contact from './Contact'
-import Scroll from 'react-scroll'
+import React, { Component } from 'react';
+import About from './About';
+import Education from './Education';
+import Skills from './Skills';
+import Work from './Work';
+import Contact from './Contact';
+import Scroll from 'react-scroll';
 
 
 //Necessary for React Scroll package
@@ -37,4 +37,4 @@ class Main extends Component {
 }
 
 
-export default Main
+export default Main;

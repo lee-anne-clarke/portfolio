@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 
 // ** SFCs containing the content for each Work item modal **
@@ -6,7 +6,7 @@ import React from 'react'
 function ModalSummaryNAHB() {
   return (
     <p>
-			Website created for the NAHB International Builders' Show<sup>&reg;</sup> while on contract at <a className="btn" href="http://www.modernsignal.com/" target="_blank" rel="noreferrer noopener">Modern Signal</a>. Built with Bootstrap. jQuery used for search bar dropdown. <a className="btn" href="https://jquerymobile.com/" target="_blank" rel="noreferrer noopener">jQuery Mobile</a> used for swipe support on image carousels. <a className="btn" href="http://www.smartmenus.org/" target="_blank" rel="noreferrer noopener">SmartMenus plugin</a> used for primary navigation. <a className="btn" href="https://select2.github.io/" target="_blank" rel="noreferrer noopener">Select2 plugin</a> used for customized select boxes. <a className="btn" href="http://kenwheeler.github.io/slick/" target="_blank" rel="noreferrer noopener">Slick plugin</a> used for image carousels. CSS created with Sass and compiled with <a className="btn" href="http://koala-app.com/" target="_blank" rel="noreferrer noopener">Koala</a>. Design comps provided by client.
+			Website created for the NAHB International Builders' Show while on contract at <a className="btn" href="http://www.modernsignal.com/" target="_blank" rel="noreferrer noopener">Modern Signal</a>. Built with Bootstrap. jQuery used for search bar dropdown. <a className="btn" href="https://jquerymobile.com/" target="_blank" rel="noreferrer noopener">jQuery Mobile</a> used for swipe support on image carousels. <a className="btn" href="http://www.smartmenus.org/" target="_blank" rel="noreferrer noopener">SmartMenus plugin</a> used for primary navigation. <a className="btn" href="https://select2.github.io/" target="_blank" rel="noreferrer noopener">Select2 plugin</a> used for customized select boxes. <a className="btn" href="http://kenwheeler.github.io/slick/" target="_blank" rel="noreferrer noopener">Slick plugin</a> used for image carousels. CSS created with Sass and compiled with <a className="btn" href="http://koala-app.com/" target="_blank" rel="noreferrer noopener">Koala</a>. Design comps provided by client.
     </p>
   );
 }
@@ -41,7 +41,7 @@ function ModalSummaryBracco() {
 function ModalSummaryFiserv() {
   return (
     <p>
-    	A mock financial services website created for my degree program at Sessions College. Built in WordPress 4 with base theme Vantage. <a className="btn" href="http://siteorigin.com/page-builder/" target="_blank" rel="noreferrer noopener">Page Builder</a> used to create and modify pages. <a className="btn" href="http://wordpress.org/plugins/ml-slider/" target="_blank" rel="noreferrer noopener">Meta Slider</a> used for page headers. <a className="btn" href="http://wordpress.org/plugins/custom-wp-login-widget/" target="_blank" rel="noreferrer noopener">Custom WP Login Widget</a> used for login box on homepage. <a className="btn" href="http://wordpress.org/plugins/basic-google-maps-placemarks/" target="_blank" rel="noreferrer noopener">Basic Google Maps Placemarks</a> used to create map on "Find a Branch" page. <a className="btn" href="http://fortawesome.github.io/Font-Awesome/" target="_blank" rel="noreferrer noopener">Font Awesome icons</a> used for navigation. Design by me.
+    	A mock financial services website created for my degree program at Sessions College. Built in WordPress 4 with base theme Vantage. <a className="btn" href="http://siteorigin.com/page-builder/" target="_blank" rel="noreferrer noopener">Page Builder</a> used to create and modify pages. <a className="btn" href="http://wordpress.org/plugins/ml-slider/" target="_blank" rel="noreferrer noopener">Meta Slider</a> used for page headers. <a className="btn" href="http://wordpress.org/plugins/custom-wp-login-widget/" target="_blank" rel="noreferrer noopener">Custom WP Login Widget</a> used for login box on homepage. <a className="btn" href="http://wordpress.org/plugins/basic-google-maps-placemarks/" target="_blank" rel="noreferrer noopener">Basic Google Maps Placemarks</a> used to create map on "Find a Branch" page. Design by me.
     </p>
   );
 }

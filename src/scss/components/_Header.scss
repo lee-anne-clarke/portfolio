@@ -16,3 +16,23 @@
 		padding: 7em 1em 4em;
 	}
 }
+
+.header-jobtitle,
+.header-email {
+	color: $white;
+	line-height: 1;
+}
+
+.header-jobtitle {
+	font-size: 1.7em;
+	letter-spacing: 0;
+
+	@media (min-width: 375px) {
+		font-size: 2em;
+	}
+}
+
+.header-email {
+	font-size: 1.2em;
+	letter-spacing: 0.2em;
+}

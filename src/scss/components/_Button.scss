@@ -36,6 +36,7 @@
 	background-color: transparent;
 	color: $white;
 	font-size: 1.1em;
+	line-height: 2;
 	text-align: center;
 	border: none;
 	border-radius: 50%;
@@ -44,32 +45,6 @@
 	transition: 
 		transform ease-out 0.1s, 
 		background 0.2s;
-
-	&::before {
-		display: block;
-		line-height: 1.9em;
-		speak: none;
-	}
-	
-	&:after {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		padding: 0;
-		z-index: -1;
-		width: 100%;
-		height: 100%;
-		border-radius: 50%;
-		box-sizing: content-box;
-		box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
-		transform: scale(0.9);
-		pointer-events: none;
-	}
-	
-	&:hover:after {
-		animation: sonarEffect 1.3s ease-out 85ms;
-	}
 
 	&:focus {
 		outline: none;
@@ -85,56 +60,59 @@
 }
 
 
-@keyframes sonarEffect {
-	0% {
-		opacity: 0.3;
+// Hover effects - mobile
+@media (max-width: 1024px) {
+	.btn-nav {
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 0;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			box-sizing: content-box;
+			box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
+			transform: scale(0.9);
+		}
+	
+		&:hover::after {
+			animation: sonarEffect 1.3s ease-out 85ms;
+		}
 	}
-	40% {
-		opacity: 0.5;
-		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #f0f5f6, 0 0 0 10px rgba(255,255,255,0.5);
-	}
-	100% {
-		box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #f0f5f6, 0 0 0 10px rgba(255,255,255,0.5);
-		transform: scale(1.5);
-		opacity: 0;
+
+	@keyframes sonarEffect {
+		0% {
+			opacity: 0.3;
+		}
+		40% {
+			opacity: 0.5;
+			box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #f0f5f6, 0 0 0 10px rgba(255,255,255,0.5);
+		}
+		100% {
+			box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #f0f5f6, 0 0 0 10px rgba(255,255,255,0.5);
+			transform: scale(1.5);
+			opacity: 0;
+		}
 	}
 }
 
 
-// Hover effects (desktop only)
+
+// Hover effects - desktop
 @media (min-width: 1025px) {
 	.btn-nav {
 		overflow: hidden;
 		transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-
-		&:after {
-			display: none;
-		}
 
 		&:hover {
 			background-color: $white;
 			color: #1abdda;
 			box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.3);
 		}
-
-		&:hover:before {
-			animation: toBottomFromTop 0.3s forwards;
-		}
 	} 
-
-
-	@keyframes toBottomFromTop {
-		49% {
-			transform: translateY(100%);
-		}
-		50% {
-			opacity: 0;
-			transform: translateY(-100%);
-		}
-		51% {
-			opacity: 1;
-		}
-	}
 }
 
 
@@ -144,6 +122,7 @@
 	display: inline-block;
 	color: $white;
 	transition: opacity 0.3s;
+	text-decoration: none;
 
 	&, 
 	&:active, 
@@ -158,11 +137,12 @@
 	span {
 		display: block;
 		font-family: 'Raleway',Arial,Helvetica,sans-serif;
+		padding-top: 0.2em;
 		font-size: 0.65em;
 	}
 }
 
-.btn-header-fa::before {
+.btn-header-icon {
 	font-size: 1.8em;
 }
 
@@ -238,65 +218,25 @@
 /********** Contact - submit button **********/
 
 .btn-submit {
+	position: relative;
 	display: block;
 	background-color: $cerulean;
 	color: $white;
 	font-family: inherit;
 	font-size: 1.2em;
 	letter-spacing: 1px;
-	padding: 1.2em 4em 1.2em 5em;
+	padding: 1.2em 4em;
 	margin: 1em auto 0;
 	border: none;
 	box-shadow: 0 0.3em #e5ecf4;
 	border-radius: 0.3em;
-	overflow: hidden;
-	clear: both;
-	transition: all 0.3s;
-	cursor: pointer;
+	transition: background-color 0.3s;
 
 	&:hover {
 		background-color: #30cfe5;
 	}
-	
-	&::before {
-		font-family: FontAwesome;
-		position: absolute;
-		left: 2%;
-		width: 40%;
-		color: $white;
-		font-size: 120%;
-		line-height: 0.8;
-	}
-	
-	&:after {
-		content: '';
-		position: absolute;
-		z-index: -1;
-		transition: all 0.3s;
-	}
 }
 
-.btn-submit--clicked {
-	background-color: $cerulean;
-	animation: fadeOutText 0.5s;
-	
-	&::before {
-		animation: zoomRight 0.5s;
-	}
+.btn-submit__icon {
+	margin-left: 0.5em;
 }
-
-@keyframes fadeOutText {
-	0% { color: transparent; }
-	80% { color: transparent; }
-	100% { color: $white; }
-}
-
-@keyframes zoomRight {
-	80% { transform: translateX(250%); }
-	81% { opacity: 1; transform: translateX(250%); }
-	82% { opacity: 0; transform: translateX(250%); }
-	83% { opacity: 0; transform: translateX(-50%); }
-	84% { opacity: 1; transform: translateX(-50%);  }
-	100% { transform: translateX(0%); }
-}
-

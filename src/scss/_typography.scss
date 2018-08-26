@@ -53,8 +53,9 @@ h2 {
 h3 {
 	font-size: 1.8em;
 	line-height: 1.3em;
+	font-weight: 400;
 	margin-top: 0.5em;
-	margin-bottom: 0;
+	margin-bottom: 0.5em;
 }
 
 .h3-workitem {
@@ -73,19 +74,10 @@ h3 {
 
 .h3-edu,
 .h3-skillsset {
-	font-weight: 400;
-	margin-bottom: 0.5em;
 	border-bottom: 1px solid #1abdda;
 
 	@media (min-width: 600px) {
 		text-align: center;
-		margin-left: 5%;
-		margin-right: 5%;
-	}
-
-	@media (min-width: 900px) {	
-		margin-left: 0;
-		margin-right: 0;
 	}
 }
 
@@ -106,129 +98,15 @@ h6 {
 	font-weight: 300;
 }
 
-p, 
-.fa-ul {
+p {
 	color: #7b7b7b;
 	font-size: 1.2em;
 	line-height: 1.5em;
 	font-weight: 300;
 	letter-spacing: 0.05em;
+	margin-top: 0;
 
 	@media (min-width: 800px) {
-		font-size: 1.4em;
+		font-size: 1.5em;
 	}
-}
-
-.fa-ul {
-	margin-left: 0;
-}
-
-/********** Header **********/
-
-.jobtitle,
-.myemail {
-	color: $white;
-	line-height: 1;
-	margin-top: 0;
-}
-
-.jobtitle {
-	font-size: 1.7em;
-	letter-spacing: 0;
-
-	@media (min-width: 375px) {
-		font-size: 2em;
-	}
-}
-
-.myemail {
-	font-size: 1.2em;
-	letter-spacing: 0.2em;
-}
-
-
-/********** Education **********/
-
-.edu__degree {
-	color: #319bb9;
-	font-weight: 500;
-}
-
-.edu__icon-flag {
-	display: none;
-
-	@media (min-width: 320px) {
-		display: inline-block;
-		left: -1.5em;
-		width: 1.8em;
-		height: 1.8em;
-		background-color: #8bcadc;
-		color: $white;
-		font-size: 1.2em;
-		text-align: center;
-		padding: 0.4em 0 0.4em 0.1em;
-		border-radius: 50%;
-		box-shadow: 0 0 0 .1em #cce2e8;
-	}
-
-	@media (min-width: 375px) {
-		font-size: 1.4em;
-	}
-
-	@media (min-width: 700px) {	
-		left: -1.3em;
-		font-size: 1.8em;
-	}
-
-	@media (min-width: 900px) {
-		left: -1em;
-	}
-}
-
-.edu__icon-uni {
-	color: #aeaeae;
-}
-
-
-/********** Work **********/
-
-.workitem__caption {
-	background-color: $white;
-	padding-top: 0.3em;
-	padding-bottom: 0.3em;
-
-	@media (min-width: 900px) and (max-width: 1000px) {
-		height: 4.5em;
-	}
-}
-
-.workitem__caption p {
-	text-transform: uppercase;
-	margin: 0;
-
-	@media (min-width: 900px) {
-		font-size: 1em; 
-		font-weight: 400;
-	}
-}
-
-
-/********** Modals **********/
-
-.modal-content p {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 300;
-	color: $black;
-	font-size: 100%;
-	line-height: 2.4;
-	text-align: left;
-	margin-bottom: 1.6em;
-
-	@media (min-width: 600px) {
-		margin-bottom: 3em;
-	}
-}
-
-.modal-fa {
-	margin-right: 0.3em;
 }

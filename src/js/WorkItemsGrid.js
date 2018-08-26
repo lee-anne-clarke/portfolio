@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import {
 	ModalSummaryNAHB,
   ModalSummaryGranstand,
@@ -16,7 +16,16 @@ import {
 	ModalSummaryLAC,
 	ModalSummaryPhotoSearch,
 	ModalSummaryGDC
-} from './ModalSummary'
+} from './ModalSummary';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { 
+	faTimes,
+	faTint,
+	faExternalLinkAlt
+} from '@fortawesome/free-solid-svg-icons';
+
+import { faFileCode } from '@fortawesome/free-regular-svg-icons';
 
 
 class WorkItemsGrid extends Component {
@@ -26,7 +35,6 @@ class WorkItemsGrid extends Component {
 			workItems: [
 		    {
 			    titleShort: "Grandstand",
-			    titleLong: "Grandstand",
 			    imgSource: require("../img/grandstand.jpg"),
 			    description: "landing page",
 			    sortClasses: "sort-foundation sort-vue",
@@ -38,7 +46,6 @@ class WorkItemsGrid extends Component {
 
 			  {
 			    titleShort: "Viable",
-			    titleLong: "Viable",
 			    imgSource: require("../img/viable.jpg"),
 			    description: "landing page",
 			    sortClasses: "sort-foundation sort-vue",
@@ -49,8 +56,7 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			    titleShort: "NAHB Int'l Builders' Show",
-			    titleLong: "NAHB International Builders' Show 2017",
+			    titleShort: "International Builders' Show",
 			    imgSource: require("../img/buildersshow.jpg"),
 			    description: "site relaunch",
 			    sortClasses: "sort-bs",
@@ -63,7 +69,6 @@ class WorkItemsGrid extends Component {
 
 			  {
 			    titleShort: "Great Design Co.",
-			    titleLong: "Great Design Co.",
 			    imgSource: require("../img/gdc.jpg"),
 			    description: "mock design agency",
 			    sortClasses: "sort-react",
@@ -78,7 +83,6 @@ class WorkItemsGrid extends Component {
 
 			  {
 				  titleShort: "The Fresh Grocer",
-				  titleLong: "The Fresh Grocer",
 				  imgSource: require("../img/freshgrocer.jpg"),
 				  description: "mock website redesign",
 				  sortClasses: "sort-react",
@@ -91,7 +95,6 @@ class WorkItemsGrid extends Component {
 
 			  {
 				  titleShort: "Lee-Anne-Clarke.com",
-				  titleLong: "Lee-Anne-Clarke.com",
 				  imgSource: require("../img/portfolio.jpg"),
 				  description: "my portfolio",
 				  sortClasses: "sort-react",
@@ -102,8 +105,7 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-			    titleShort: "Bracco",
-			    titleLong: "Bracco: Learn the Truth",
+			    titleShort: "Bracco: Learn the Truth",
 			    imgSource: require("../img/bracco.jpg"),
 			    description: "microsite",
 			    sortClasses: "sort-bs",
@@ -116,7 +118,6 @@ class WorkItemsGrid extends Component {
 
 			  {
 			    titleShort: "Upserve",
-			    titleLong: "Upserve",
 			    imgSource: require("../img/upserve.jpg"),
 			    description: "landing page templates",
 			    sortClasses: "sort-other",
@@ -130,7 +131,6 @@ class WorkItemsGrid extends Component {
 
 			  {
 			    titleShort: "itslearning, inc.",
-			    titleLong: "itslearning, inc.",
 			    imgSource: require("../img/itslearning-cp.jpg"),
 			    description: "channel partner page template",
 			    sortClasses: "sort-bs",
@@ -142,7 +142,6 @@ class WorkItemsGrid extends Component {
 
 			  {
 					titleShort: "City Hospital",
-					titleLong: "City Hospital",
 					imgSource: require("../img/cityhospital.jpg"),
 					description: "homepage prototype",
 					sortClasses: "sort-bs",
@@ -155,7 +154,6 @@ class WorkItemsGrid extends Component {
 
 			  {
 			    titleShort: "Modern Signal",
-			    titleLong: "Modern Signal",
 			    imgSource: require("../img/teampage.jpg"),
 			    description: "client employee page",
 			    sortClasses: "sort-other",
@@ -168,7 +166,6 @@ class WorkItemsGrid extends Component {
 
 			  {
 			    titleShort: "itslearning, inc.",
-			    titleLong: "itslearning, inc.",
 			    imgSource: require("../img/itslearning-email.jpg"),
 			    description: "email templates",
 			    sortClasses: "sort-emails",
@@ -181,7 +178,6 @@ class WorkItemsGrid extends Component {
 
 			  {
 			    titleShort: "Chanel",
-			    titleLong: "Chanel",
 			    imgSource: require("../img/chanel.jpg"),
 			    description: "mock website redesign",
 			    sortClasses: "sort-drupal",
@@ -195,7 +191,6 @@ class WorkItemsGrid extends Component {
 
 			  {
 			    titleShort: "Fiservices",
-			    titleLong: "Fiservices",
 			    imgSource: require("../img/fiservices.jpg"),
 			    description: "mock financial services website",
 			    sortClasses: "sort-wp",
@@ -209,7 +204,6 @@ class WorkItemsGrid extends Component {
 
 			  {
 			    titleShort: "Silver Spark Jewelry",
-			    titleLong: "Silver Spark Jewelry",
 			    imgSource: require("../img/silverspark.jpg"),
 			    description: "mock business website",
 			    sortClasses: "sort-wp",
@@ -223,7 +217,6 @@ class WorkItemsGrid extends Component {
 
 			  {
 			    titleShort: "Flickr photo search",
-			    titleLong: "Flickr photo search",
 			    imgSource: require("../img/photosearch.jpg"),
 			    description: "independent project",
 			    sortClasses: "sort-other",
@@ -268,7 +261,7 @@ class WorkItemsGrid extends Component {
 				modalViewTempTwoStyle,
 				modalViewTempThreeStyle
 
-		// ** Hide project images/links as needed **
+		// ** Hide project content as needed **
 
 	  if (item.modalImgTwoSrc) {
 	  	modalImgTwoStyle = {display: 'inline'}
@@ -328,7 +321,7 @@ class WorkItemsGrid extends Component {
 	      
 	      <label className="modal-label modal-open" htmlFor={`workItem${i}`}>
 	        <figure className="workitem__fig">
-		        <img className="workitem__img" src={item.imgSource} alt={`${item.titleLong} screen cap`} />
+		        <img className="workitem__img" src={item.imgSource} alt={`${item.titleShort} screen cap`} />
 		        
 		        <figcaption className="workitem__caption">
 		          <h3 className="h3-workitem">{item.titleShort}</h3>
@@ -342,10 +335,10 @@ class WorkItemsGrid extends Component {
 	        <div className="modal-content">
 
 	          <label className="btn-modal-close" htmlFor={`workItem${i}`}>
-	            <i className="fa fa-close modal-fa"></i>CLOSE
+	            <FontAwesomeIcon className="modal-icon" icon={faTimes} />CLOSE
 	          </label>
 
-	          <h3 className="h3-modal">{item.titleLong}</h3>
+	          <h3 className="h3-modal">{item.titleShort}</h3>
 	          <h4>{item.description}</h4> 
 
 			      <img className="modal-img" src={item.modalImgOneSrc} alt={item.modalImgOneAlt} />
@@ -359,7 +352,7 @@ class WorkItemsGrid extends Component {
 	          		href={item.projectURL} 
 	          		target="_blank" 
 	          		rel="noreferrer noopener">
-	          		<i className="fa fa-external-link modal-fa"></i>view the project
+	          		<FontAwesomeIcon className="modal-icon" icon={faExternalLinkAlt} />view the project
 	          	</a>
 	          </div>
 
@@ -368,31 +361,37 @@ class WorkItemsGrid extends Component {
 								className="btn-viewproject" 
 								href={`https://github.com/lee-anne-clarke/${item.projectRepo}`} 
 								target="_blank" rel="noreferrer noopener">
-								<i className="fa fa-file-code-o modal-fa"></i>view the repo
+								<FontAwesomeIcon className="modal-icon" icon={faFileCode} />view the repo
 							</a>
 	          </div>
 
 	          <div style={modalViewTempOneStyle}>
-							<a className="btn-viewproject" href={item.projTempURLOne} target="_blank" rel="noreferrer noopener"><i className="fa fa-tint modal-fa"></i>template 1</a>
+							<a className="btn-viewproject" href={item.projTempURLOne} target="_blank" rel="noreferrer noopener">
+								<FontAwesomeIcon className="modal-icon" icon={faTint} />template 1
+							</a>
 	          </div>
 
 	          <div style={modalViewTempTwoStyle}>
-							<a className="btn-viewproject" href={item.projTempURLTwo} target="_blank" rel="noreferrer noopener"><i className="fa fa-tint modal-fa"></i>template 2</a>
+							<a className="btn-viewproject" href={item.projTempURLTwo} target="_blank" rel="noreferrer noopener">
+								<FontAwesomeIcon className="modal-icon" icon={faTint} />template 2
+							</a>
 	          </div>
 
 	          <div style={modalViewTempThreeStyle}>
-							<a className="btn-viewproject" href={item.projTempURLThree} target="_blank" rel="noreferrer noopener"><i className="fa fa-tint modal-fa"></i>template 3</a>
+							<a className="btn-viewproject" href={item.projTempURLThree} target="_blank" rel="noreferrer noopener">
+								<FontAwesomeIcon className="modal-icon" icon={faTint} />template 3
+							</a>
 	          </div>
 
 	          <label className="btn-modal-close btn-modal-close--bottom" htmlFor={`workItem${i}`}>
-	            <i className="fa fa-close modal-fa"></i>CLOSE
+	            <FontAwesomeIcon className="modal-icon" icon={faTimes} />CLOSE
 	          </label>
 
 	        </div>
 	      </div>
 
 	    </div> // END .workitem
-		)
+		);
 	}
 
 
@@ -406,4 +405,4 @@ class WorkItemsGrid extends Component {
 }
 
 
-export default WorkItemsGrid
+export default WorkItemsGrid;

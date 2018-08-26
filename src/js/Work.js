@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import WorkSorting from './WorkSorting'
-import WorkItemsGrid from './WorkItemsGrid'
+import React, { Component } from 'react';
+import WorkSorting from './WorkSorting';
+import WorkItemsGrid from './WorkItemsGrid';
+import Divider from './Divider';
 
 
 class Work extends Component {
@@ -16,13 +17,11 @@ class Work extends Component {
 					<WorkItemsGrid />
 				</div>
 
-				<div className="divider">
-					<i className="fa fa-anchor"></i> 
-				</div>
+				<Divider />
 			</section>
 		);
 	}
 }
 
 
-export default Work
+export default Work;

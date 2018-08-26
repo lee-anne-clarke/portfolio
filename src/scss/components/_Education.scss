@@ -3,42 +3,50 @@
 ---------------------------------------------------*/
 
 .edu {
-	@media (min-width: 900px) {
-		width: 49em;
-	}
-}
-
-.edu__list {
-	@media (min-width: 320px) {		
-		margin-left: 2em;
-	}
-
-	@media (min-width: 600px) and (max-width: 900px) {
-		margin-left: 4em;
-	}
+	max-width: 49em;
 }
 	
-.edu__li {
-	line-height: 1.5em;
-	padding-top: 0.3em;
-	padding-left: 0;
-	margin-bottom: 2em;
+.edu__item {
+	display: flex;
+	padding-top: 0.5em;
+}
 
-	@media (min-width: 320px) {		
-		padding-left: 1.2em;
+.edu__text {
+	padding-left: 1em;
+
+	@media (min-width: 800px) {	
+		padding-left: 2em;
+	}
+}
+
+.edu__degree {
+	color: #319bb9;
+	font-weight: 500;
+	margin-bottom: 0;
+}
+
+.edu__icon-flag {
+	display: none;
+
+	@media (min-width: 320px) {
+		display: inline-block;
+		background-color: #8bcadc;
+		color: $white;
+		font-size: 3em;
+		text-align: center;
+		padding: 0.28em;
+		border-radius: 50%;
+		box-shadow: 0 0 0 0.06em #cce2e8;
 	}
 
-	@media (min-width: 375px) {
-		padding-left: 1.4em;
+	@media (min-width: 800px) {	
+		font-size: 4.5em;
+		padding: 0.25em;
 	}
+}
 
-	@media (min-width: 700px) {
-		padding-left: 2.2em;
-	}
-
-	@media (min-width: 900px) {
-		padding-left: 3em;
-	}
+.edu__icon-uni {
+	color: #aeaeae;
 }
 
 .edu__br {

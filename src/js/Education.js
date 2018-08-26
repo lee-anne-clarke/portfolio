@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFlag, faUniversity } from '@fortawesome/free-solid-svg-icons';
+import Divider from './Divider';
 
 
 function Education() {
@@ -6,44 +9,44 @@ function Education() {
     <section className="edu">
       <h3 className="h3-edu">Education</h3>
 
-      <ul className="fa-ul edu__list">
+      <div className="edu__items">
 
-        <li className="edu__li">
-          <i className="fa fa-li fa-flag edu__icon-flag"></i>
-          <span>
-          	<span className="edu__degree">Advanced Certificate 
-          		<span className="edu__br"><br /></span>&mdash; 
+        <div className="edu__item">
+          <FontAwesomeIcon className="edu__icon-flag" icon={faFlag} />
+          <div className="edu__text">
+          	<p className="edu__degree">Advanced Certificate 
+          		<span className="edu__br"><br /></span> &mdash; 
           		Web Design and Development
-          	</span> {/* END .edu__degree */}
-          	<br />
+          	</p>
 
-            <i className="fa fa-university edu__icon-uni"></i> Sessions College for Professional Design
-          </span>
-        </li>
+          	<p className="edu__uni">
+            	<FontAwesomeIcon className="edu__icon-uni" icon={faUniversity} /> Sessions College for Professional Design
+            </p>
+          </div>
+        </div>
 
-        <li className="edu__li">
-          <i className="fa fa-li fa-flag edu__icon-flag"></i>
-          <span>
-            <span className="edu__degree">
+
+        <div className="edu__item">
+          <FontAwesomeIcon className="edu__icon-flag" icon={faFlag} />
+          <div className="edu__text">
+            <p className="edu__degree">
             	Bachelor of Arts 
-            	<span className="edu__br"><br /></span>&mdash; 
+            	<span className="edu__br"><br /></span> &mdash; 
             	Asian Studies
-            </span> {/* END .edu__degree */}
-            <br />
+            </p>
             
-            <i className="fa fa-university edu__icon-uni"></i> The George Washington University
-          </span>
-        </li>
-      </ul>
-
-
-      <div className="divider">
-        <i className="fa fa-anchor"></i> 
+          	<p className="edu__uni">
+            	<FontAwesomeIcon className="edu__icon-uni" icon={faUniversity} /> The George Washington University
+            </p>
+          </div>
+        </div>
       </div>
+
+
+      <Divider />
     </section>
   );
 }
 
 
-export default Education
-
+export default Education;

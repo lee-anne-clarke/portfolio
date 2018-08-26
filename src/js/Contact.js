@@ -1,4 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+	faUser, 
+	faEnvelope,
+	faGlobe,
+	faPencilAlt,
+	faPaperPlane
+} from '@fortawesome/free-solid-svg-icons';
 
 
 class Contact extends React.Component {
@@ -29,7 +37,7 @@ class Contact extends React.Component {
     this.state = {
       contactName: '',
       contactEmail: '',
-      contactMsg: '',
+      contactMsg: ''
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -84,10 +92,10 @@ class Contact extends React.Component {
 							onChange={this.handleInputChange} />
 
 				    <label className="form__label" htmlFor="contactName">
-			        <i className="fa fa-fw fa-user form__label-icon"></i>
+			        <FontAwesomeIcon className="fa-fw form__label-icon" icon={faUser} />
 			        <span className="form__label-text">Name *</span>
 				    </label>
-					</div> {/* END .form__group */}
+					</div>
 
 
 					<div className="form__group">
@@ -100,10 +108,10 @@ class Contact extends React.Component {
 							onChange={this.handleInputChange} />
 
 						<label className="form__label" htmlFor="contactEmail">
-							<i className="fa fa-fw fa-envelope form__label-icon"></i>
+							<FontAwesomeIcon className="fa-fw form__label-icon" icon={faEnvelope} />
 							<span className="form__label-text">Email *</span>
 						</label>
-					</div> {/* END .form__group */}
+					</div>
 
 
 					<div className="form__group">
@@ -114,10 +122,10 @@ class Contact extends React.Component {
 							id="contactWebsite" />
 
 						<label className="form__label" htmlFor="contactWebsite">
-							<i className="fa fa-fw fa-globe form__label-icon"></i>
+							<FontAwesomeIcon className="fa-fw form__label-icon" icon={faGlobe} />
 							<span className="form__label-text">Website</span>
 						</label>
-					</div> {/* END .form__group */}
+					</div>
 
 
 					<div className="form__group">
@@ -131,17 +139,20 @@ class Contact extends React.Component {
 						</textarea>
 
 						<label className="form__label" htmlFor="contactMsg">
-							<i className="fa fa-fw fa-pencil form__label-icon"></i>
+							<FontAwesomeIcon className="fa-fw form__label-icon" icon={faPencilAlt} />
 							<span className="form__label-text">Message *</span>
 						</label>
-					</div> {/* END .form__group */}
+					</div>
 					         
 					         
 					<div className="form__msg" id="formInvalidMsg">
 						<p className="form__msg-invalid">Please fill in all required fields.</p>
 					</div>
 
-					<button className="fa fa-paper-plane-o btn-submit" type="submit">Submit</button>
+					<button className="btn-submit" type="submit">
+						Submit
+						<FontAwesomeIcon className="btn-submit__icon" icon={faPaperPlane} />
+					</button>
 	      </form>
 
 	      <div className="form__msg form__msg--valid" id="formValidMsg">
@@ -153,4 +164,4 @@ class Contact extends React.Component {
 }
 
 
-export default Contact
+export default Contact;

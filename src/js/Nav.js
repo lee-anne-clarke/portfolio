@@ -1,9 +1,18 @@
-import React, { Component } from 'react'
-import uuid from 'uuid'
-import Scroll from 'react-scroll'
-import NavItem from './NavItem'
+import React, { Component } from 'react';
+import uuid from 'uuid';
+import Scroll from 'react-scroll';
+import { 
+	faHome,
+	faUser,
+	faGraduationCap,
+	faWrench,
+	faBriefcase,
+	faPaperPlane
+} 
+from '@fortawesome/free-solid-svg-icons';
+import NavItem from './NavItem';
 
-//Variables necessary for React Scroll package
+//Variables for React Scroll
 let Events     = Scroll.Events;
 let scroll     = Scroll.animateScroll;
 let scrollSpy  = Scroll.scrollSpy;
@@ -12,7 +21,7 @@ let scroller   = Scroll.scroller;
 
 class Nav extends Component {
 	
-	/* Functions necessary for React Scroll */
+	/* React Scroll */
 	componentDidMount() {
 		scrollSpy.update();
 	}
@@ -52,9 +61,9 @@ class Nav extends Component {
 				<ul className="nav-list">
 
 					<NavItem 
-						liClass=" nav-li--home"
+						liClass="nav-li--home"
 						id={uuid()}
-						faClass="fa-home"
+						faIcon={faHome}
 						clickEvent={this.scrollToTop}
 						srText="Home"
 					/>
@@ -62,15 +71,15 @@ class Nav extends Component {
 					<NavItem 
 						liClass=""
 						id={uuid()}
-						faClass="fa-user"
+						faIcon={faUser}
 						clickEvent={this.scrollToAbout}
 						srText="About"
 					/>
 
 					<NavItem 
-						liClass=" nav-li--edu"
+						liClass="nav-li--edu"
 						id={uuid()}
-						faClass="fa-graduation-cap"
+						faIcon={faGraduationCap}
 						clickEvent={this.scrollToEdu}
 						srText="Education"
 					/>
@@ -78,7 +87,7 @@ class Nav extends Component {
 					<NavItem 
 						liClass=""
 						id={uuid()}
-						faClass="fa-wrench"
+						faIcon={faWrench}
 						clickEvent={this.scrollToSkills}
 						srText="Skills"
 					/>
@@ -86,7 +95,7 @@ class Nav extends Component {
 					<NavItem 
 						liClass=""
 						id={uuid()}
-						faClass="fa-briefcase"
+						faIcon={faBriefcase}
 						clickEvent={this.scrollToWork}
 						srText="Work"
 					/>
@@ -94,7 +103,7 @@ class Nav extends Component {
 					<NavItem 
 						liClass=""
 						id={uuid()}
-						faClass="fa-paper-plane-o"
+						faIcon={faPaperPlane}
 						clickEvent={this.scrollToContact}
 						srText="Contact"
 					/>
@@ -106,7 +115,7 @@ class Nav extends Component {
 }
 
 
-export default Nav
+export default Nav;
 
 
 

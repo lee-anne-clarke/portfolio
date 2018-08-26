@@ -38,6 +38,26 @@
 	box-shadow: 0 0.3em #e5ecf4;
 }
 
+.workitem__caption {
+	background-color: $white;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+
+	@media (min-width: 900px) and (max-width: 1000px) {
+		height: 4.5em;
+	}
+}
+
+.workitem__caption p {
+	text-transform: uppercase;
+	margin: 0;
+
+	@media (min-width: 900px) {
+		font-size: 1em; 
+		font-weight: 400;
+	}
+}
+
 
 /********** Work item hover effects (desktop only) **********/
 
@@ -70,9 +90,8 @@
 		.workitem__caption {
 			transform: translate3d(0,0,0);
 		}
-	} // END .workitem__fig:hover
-
-} // END (min-width: 600px)
+	}
+}
 
 
 /*************** 2 columns ***************/

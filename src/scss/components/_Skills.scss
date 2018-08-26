@@ -28,7 +28,7 @@
 	padding-left: 0.8em;
 }
 
-.skills__btn {
+.skill {
 	position: relative;
 	display: inline-block;
 	width: 100%;
@@ -81,9 +81,10 @@
 	}
 }
 
-/******************************* Programming & Design *******************************/
 
-.skills__btn--prog {
+/******* Programming & Design *******/
+
+.skill--prog {
 	color: $white;
 
 	&::before {
@@ -92,15 +93,25 @@
 	}
 }
 
-.skills__btn--html5 {
+.skill--html5 {
 	background-color: #ee652a;
+	&::before {
+		background-image: url(./img/skills/html5-logo.png);
+		width: 35px;	
+		@include skillsImgs;		
+	}
 }
 
-.skills__btn--css3 {
+.skill--css3 {
 	background-color: #2162af;
+	&::before {
+		background-image: url(./img/skills/css3-logo.png);
+		width: 40px;	
+		@include skillsImgs;		
+	}
 }
 
-.skills__btn--less {
+.skill--less {
 	background-color: #5473a2;
 	&::before {
 		background-image: url(./img/skills/less-logo.png);
@@ -109,7 +120,7 @@
 	}
 }
 
-.skills__btn--sass {
+.skill--sass {
 	background-color: #cd679a;
 	&::before {
 		background-image: url(./img/skills/sass-logo.png);
@@ -118,7 +129,7 @@
 	}
 }
 
-.skills__btn--js {
+.skill--js {
 	color: black;
 	background-color: #f0db4f;
 	&::before {
@@ -128,7 +139,7 @@
 	}
 }
 
-.skills__btn--react {
+.skill--react {
 	color: #61dafb; 
 	background-color: #383838;
 	&::before {
@@ -138,7 +149,7 @@
 	}
 }
 
-.skills__btn--fd {
+.skill--fd {
 	color: #07609d; 
 	background-color: #eee;
 	&::before {
@@ -148,7 +159,7 @@
 	}
 }
 
-.skills__btn--bs {
+.skill--bootstrap {
 	background-color: #644190;
 	&::before {
 		background-image: url(./img/skills/bootstrap-logo.png);
@@ -157,7 +168,7 @@
 	}
 }
 
-.skills__btn--vue {
+.skill--vue {
 	background-color: #028559;
 	&::before {
 		background-image: url(./img/skills/vue-logo.png);
@@ -166,7 +177,7 @@
 	}
 }
 
-.skills__btn--ps {
+.skill--ps {
 	color: #4fc8f3;
 	background-color: #2465af;
 	&::before {
@@ -179,14 +190,22 @@
 }
 
 
-/******************************* Content Management Systems *******************************/
-.skills__btn--cms {
+/******* Content Management Systems *******/
+.skill--cms {
 	background-color: #f6f3f3;
+	
+	&::before {
+		background-size: 100%;
+		width: 1.1em;
+		height: 1.1em;
+		@include skillsImgs;
+	}
 
 	span {
 		color: $white;
+		line-height: 4;
 	}
-	
+
 	&:hover span {
 		z-index: 1;
 		transform: rotate3d(0, 0, 1, 0deg);
@@ -194,47 +213,39 @@
 	}
 }
 
-.skills__btn--drupal {
-	color: #0073ba;
+.skill--drupal {
+	&::before {
+		background-image: url(./img/skills/drupal-logo.png);
+	}
 	span {
 		background-color: #0073ba;
-		line-height: 4.3;
 	}
 }
 
-.skills__btn--wordpress {
-	color: #2b9dd5;
+.skill--wp {
+	&::before {
+		background-image: url(./img/skills/wp-logo.png);
+	}
 	span {
-		background-color: #24749d;
-		line-height: 4.3;
+		background-color: #46a5c7;
 	}
 }
 
-.skills__btn--sitecore {
+.skill--sitecore {
 	&::before {
 		background-image: url(./img/skills/sitecore-logo.png);
-		background-size: 100%;
-		width: 44px;
-		height: 44px;
-		@include skillsImgs;
 	}
 	span {
 		background-color: #c1271e;
-		line-height: 4;
 	}
 }
 
-.skills__btn--sp {
+.skill--sharepoint {
 	&::before {
 		background-image: url(./img/skills/sharepoint-logo.png);
-		background-size: 100%;
-		width: 44px;
-		height: 44px;
-		@include skillsImgs;
 	}
 	span {
 		background-color: #0072c6;
-		line-height: 4;
 	}
 }
 
@@ -252,7 +263,7 @@
 }
 
 @media (min-width: 425px) {	
-	.skills__btn span {
+	.skill span {
 		font-size: 1.6em;
 		line-height: 2.7;
 		font-weight: 400;
@@ -260,7 +271,7 @@
 }
 
 @media (min-width: 600px) {
-	.skills__btn {
+	.skill {
 		margin-bottom: 5em;
 	}
 }
@@ -279,7 +290,7 @@
 		padding-left: 3em;
 	}
 	
-	.skills__btn {
+	.skill {
 		margin-bottom: 4em;
 	}
 }

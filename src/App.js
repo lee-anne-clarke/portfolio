@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
-import Nav from './js/Nav'
-import Header from './js/Header'
-import Main from './js/Main'
-import './normalize.min.css'
-import './App.css'
+import React, { Component } from 'react';
+import Nav from './js/Nav';
+import Header from './js/Header';
+import Main from './js/Main';
+import './normalize.min.css';
+import './App.css';
 
 
 class App extends Component {
@@ -19,4 +19,4 @@ class App extends Component {
 }
 
 
-export default App
+export default App;
