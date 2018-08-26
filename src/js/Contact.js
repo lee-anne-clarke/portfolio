@@ -1,4 +1,6 @@
 import React from 'react';
+import axios from 'axios';
+import qs from 'qs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
 	faUser, 
@@ -37,6 +39,7 @@ class Contact extends React.Component {
     this.state = {
       contactName: '',
       contactEmail: '',
+      contactWebsite: '',
       contactMsg: ''
     };
 
@@ -54,20 +57,39 @@ class Contact extends React.Component {
   }
 
   handleSubmit(event) {
-		let contactForm = document.getElementById('contactForm');
-		const Name = this.state.contactName;
-		const Email = this.state.contactEmail;
-		const Message = this.state.contactMsg;
+  	event.preventDefault();
+
+		const contactForm = document.getElementById('contactForm');
 		const formValidMsg = document.getElementById('formValidMsg');
 		const formInvalidMsg = document.getElementById('formInvalidMsg');
+		const Name = this.state.contactName;
+		const Email = this.state.contactEmail;
+		const Website = this.state.contactWebsite;
+		const Message = this.state.contactMsg;
+		let data = { 
+      contactName: Name,
+      contactEmail: Email,
+      contactWebsite: Website,
+      contactMsg: Message
+		};
 
-    if (Name && Email && Message) {
-			contactForm.style.display = 'none';
-			formValidMsg.style.display = 'block';
-    } else {
-    	formInvalidMsg.style.display = 'block';
-    	event.preventDefault();
-    }
+		if (Name && Email && Message) {
+			axios({
+					method: 'post',
+					url: 'mail.php', 
+	  			data: qs.stringify(data),
+				})
+				.then((response) => {
+					contactForm.style.display = 'none';
+					formValidMsg.style.display = 'block';
+				})
+				.catch((error) => {
+					console.log(error);
+					formInvalidMsg.style.display = 'block';
+			});
+		} else {
+			formInvalidMsg.style.display = 'block';
+		}
   }
 
   render() {
@@ -119,7 +141,9 @@ class Contact extends React.Component {
 							className="form__field" 
 							type="url" 
 							name="contactWebsite" 
-							id="contactWebsite" />
+							id="contactWebsite" 
+							value={this.state.contactWebsite}
+							onChange={this.handleInputChange}  />
 
 						<label className="form__label" htmlFor="contactWebsite">
 							<FontAwesomeIcon className="fa-fw form__label-icon" icon={faGlobe} />

@@ -89,7 +89,7 @@ class WorkSorting extends Component {
     });
 		
 		// Sort individual categories
-    function sortItems(theClassName, theBtn) {
+    const sortItems = (theClassName, theBtn) => {
     	for (let i of sortAll) {
     		if ( i.classList.contains(theClassName) ) {
 					i.style.display = 'inline-block';
