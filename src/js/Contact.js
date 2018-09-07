@@ -17,6 +17,7 @@ class Contact extends React.Component {
     const formInvalidMsg = document.getElementById('formInvalidMsg');
 		
 		for (let field of formFields) {
+			
 			// ** Hide invalid message on form field focus ** 
 			field.addEventListener('focus', () => {
 				formInvalidMsg.style.display = 'none';
