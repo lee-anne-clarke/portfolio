@@ -67,6 +67,7 @@ class Contact extends React.Component {
 		const Email = this.state.contactEmail;
 		const Website = this.state.contactWebsite;
 		const Message = this.state.contactMsg;
+
 		let data = { 
       contactName: Name,
       contactEmail: Email,
@@ -120,7 +121,6 @@ class Contact extends React.Component {
 				    </label>
 					</div>
 
-
 					<div className="form__group">
 						<input 
 							className="form__field" 
@@ -168,8 +168,7 @@ class Contact extends React.Component {
 							<span className="form__label-text">Message *</span>
 						</label>
 					</div>
-					         
-					         
+
 					<div className="form__msg" id="formInvalidMsg">
 						<p className="form__msg-invalid">Please fill in all required fields.</p>
 					</div>
