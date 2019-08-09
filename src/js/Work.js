@@ -11,7 +11,7 @@ class Work extends Component {
 				<h2>Work</h2>
 
 				<div className="work__inner">
-					<p>A selection of projects I have worked on.</p>
+					<p>A selection of projects I have worked on</p>
 
 					<WorkSorting />
 					<WorkItemsGrid />

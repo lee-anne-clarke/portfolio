@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import {
 	ModalSummaryNAHB,
-  ModalSummaryGranstand,
-  ModalSummaryViable,
-  ModalSummaryBracco,
-  ModalSummaryFiserv,
-  ModalSummarySilver,
-  ModalSummaryFresh,
+	ModalSummaryGranstand,
+	ModalSummaryViable,
+	ModalSummaryBracco,
+	ModalSummaryFiserv,
+	ModalSummarySilver,
+	ModalSummaryFresh,
 	ModalSummaryUpserve,
 	ModalSummaryITSLContact,
 	ModalSummaryCity,
@@ -82,11 +82,11 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-				  titleShort: "The Fresh Grocer",
-				  imgSource: require("../img/freshgrocer.jpg"),
-				  description: "mock website redesign",
-				  sortClasses: "sort-react",
-			    modalImgOneSrc: require("../img/freshgrocer-full.jpg"),
+				titleShort: "The Fresh Grocer",
+				imgSource: require("../img/freshgrocer.jpg"),
+				description: "mock website redesign",
+				sortClasses: "sort-react",
+				modalImgOneSrc: require("../img/freshgrocer-full.jpg"),
 			    modalImgOneAlt: "The Fresh Grocer screen cap - full",
 			    modalSummary: <ModalSummaryFresh />,
 			    projectURL: "/work/freshgrocer/",
@@ -94,10 +94,10 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-				  titleShort: "Lee-Anne-Clarke.com",
-				  imgSource: require("../img/portfolio.jpg"),
-				  description: "my portfolio",
-				  sortClasses: "sort-react",
+				titleShort: "Lee-Anne-Clarke.com",
+				imgSource: require("../img/portfolio.jpg"),
+				description: "my portfolio",
+				sortClasses: "sort-react",
 			    modalImgOneSrc: require("../img/portfolio-full.jpg"),
 			    modalImgOneAlt: "Lee-Anne-Clarke.com screen cap - full",
 			    modalSummary: <ModalSummaryLAC />,
@@ -141,10 +141,10 @@ class WorkItemsGrid extends Component {
 			  },
 
 			  {
-					titleShort: "City Hospital",
-					imgSource: require("../img/cityhospital.jpg"),
-					description: "homepage prototype",
-					sortClasses: "sort-bs",
+				titleShort: "City Hospital",
+				imgSource: require("../img/cityhospital.jpg"),
+				description: "homepage prototype",
+				sortClasses: "sort-bs",
 			    modalImgOneSrc: require("../img/cityhospital-full.jpg"),
 			    modalImgOneAlt: "City Hospital screen cap - full",
 			    modalSummary: <ModalSummaryCity />,
@@ -196,7 +196,7 @@ class WorkItemsGrid extends Component {
 			    sortClasses: "sort-wp",
 			    modalImgOneSrc: require("../img/fiservices-full-1.jpg"),
 			    modalImgOneAlt: "Fiservices screen cap - homepage",
-					modalImgTwoSrc: require("../img/fiservices-full-2.jpg"),
+				modalImgTwoSrc: require("../img/fiservices-full-2.jpg"),
 			    modalImgTwoAlt: "Fiservices screen cap - inside page",
 			    modalSummary: <ModalSummaryFiserv />,
 			    projectURL: "/work/fiservices/"
@@ -209,7 +209,7 @@ class WorkItemsGrid extends Component {
 			    sortClasses: "sort-wp",
 			    modalImgOneSrc: require("../img/silverspark-full-1.jpg"),
 			    modalImgOneAlt: "Silver Spark Jewelry screen cap - homepage",
-					modalImgTwoSrc: require("../img/silverspark-full-2.jpg"),
+				modalImgTwoSrc: require("../img/silverspark-full-2.jpg"),
 			    modalImgTwoAlt: "Silver Spark Jewelry screen cap - inside page",
 			    modalSummary: <ModalSummarySilver />,
 			    projectURL: "/work/silverspark/"
@@ -397,9 +397,9 @@ class WorkItemsGrid extends Component {
 
 	render() {
 	  return (
-	  	<React.Fragment>
+	  	<div>
 	  		{this.state.workItems.map(this.eachWorkItem)}
-	  	</React.Fragment>
+	  	</div>
 	  );
 	}
 }
