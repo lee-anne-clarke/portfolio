@@ -16,23 +16,23 @@ class Contact extends Component {
     const formFields = document.querySelectorAll(".form__field");
     const formInvalidMsg = document.getElementById('formInvalidMsg');
 		
-		for (let field of formFields) {
-			
-			// ** Hide invalid message on form field focus ** 
-			field.addEventListener('focus', () => {
-				formInvalidMsg.style.display = 'none';
-			});	
+	for (let field of formFields) {
+		
+		// ** Hide invalid message on form field focus ** 
+		field.addEventListener('focus', () => {
+			formInvalidMsg.style.display = 'none';
+		});	
 
-			// ** Add a special class to form field if it's filled in ** 
-			field.addEventListener('blur', () => {
+		// ** Add a special class to form field if it's filled in ** 
+		field.addEventListener('blur', () => {
 
-				if (field.value) {
-					field.classList.add('form__field--filled');
-				} else {
-					field.classList.remove('form__field--filled');
-				}
-			});		
-		}
+			if (field.value) {
+				field.classList.add('form__field--filled');
+			} else {
+				field.classList.remove('form__field--filled');
+			}
+		});		
+	}
   }
 
   constructor(props) {
@@ -75,12 +75,14 @@ class Contact extends Component {
 	  contactMsg: Message
 	};
 
+	// If the required form fields are filled in, process & submit the form
 	if (Name && Email && Message) {
 		axios({
 				method: 'post',
 				url: 'mail.php', 
 	  			data: qs.stringify(data),
 			})
+			// Upon successful submission, hide the form & display the form valid msg
 			.then((response) => {
 				contactForm.style.display = 'none';
 				formValidMsg.style.display = 'block';
@@ -89,6 +91,8 @@ class Contact extends Component {
 				console.log(error);
 				formInvalidMsg.style.display = 'block';
 		});
+
+	// If not, display the form invalid message
 	} else {
 		formInvalidMsg.style.display = 'block';
 	}
@@ -106,78 +110,84 @@ class Contact extends Component {
 				id="contactForm" 
 				onSubmit={this.handleSubmit}>
 
-				<div className="form__group">
-					<input 
-				    className="form__field" 
-				    type="text" 
-				    name="contactName" 
-				    id="contactName" 
-				    value={this.state.contactName}
-					onChange={this.handleInputChange} />
+				<p className="u-text-center">
+					You can email me at lac @ lee-anne-clarke.com, or use the form below.
+				</p>
 
-				    <label className="form__label" htmlFor="contactName">
-			        <FontAwesomeIcon className="fa-fw form__label-icon" icon={faUser} />
-			        <span className="form__label-text">Name *</span>
-				    </label>
-				</div>
-
-				<div className="form__group">
-					<input 
-						className="form__field" 
-						type="email" 
-						name="contactEmail" 
-						id="contactEmail" 
-						value={this.state.contactEmail}
+				<div className="form-inner">
+					<div className="form__group">
+						<input 
+					    className="form__field" 
+					    type="text" 
+					    name="contactName" 
+					    id="contactName" 
+					    value={this.state.contactName}
 						onChange={this.handleInputChange} />
 
-					<label className="form__label" htmlFor="contactEmail">
-						<FontAwesomeIcon className="fa-fw form__label-icon" icon={faEnvelope} />
-						<span className="form__label-text">Email *</span>
-					</label>
+					    <label className="form__label" htmlFor="contactName">
+				        <FontAwesomeIcon className="fa-fw form__label-icon" icon={faUser} />
+				        <span className="form__label-text">Name *</span>
+					    </label>
+					</div>
+
+					<div className="form__group">
+						<input 
+							className="form__field" 
+							type="email" 
+							name="contactEmail" 
+							id="contactEmail" 
+							value={this.state.contactEmail}
+							onChange={this.handleInputChange} />
+
+						<label className="form__label" htmlFor="contactEmail">
+							<FontAwesomeIcon className="fa-fw form__label-icon" icon={faEnvelope} />
+							<span className="form__label-text">Email *</span>
+						</label>
+					</div>
+
+
+					<div className="form__group">
+						<input 
+							className="form__field" 
+							type="url" 
+							name="contactWebsite" 
+							id="contactWebsite" 
+							value={this.state.contactWebsite}
+							onChange={this.handleInputChange}  />
+
+						<label className="form__label" htmlFor="contactWebsite">
+							<FontAwesomeIcon className="fa-fw form__label-icon" icon={faGlobe} />
+							<span className="form__label-text">Website</span>
+						</label>
+					</div>
+
+
+					<div className="form__group">
+						<textarea 
+							className="form__field form__field--ta" 
+							rows="7" 
+							name="contactMsg" 
+							id="contactMsg"
+							value={this.state.contactMsg}
+							onChange={this.handleInputChange}>
+						</textarea>
+
+						<label className="form__label" htmlFor="contactMsg">
+							<FontAwesomeIcon className="fa-fw form__label-icon" icon={faPencilAlt} />
+							<span className="form__label-text">Message *</span>
+						</label>
+					</div>
+
+
+					<div className="form__msg" id="formInvalidMsg">
+						<p className="form__msg-invalid">Please fill in all required fields.</p>
+					</div>
+
+					<button className="btn-submit" type="submit">
+						Submit
+						<FontAwesomeIcon className="btn-submit__icon" icon={faPaperPlane} />
+					</button>
 				</div>
-
-
-				<div className="form__group">
-					<input 
-						className="form__field" 
-						type="url" 
-						name="contactWebsite" 
-						id="contactWebsite" 
-						value={this.state.contactWebsite}
-						onChange={this.handleInputChange}  />
-
-					<label className="form__label" htmlFor="contactWebsite">
-						<FontAwesomeIcon className="fa-fw form__label-icon" icon={faGlobe} />
-						<span className="form__label-text">Website</span>
-					</label>
-				</div>
-
-
-				<div className="form__group">
-					<textarea 
-						className="form__field form__field--ta" 
-						rows="7" 
-						name="contactMsg" 
-						id="contactMsg"
-						value={this.state.contactMsg}
-						onChange={this.handleInputChange}>
-					</textarea>
-
-					<label className="form__label" htmlFor="contactMsg">
-						<FontAwesomeIcon className="fa-fw form__label-icon" icon={faPencilAlt} />
-						<span className="form__label-text">Message *</span>
-					</label>
-				</div>
-
-
-				<div className="form__msg" id="formInvalidMsg">
-					<p className="form__msg-invalid">Please fill in all required fields.</p>
-				</div>
-
-				<button className="btn-submit" type="submit">
-					Submit
-					<FontAwesomeIcon className="btn-submit__icon" icon={faPaperPlane} />
-				</button>
 			</form>
 
 	      <div className="form__msg form__msg--valid" id="formValidMsg">
