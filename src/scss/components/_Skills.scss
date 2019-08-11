@@ -33,6 +33,7 @@
 	display: inline-block;
 	width: 100%;
 	clear: both;
+	color: $white;
 	text-align: center;
 	padding: 1em;
 	margin-bottom: 3em;
@@ -41,10 +42,12 @@
 	box-shadow: 0 0.3em #e5ecf4;
 	overflow: hidden;
 	backface-visibility: hidden;
-	transition: all 0.3s;
-	
+	transition: all 0.3s;		
+
 	&::before {
 		display: inline-block;
+		background-size: 100%;
+		height: 39px;
 		font-size: 2.5em;
 		transition: all 0.3s;
 		backface-visibility: hidden;
@@ -85,12 +88,7 @@
 /******* Programming & Design *******/
 
 .skill--prog {
-	color: $white;
 
-	&::before {
-		background-size: 100%;
-		height: 39px;
-	}
 }
 
 .skill--html5 {

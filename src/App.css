@@ -23,16 +23,12 @@
   position: relative; }
 
 .main__inner {
-  padding: 2em 1.5em 1em; }
+  padding: 2em 1.5em 4em; }
 
 .main__anchor {
   top: -1.5em; }
 
-.about,
-.edu,
-.skills,
-.work,
-.contact {
+.section {
   padding-top: 4em; }
 
 @media (min-width: 375px) {
@@ -347,21 +343,21 @@ p {
 .modal-icon {
   margin-right: 0.3em; }
 
-.modal-content {
+.modal-inner {
   max-width: 800px;
   margin: 0 auto;
   padding-bottom: 2em; }
 
-.modal-content p {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
+.modal-inner p {
   color: #2d2d2d;
+  font-family: 'Roboto', sans-serif;
   font-size: 100%;
+  font-weight: 300;
   line-height: 2.4;
   text-align: left;
   margin-bottom: 1.6em; }
   @media (min-width: 600px) {
-    .modal-content p {
+    .modal-inner p {
       margin-bottom: 3em; } }
 
 .modal-img {
@@ -387,6 +383,9 @@ p {
     .form {
       margin-left: auto;
       margin-right: auto; } }
+
+.form-inner {
+  padding-top: 1em; }
 
 .form__group {
   display: inline-block;
@@ -650,6 +649,7 @@ p {
   display: inline-block;
   width: 100%;
   clear: both;
+  color: #fff;
   text-align: center;
   padding: 1em;
   margin-bottom: 3em;
@@ -661,6 +661,8 @@ p {
   transition: all 0.3s; }
   .skill::before {
     display: inline-block;
+    background-size: 100%;
+    height: 39px;
     font-size: 2.5em;
     transition: all 0.3s;
     backface-visibility: hidden; }
@@ -686,12 +688,6 @@ p {
     top: 0; }
 
 /******* Programming & Design *******/
-.skill--prog {
-  color: #fff; }
-  .skill--prog::before {
-    background-size: 100%;
-    height: 39px; }
-
 .skill--html5 {
   background-color: #ee652a; }
   .skill--html5::before {
@@ -933,17 +929,11 @@ p {
 .ws-li {
   display: inline-block;
   width: 50%;
-  padding-bottom: 1.5em; }
+  padding-bottom: 2em; }
   @media (min-width: 600px) {
     .ws-li {
       width: 25%;
-      padding-bottom: 3em; } }
-
-/*---------------------------------------------------
-	Contact
----------------------------------------------------*/
-.contact {
-  padding-bottom: 3em; }
+      padding-bottom: 4em; } }
 
 /*---------------------------------------------------
 	Utilities

@@ -1,47 +1,30 @@
 import React from 'react';
-import { SkillProg, SkillCMS } from './SkillDivs';
+import SkillDiv from './SkillDivs';
 import Divider from './Divider';
 
 
 function Skills() {
 	return (  
-		<section className="skills">
+		<section className="section skills">
 			<h2>Skills</h2> 
 
-			<section className="skills__set">
-				<h3 className="h3-skillsset">Programming &amp; Design</h3>
-
+			<div className="skills__set">
 				<div className="skills__set-left">
-					<SkillProg text="HTML5" skillClass="html5" />
-					<SkillProg text="Less" skillClass="less" />
-					<SkillProg text="JavaScript" skillClass="js" />
-					<SkillProg text="Foundation" skillClass="fd" />
-					<SkillProg text="Vue.js" skillClass="vue" />
+					<SkillDiv text="HTML5" skillClass="html5" />
+					<SkillDiv text="JavaScript" skillClass="js" />
+					<SkillDiv text="Less" skillClass="less" />
+					<SkillDiv text="Foundation" skillClass="fd" />
+					<SkillDiv text="Vue.js" skillClass="vue" />
 				</div>
 
 				<div className="skills__set-right">
-					<SkillProg text="CSS3" skillClass="css3" />
-					<SkillProg text="Sass" skillClass="sass" />
-					<SkillProg text="React" skillClass="react" />
-					<SkillProg text="Bootstrap" skillClass="bootstrap" />
-					<SkillProg text="Photoshop" skillClass="ps" />
+					<SkillDiv text="CSS3" skillClass="css3" />
+					<SkillDiv text="React" skillClass="react" />
+					<SkillDiv text="Sass" skillClass="sass" />		
+					<SkillDiv text="Bootstrap" skillClass="bootstrap" />
+					<SkillDiv text="Photoshop" skillClass="ps" />
 				</div>
-			</section>
-
-
-			<section className="skills__set">
-				<h3 className="h3-skillsset">Content Management Systems</h3>
-
-				<div className="skills__set-left">
-					<SkillCMS text="WordPress" skillClass="wp" />
-					<SkillCMS text="Sitecore" skillClass="sitecore" />
-				</div>
-
-				<div className="skills__set-right">
-					<SkillCMS text="Drupal" skillClass="drupal" />
-					<SkillCMS text="SharePoint" skillClass="sharepoint" />
-				</div>
-			</section>
+			</div>
 
 			<Divider />
 		</section>

@@ -7,7 +7,7 @@ import Divider from './Divider';
 class Work extends Component {
 	render() {
 		return (
-			<section className="work">
+			<section className="section work">
 				<h2>Work</h2>
 
 				<div className="work__inner">

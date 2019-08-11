@@ -1,24 +1,13 @@
 import React from 'react';
 
 
-function SkillProg(props) {
+function SkillDiv(props) {
 	return (
-		<div className={`skill skill--prog skill--${props.skillClass}`}>
-			<span>{props.text}</span>
-		</div>
-	);
-}
-
-function SkillCMS(props) {
-	return (
-		<div className={`skill skill--cms skill--${props.skillClass}`}>
+		<div className={`skill skill--${props.skillClass}`}>
 			<span>{props.text}</span>
 		</div>
 	);
 }
 
 
-export {
-	SkillProg,
-	SkillCMS
-}
+export default SkillDiv;

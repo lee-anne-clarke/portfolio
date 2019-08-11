@@ -111,15 +111,6 @@ function ModalSummaryITSLEmail() {
 }
 
 
-function ModalSummaryChanel() {
-  return (
-    <p>
-    	A mock site redesign created for my degree program at Sessions College. Built in Drupal 7 with base theme SimpleCorp. <a className="btn" href="https://drupal.org/project/flexslider" target="_blank" rel="noreferrer noopener">FlexSlider</a> used for image slider on the homepage. <a className="btn" href="http://www.no-margin-for-errors.com/projects/prettyphoto-jquery-lightbox-clone/" target="_blank" rel="noreferrer noopener">prettyPhoto lightbox</a> used for image gallery at the bottom of the homepage. <a className="btn" href="http://www.juicebox.net/" target="_blank" rel="noreferrer noopener">Juicebox</a> responsive image sliders used on product pages. Design by me.
-    </p>
-  );
-}
-
-
 function ModalSummaryBea() {
   return (
     <p>
@@ -164,7 +155,6 @@ export {
 	ModalSummaryCity,
 	ModalSummaryModSig,
 	ModalSummaryITSLEmail,
-	ModalSummaryChanel,
 	ModalSummaryBea,
 	ModalSummaryLAC,
 	ModalSummaryPhotoSearch,

@@ -19,11 +19,6 @@ class WorkSorting extends Component {
 		},
 		{
 			btnClass: '',
-			btnID: 'btnSortDrupal',
-			btnText: 'Drupal',
-		},
-		{
-			btnClass: '',
 			btnID: 'btnSortVue',
 			btnText: 'Vue.js',
 		},
@@ -63,7 +58,6 @@ class WorkSorting extends Component {
 		const sortBtns = document.querySelectorAll('.btn-sort');
 		const btnSortAll = document.getElementById('btnSortAll');
 		const btnSortWP = document.getElementById('btnSortWP');
-		const btnSortDrupal = document.getElementById('btnSortDrupal');
 		const btnSortVue = document.getElementById('btnSortVue');
 		const btnSortReact = document.getElementById('btnSortReact');
 		const btnSortBootstrap = document.getElementById('btnSortBootstrap');
@@ -113,10 +107,7 @@ class WorkSorting extends Component {
 	    btnSortWP.addEventListener('click', () => {
 	    	sortItems('sort-wp', btnSortWP);
 	    });
-	    btnSortDrupal.addEventListener('click', () => {
-	    	sortItems('sort-drupal', btnSortDrupal);
-	    });
-
+	    
 	    btnSortVue.addEventListener('click', () => {
 	    	sortItems('sort-vue', btnSortVue);
 	    });

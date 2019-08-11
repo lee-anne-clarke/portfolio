@@ -100,7 +100,7 @@ class Contact extends Component {
 
   render() {
     return (
-		<section className="contact">
+		<section className="section contact">
 			<h2>Contact</h2>
 
 			<form 

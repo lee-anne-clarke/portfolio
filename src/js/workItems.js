@@ -13,7 +13,6 @@ import {
 	ModalSummaryCity,
 	ModalSummaryModSig,
 	ModalSummaryITSLEmail,
-	ModalSummaryChanel,
 	ModalSummaryLAC,
 	ModalSummaryPhotoSearch,
 	ModalSummaryGDC
@@ -163,19 +162,6 @@ const workItems = [
     modalSummary: <ModalSummaryITSLEmail />,
     projTempURLOne: "/work/itslearning/emailtemplates/emailtemp1.html",
     projTempURLTwo: "/work/itslearning/emailtemplates/emailtemp2.html"
-  },
-
-  {
-    titleShort: "Chanel",
-    imgSource: require("../img/chanel.jpg"),
-    description: "mock website redesign",
-    sortClasses: "sort-drupal",
-    modalImgOneSrc: require("../img/chanel-full-1.jpg"),
-    modalImgOneAlt: "Chanel screen cap - homepage",
-    modalImgTwoSrc: require("../img/chanel-full-2.jpg"),
-    modalImgTwoAlt: "Chanel screen cap - inside page",
-    modalSummary: <ModalSummaryChanel />,
-    projectURL: "/work/chanel/"
   },
 
   {

@@ -121,7 +121,7 @@ class WorkItemsGrid extends Component {
 
 
 			<div className="modal" role="dialog">
-				<div className="modal-content">
+				<div className="modal-inner">
 
 				  <label className="btn-modal-close" htmlFor={`workItem${i}`}>
 				    <FontAwesomeIcon className="modal-icon" icon={faTimes} />CLOSE
