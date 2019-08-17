@@ -1,55 +1,13 @@
 import React, { Component } from 'react'
 import uuid from 'uuid'
+import workSortBtnList from './workSortBtnList'
 
 
 class WorkSorting extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      btnListItems: [
-			{
-				btnClass: 'active',
-				btnID: 'btnSortAll',
-				btnText: 'All',
-			},
-			{
-				btnClass: '',
-				btnID: 'btnSortWP',
-				btnText: 'WordPress',
-			},
-			{
-				btnClass: '',
-				btnID: 'btnSortVue',
-				btnText: 'Vue.js',
-			},
-			{
-				btnClass: '',
-				btnID: 'btnSortReact',
-				btnText: 'React',
-			},
-			{
-				btnClass: '',
-				btnID: 'btnSortBootstrap',
-				btnText: 'Bootstrap',
-			},
-			{
-				btnClass: '',
-				btnID: 'btnSortFoundation',
-				btnText: 'Foundation',
-			},
-			{
-				btnClass: '',
-				btnID: 'btnSortEmails',
-				btnText: 'Emails',
-			},
-			{
-				btnClass: '',
-				btnID: 'btnSortOther',
-				btnText: 'Other',
-			},
-     ],
-    }
-  }
+	constructor(props) {
+		super(props);
+		this.state = { workSortBtnList }
+	}
 
 	componentDidMount() {
 		const sortAll = document.querySelectorAll('.sort');
@@ -134,11 +92,11 @@ class WorkSorting extends Component {
 	}
 
 	render() {
-		const { btnListItems } = this.state
+		const { workSortBtnList } = this.state
 
 		return (
 			<ul className="work__sorting">
-				{btnListItems.map(({ id, btnClass, btnID, btnText }) => (
+				{workSortBtnList.map(({ id, btnClass, btnID, btnText }) => (
 					<li className="ws-li" key={uuid()}>
 						<button className={`btn-sort ${btnClass}`} id={btnID}>
 							{btnText}

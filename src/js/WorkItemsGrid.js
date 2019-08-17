@@ -186,7 +186,6 @@ class WorkItemsGrid extends Component {
 
 
 	render() {
-
 	  return (
 	  	<div>
 	  		{this.state.workItems.map(this.eachWorkItem)}

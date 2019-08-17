@@ -1,5 +1,5 @@
 import React from 'react';
-import SkillDiv from './SkillDivs';
+import SkillDiv from './SkillDiv';
 import Divider from './Divider';
 
 

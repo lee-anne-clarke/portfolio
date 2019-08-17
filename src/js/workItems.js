@@ -19,7 +19,6 @@ import {
 } from './ModalSummary';
 
 
-
 const workItems = [
   {
     titleShort: "Grandstand",

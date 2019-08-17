@@ -10,6 +10,7 @@ import Scroll from 'react-scroll';
 //Necessary for React Scroll package
 let Element = Scroll.Element;
 
+
 class Main extends Component {
 	render() {
 		return (
