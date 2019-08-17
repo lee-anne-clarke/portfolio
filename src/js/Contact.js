@@ -9,6 +9,7 @@ import {
 	faPencilAlt,
 	faPaperPlane
 } from '@fortawesome/free-solid-svg-icons';
+import FormItem from './FormItem'
 
 
 class Contact extends Component {
@@ -60,42 +61,42 @@ class Contact extends Component {
   handleSubmit(event) {
   	event.preventDefault();
 
-	const contactForm = document.getElementById('contactForm');
-	const formValidMsg = document.getElementById('formValidMsg');
-	const formInvalidMsg = document.getElementById('formInvalidMsg');
-	const Name = this.state.contactName;
-	const Email = this.state.contactEmail;
-	const Website = this.state.contactWebsite;
-	const Message = this.state.contactMsg;
+		const contactForm = document.getElementById('contactForm');
+		const formValidMsg = document.getElementById('formValidMsg');
+		const formInvalidMsg = document.getElementById('formInvalidMsg');
+		const Name = this.state.contactName;
+		const Email = this.state.contactEmail;
+		const Website = this.state.contactWebsite;
+		const Message = this.state.contactMsg;
 
-	let data = { 
-	  contactName: Name,
-	  contactEmail: Email,
-	  contactWebsite: Website,
-	  contactMsg: Message
-	};
+		let data = { 
+		  contactName: Name,
+		  contactEmail: Email,
+		  contactWebsite: Website,
+		  contactMsg: Message
+		};
 
-	// If the required form fields are filled in, process & submit the form
-	if (Name && Email && Message) {
-		axios({
-				method: 'post',
-				url: 'mail.php', 
-	  			data: qs.stringify(data),
-			})
-			// Upon successful submission, hide the form & display the form valid msg
-			.then((response) => {
-				contactForm.style.display = 'none';
-				formValidMsg.style.display = 'block';
-			})
-			.catch((error) => {
-				console.log(error);
-				formInvalidMsg.style.display = 'block';
-		});
+		// If the required form fields are filled in, process & submit the form
+		if (Name && Email && Message) {
+			axios({
+					method: 'post',
+					url: 'mail.php', 
+		  			data: qs.stringify(data),
+				})
+				// Upon successful submission, hide the form & display the form valid msg
+				.then((response) => {
+					contactForm.style.display = 'none';
+					formValidMsg.style.display = 'block';
+				})
+				.catch((error) => {
+					console.log(error);
+					formInvalidMsg.style.display = 'block';
+			});
 
-	// If not, display the form invalid message
-	} else {
-		formInvalidMsg.style.display = 'block';
-	}
+		// If not, display the form invalid message
+		} else {
+			formInvalidMsg.style.display = 'block';
+		}
   }
 
   render() {
@@ -115,52 +116,29 @@ class Contact extends Component {
 				</p>
 
 				<div className="form-inner">
-					<div className="form__group">
-						<input 
-					    className="form__field" 
-					    type="text" 
-					    name="contactName" 
-					    id="contactName" 
-					    value={this.state.contactName}
-						onChange={this.handleInputChange} />
+					<FormItem 
+						itemName="contactName"
+						inputValue={this.state.contactName}
+						changeEvent={this.handleInputChange}
+						iconName={faUser}
+						itemLabel="Name *"
+					/>
+					
+					<FormItem 
+						itemName="contactEmail"
+						inputValue={this.state.contactEmail}
+						changeEvent={this.handleInputChange}
+						iconName={faEnvelope}
+						itemLabel="Email *"
+					/>
 
-					    <label className="form__label" htmlFor="contactName">
-				        <FontAwesomeIcon className="fa-fw form__label-icon" icon={faUser} />
-				        <span className="form__label-text">Name *</span>
-					    </label>
-					</div>
-
-					<div className="form__group">
-						<input 
-							className="form__field" 
-							type="email" 
-							name="contactEmail" 
-							id="contactEmail" 
-							value={this.state.contactEmail}
-							onChange={this.handleInputChange} />
-
-						<label className="form__label" htmlFor="contactEmail">
-							<FontAwesomeIcon className="fa-fw form__label-icon" icon={faEnvelope} />
-							<span className="form__label-text">Email *</span>
-						</label>
-					</div>
-
-
-					<div className="form__group">
-						<input 
-							className="form__field" 
-							type="url" 
-							name="contactWebsite" 
-							id="contactWebsite" 
-							value={this.state.contactWebsite}
-							onChange={this.handleInputChange}  />
-
-						<label className="form__label" htmlFor="contactWebsite">
-							<FontAwesomeIcon className="fa-fw form__label-icon" icon={faGlobe} />
-							<span className="form__label-text">Website</span>
-						</label>
-					</div>
-
+					<FormItem 
+						itemName="contactWebsite"
+						inputValue={this.state.contactWebsite}
+						changeEvent={this.handleInputChange}
+						iconName={faGlobe}
+						itemLabel="Website"
+					/>
 
 					<div className="form__group">
 						<textarea 
