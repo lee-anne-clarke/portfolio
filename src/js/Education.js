@@ -42,7 +42,6 @@ function Education() {
         </div>
       </div>
 
-
       <Divider />
     </section>
   );

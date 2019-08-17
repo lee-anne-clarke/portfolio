@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import uuid from 'uuid';
 import Scroll from 'react-scroll';
 import { 
 	faHome,
@@ -20,7 +19,6 @@ let scroller   = Scroll.scroller;
 
 
 class Nav extends Component {
-	
 	/* React Scroll */
 	componentDidMount() {
 		scrollSpy.update();
@@ -62,7 +60,6 @@ class Nav extends Component {
 
 					<NavItem 
 						liClass="nav-li--home"
-						id={uuid()}
 						faIcon={faHome}
 						clickEvent={this.scrollToTop}
 						srText="Home"
@@ -70,15 +67,14 @@ class Nav extends Component {
 
 					<NavItem 
 						liClass=""
-						id={uuid()}
 						faIcon={faUser}
 						clickEvent={this.scrollToAbout}
 						srText="About"
 					/>
 
 					<NavItem 
+						liClass=""
 						liClass="nav-li--edu"
-						id={uuid()}
 						faIcon={faGraduationCap}
 						clickEvent={this.scrollToEdu}
 						srText="Education"
@@ -86,7 +82,6 @@ class Nav extends Component {
 
 					<NavItem 
 						liClass=""
-						id={uuid()}
 						faIcon={faWrench}
 						clickEvent={this.scrollToSkills}
 						srText="Skills"
@@ -94,7 +89,6 @@ class Nav extends Component {
 
 					<NavItem 
 						liClass=""
-						id={uuid()}
 						faIcon={faBriefcase}
 						clickEvent={this.scrollToWork}
 						srText="Work"
@@ -102,7 +96,6 @@ class Nav extends Component {
 
 					<NavItem 
 						liClass=""
-						id={uuid()}
 						faIcon={faPaperPlane}
 						clickEvent={this.scrollToContact}
 						srText="Contact"
