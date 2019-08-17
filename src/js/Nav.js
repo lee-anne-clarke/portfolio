@@ -73,7 +73,6 @@ class Nav extends Component {
 					/>
 
 					<NavItem 
-						liClass=""
 						liClass="nav-li--edu"
 						faIcon={faGraduationCap}
 						clickEvent={this.scrollToEdu}
