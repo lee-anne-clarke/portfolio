@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Scroll from 'react-scroll';
+import uuid from 'uuid';
+import NavItem from './NavItem';
 import { 
 	faHome,
 	faUser,
@@ -9,7 +11,7 @@ import {
 	faPaperPlane
 } 
 from '@fortawesome/free-solid-svg-icons';
-import NavItem from './NavItem';
+
 
 //Variables for React Scroll
 let Events     = Scroll.Events;
@@ -59,6 +61,7 @@ class Nav extends Component {
 				<ul className="nav-list">
 
 					<NavItem 
+						key={uuid()}
 						liClass="nav-li--home"
 						faIcon={faHome}
 						clickEvent={this.scrollToTop}
@@ -66,6 +69,7 @@ class Nav extends Component {
 					/>
 
 					<NavItem 
+						key={uuid()}
 						liClass=""
 						faIcon={faUser}
 						clickEvent={this.scrollToAbout}
@@ -73,6 +77,7 @@ class Nav extends Component {
 					/>
 
 					<NavItem 
+						key={uuid()}
 						liClass="nav-li--edu"
 						faIcon={faGraduationCap}
 						clickEvent={this.scrollToEdu}
@@ -80,6 +85,7 @@ class Nav extends Component {
 					/>
 
 					<NavItem 
+						key={uuid()}
 						liClass=""
 						faIcon={faWrench}
 						clickEvent={this.scrollToSkills}
@@ -87,6 +93,7 @@ class Nav extends Component {
 					/>
 
 					<NavItem 
+						key={uuid()}
 						liClass=""
 						faIcon={faBriefcase}
 						clickEvent={this.scrollToWork}
@@ -94,6 +101,7 @@ class Nav extends Component {
 					/>
 
 					<NavItem 
+						key={uuid()}
 						liClass=""
 						faIcon={faPaperPlane}
 						clickEvent={this.scrollToContact}
