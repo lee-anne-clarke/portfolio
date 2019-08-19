@@ -1,5 +1,40 @@
 import React from 'react';
 
+import grandstandThumb from '../img/grandstand.jpg';
+import grandstandFull from '../img/grandstand-full.jpg';
+import viableThumb from '../img/viable.jpg';
+import viableFull from '../img/viable-full.jpg';
+import buildersThumb from '../img/buildersshow.jpg';
+import buildersFull1 from '../img/buildersshow-full-1.jpg';
+import buildersFull2 from '../img/buildersshow-full-2.jpg';
+import gdcThumb from '../img/gdc.jpg';
+import gdcFull1 from '../img/gdc-full-1.jpg';
+import gdcFull2 from '../img/gdc-full-2.jpg';
+import freshgrocerThumb from '../img/freshgrocer.jpg';
+import freshgrocerFull from '../img/freshgrocer-full.jpg';
+import portfolioThumb from '../img/portfolio.jpg';
+import portfolioFull from '../img/portfolio-full.jpg';
+import braccoThumb from '../img/bracco.jpg';
+import braccoFull from '../img/bracco-full.jpg';
+import upserveThumb from '../img/upserve.jpg';
+import upserveFull from '../img/upserve-full.jpg';
+import itsPartnerThumb from '../img/itslearning-cp.jpg';
+import itsPartnerFull from '../img/itslearning-cp-full.jpg';
+import cityHospitalThumb from '../img/cityhospital.jpg';
+import cityHospitalFull from '../img/cityhospital-full.jpg';
+import teampageThumb from '../img/teampage.jpg';
+import teampageFull from '../img/teampage-full.jpg';
+import itsEmailThumb from '../img/itslearning-email.jpg';
+import itsEmailFull from '../img/itslearning-email-full.jpg';
+import fisThumb from '../img/fiservices.jpg';
+import fisFull1 from '../img/fiservices-full-1.jpg';
+import fisFull2 from '../img/fiservices-full-2.jpg';
+import silversparkThumb from '../img/silverspark.jpg';
+import silversparkFull1 from '../img/silverspark-full-1.jpg';
+import silversparkFull2 from '../img/silverspark-full-2.jpg';
+import photosearchThumb from '../img/photosearch.jpg';
+import photosearchFull from '../img/photosearch-full.jpg';
+
 import {
 	ModalSummaryNAHB,
 	ModalSummaryGranstand,
@@ -22,10 +57,10 @@ import {
 const workItems = [
   {
     titleShort: "Grandstand",
-    imgSource: require("../img/grandstand.jpg"),
+    imgSource: grandstandThumb,
     description: "landing page",
     sortClasses: "sort-foundation sort-vue",
-    modalImgOneSrc: require("../img/grandstand-full.jpg"),
+    modalImgOneSrc: grandstandFull,
     modalImgOneAlt: "Grandstand landing page screen cap - full",
     modalSummary: <ModalSummaryGranstand />,
     projectURL: "https://getgrandstand.com/"
@@ -33,10 +68,10 @@ const workItems = [
 
   {
     titleShort: "Viable",
-    imgSource: require("../img/viable.jpg"),
+    imgSource: viableThumb,
     description: "landing page",
     sortClasses: "sort-foundation sort-vue",
-    modalImgOneSrc: require("../img/viable-full.jpg"),
+    modalImgOneSrc: viableFull,
     modalImgOneAlt: "Viable landing page screen cap - full",
     modalSummary: <ModalSummaryViable />,
     projectURL: "https://viable.af/"
@@ -44,24 +79,24 @@ const workItems = [
 
   {
     titleShort: "International Builders' Show",
-    imgSource: require("../img/buildersshow.jpg"),
+    imgSource: buildersThumb,
     description: "site relaunch",
     sortClasses: "sort-bs",
-    modalImgOneSrc: require("../img/buildersshow-full-1.jpg"),
+    modalImgOneSrc: buildersFull1,
     modalImgOneAlt: "NAHB International Builders' Show 2017 screen cap - homepage",
-    modalImgTwoSrc: require("../img/buildersshow-full-2.jpg"),
+    modalImgTwoSrc: buildersFull2,
     modalImgTwoAlt: "NAHB International Builders' Show 2017 screen cap - inside page",
     modalSummary: <ModalSummaryNAHB />
   },
 
   {
     titleShort: "Great Design Co.",
-    imgSource: require("../img/gdc.jpg"),
+    imgSource: gdcThumb,
     description: "mock design agency",
     sortClasses: "sort-react",
-    modalImgOneSrc: require("../img/gdc-full-1.jpg"),
+    modalImgOneSrc: gdcFull1,
     modalImgOneAlt: "Great Design Co. screen cap - homepage",
-    modalImgTwoSrc: require("../img/gdc-full-2.jpg"),
+    modalImgTwoSrc: gdcFull2,
     modalImgTwoAlt: "Great Design Co. screen cap - project page",
     modalSummary: <ModalSummaryGDC />,
     projectURL: "/work/greatdesignco/",
@@ -70,10 +105,10 @@ const workItems = [
 
   {
 	titleShort: "The Fresh Grocer",
-	imgSource: require("../img/freshgrocer.jpg"),
+	imgSource: freshgrocerThumb,
 	description: "mock website redesign",
 	sortClasses: "sort-react",
-	modalImgOneSrc: require("../img/freshgrocer-full.jpg"),
+	modalImgOneSrc: freshgrocerFull,
     modalImgOneAlt: "The Fresh Grocer screen cap - full",
     modalSummary: <ModalSummaryFresh />,
     projectURL: "/work/freshgrocer/",
@@ -82,10 +117,10 @@ const workItems = [
 
   {
 	titleShort: "Lee-Anne-Clarke.com",
-	imgSource: require("../img/portfolio.jpg"),
+	imgSource: portfolioThumb,
 	description: "my portfolio",
 	sortClasses: "sort-react",
-    modalImgOneSrc: require("../img/portfolio-full.jpg"),
+    modalImgOneSrc: portfolioFull,
     modalImgOneAlt: "Lee-Anne-Clarke.com screen cap - full",
     modalSummary: <ModalSummaryLAC />,
     projectRepo: "portfolio"
@@ -93,10 +128,10 @@ const workItems = [
 
   {
     titleShort: "Bracco: Learn the Truth",
-    imgSource: require("../img/bracco.jpg"),
+    imgSource: braccoThumb,
     description: "microsite",
     sortClasses: "sort-bs",
-    modalImgOneSrc: require("../img/bracco-full.jpg"),
+    modalImgOneSrc: braccoFull,
     modalImgOneAlt: "Grandstand landing page screen cap - full",
     modalSummary: <ModalSummaryBracco />,
     projectURL: "/work/bracco/",
@@ -105,10 +140,10 @@ const workItems = [
 
   {
     titleShort: "Upserve",
-    imgSource: require("../img/upserve.jpg"),
+    imgSource: upserveThumb,
     description: "landing page templates",
     sortClasses: "sort-other",
-    modalImgOneSrc: require("../img/upserve-full.jpg"),
+    modalImgOneSrc: upserveFull,
     modalImgOneAlt: "Upserve marketing landing page template screen cap - full",
     modalSummary: <ModalSummaryUpserve />,
     projTempURLOne: "/work/upserve/upserve1.html",
@@ -118,10 +153,10 @@ const workItems = [
 
   {
     titleShort: "itslearning, inc.",
-    imgSource: require("../img/itslearning-cp.jpg"),
+    imgSource: itsPartnerThumb,
     description: "channel partner page template",
     sortClasses: "sort-bs",
-    modalImgOneSrc: require("../img/itslearning-cp-full.jpg"),
+    modalImgOneSrc: itsPartnerFull,
     modalImgOneAlt: "itslearning channel partner page screen cap - full",
     modalSummary: <ModalSummaryITSLContact />,
     projectURL: "http://info.itslearning.net/US-Partner-Landing-Page.html",
@@ -129,10 +164,10 @@ const workItems = [
 
   {
 	titleShort: "City Hospital",
-	imgSource: require("../img/cityhospital.jpg"),
+	imgSource: cityHospitalThumb,
 	description: "homepage prototype",
 	sortClasses: "sort-bs",
-    modalImgOneSrc: require("../img/cityhospital-full.jpg"),
+    modalImgOneSrc: cityHospitalFull,
     modalImgOneAlt: "City Hospital screen cap - full",
     modalSummary: <ModalSummaryCity />,
     projectURL: "/work/cityhospital/",
@@ -141,10 +176,10 @@ const workItems = [
 
   {
     titleShort: "Modern Signal",
-    imgSource: require("../img/teampage.jpg"),
+    imgSource: teampageThumb,
     description: "client employee page",
     sortClasses: "sort-other",
-    modalImgOneSrc: require("../img/teampage-full.jpg"),
+    modalImgOneSrc: teampageFull,
     modalImgOneAlt: "Modern Signal client employee page screen cap - full",
     modalSummary: <ModalSummaryModSig />,
     projectURL: "/work/teampage/",
@@ -153,10 +188,10 @@ const workItems = [
 
   {
     titleShort: "itslearning, inc.",
-    imgSource: require("../img/itslearning-email.jpg"),
+    imgSource: itsEmailThumb,
     description: "email templates",
     sortClasses: "sort-emails",
-    modalImgOneSrc: require("../img/itslearning-email-full.jpg"),
+    modalImgOneSrc: itsEmailFull,
     modalImgOneAlt: "itslearning email template screen cap - full",
     modalSummary: <ModalSummaryITSLEmail />,
     projTempURLOne: "/work/itslearning/emailtemplates/emailtemp1.html",
@@ -165,12 +200,12 @@ const workItems = [
 
   {
     titleShort: "Fiservices",
-    imgSource: require("../img/fiservices.jpg"),
+    imgSource: fisThumb,
     description: "mock financial services website",
     sortClasses: "sort-wp",
-    modalImgOneSrc: require("../img/fiservices-full-1.jpg"),
+    modalImgOneSrc: fisFull1,
     modalImgOneAlt: "Fiservices screen cap - homepage",
-	modalImgTwoSrc: require("../img/fiservices-full-2.jpg"),
+	modalImgTwoSrc: fisFull2,
     modalImgTwoAlt: "Fiservices screen cap - inside page",
     modalSummary: <ModalSummaryFiserv />,
     projectURL: "/work/fiservices/"
@@ -178,12 +213,12 @@ const workItems = [
 
   {
     titleShort: "Silver Spark Jewelry",
-    imgSource: require("../img/silverspark.jpg"),
+    imgSource: silversparkThumb,
     description: "mock business website",
     sortClasses: "sort-wp",
-    modalImgOneSrc: require("../img/silverspark-full-1.jpg"),
+    modalImgOneSrc: silversparkFull1,
     modalImgOneAlt: "Silver Spark Jewelry screen cap - homepage",
-	modalImgTwoSrc: require("../img/silverspark-full-2.jpg"),
+	modalImgTwoSrc: silversparkFull2,
     modalImgTwoAlt: "Silver Spark Jewelry screen cap - inside page",
     modalSummary: <ModalSummarySilver />,
     projectURL: "/work/silverspark/"
@@ -191,10 +226,10 @@ const workItems = [
 
   {
     titleShort: "Flickr photo search",
-    imgSource: require("../img/photosearch.jpg"),
+    imgSource: photosearchThumb,
     description: "independent project",
     sortClasses: "sort-other",
-    modalImgOneSrc: require("../img/photosearch-full.jpg"),
+    modalImgOneSrc: photosearchFull,
     modalImgOneAlt: "Flickr photo search screen cap - full",
     modalSummary: <ModalSummaryPhotoSearch />,
     projectURL: "/work/photosearch/",

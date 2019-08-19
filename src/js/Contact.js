@@ -17,23 +17,23 @@ class Contact extends Component {
     const formFields = document.querySelectorAll(".form__field");
     const formInvalidMsg = document.getElementById('formInvalidMsg');
 		
-	for (let field of formFields) {
+		for (let field of formFields) {
 		
-		// ** Hide invalid message on form field focus ** 
-		field.addEventListener('focus', () => {
-			formInvalidMsg.style.display = 'none';
-		});	
+			// ** Hide invalid message on form field focus ** 
+			field.addEventListener('focus', () => {
+				formInvalidMsg.style.display = 'none';
+			});	
 
-		// ** Add a special class to form field if it's filled in ** 
-		field.addEventListener('blur', () => {
+			// ** Add a special class to form field if it's filled in ** 
+			field.addEventListener('blur', () => {
 
-			if (field.value) {
-				field.classList.add('form__field--filled');
-			} else {
-				field.classList.remove('form__field--filled');
-			}
-		});		
-	}
+				if (field.value) {
+					field.classList.add('form__field--filled');
+				} else {
+					field.classList.remove('form__field--filled');
+				}
+			});		
+		}
   }
 
   constructor(props) {

@@ -146,34 +146,33 @@ class WorkItemsGrid extends Component {
 				  </div>
 
 				  <div style={modalViewRepoStyle}>
-					<a 
-						className="btn-viewproject" 
-						href={`https://github.com/lee-anne-clarke/${item.projectRepo}`} 
-						target="_blank" rel="noreferrer noopener">
-						<FontAwesomeIcon className="modal-icon" icon={faFileCode} />view the repo
-					</a>
+						<a 
+							className="btn-viewproject" 
+							href={`https://github.com/lee-anne-clarke/${item.projectRepo}`} 
+							target="_blank" rel="noreferrer noopener">
+							<FontAwesomeIcon className="modal-icon" icon={faFileCode} />view the repo
+						</a>
 				  </div>
 
 				  <div style={modalViewTempOneStyle}>
-					<a className="btn-viewproject" href={item.projTempURLOne} target="_blank" rel="noreferrer noopener">
-						<FontAwesomeIcon className="modal-icon" icon={faTint} />template 1
-					</a>
+						<a className="btn-viewproject" href={item.projTempURLOne} target="_blank" rel="noreferrer noopener">
+							<FontAwesomeIcon className="modal-icon" icon={faTint} />template 1
+						</a>
 				  </div>
 
 				  <div style={modalViewTempTwoStyle}>
-					<a className="btn-viewproject" href={item.projTempURLTwo} target="_blank" rel="noreferrer noopener">
-						<FontAwesomeIcon className="modal-icon" icon={faTint} />template 2
-					</a>
+						<a className="btn-viewproject" href={item.projTempURLTwo} target="_blank" rel="noreferrer noopener">
+							<FontAwesomeIcon className="modal-icon" icon={faTint} />template 2
+						</a>
 				  </div>
 
 				  <div style={modalViewTempThreeStyle}>
-					<a className="btn-viewproject" href={item.projTempURLThree} target="_blank" rel="noreferrer noopener">
-						<FontAwesomeIcon className="modal-icon" icon={faTint} />template 3
-					</a>
+						<a className="btn-viewproject" href={item.projTempURLThree} target="_blank" rel="noreferrer noopener">
+							<FontAwesomeIcon className="modal-icon" icon={faTint} />template 3
+						</a>
 				  </div>
 
-				  <label className="btn-modal-close btn-modal-close--bottom" 
-				  		 htmlFor={`workItem${i}`}>
+				  <label className="btn-modal-close btn-modal-close--bottom" htmlFor={`workItem${i}`}>
 				    <FontAwesomeIcon className="modal-icon" icon={faTimes} />CLOSE
 				  </label>
 
