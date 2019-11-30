@@ -15,12 +15,14 @@ import FormItem from './FormItem'
 class Contact extends Component {
   componentDidMount() {
     const formFields = document.querySelectorAll(".form__field");
+    const textareaInvalidMsg = document.getElementById('textareaInvalidMsg');
     const formInvalidMsg = document.getElementById('formInvalidMsg');
 		
 		for (let field of formFields) {
 		
-			// ** Hide invalid message on form field focus ** 
+			// ** Hide invalid messages on form field focus ** 
 			field.addEventListener('focus', () => {
+				textareaInvalidMsg.style.display = 'none';
 				formInvalidMsg.style.display = 'none';
 			});	
 
@@ -64,6 +66,7 @@ class Contact extends Component {
 		const contactForm = document.getElementById('contactForm');
 		const formValidMsg = document.getElementById('formValidMsg');
 		const formInvalidMsg = document.getElementById('formInvalidMsg');
+		const textareaInvalidMsg = document.getElementById('textareaInvalidMsg');
 		const Name = this.state.contactName;
 		const Email = this.state.contactEmail;
 		const Website = this.state.contactWebsite;
@@ -78,21 +81,23 @@ class Contact extends Component {
 
 		// If the required form fields are filled in, process & submit the form
 		if (Name && Email && Message) {
-			axios({
-					method: 'post',
-					url: 'mail.php', 
-		  			data: qs.stringify(data),
-				})
-				// Upon successful submission, hide the form & display the form valid msg
-				.then((response) => {
-					contactForm.style.display = 'none';
-					formValidMsg.style.display = 'block';
-				})
-				.catch((error) => {
-					console.log(error);
-					formInvalidMsg.style.display = 'block';
-			});
-
+			if (Message.length > 150) {
+				axios({
+						method: 'post',
+						url: 'mail.php', 
+			  		data: qs.stringify(data),
+					})
+					// Upon successful submission, hide the form & display the form valid msg
+					.then((response) => {
+						contactForm.style.display = 'none';
+						formValidMsg.style.display = 'block';
+					})
+					.catch((error) => {
+						console.log(error);
+				});
+			} else {
+				textareaInvalidMsg.style.display = 'block';	
+			}
 		// If not, display the form invalid message
 		} else {
 			formInvalidMsg.style.display = 'block';
@@ -101,77 +106,81 @@ class Contact extends Component {
 
   render() {
     return (
-		<section className="section contact">
-			<h2>Contact</h2>
+			<section className="section contact">
+				<h2>Contact</h2>
 
-			<form 
-				className="form" 
-				action="mail.php" 
-				method="post" 
-				id="contactForm" 
-				onSubmit={this.handleSubmit}>
+				<form 
+					className="form" 
+					action="mail.php" 
+					method="post" 
+					id="contactForm" 
+					onSubmit={this.handleSubmit}>
 
-				<p className="u-text-center">
-					You can email me at lac @ lee-anne-clarke.com, or use the form below.
-				</p>
+					<p className="u-text-center">
+						You can email me at lac @ lee-anne-clarke.com, or use the form below.
+					</p>
 
-				<div className="form-inner">
-					<FormItem 
-						itemName="contactName"
-						inputValue={this.state.contactName}
-						changeEvent={this.handleInputChange}
-						iconName={faUser}
-						itemLabel="Name *"
-					/>
-					
-					<FormItem 
-						itemName="contactEmail"
-						inputValue={this.state.contactEmail}
-						changeEvent={this.handleInputChange}
-						iconName={faEnvelope}
-						itemLabel="Email *"
-					/>
+					<div className="form-inner">
+						<FormItem 
+							itemLabel="Name *"
+							itemName="contactName"
+							inputValue={this.state.contactName}
+							changeEvent={this.handleInputChange}
+							iconName={faUser}
+						/>
+						
+						<FormItem 
+							itemLabel="Email *"
+							itemName="contactEmail"
+							inputValue={this.state.contactEmail}
+							changeEvent={this.handleInputChange}
+							iconName={faEnvelope}
+						/>
 
-					<FormItem 
-						itemName="contactWebsite"
-						inputValue={this.state.contactWebsite}
-						changeEvent={this.handleInputChange}
-						iconName={faGlobe}
-						itemLabel="Website"
-					/>
+						<FormItem 
+							itemLabel="Website"
+							itemName="contactWebsite"
+							inputValue={this.state.contactWebsite}
+							changeEvent={this.handleInputChange}
+							iconName={faGlobe}
+						/>
 
-					<div className="form__group">
-						<textarea 
-							className="form__field form__field--ta" 
-							rows="7" 
-							name="contactMsg" 
-							id="contactMsg"
-							value={this.state.contactMsg}
-							onChange={this.handleInputChange}>
-						</textarea>
+						<div className="form__group">
+							<textarea 
+								className="form__field form__field--ta" 
+								rows="7" 
+								name="contactMsg" 
+								id="contactMsg"
+								value={this.state.contactMsg}
+								onChange={this.handleInputChange}>
+							</textarea>
 
-						<label className="form__label" htmlFor="contactMsg">
-							<FontAwesomeIcon className="fa-fw form__label-icon" icon={faPencilAlt} />
-							<span className="form__label-text">Message *</span>
-						</label>
+							<label className="form__label" htmlFor="contactMsg">
+								<FontAwesomeIcon className="fa-fw form__label-icon" icon={faPencilAlt} />
+								<span className="form__label-text">Message *</span>
+							</label>
+						</div>
+
+
+						<div className="form__msg" id="formInvalidMsg">
+							<p className="form__msg-invalid">Please fill in all required fields.</p>
+						</div>
+
+						<div className="form__msg" id="textareaInvalidMsg">
+							<p className="form__msg-invalid">Message must be at least 150 characters.</p>
+						</div>
+
+						<button className="btn-submit" type="submit">
+							Submit
+							<FontAwesomeIcon className="btn-submit__icon" icon={faPaperPlane} />
+						</button>
 					</div>
+				</form>
 
-
-					<div className="form__msg" id="formInvalidMsg">
-						<p className="form__msg-invalid">Please fill in all required fields.</p>
-					</div>
-
-					<button className="btn-submit" type="submit">
-						Submit
-						<FontAwesomeIcon className="btn-submit__icon" icon={faPaperPlane} />
-					</button>
+				<div className="form__msg form__msg--valid" id="formValidMsg">
+					<p>Thank you!</p>
 				</div>
-			</form>
-
-	      <div className="form__msg form__msg--valid" id="formValidMsg">
-			<p>Thank you!</p>
-	      </div>
-		</section>
+			</section>
     );
   }
 }
