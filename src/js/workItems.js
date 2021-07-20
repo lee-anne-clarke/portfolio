@@ -134,7 +134,6 @@ const workItems = [
     modalImgOneSrc: braccoFull,
     modalImgOneAlt: "Grandstand landing page screen cap - full",
     modalSummary: <ModalSummaryBracco />,
-    projectURL: "/work/bracco/",
     projectRepo: "bracco"
   },
 
