@@ -15,14 +15,12 @@ import FormItem from './FormItem'
 class Contact extends Component {
   componentDidMount() {
     const formFields = document.querySelectorAll(".form__field");
-    const textareaInvalidMsg = document.getElementById('textareaInvalidMsg');
     const formInvalidMsg = document.getElementById('formInvalidMsg');
 		
 		for (let field of formFields) {
 		
-			// ** Hide invalid messages on form field focus ** 
+			// ** Hide invalid message on form field focus ** 
 			field.addEventListener('focus', () => {
-				textareaInvalidMsg.style.display = 'none';
 				formInvalidMsg.style.display = 'none';
 			});	
 
@@ -66,7 +64,6 @@ class Contact extends Component {
 		const contactForm = document.getElementById('contactForm');
 		const formValidMsg = document.getElementById('formValidMsg');
 		const formInvalidMsg = document.getElementById('formInvalidMsg');
-		const textareaInvalidMsg = document.getElementById('textareaInvalidMsg');
 		const Name = this.state.contactName;
 		const Email = this.state.contactEmail;
 		const Website = this.state.contactWebsite;
@@ -81,23 +78,20 @@ class Contact extends Component {
 
 		// If the required form fields are filled in, process & submit the form
 		if (Name && Email && Message) {
-			if (Message.length > 150) {
-				axios({
-						method: 'post',
-						url: 'mail.php', 
-			  		data: qs.stringify(data),
-					})
-					// Upon successful submission, hide the form & display the form valid msg
-					.then((response) => {
-						contactForm.style.display = 'none';
-						formValidMsg.style.display = 'block';
-					})
-					.catch((error) => {
-						console.log(error);
-				});
-			} else {
-				textareaInvalidMsg.style.display = 'block';	
-			}
+			axios({
+					method: 'post',
+					url: 'mail.php', 
+		  		data: qs.stringify(data),
+				})
+				// Upon successful submission, hide the form & display the form valid msg
+				.then((response) => {
+					contactForm.style.display = 'none';
+					formValidMsg.style.display = 'block';
+				})
+				.catch((error) => {
+					console.log(error);
+			});
+
 		// If not, display the form invalid message
 		} else {
 			formInvalidMsg.style.display = 'block';
@@ -164,10 +158,6 @@ class Contact extends Component {
 
 						<div className="form__msg" id="formInvalidMsg">
 							<p className="form__msg-invalid">Please fill in all required fields.</p>
-						</div>
-
-						<div className="form__msg" id="textareaInvalidMsg">
-							<p className="form__msg-invalid">Message must be at least 150 characters.</p>
 						</div>
 
 						<button className="btn-submit" type="submit">

@@ -56,6 +56,32 @@ import {
 
 const workItems = [
   {
+    titleShort: "Great Design Co.",
+    imgSource: gdcThumb,
+    description: "mock design agency",
+    sortClasses: "sort-react",
+    modalImgOneSrc: gdcFull1,
+    modalImgOneAlt: "Great Design Co. screen cap - homepage",
+    modalImgTwoSrc: gdcFull2,
+    modalImgTwoAlt: "Great Design Co. screen cap - project page",
+    modalSummary: <ModalSummaryGDC />,
+    projectURL: "/work/greatdesignco/",
+    projectRepo: "greatdesignco"
+  },
+
+  {
+    titleShort: "The Fresh Grocer",
+    imgSource: freshgrocerThumb,
+    description: "mock website redesign",
+    sortClasses: "sort-react",
+    modalImgOneSrc: freshgrocerFull,
+      modalImgOneAlt: "The Fresh Grocer screen cap - full",
+      modalSummary: <ModalSummaryFresh />,
+      projectURL: "/work/freshgrocer/",
+      projectRepo: "freshgrocer"
+  },
+  
+  {
     titleShort: "Grandstand",
     imgSource: grandstandThumb,
     description: "landing page",
@@ -63,7 +89,6 @@ const workItems = [
     modalImgOneSrc: grandstandFull,
     modalImgOneAlt: "Grandstand landing page screen cap - full",
     modalSummary: <ModalSummaryGranstand />,
-    projectURL: "https://getgrandstand.com/"
   },
 
   {
@@ -74,7 +99,6 @@ const workItems = [
     modalImgOneSrc: viableFull,
     modalImgOneAlt: "Viable landing page screen cap - full",
     modalSummary: <ModalSummaryViable />,
-    projectURL: "https://viable.af/"
   },
 
   {
@@ -90,40 +114,14 @@ const workItems = [
   },
 
   {
-    titleShort: "Great Design Co.",
-    imgSource: gdcThumb,
-    description: "mock design agency",
-    sortClasses: "sort-react",
-    modalImgOneSrc: gdcFull1,
-    modalImgOneAlt: "Great Design Co. screen cap - homepage",
-    modalImgTwoSrc: gdcFull2,
-    modalImgTwoAlt: "Great Design Co. screen cap - project page",
-    modalSummary: <ModalSummaryGDC />,
-    projectURL: "/work/greatdesignco/",
-    projectRepo: "greatdesignco"
-  },
-
-  {
-	titleShort: "The Fresh Grocer",
-	imgSource: freshgrocerThumb,
-	description: "mock website redesign",
-	sortClasses: "sort-react",
-	modalImgOneSrc: freshgrocerFull,
-    modalImgOneAlt: "The Fresh Grocer screen cap - full",
-    modalSummary: <ModalSummaryFresh />,
-    projectURL: "/work/freshgrocer/",
-    projectRepo: "freshgrocer"
-  },
-
-  {
-	titleShort: "Lee-Anne-Clarke.com",
-	imgSource: portfolioThumb,
-	description: "my portfolio",
-	sortClasses: "sort-react",
-    modalImgOneSrc: portfolioFull,
-    modalImgOneAlt: "Lee-Anne-Clarke.com screen cap - full",
-    modalSummary: <ModalSummaryLAC />,
-    projectRepo: "portfolio"
+  	titleShort: "Lee-Anne-Clarke.com",
+  	imgSource: portfolioThumb,
+  	description: "my portfolio",
+  	sortClasses: "sort-react",
+      modalImgOneSrc: portfolioFull,
+      modalImgOneAlt: "Lee-Anne-Clarke.com screen cap - full",
+      modalSummary: <ModalSummaryLAC />,
+      projectRepo: "portfolio"
   },
 
   {
@@ -134,6 +132,7 @@ const workItems = [
     modalImgOneSrc: braccoFull,
     modalImgOneAlt: "Grandstand landing page screen cap - full",
     modalSummary: <ModalSummaryBracco />,
+    projectURL: "/work/bracco/",
     projectRepo: "bracco"
   },
 
@@ -158,19 +157,18 @@ const workItems = [
     modalImgOneSrc: itsPartnerFull,
     modalImgOneAlt: "itslearning channel partner page screen cap - full",
     modalSummary: <ModalSummaryITSLContact />,
-    projectURL: "http://info.itslearning.net/US-Partner-Landing-Page.html",
   },
 
   {
-	titleShort: "City Hospital",
-	imgSource: cityHospitalThumb,
-	description: "homepage prototype",
-	sortClasses: "sort-bs",
-    modalImgOneSrc: cityHospitalFull,
-    modalImgOneAlt: "City Hospital screen cap - full",
-    modalSummary: <ModalSummaryCity />,
-    projectURL: "/work/cityhospital/",
-    projectRepo: "cityhospital"
+  	titleShort: "City Hospital",
+  	imgSource: cityHospitalThumb,
+  	description: "homepage prototype",
+  	sortClasses: "sort-bs",
+      modalImgOneSrc: cityHospitalFull,
+      modalImgOneAlt: "City Hospital screen cap - full",
+      modalSummary: <ModalSummaryCity />,
+      projectURL: "/work/cityhospital/",
+      projectRepo: "cityhospital"
   },
 
   {
