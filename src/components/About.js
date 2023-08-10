@@ -8,7 +8,7 @@ export default function About() {
 
 			<div className="about__intro">
 				<h3>Hi there! <span className="about-br"><br /></span>I'm Lee-Anne.</h3>
-				<p>I have extensive experience in web development, content management, and email development. I love to create clean interfaces, and I am passionate about responsive design.</p>
+				<p>I have extensive experience in front-end web development. I love to create clean interfaces, and I am passionate about responsive design.</p>
 
 				<p>This site was built with <a className="btn" href="https://react.dev/" target="_blank" rel="noreferrer noopener">React</a> and <a className="btn" href="https://nextjs.org/" target="_blank" rel="noreferrer noopener">Next.js</a>.</p>
 			</div>
