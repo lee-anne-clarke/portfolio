@@ -1,7 +1,6 @@
 /*---------------------------------------------------
 	Buttons and Hyperlinks
 ---------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto:300,400');
 
 .btn {
 	color: $black;
@@ -138,7 +137,6 @@
 
 	span {
 		display: block;
-		font-family: 'Raleway',Arial,Helvetica,sans-serif;
 		font-size: .7em;
 		padding-top: 0.2em;
 	}
@@ -155,7 +153,7 @@
 	width: 7em;
 	background-color: $white;
 	color: $black;
-	font-family: 'Raleway',Arial,Helvetica,sans-serif;
+	font-family: inherit;
 	font-size: 1em;
 	padding: 0.5em 0;
 	border: none;

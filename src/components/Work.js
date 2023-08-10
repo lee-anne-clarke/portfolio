@@ -1,4 +1,3 @@
-// eslint-disable @next/next/no-img-element
 import React, { Component } from 'react';
 import WorkSorting from './WorkSorting';
 import WorkItemsGrid from './WorkItemsGrid';

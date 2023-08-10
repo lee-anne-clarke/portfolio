@@ -2,8 +2,6 @@
 	Typography
 ---------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto:300,400');
-
 @font-face {
 	font-family: CaviarDreams;
 	src: url('../fonts/CaviarDreams.eot'); /*  IE9 Compat Modes */
@@ -16,7 +14,7 @@
 
 body {
 	background-color: #fafafa;
-	font-family: 'Raleway', Arial, Helvetica, sans-serif;
+	font-family: var(--font-raleway), sans-serif;
 	color: $bodyColor;
 	font-size: 100%;
 	font-weight: 400;

@@ -61,6 +61,7 @@ class WorkSorting extends Component {
 	    }
 
 	    // Button events
+
 		// btnSortWP.addEventListener('click', () => {
 		// 	sortItems('sort-wp', btnSortWP);
 		// });
@@ -108,4 +109,4 @@ class WorkSorting extends Component {
 }
 
 
-export default WorkSorting
+export default WorkSorting;
