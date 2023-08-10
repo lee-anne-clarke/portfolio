@@ -1,0 +1,115 @@
+/*---------------------------------------------------
+	Typography
+---------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto:300,400');
+
+@font-face {
+	font-family: CaviarDreams;
+	src: url('../fonts/CaviarDreams.eot'); /*  IE9 Compat Modes */
+	src: url('../fonts/CaviarDreams.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		 url('../fonts/CaviarDreams.svg') format('svg'), /* Legacy iOS */
+		 url('../fonts/CaviarDreams.woff') format('woff'), /* Modern Browsers */
+		 url('../fonts/CaviarDreams.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+
+body {
+	background-color: #fafafa;
+	font-family: 'Raleway', Arial, Helvetica, sans-serif;
+	color: $bodyColor;
+	font-size: 100%;
+	font-weight: 400;
+	line-height: 1;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+h1 {
+	font-family: CaviarDreams, Arial, Helvetica, sans-serif;
+	color: $white;
+	font-weight: normal;
+	font-size: 3.5em;
+	line-height: 1;
+	margin-top: 0;
+	margin-bottom: 0.4em;
+
+	@media (min-width: 375px) {
+		font-size: 5em;
+	}
+}
+
+h2 {
+	font-size: 2.8em;
+	font-weight: 500;
+	text-align: center;
+	padding-bottom: 0.2em;
+	margin-top: 0;
+	margin-bottom: 0.8em;
+	border-bottom: 2px solid #46badb;
+
+	@media (min-width: 600px) {
+		letter-spacing: 0.5em;
+	}
+}
+
+h3 {
+	font-size: 1.8em;
+	line-height: 1.3em;
+	font-weight: 400;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.h3-workitem {
+	color: #2488ce;
+	font-weight: 400;
+	margin: 0;
+
+	@media (min-width: 900px) and (max-width: 1000px) {
+		font-size: 1.5em;
+	}
+}
+
+.h3-modal {
+	font-weight: 500;
+}
+
+.h3-edu,
+.h3-skillsset {
+	border-bottom: 1px solid #1abdda;
+
+	@media (min-width: 600px) {
+		text-align: center;
+	}
+}
+
+.h3-skillsset {
+	@media (min-width: 600px) {
+		margin-bottom: 1em;
+	}
+}
+
+h4 {
+	color: #333;
+	font-weight: 500;
+	line-height: 1.4;
+}
+
+h5,
+h6 {
+	font-weight: 300;
+}
+
+p {
+	color: $bodyColor;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	font-weight: 300;
+	letter-spacing: 0.05em;
+	margin-top: 0;
+
+	@media (min-width: 800px) {
+		font-size: 1.5em;
+	}
+}

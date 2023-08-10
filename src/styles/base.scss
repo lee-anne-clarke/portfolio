@@ -1,0 +1,67 @@
+/*---------------------------------------------------
+  Base styles
+---------------------------------------------------*/
+
+*, 
+*::after, 
+*::before {
+  box-sizing: border-box;
+}
+
+.divider {
+  color: #b7e5e7;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  clear: both;
+}
+
+.main,
+.main__inner,
+.main__anchor {
+  position: relative;
+}
+
+.main__inner {
+  padding: 2em 1.5em 4em;
+}
+
+.main__anchor {
+  top: -1.5em;
+}
+
+.section {
+  padding-top: 4em;
+}
+
+.about,
+.skills,
+.work,
+.contact {
+  @media (min-width: 375px) {
+    padding-top: 4.6em;
+  }
+}
+
+.skills__set,
+.form-inner {
+  @media (min-width: 900px) { 
+    width: 49.2em; 
+  }
+}
+
+.edu,
+.skills__set, 
+.form-inner {
+  @media (min-width: 900px) { 
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+
