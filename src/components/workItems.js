@@ -80,7 +80,7 @@ const workItems = [
   {
     titleShort: "Grandstand",
     imgSource: grandstandThumb,
-    description: "landing page",
+    description: "product landing page",
     sortClasses: "sort-foundation sort-vue",
     modalImgOneSrc: grandstandFull,
     modalImgOneAlt: "Grandstand landing page screen cap - full",
@@ -90,7 +90,7 @@ const workItems = [
   {
     titleShort: "Viable",
     imgSource: viableThumb,
-    description: "landing page",
+    description: "product landing page",
     sortClasses: "sort-foundation sort-vue",
     modalImgOneSrc: viableFull,
     modalImgOneAlt: "Viable landing page screen cap - full",

@@ -18,6 +18,7 @@ export default function Contact() {
    const [contactMsg, setContactMsg] = useState('');
    const [formSubmitted, setFormSubmitted] = useState(false);
    const [showFormInvalidMsg, setShowFormInvalidMsg] = useState(false);
+   const [submitBtnText, setSubmitBtnText] = useState('Send')
 
 
   useEffect(() => {
@@ -47,6 +48,7 @@ export default function Contact() {
 
   const handleSubmit = async (event) => {
   	event.preventDefault();
+  	setSubmitBtnText('Sending...');
 
 		if (contactName.length > 1 && contactEmail.length > 4 && contactMsg.length > 10) {
 	  	const response = await fetch('https://formspree.io/f/mjvqzadp', {
@@ -65,6 +67,7 @@ export default function Contact() {
 
 	  } else {
 	  	setShowFormInvalidMsg(true);
+	  	setSubmitBtnText('Send');
 	  }
   }
 
@@ -112,7 +115,7 @@ export default function Contact() {
 
 						<FormItem 
 							itemLabel="Website"
-							itemType="url"
+							itemType="text"
 							inputValue={contactWebsite}
 							changeEvent={(e) => setContactWebsite(e.target.value)}
 							iconName={faGlobe}
@@ -140,7 +143,7 @@ export default function Contact() {
 						) : (``)}
 
 						<button className="btn-submit" type="submit">
-							Submit
+							{submitBtnText}
 							<FontAwesomeIcon className="btn-submit__icon" icon={faPaperPlane} />
 						</button>
 					</div>
@@ -148,23 +151,7 @@ export default function Contact() {
 			</section>
 	  );
   }
-
-
-
-
-
-  // return (
-  // 	<section className="section contact">
-	// 		<h2>Contact</h2>
-	//   	<p className="u-text-center">
-	//   		You can email me at lac @ lee-anne-clarke.com. 
-	//   	</p>
-	//   	<p className="u-text-center">
-	//   		Thanks and have a great day!
-	//   	</p>
-  // 	</section>
-  // );
-
+  
 
 }
 
