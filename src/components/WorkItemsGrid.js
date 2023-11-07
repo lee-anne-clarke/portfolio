@@ -195,7 +195,7 @@ class WorkItemsGrid extends Component {
 
 			</div> // END .workitem
 		);
-	}
+	} // END OF eachWorkItem
 
 
 	render() {

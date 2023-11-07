@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import qs from 'qs';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
 	faUser, 
@@ -12,21 +10,31 @@ import {
 import FormItem from './FormItem'
 
 
-class Contact extends Component {
-  componentDidMount() {
+export default function Contact() {
+
+   const [contactName, setContactName] = useState('');
+   const [contactEmail, setContactEmail] = useState('');
+   const [contactWebsite, setContactWebsite] = useState('');
+   const [contactMsg, setContactMsg] = useState('');
+   const [formSubmitted, setFormSubmitted] = useState(false);
+   const [showFormInvalidMsg, setShowFormInvalidMsg] = useState(false);
+
+
+  useEffect(() => {
     const formFields = document.querySelectorAll(".form__field");
     const formInvalidMsg = document.getElementById('formInvalidMsg');
 		
 		for (let field of formFields) {
 		
-			// ** Hide invalid message on form field focus ** 
+			// Hide invalid form message on form field focus
+
 			field.addEventListener('focus', () => {
-				formInvalidMsg.style.display = 'none';
+				setShowFormInvalidMsg(false);
 			});	
 
-			// ** Add a special class to form field if it's filled in ** 
-			field.addEventListener('blur', () => {
+			// Add a special class to form field if it's filled in
 
+			field.addEventListener('blur', () => {
 				if (field.value) {
 					field.classList.add('form__field--filled');
 				} else {
@@ -34,72 +42,43 @@ class Contact extends Component {
 				}
 			});		
 		}
-  }
+  }, []);
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      contactName: '',
-      contactEmail: '',
-      contactWebsite: '',
-      contactMsg: ''
-    };
 
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleInputChange(event) {
-  	const name = event.target.name;
-  	const value = event.target.value;
-
-    this.setState({
-    	[name]: value
-    });
-  }
-
-  handleSubmit(event) {
+  const handleSubmit = async (event) => {
   	event.preventDefault();
 
-		const contactForm = document.getElementById('contactForm');
-		const formValidMsg = document.getElementById('formValidMsg');
-		const formInvalidMsg = document.getElementById('formInvalidMsg');
-		const Name = this.state.contactName;
-		const Email = this.state.contactEmail;
-		const Website = this.state.contactWebsite;
-		const Message = this.state.contactMsg;
+		if (contactName.length > 1 && contactEmail.length > 4 && contactMsg.length > 10) {
+	  	const response = await fetch('https://formspree.io/f/mjvqzadp', {
+	      method: 'POST',
+	      headers: {
+	        'Content-Type': 'application/json',
+	      },
+	      body: JSON.stringify({ contactName, contactEmail, contactWebsite, contactMsg }),
+	    });
 
-		let data = { 
-		  contactName: Name,
-		  contactEmail: Email,
-		  contactWebsite: Website,
-		  contactMsg: Message
-		};
+	    if (response.ok) {
+	      setFormSubmitted(true);
+	    } else {
+	      console.log(response);
+	    }
 
-		// If the required form fields are filled in, process & submit the form
-		if (Name && Email && Message) {
-			axios({
-					method: 'post',
-					url: 'mail.php', 
-		  		data: qs.stringify(data),
-				})
-				// Upon successful submission, hide the form & display the form valid msg
-				.then((response) => {
-					contactForm.style.display = 'none';
-					formValidMsg.style.display = 'block';
-				})
-				.catch((error) => {
-					console.log(error);
-			});
-
-		// If not, display the form invalid message
-		} else {
-			formInvalidMsg.style.display = 'block';
-		}
+	  } else {
+	  	setShowFormInvalidMsg(true);
+	  }
   }
 
-  render() {
-    return (
+
+
+  if (formSubmitted) {
+  	return(
+  		<div className="form__msg form__msg--valid" id="formValidMsg">
+				<p>Thank you!</p>
+			</div>
+  	);
+
+  } else {
+	  return (
 			<section className="section contact">
 				<h2>Contact</h2>
 
@@ -108,7 +87,7 @@ class Contact extends Component {
 					action="mail.php" 
 					method="post" 
 					id="contactForm" 
-					onSubmit={this.handleSubmit}>
+					onSubmit={handleSubmit}>
 
 					<p className="u-text-center">
 						You can email me at lac @ lee-anne-clarke.com, or use the form below.
@@ -117,25 +96,25 @@ class Contact extends Component {
 					<div className="form-inner">
 						<FormItem 
 							itemLabel="Name *"
-							itemName="contactName"
-							inputValue={this.state.contactName}
-							changeEvent={this.handleInputChange}
+							itemType="text"
+							inputValue={contactName}
+							changeEvent={(e) => setContactName(e.target.value)}
 							iconName={faUser}
 						/>
 						
 						<FormItem 
 							itemLabel="Email *"
-							itemName="contactEmail"
-							inputValue={this.state.contactEmail}
-							changeEvent={this.handleInputChange}
+							itemType="email"
+							inputValue={contactEmail}
+							changeEvent={(e) => setContactEmail(e.target.value)}
 							iconName={faEnvelope}
 						/>
 
 						<FormItem 
 							itemLabel="Website"
-							itemName="contactWebsite"
-							inputValue={this.state.contactWebsite}
-							changeEvent={this.handleInputChange}
+							itemType="url"
+							inputValue={contactWebsite}
+							changeEvent={(e) => setContactWebsite(e.target.value)}
 							iconName={faGlobe}
 						/>
 
@@ -143,10 +122,9 @@ class Contact extends Component {
 							<textarea 
 								className="form__field form__field--ta" 
 								rows="7" 
-								name="contactMsg" 
 								id="contactMsg"
-								value={this.state.contactMsg}
-								onChange={this.handleInputChange}>
+								value={contactMsg}
+								onChange={(e) => setContactMsg(e.target.value)}>
 							</textarea>
 
 							<label className="form__label" htmlFor="contactMsg">
@@ -155,10 +133,11 @@ class Contact extends Component {
 							</label>
 						</div>
 
-
-						<div className="form__msg" id="formInvalidMsg">
-							<p className="form__msg-invalid">Please fill in all required fields.</p>
-						</div>
+						{showFormInvalidMsg ? (
+							<div className="form__msg" id="formInvalidMsg">
+								<p className="form__msg-invalid">Please fill in all required fields.</p>
+							</div>
+						) : (``)}
 
 						<button className="btn-submit" type="submit">
 							Submit
@@ -166,14 +145,27 @@ class Contact extends Component {
 						</button>
 					</div>
 				</form>
-
-				<div className="form__msg form__msg--valid" id="formValidMsg">
-					<p>Thank you!</p>
-				</div>
 			</section>
-    );
+	  );
   }
+
+
+
+
+
+  // return (
+  // 	<section className="section contact">
+	// 		<h2>Contact</h2>
+	//   	<p className="u-text-center">
+	//   		You can email me at lac @ lee-anne-clarke.com. 
+	//   	</p>
+	//   	<p className="u-text-center">
+	//   		Thanks and have a great day!
+	//   	</p>
+  // 	</section>
+  // );
+
+
 }
 
 
-export default Contact;

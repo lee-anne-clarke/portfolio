@@ -4,11 +4,7 @@ const workSortBtnList = [
 		btnID: 'btnSortAll',
 		btnText: 'All',
 	},
-	// {
-	// 	btnClass: '',
-	// 	btnID: 'btnSortWP',
-	// 	btnText: 'WordPress',
-	// },
+
 	{
 		btnClass: '',
 		btnID: 'btnSortReact',

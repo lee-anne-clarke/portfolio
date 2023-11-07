@@ -1,21 +1,17 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import workSortBtnList from './workSortBtnList'
 
 
-class WorkSorting extends Component {
-	constructor(props) {
-		super(props);
-		this.state = { workSortBtnList }
-	}
+export default function WorkSorting() {
+	const [sortingState] = useState(workSortBtnList);
 
-	componentDidMount() {
+	useEffect(() => {
 		const sortAll = document.querySelectorAll('.sort');
 
 		// Buttons
 		const sortBtns = document.querySelectorAll('.btn-sort');
 		const btnSortAll = document.getElementById('btnSortAll');
-		//const btnSortWP = document.getElementById('btnSortWP');
 		const btnSortReact = document.getElementById('btnSortReact');
 		const btnSortVue = document.getElementById('btnSortVue');
 		const btnSortBootstrap = document.getElementById('btnSortBootstrap');
@@ -60,12 +56,7 @@ class WorkSorting extends Component {
 	    	}
 	    }
 
-	    // Button events
-
-		// btnSortWP.addEventListener('click', () => {
-		// 	sortItems('sort-wp', btnSortWP);
-		// });
-
+	    
 		btnSortReact.addEventListener('click', () => {
 			sortItems('sort-react', btnSortReact);
 		});
@@ -89,24 +80,19 @@ class WorkSorting extends Component {
 		btnSortOther.addEventListener('click', () => {
 			sortItems('sort-other', btnSortOther);
 		});
-	}
+	}, []);
 
-	render() {
-		const { workSortBtnList } = this.state
 
-		return (
-			<ul className="work__sorting">
-				{workSortBtnList.map(({ id, btnClass, btnID, btnText }) => (
-					<li className="ws-li" key={uuidv4()}>
-						<button className={`btn-sort ${btnClass}`} id={btnID}>
-							{btnText}
-						</button>
-					</li>
-				))}
-			</ul>
-		);
-	}
+	return (
+		<ul className="work__sorting">
+			{sortingState.map(({ id, btnClass, btnID, btnText }) => (
+				<li className="ws-li" key={uuidv4()}>
+					<button className={`btn-sort ${btnClass}`} id={btnID}>
+						{btnText}
+					</button>
+				</li>
+			))}
+		</ul>
+	);
 }
 
-
-export default WorkSorting;

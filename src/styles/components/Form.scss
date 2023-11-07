@@ -35,6 +35,7 @@
 	width: 100%;
 	background-color: $white;
 	color: #6a6c6a;
+	font-family: inherit;
 	font-size: 1.2em;
 	padding: 1em 0.5em 1em 2.4em;
 	border-radius: 0.3em;
@@ -111,7 +112,6 @@
 /*************** Validation messages ***************/
 
 .form__msg {
-	display: none;
 	text-align: center;
 }
 

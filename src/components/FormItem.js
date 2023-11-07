@@ -7,15 +7,15 @@ export default function FormItem(props) {
 		<div className="form__group">
 			<input 
 		    className="form__field" 
-		    type="text" 
+		    type={props.itemType} 
 		    name={props.itemName} 
 		    id={props.itemName} 
 		    value={props.inputValue}
-				onChange={props.changeEvent} />
+			onChange={props.changeEvent} />
 
 		    <label className="form__label" htmlFor={props.itemName}>
-	        <FontAwesomeIcon className="fa-fw form__label-icon" icon={props.iconName} />
-	        <span className="form__label-text">{props.itemLabel}</span>
+		        <FontAwesomeIcon className="fa-fw form__label-icon" icon={props.iconName} />
+		        <span className="form__label-text">{props.itemLabel}</span>
 		    </label>
 		</div>
 	);

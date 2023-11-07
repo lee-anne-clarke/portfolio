@@ -4,24 +4,20 @@ import WorkItemsGrid from './WorkItemsGrid';
 import Divider from './Divider';
 
 
-class Work extends Component {
-	render() {
-		return (
-			<section className="section work">
-				<h2>Work</h2>
+export default function Work() {
+	return (
+		<section className="section work">
+			<h2>Work</h2>
 
-				<div className="work__inner">
-					<p>A selection of projects I have worked on</p>
+			<div className="work__inner">
+				<p>A selection of projects I have worked on</p>
 
-					<WorkSorting />
-					<WorkItemsGrid />
-				</div>
+				<WorkSorting />
+				<WorkItemsGrid />
+			</div>
 
-				<Divider />
-			</section>
-		);
-	}
+			<Divider />
+		</section>
+	);
 }
 
-
-export default Work;

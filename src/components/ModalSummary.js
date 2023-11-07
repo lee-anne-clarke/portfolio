@@ -141,13 +141,13 @@ function ModalSummaryLAC() {
       <p>Built with React and <a className="btn" href="https://nextjs.org/" target="_blank" rel="noreferrer noopener">Next.js</a>. CSS3 animation used for navigation buttons on hover. Sass automatically compiled with Next.js. Design by me.</p>
 
       <ul className="modal-features-list">
-        <li>Smooth-scrolling navigation links - <a className="btn" href="https://www.npmjs.com/package/react-scroll" target="_blank" rel="noreferrer noopener">React Scroll</a> </li>
+        <li>Contact form submission - <a className="btn" href="https://formspree.io/" target="_blank" rel="noreferrer noopener">Formspree API</a> </li>
+
+        <li>Smooth-scrolling for navigation - <a className="btn" href="https://www.npmjs.com/package/react-scroll" target="_blank" rel="noreferrer noopener">React Scroll</a> </li>
 
         <li>Vector icons - <a className="btn" href="https://github.com/FortAwesome/react-fontawesome" target="_blank" rel="noreferrer noopener">Font Awesome for React</a> </li>
 
-        <li>Contact form data processing - <a className="btn" href="https://www.npmjs.com/package/axios" target="_blank" rel="noreferrer noopener">Axios</a>, <a className="btn" href="https://www.npmjs.com/package/qs" target="_blank" rel="noreferrer noopener">qs</a>, and PHP </li>
-
-        <li>Used to generate UUIDs for React keys - <a className="btn" href="https://www.npmjs.com/package/uuid" target="_blank" rel="noreferrer noopener">uuid</a> </li>
+        <li>UUIDs for React keys - <a className="btn" href="https://www.npmjs.com/package/uuid" target="_blank" rel="noreferrer noopener">uuid</a> </li>
       </ul>
     </div>
   );
@@ -170,13 +170,13 @@ function ModalSummaryGDC() {
 
         <li>Header transition on scroll - <a className="btn" href="https://github.com/brigade/react-waypoint" target="_blank" rel="noreferrer noopener">React Waypoint</a> </li>
 
-        <li>Smooth-scrolling sub-navigation links - <a className="btn" href="https://www.npmjs.com/package/react-scroll" target="_blank" rel="noreferrer noopener">React Scroll</a> </li>
+        <li>Smooth-scrolling for navigation - <a className="btn" href="https://www.npmjs.com/package/react-scroll" target="_blank" rel="noreferrer noopener">React Scroll</a> </li>
 
         <li>Image carousels - <a className="btn" href="https://github.com/akiran/react-slick" target="_blank" rel="noreferrer noopener">react-slick</a> </li>
 
         <li>Page transition animations - <a className="btn" href="https://scrollrevealjs.org/" target="_blank" rel="noreferrer noopener">ScrollReveal</a> </li>
 
-        <li>Used to generate UUIDs for React keys - <a className="btn" href="https://www.npmjs.com/package/uuid" target="_blank" rel="noreferrer noopener">uuid</a> </li>
+        <li>UUIDs for React keys - <a className="btn" href="https://www.npmjs.com/package/uuid" target="_blank" rel="noreferrer noopener">uuid</a> </li>
 
         <li>Sass compiler - <a className="btn" href="http://koala-app.com/" target="_blank" rel="noreferrer noopener">Koala</a> </li>
       </ul>

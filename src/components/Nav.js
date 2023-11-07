@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import Scroll from 'react-scroll';
 import { v4 as uuidv4 } from 'uuid';
 import NavItem from './NavItem';
@@ -9,8 +9,7 @@ import {
 	faWrench,
 	faBriefcase,
 	faPaperPlane
-} 
-from '@fortawesome/free-solid-svg-icons';
+} from '@fortawesome/free-solid-svg-icons';
 
 
 //Variables for React Scroll
@@ -20,102 +19,103 @@ let scrollSpy  = Scroll.scrollSpy;
 let scroller   = Scroll.scroller;
 
 
-class Nav extends Component {
+export default function Nav() {
 	/* React Scroll */
-	componentDidMount() {
+	useEffect(() => {
 		scrollSpy.update();
-	}
 
-	componentWillUnmount() {
-		Events.scrollEvent.remove('begin');
-		Events.scrollEvent.remove('end');
-	}
+		return() => {
+			Events.scrollEvent.remove('begin');
+			Events.scrollEvent.remove('end');
+		};
 
-	scrollToTop() {
+	}, []);
+
+
+	const scrollToTop = () => {
 		scroll.scrollToTop();
 	}
 
-	scrollToAbout() {
+	const scrollToAbout = () => {
 		scroller.scrollTo('aboutAnchor', {smooth: true,});
 	}
 
-	scrollToEdu() {
+	const scrollToEdu = () => {
 		scroller.scrollTo('eduAnchor', {smooth: true,});
 	}
 
-	scrollToSkills() {
+	const scrollToSkills = () => {
 		scroller.scrollTo('skillsAnchor', {smooth: true,});
 	}
 
-	scrollToWork() {
+	const scrollToWork = () => {
 		scroller.scrollTo('workAnchor', {smooth: true,});
 	}
 
-	scrollToContact() {
+	const scrollToContact = () => {
 		scroller.scrollTo('contactAnchor', {smooth: true,});
 	}
 
-	render() {
-		return (
-			<nav className="nav">
-				<ul className="nav-list">
 
-					<NavItem 
-						key={uuidv4()}
-						liClass="nav-li--home"
-						faIcon={faHome}
-						clickEvent={this.scrollToTop}
-						srText="Home"
-					/>
+	return (
+		<nav className="nav">
+			<ul className="nav-list">
 
-					<NavItem 
-						key={uuidv4()}
-						liClass=""
-						faIcon={faUser}
-						clickEvent={this.scrollToAbout}
-						srText="About"
-					/>
+				<NavItem 
+					key={uuidv4()}
+					liClass="nav-li--home"
+					faIcon={faHome}
+					clickEvent={scrollToTop}
+					srText="Home"
+				/>
 
-					<NavItem 
-						key={uuidv4()}
-						liClass="nav-li--edu"
-						faIcon={faGraduationCap}
-						clickEvent={this.scrollToEdu}
-						srText="Education"
-					/>
+				<NavItem 
+					key={uuidv4()}
+					liClass=""
+					faIcon={faUser}
+					clickEvent={scrollToAbout}
+					srText="About"
+				/>
 
-					<NavItem 
-						key={uuidv4()}
-						liClass=""
-						faIcon={faWrench}
-						clickEvent={this.scrollToSkills}
-						srText="Skills"
-					/>
+				<NavItem 
+					key={uuidv4()}
+					liClass="nav-li--edu"
+					faIcon={faGraduationCap}
+					clickEvent={scrollToEdu}
+					srText="Education"
+				/>
 
-					<NavItem 
-						key={uuidv4()}
-						liClass=""
-						faIcon={faBriefcase}
-						clickEvent={this.scrollToWork}
-						srText="Work"
-					/>
+				<NavItem 
+					key={uuidv4()}
+					liClass=""
+					faIcon={faWrench}
+					clickEvent={scrollToSkills}
+					srText="Skills"
+				/>
 
-					<NavItem 
-						key={uuidv4()}
-						liClass=""
-						faIcon={faPaperPlane}
-						clickEvent={this.scrollToContact}
-						srText="Contact"
-					/>
+				<NavItem 
+					key={uuidv4()}
+					liClass=""
+					faIcon={faBriefcase}
+					clickEvent={scrollToWork}
+					srText="Work"
+				/>
 
-				</ul>
-			</nav>
-		);
-	}
+				<NavItem 
+					key={uuidv4()}
+					liClass=""
+					faIcon={faPaperPlane}
+					clickEvent={scrollToContact}
+					srText="Contact"
+				/>
+
+			</ul>
+		</nav>
+	);
 }
 
 
-export default Nav;
+
 
 
 

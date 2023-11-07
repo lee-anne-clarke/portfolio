@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import About from './About';
 import Education from './Education';
 import Skills from './Skills';
@@ -11,31 +11,27 @@ import Scroll from 'react-scroll';
 let Element = Scroll.Element;
 
 
-class Main extends Component {
-	render() {
-		return (
-			<main className="main">
-				<div className="main__inner">
-					
-					<Element name="aboutAnchor" className="main__anchor" />
-					<About />
+export default function Main() {
+	return (
+		<main className="main">
+			<div className="main__inner">
+				
+				<Element name="aboutAnchor" className="main__anchor" />
+				<About />
 
-					<Element name="eduAnchor" className="main__anchor" />
-					<Education />
+				<Element name="eduAnchor" className="main__anchor" />
+				<Education />
 
-					<Element name="skillsAnchor" className="main__anchor" />
-					<Skills />
+				<Element name="skillsAnchor" className="main__anchor" />
+				<Skills />
 
-					<Element name="workAnchor" className="main__anchor" />
-					<Work />
+				<Element name="workAnchor" className="main__anchor" />
+				<Work />
 
-					<Element name="contactAnchor" className="main__anchor" />
-					<Contact />
-				</div>
-			</main>
-		);
-	}
+				<Element name="contactAnchor" className="main__anchor" />
+				<Contact />
+			</div>
+		</main>
+	);
 }
 
-
-export default Main;
