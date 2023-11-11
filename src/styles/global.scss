@@ -1,16 +1,15 @@
+@import './variables';
+@import './base';
+@import './typography';
+@import './buttons';
 
-@import './variables.scss';
-@import './base.scss';
-@import './typography.scss';
-@import './buttons.scss';
+@import './components/Modal';
+@import './components/Form';
+@import './components/Nav';
+@import './components/Header';
+@import './components/About';
+@import './components/Education';
+@import './components/Skills';
+@import './components/Work';
 
-@import './components/Modal.scss';
-@import './components/Form.scss';
-@import './components/Nav.scss';
-@import './components/Header.scss';
-@import './components/About.scss';
-@import './components/Education.scss';
-@import './components/Skills.scss';
-@import './components/Work.scss';
-
-@import './utilities.scss';
+@import './utilities';
