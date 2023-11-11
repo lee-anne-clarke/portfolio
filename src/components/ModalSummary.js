@@ -3,7 +3,7 @@
 function ModalSummaryNAHB() {
   return (
     <p>
-			Website created for the NAHB International Builders' Show while on contract at <a className="btn" href="http://www.modernsignal.com/" target="_blank" rel="noreferrer noopener">Modern Signal</a>. Built with Bootstrap, <a className="btn" href="http://lesscss.org/" target="_blank" rel="noreferrer noopener">Less</a>, and JavaScript. <a className="btn" href="http://www.smartmenus.org/" target="_blank" rel="noreferrer noopener">SmartMenus</a> used for primary navigation. <a className="btn" href="https://select2.org/" target="_blank" rel="noreferrer noopener">Select2</a> used for customized select boxes. <a className="btn" href="http://kenwheeler.github.io/slick/" target="_blank" rel="noreferrer noopener">Slick</a> used for image carousels. Less compiled with <a className="btn" href="http://koala-app.com/" target="_blank" rel="noreferrer noopener">Koala</a>. Design comps provided by client.
+			Website created for the NAHB International Builders' Show while on contract at <a className="btn" href="http://www.modernsignal.com/" target="_blank" rel="noreferrer noopener">Modern Signal</a>. Built with Bootstrap, <a className="btn" href="http://lesscss.org/" target="_blank" rel="noreferrer noopener">Less</a>, and JavaScript. <a className="btn" href="http://www.smartmenus.org/" target="_blank" rel="noreferrer noopener">SmartMenus</a> used for primary navigation. <a className="btn" href="https://select2.org/" target="_blank" rel="noreferrer noopener">Select2</a> used for customized select boxes. <a className="btn" href="https://www.npmjs.com/package/react-slick" target="_blank" rel="noreferrer noopener">Slick</a> used for image carousels. Less compiled with <a className="btn" href="http://koala-app.com/" target="_blank" rel="noreferrer noopener">Koala</a>. Design comps provided by client.
     </p>
   );
 }
@@ -103,7 +103,7 @@ function ModalSummaryITSLContact() {
 function ModalSummaryCity() {
   return (
     <p>
-    	Based on a homepage prototype created for a government SharePoint website while on contract with <a className="btn" href="http://www.bixal.com/" target="_blank" rel="noreferrer noopener">Bixal</a>. <a className="btn" href="http://cameronspear.com/blog/bootstrap-dropdown-on-hover-plugin/" target="_blank" rel="noreferrer noopener">Dropdown on hover plugin</a> used for primary navigation links. CSS3  @font-face used for all fonts. <a className="btn" href="http://kenwheeler.github.io/slick/" target="_blank" rel="noreferrer noopener">Slick</a> used for video carousel. &nbsp;jQuery used for Calendar and "Chat With Us" box. Design comps provided by Bixal design team.
+    	Based on a homepage prototype created for a government SharePoint website while on contract with <a className="btn" href="http://www.bixal.com/" target="_blank" rel="noreferrer noopener">Bixal</a>. <a className="btn" href="http://cameronspear.com/blog/bootstrap-dropdown-on-hover-plugin/" target="_blank" rel="noreferrer noopener">Dropdown on hover plugin</a> used for primary navigation links. CSS3  @font-face used for all fonts. <a className="btn" href="https://www.npmjs.com/package/react-slick" target="_blank" rel="noreferrer noopener">Slick</a> used for video carousel. &nbsp;jQuery used for Calendar and "Chat With Us" box. Design comps provided by Bixal design team.
     </p>
   );
 }
@@ -162,23 +162,15 @@ function ModalSummaryPhotoSearch() {
 function ModalSummaryGDC() {
   return (
     <div>
-      <p>Built with React and compiled using <a className="btn" href="https://create-react-app.dev/" target="_blank" rel="noreferrer noopener">Create React App</a>. CSS3 animation used for navigation buttons. Design by me.
+      <p>Built with React and <a className="btn" href="https://nextjs.org/" target="_blank" rel="noreferrer noopener">Next.js</a>. CSS3 animation used for navigation buttons. Sass automatically compiled with Next.js. Design by me.
       </p>
 
       <ul className="modal-features-list">
-        <li>Routing - <a className="btn" href="https://reactrouter.com/" target="_blank" rel="noreferrer noopener">React Router</a> </li>
-
-        <li>Header transition on scroll - <a className="btn" href="https://github.com/brigade/react-waypoint" target="_blank" rel="noreferrer noopener">React Waypoint</a> </li>
-
         <li>Smooth-scrolling for navigation - <a className="btn" href="https://www.npmjs.com/package/react-scroll" target="_blank" rel="noreferrer noopener">React Scroll</a> </li>
 
         <li>Image carousels - <a className="btn" href="https://github.com/akiran/react-slick" target="_blank" rel="noreferrer noopener">react-slick</a> </li>
 
-        <li>Page transition animations - <a className="btn" href="https://scrollrevealjs.org/" target="_blank" rel="noreferrer noopener">ScrollReveal</a> </li>
-
         <li>UUIDs for React keys - <a className="btn" href="https://www.npmjs.com/package/uuid" target="_blank" rel="noreferrer noopener">uuid</a> </li>
-
-        <li>Sass compiler - <a className="btn" href="http://koala-app.com/" target="_blank" rel="noreferrer noopener">Koala</a> </li>
       </ul>
 	  
     </div>
