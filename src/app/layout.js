@@ -31,8 +31,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${raleway.variable} ${roboto.variable}`}>
-      <body>{children}</body>
+    <html lang="en">
+      <body className={`${raleway.variable} ${roboto.variable}`}>{children}</body>
     </html>
   )
 }
