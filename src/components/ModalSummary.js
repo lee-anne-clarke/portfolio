@@ -58,8 +58,10 @@ function ModalSummaryFresh() {
     <div>
 	    <p>Built with React and compiled using <a className="btn" href="https://create-react-app.dev/" target="_blank" rel="noreferrer noopener">Create React App</a>. Design by me.</p> 
 
+      {/*<p>Built with React and <a className="btn" href="https://nextjs.org/" target="_blank" rel="noreferrer noopener">Next.js</a>. CSS3 animation used for navigation buttons on hover. Sass automatically compiled with Next.js. Design by me.</p>*/}
+
       <ul className="modal-features-list">
-        <li>Routing - <a className="btn" href="https://reactrouter.com/" target="_blank" rel="noreferrer noopener">React Router</a> </li>
+        {/*<li>Routing - Next.js's App Router</li>*/}
 
         <li>Parallax images - <a className="btn" href="https://www.npmjs.com/package/react-parallax" target="_blank" rel="noreferrer noopener">react-parallax</a> </li>
 
@@ -145,7 +147,7 @@ function ModalSummaryLAC() {
 
         <li>Smooth-scrolling for navigation - <a className="btn" href="https://www.npmjs.com/package/react-scroll" target="_blank" rel="noreferrer noopener">React Scroll</a> </li>
 
-        <li>Vector icons - <a className="btn" href="https://github.com/FortAwesome/react-fontawesome" target="_blank" rel="noreferrer noopener">Font Awesome for React</a> </li>
+        <li>Vector icons - <a className="btn" href="https://fontawesome.com/" target="_blank" rel="noreferrer noopener">Font Awesome</a> </li>
 
         <li>UUIDs for React keys - <a className="btn" href="https://www.npmjs.com/package/uuid" target="_blank" rel="noreferrer noopener">uuid</a> </li>
       </ul>
@@ -166,7 +168,7 @@ function ModalSummaryGDC() {
       </p>
 
       <ul className="modal-features-list">
-        <li>Smooth-scrolling for navigation - <a className="btn" href="https://www.npmjs.com/package/react-scroll" target="_blank" rel="noreferrer noopener">React Scroll</a> </li>
+        <li>Routing - Next.js's App Router</li>
 
         <li>Image carousels - <a className="btn" href="https://github.com/akiran/react-slick" target="_blank" rel="noreferrer noopener">react-slick</a> </li>
 

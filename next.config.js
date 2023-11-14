@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	output: 'export',
-	images: { unoptimized: true } // Because this React app is being deployed as a static export (see line 3), this property is required in order to use <Image /> 
+	// Deploy the app as a static export
+	output: 'export', 
+
+	// Because this React app is being deployed as a static export, this property is required in order to use <Image /> 
+	images: { unoptimized: true } 
 }
 
 module.exports = nextConfig

@@ -20,7 +20,6 @@ let scroller   = Scroll.scroller;
 
 
 export default function Nav() {
-	/* React Scroll */
 	useEffect(() => {
 		scrollSpy.update();
 
