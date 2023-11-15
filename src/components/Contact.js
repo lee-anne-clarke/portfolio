@@ -147,7 +147,9 @@ export default function Contact() {
 							<FontAwesomeIcon className="btn-submit__icon" icon={faPaperPlane} />
 						</button>
 					</div>
+					
 				</form>
+
 			</section>
 	  );
   }

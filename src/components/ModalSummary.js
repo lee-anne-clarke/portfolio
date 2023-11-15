@@ -56,24 +56,14 @@ function ModalSummarySilver() {
 function ModalSummaryFresh() {
   return (
     <div>
-	    <p>Built with React and compiled using <a className="btn" href="https://create-react-app.dev/" target="_blank" rel="noreferrer noopener">Create React App</a>. Design by me.</p> 
-
-      {/*<p>Built with React and <a className="btn" href="https://nextjs.org/" target="_blank" rel="noreferrer noopener">Next.js</a>. CSS3 animation used for navigation buttons on hover. Sass automatically compiled with Next.js. Design by me.</p>*/}
+      <p>Built with React and <a className="btn" href="https://nextjs.org/" target="_blank" rel="noreferrer noopener">Next.js</a>. Sass automatically compiled with Next.js. Design by me.</p>
 
       <ul className="modal-features-list">
-        {/*<li>Routing - Next.js's App Router</li>*/}
-
-        <li>Parallax images - <a className="btn" href="https://www.npmjs.com/package/react-parallax" target="_blank" rel="noreferrer noopener">react-parallax</a> </li>
-
-        <li>Mobile navigation menu - <a className="btn" href="https://www.npmjs.com/package/react-burger-menu" target="_blank" rel="noreferrer noopener">react-burger-menu</a> </li>
-
-        <li>Scroll effects - <a className="btn" href="https://scrollrevealjs.org/" target="_blank" rel="noreferrer noopener">ScrollReveal</a> </li>
+        <li>Routing - Next.js's App Router</li>
 
         <li>Smooth-scrolling links - <a className="btn" href="https://www.npmjs.com/package/react-scroll" target="_blank" rel="noreferrer noopener">React Scroll</a> </li>
 
         <li>Used to generate UUIDs for React keys - <a className="btn" href="https://www.npmjs.com/package/uuid" target="_blank" rel="noreferrer noopener">uuid</a> </li>
-
-        <li>Sass compiler - <a className="btn" href="http://koala-app.com/" target="_blank" rel="noreferrer noopener">Koala</a> </li>
 
         <li>Free stock photos - <a className="btn" href="https://unsplash.com/" target="_blank" rel="noreferrer noopener">Unsplash</a> </li>
 
