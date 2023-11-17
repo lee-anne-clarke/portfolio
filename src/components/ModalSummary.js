@@ -61,8 +61,6 @@ function ModalSummaryFresh() {
       <ul className="modal-features-list">
         <li>Routing - Next.js's App Router</li>
 
-        <li>Smooth-scrolling links - <a className="btn" href="https://www.npmjs.com/package/react-scroll" target="_blank" rel="noreferrer noopener">React Scroll</a> </li>
-
         <li>Used to generate UUIDs for React keys - <a className="btn" href="https://www.npmjs.com/package/uuid" target="_blank" rel="noreferrer noopener">uuid</a> </li>
 
         <li>Free stock photos - <a className="btn" href="https://unsplash.com/" target="_blank" rel="noreferrer noopener">Unsplash</a> </li>
