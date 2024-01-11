@@ -17,7 +17,8 @@ export default function Contact() {
    const [contactWebsite, setContactWebsite] = useState('');
    const [contactMsg, setContactMsg] = useState('');
    const [formSubmitted, setFormSubmitted] = useState(false);
-   const [showFormInvalidMsg, setShowFormInvalidMsg] = useState(false);
+   const [formInvalid, setFormInvalid] = useState(false);
+   const [formHasError, setFormHasError] = useState(false);
    const [submitBtnText, setSubmitBtnText] = useState('Send')
 
 
@@ -30,7 +31,8 @@ export default function Contact() {
 			// Hide invalid form message on form field focus
 
 			field.addEventListener('focus', () => {
-				setShowFormInvalidMsg(false);
+				setFormInvalid(false);
+				setFormHasError(false);
 			});	
 
 			// Add a special class to form field if it's filled in
@@ -62,11 +64,12 @@ export default function Contact() {
 	    if (response.ok) {
 	      setFormSubmitted(true);
 	    } else {
+	    	setFormHasError(true);
 	      console.log(response);
 	    }
 
 	  } else {
-	  	setShowFormInvalidMsg(true);
+	  	setFormInvalid(true);
 	  	setSubmitBtnText('Send');
 	  }
   }
@@ -136,9 +139,15 @@ export default function Contact() {
 							</label>
 						</div>
 
-						{showFormInvalidMsg ? (
+						{formInvalid ? (
 							<div className="form__msg" id="formInvalidMsg">
 								<p className="form__msg-invalid">Please fill in all required fields.</p>
+							</div>
+						) : (``)}
+
+						{formHasError ? (
+							<div className="form__msg" id="formInvalidMsg">
+								<p className="form__msg-invalid">Sorry, something went wrong. Please try again.</p>
 							</div>
 						) : (``)}
 
