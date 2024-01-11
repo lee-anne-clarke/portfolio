@@ -22,7 +22,6 @@ class WorkItemsGrid extends Component {
 		this.eachWorkItem = this.eachWorkItem.bind(this)
 	}
 
-
 	componentDidMount() {
 		//Add ".u-no-overflow" to <body> when modal is opened; remove when it's closed
 		let openModalBtn = document.querySelectorAll('.modal-open');
@@ -40,7 +39,6 @@ class WorkItemsGrid extends Component {
 		  });
 		}
 	}
-
 
 
 	eachWorkItem(item, i) {

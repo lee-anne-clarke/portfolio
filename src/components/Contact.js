@@ -18,6 +18,7 @@ export default function Contact() {
    const [contactMsg, setContactMsg] = useState('');
    const [formSubmitted, setFormSubmitted] = useState(false);
    const [formInvalid, setFormInvalid] = useState(false);
+   const [msgTooShort, setMsgTooShort] = useState(false);
    const [formHasError, setFormHasError] = useState(false);
    const [submitBtnText, setSubmitBtnText] = useState('Send')
 
@@ -32,6 +33,7 @@ export default function Contact() {
 
 			field.addEventListener('focus', () => {
 				setFormInvalid(false);
+				setMsgTooShort(false);
 				setFormHasError(false);
 			});	
 
@@ -52,21 +54,28 @@ export default function Contact() {
   	event.preventDefault();
   	setSubmitBtnText('Sending...');
 
-		if (contactName.length > 1 && contactEmail.length > 4 && contactMsg.length > 10) {
-	  	const response = await fetch('https://formspree.io/f/mjvqzadp', {
-	      method: 'POST',
-	      headers: {
-	        'Content-Type': 'application/json',
-	      },
-	      body: JSON.stringify({ contactName, contactEmail, contactWebsite, contactMsg }),
-	    });
+		if (contactName.length > 1 && contactEmail.length > 4) {
+			if (contactMsg.length >= 10) {
+		  	const response = await fetch('https://formspree.io/f/mjvqzadp', {
+		      method: 'POST',
+		      headers: {
+		        'Content-Type': 'application/json',
+		      },
+		      body: JSON.stringify({ contactName, contactEmail, contactWebsite, contactMsg }),
+		    });
 
-	    if (response.ok) {
-	      setFormSubmitted(true);
-	    } else {
-	    	setFormHasError(true);
-	      console.log(response);
-	    }
+		    if (response.ok) {
+	      	setFormSubmitted(true);
+		    } else {
+		    	setFormHasError(true);
+		    	setSubmitBtnText('Send');
+		      console.log(response);
+		    }
+
+	  	} else {
+	  		setMsgTooShort(true);
+	  		setSubmitBtnText('Send');
+	  	}
 
 	  } else {
 	  	setFormInvalid(true);
@@ -78,7 +87,7 @@ export default function Contact() {
 
   if (formSubmitted) {
   	return(
-  		<div className="form__msg form__msg--valid" id="formValidMsg">
+  		<div className="form__msg form__msg--valid">
 				<p>Thank you!</p>
 			</div>
   	);
@@ -101,22 +110,25 @@ export default function Contact() {
 
 					<div className="form-inner">
 						<FormItem 
+							itemName="name"
 							itemLabel="Name *"
 							itemType="text"
 							inputValue={contactName}
-							changeEvent={(e) => setContactName(e.target.value)}
 							iconName={faUser}
+							changeEvent={(e) => setContactName(e.target.value)}
 						/>
 						
 						<FormItem 
+							itemName="email"
 							itemLabel="Email *"
 							itemType="email"
 							inputValue={contactEmail}
-							changeEvent={(e) => setContactEmail(e.target.value)}
 							iconName={faEnvelope}
+							changeEvent={(e) => setContactEmail(e.target.value)}
 						/>
 
 						<FormItem 
+							itemName="website"
 							itemLabel="Website"
 							itemType="text"
 							inputValue={contactWebsite}
@@ -126,9 +138,9 @@ export default function Contact() {
 
 						<div className="form__group">
 							<textarea 
+								name="message"
 								className="form__field form__field--ta" 
 								rows="7" 
-								id="contactMsg"
 								value={contactMsg}
 								onChange={(e) => setContactMsg(e.target.value)}>
 							</textarea>
@@ -140,13 +152,19 @@ export default function Contact() {
 						</div>
 
 						{formInvalid ? (
-							<div className="form__msg" id="formInvalidMsg">
+							<div className="form__msg">
 								<p className="form__msg-invalid">Please fill in all required fields.</p>
 							</div>
 						) : (``)}
 
+						{msgTooShort ? (
+							<div className="form__msg">
+								<p className="form__msg-invalid">Message must be at least 10 characters long.</p>
+							</div>
+						) : (``)}
+
 						{formHasError ? (
-							<div className="form__msg" id="formInvalidMsg">
+							<div className="form__msg">
 								<p className="form__msg-invalid">Sorry, something went wrong. Please try again.</p>
 							</div>
 						) : (``)}
