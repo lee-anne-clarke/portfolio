@@ -151,23 +151,23 @@ export default function Contact() {
 							</label>
 						</div>
 
-						{formInvalid ? (
+						{formInvalid && (
 							<div className="form__msg">
 								<p className="form__msg-invalid">Please fill in all required fields.</p>
 							</div>
-						) : (``)}
+						)}
 
-						{msgTooShort ? (
+						{msgTooShort && (
 							<div className="form__msg">
 								<p className="form__msg-invalid">Message must be at least 10 characters long.</p>
 							</div>
-						) : (``)}
+						)}
 
-						{formHasError ? (
+						{formHasError && (
 							<div className="form__msg">
 								<p className="form__msg-invalid">Sorry, something went wrong. Please try again.</p>
 							</div>
-						) : (``)}
+						)}
 
 						<button className="btn-submit" type="submit">
 							{submitBtnText}
