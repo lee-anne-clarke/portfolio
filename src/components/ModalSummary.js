@@ -59,11 +59,11 @@ function ModalSummaryFresh() {
       <p>Built with React and <a className="btn" href="https://nextjs.org/" target="_blank" rel="noreferrer noopener">Next.js</a>. Sass automatically compiled with Next.js. Design by me.</p>
 
       <ul className="modal-features-list">
-        <li>Routing - Next.js's App Router</li>
+        <li>Routing &mdash; Next.js's App Router</li>
 
-        <li>UUIDs for React keys - <a className="btn" href="https://www.npmjs.com/package/uuid" target="_blank" rel="noreferrer noopener">uuid</a> </li>
+        <li>UUIDs for React keys &mdash; <a className="btn" href="https://www.npmjs.com/package/uuid" target="_blank" rel="noreferrer noopener">uuid</a> </li>
 
-        <li>Free stock photos - <a className="btn" href="https://unsplash.com/" target="_blank" rel="noreferrer noopener">Unsplash</a> </li>
+        <li>Free stock photos &mdash; <a className="btn" href="https://unsplash.com/" target="_blank" rel="noreferrer noopener">Unsplash</a> </li>
 
       </ul>
 
@@ -131,13 +131,13 @@ function ModalSummaryLAC() {
       <p>Built with React and <a className="btn" href="https://nextjs.org/" target="_blank" rel="noreferrer noopener">Next.js</a>. CSS3 animation used for navigation buttons on hover. Sass automatically compiled with Next.js. Design by me.</p>
 
       <ul className="modal-features-list">
-        <li>Contact form submission - <a className="btn" href="https://formspree.io/" target="_blank" rel="noreferrer noopener">Formspree API</a> </li>
+        <li>Contact form submission &mdash; <a className="btn" href="https://formspree.io/" target="_blank" rel="noreferrer noopener">Formspree API</a> </li>
 
-        <li>Smooth-scrolling for navigation - <a className="btn" href="https://www.npmjs.com/package/react-scroll" target="_blank" rel="noreferrer noopener">React Scroll</a> </li>
+        <li>Smooth-scrolling for navigation &mdash; <a className="btn" href="https://www.npmjs.com/package/react-scroll" target="_blank" rel="noreferrer noopener">React Scroll</a> </li>
 
-        <li>Vector icons - <a className="btn" href="https://fontawesome.com/" target="_blank" rel="noreferrer noopener">Font Awesome</a> </li>
+        <li>Vector icons &mdash; <a className="btn" href="https://fontawesome.com/" target="_blank" rel="noreferrer noopener">Font Awesome</a> </li>
 
-        <li>UUIDs for React keys - <a className="btn" href="https://www.npmjs.com/package/uuid" target="_blank" rel="noreferrer noopener">uuid</a> </li>
+        <li>UUIDs for React keys &mdash; <a className="btn" href="https://www.npmjs.com/package/uuid" target="_blank" rel="noreferrer noopener">uuid</a> </li>
       </ul>
     </div>
   );
@@ -156,11 +156,11 @@ function ModalSummaryGDC() {
       </p>
 
       <ul className="modal-features-list">
-        <li>Routing - Next.js's App Router</li>
+        <li>Routing &mdash; Next.js's App Router</li>
 
-        <li>Image carousels - <a className="btn" href="https://github.com/akiran/react-slick" target="_blank" rel="noreferrer noopener">react-slick</a> </li>
+        <li>Image carousels &mdash; <a className="btn" href="https://github.com/akiran/react-slick" target="_blank" rel="noreferrer noopener">react-slick</a> </li>
 
-        <li>UUIDs for React keys - <a className="btn" href="https://www.npmjs.com/package/uuid" target="_blank" rel="noreferrer noopener">uuid</a> </li>
+        <li>UUIDs for React keys &mdash; <a className="btn" href="https://www.npmjs.com/package/uuid" target="_blank" rel="noreferrer noopener">uuid</a> </li>
       </ul>
 	  
     </div>
