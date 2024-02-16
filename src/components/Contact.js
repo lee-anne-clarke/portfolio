@@ -37,7 +37,7 @@ export default function Contact() {
 				setFormHasError(false);
 			});	
 
-			// Add a special class to form field if it's filled in
+			// Add a special css class to form field if it's filled in
 
 			field.addEventListener('blur', () => {
 				if (field.value) {
@@ -99,7 +99,6 @@ export default function Contact() {
 
 				<form 
 					className="form" 
-					action="mail.php" 
 					method="post" 
 					id="contactForm" 
 					onSubmit={handleSubmit}>
@@ -153,19 +152,25 @@ export default function Contact() {
 
 						{formInvalid && (
 							<div className="form__msg">
-								<p className="form__msg-invalid">Please fill in all required fields.</p>
+								<p className="form__msg-invalid">
+									Please fill in all required fields.
+								</p>
 							</div>
 						)}
 
 						{msgTooShort && (
 							<div className="form__msg">
-								<p className="form__msg-invalid">Message must be at least 10 characters long.</p>
+								<p className="form__msg-invalid">
+									Message must be at least 10 characters long.
+								</p>
 							</div>
 						)}
 
 						{formHasError && (
 							<div className="form__msg">
-								<p className="form__msg-invalid">Sorry, something went wrong. Please try again.</p>
+								<p className="form__msg-invalid">
+									Sorry, something went wrong. Please try again.
+								</p>
 							</div>
 						)}
 
