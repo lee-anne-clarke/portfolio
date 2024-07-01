@@ -6,14 +6,13 @@
 
 
 .skills__set {
+	display: flex;
 	padding-bottom: 3em;
-	clear: both;
 }
 
 .skills__set-left,
 .skills__set-right {
-	float: left;
-	width: 50%;
+	flex: 1;
 	margin-top: 1em;
 	margin-bottom: 1.5em;
 }
