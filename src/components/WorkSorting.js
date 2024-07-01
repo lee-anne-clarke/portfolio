@@ -19,13 +19,14 @@ export default function WorkSorting() {
 		const btnSortEmails = document.getElementById('btnSortEmails');
 		const btnSortOther = document.getElementById('btnSortOther');
 
-		// Sort all
+		// *** "All" button ****
 		btnSortAll.addEventListener('click', () => {
+			// Show all Work items 
 	    	for (let i of sortAll) {
 					i.style.display = 'inline-block';  
 	    	}
 
-	    	// Add the active class to the button
+	    	// Add the 'active' class to the button and remove it from every other button
 	    	for (let j of sortBtns) {
 	    		if ( j === btnSortAll ) {
 	    			btnSortAll.classList.add('active');
@@ -35,9 +36,9 @@ export default function WorkSorting() {
 	    	}
     	});
 	
-		// Sort individual categories
+		// **** Category buttons ****
 	    const sortItems = (theClassName, theBtn) => {
-	    	// Display the category items
+	    	// Display the selected category's items
 	    	for (let i of sortAll) {
 	    		if ( i.classList.contains(theClassName) ) {
 					i.style.display = 'inline-block';
@@ -46,7 +47,7 @@ export default function WorkSorting() {
 		    	}
 	    	}
 
-	    	// Add the active class to the button and remove it from every other button
+	    	// Add the 'active' class to the button and remove it from every other button
 	    	for (let j of sortBtns) {
 	    		if ( j === theBtn ) {
 	    			theBtn.classList.add('active');

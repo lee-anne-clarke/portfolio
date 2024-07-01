@@ -25,12 +25,10 @@ export default function Contact() {
 
   useEffect(() => {
     const formFields = document.querySelectorAll(".form__field");
-    const formInvalidMsg = document.getElementById('formInvalidMsg');
 		
 		for (let field of formFields) {
 		
-			// Hide invalid form message on form field focus
-
+			// Hide invalid messages upon form field focus
 			field.addEventListener('focus', () => {
 				setFormInvalid(false);
 				setMsgTooShort(false);
@@ -38,7 +36,6 @@ export default function Contact() {
 			});	
 
 			// Add a special css class to form field if it's filled in
-
 			field.addEventListener('blur', () => {
 				if (field.value) {
 					field.classList.add('form__field--filled');

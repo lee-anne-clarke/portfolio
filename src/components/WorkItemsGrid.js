@@ -24,7 +24,7 @@ class WorkItemsGrid extends Component {
 
 	componentDidMount() {
 		//Add ".u-no-overflow" to <body> when modal is opened; remove when it's closed
-		let openModalBtn = document.querySelectorAll('.modal-open');
+		let openModalBtn = document.querySelectorAll('.modal-checkbox-label');
 		let closeModalBtn = document.querySelectorAll('.btn-modal-close');
 
 		for (let i of openModalBtn) {
@@ -100,7 +100,7 @@ class WorkItemsGrid extends Component {
 		}
 	  
 
-	  // ** Dynamically generate each Work item with the content from the "workItems" array **
+	  // ** Generate modal content for each Work item with the content from the "workItems" array **
 
 	  i += 1; //start index at 1 instead of 0
 
@@ -108,10 +108,8 @@ class WorkItemsGrid extends Component {
 			<div className={`workitem sort ${item.sortClasses}`} key={i}>
 				<input className="modal-checkbox" type="checkbox" name={`workItem${i}`} id={`workItem${i}`} />
 			  
-				<label className="modal-label modal-open" htmlFor={`workItem${i}`}>
+				<label className="modal-checkbox-label" htmlFor={`workItem${i}`}>
 					<figure className="workitem__fig">
-					    {/*<img className="workitem__img" src={item.imgSource} alt={`${item.titleShort} screen cap`} />*/}
-
 					    <Image className="workitem__img" src={item.imgSource} alt={`${item.titleShort} screen cap`} />
 					    
 					    <figcaption className="workitem__caption">
