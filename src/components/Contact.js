@@ -66,7 +66,6 @@ export default function Contact() {
 		    } else {
 		    	setFormHasError(true);
 		    	setSubmitBtnText('Send');
-		      console.log(response);
 		    }
 
 	  	} else {
