@@ -1,5 +1,5 @@
 import React from 'react';
-import SkillDiv from './SkillDiv';
+import SkillItem from './SkillItem';
 import Divider from './Divider';
 
 
@@ -10,19 +10,19 @@ export default function Skills() {
 
 			<div className="skills__set">
 				<div className="skills__set-left">
-					<SkillDiv text="HTML5" skillClass="html5" />
-					<SkillDiv text="JavaScript" skillClass="js" />
-					<SkillDiv text="Less" skillClass="less" />
-					<SkillDiv text="Foundation" skillClass="fd" />
-					<SkillDiv text="Vue.js" skillClass="vue" />
+					<SkillItem text="HTML5" skillClass="html5" />
+					<SkillItem text="JavaScript" skillClass="js" />
+					<SkillItem text="Less" skillClass="less" />
+					<SkillItem text="Foundation" skillClass="fd" />
+					<SkillItem text="Vue.js" skillClass="vue" />
 				</div>
 
 				<div className="skills__set-right">
-					<SkillDiv text="CSS3" skillClass="css3" />
-					<SkillDiv text="React" skillClass="react" />
-					<SkillDiv text="Sass" skillClass="sass" />		
-					<SkillDiv text="Bootstrap" skillClass="bootstrap" />
-					<SkillDiv text="Photoshop" skillClass="ps" />
+					<SkillItem text="CSS3" skillClass="css3" />
+					<SkillItem text="React" skillClass="react" />
+					<SkillItem text="Sass" skillClass="sass" />		
+					<SkillItem text="Bootstrap" skillClass="bootstrap" />
+					<SkillItem text="Photoshop" skillClass="ps" />
 				</div>
 			</div>
 

@@ -25,7 +25,7 @@ import '../styles/global.scss'
 
 // Metadata
 export const metadata = {
-  title: 'Lee-Anne Clarke | Front-End Developer',
+  title: 'Lee-Anne Clarke | Front-End Engineer',
   description: '',
 }
 
@@ -33,7 +33,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${raleway.variable} ${roboto.variable}`}>{children}</body>
+      <body className={`${raleway.variable} ${roboto.variable}`}>
+        {children}
+      </body>
     </html>
   )
 }
