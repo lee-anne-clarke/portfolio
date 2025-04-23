@@ -1,4 +1,4 @@
-@use "../variables";
+@use "../var";
 
 /*---------------------------------------------------
 	Modals
@@ -14,7 +14,7 @@
 	top: 0;
 	z-index: -800;
 	background-color: #e4f4f9;
-	color: variables.$black;
+	color: var.$black;
 	padding-left: 2em;
 	padding-right: 2em;
 	overflow-y: auto;
@@ -52,7 +52,7 @@
 
 .modal-inner p, 
 .modal-inner li {
-	color: variables.$black;
+	color: var.$black;
 	font-family: var(--font-roboto), sans-serif;
 	font-size: 100%;
 	font-weight: 300;

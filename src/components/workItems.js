@@ -191,32 +191,6 @@ const workItems = [
     projTempURLTwo: "/work/itslearning/emailtemplates/emailtemp2.html"
   },
 
-  // {
-  //   titleShort: "Fiservices",
-  //   imgSource: fisThumb,
-  //   description: "mock financial services website",
-  //   sortClasses: "sort-wp",
-  //   modalImgOneSrc: fisFull1,
-  //   modalImgOneAlt: "Fiservices screen cap - homepage",
-	// modalImgTwoSrc: fisFull2,
-  //   modalImgTwoAlt: "Fiservices screen cap - inside page",
-  //   modalSummary: <ModalSummaryFiserv />,
-  //   projectURL: "/work/fiservices/"
-  // },
-
-  // {
-  //   titleShort: "Silver Spark Jewelry",
-  //   imgSource: silversparkThumb,
-  //   description: "mock business website",
-  //   sortClasses: "sort-wp",
-  //   modalImgOneSrc: silversparkFull1,
-  //   modalImgOneAlt: "Silver Spark Jewelry screen cap - homepage",
-	// modalImgTwoSrc: silversparkFull2,
-  //   modalImgTwoAlt: "Silver Spark Jewelry screen cap - inside page",
-  //   modalSummary: <ModalSummarySilver />,
-  //   projectURL: "/work/silverspark/"
-  // },
-
   {
     titleShort: "Flickr photo search",
     imgSource: photosearchThumb,

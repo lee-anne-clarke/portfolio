@@ -12,7 +12,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 
-//Variables for React Scroll
+// Variables for React Scroll
 let Events     = Scroll.Events;
 let scroll     = Scroll.animateScroll;
 let scrollSpy  = Scroll.scrollSpy;
@@ -30,29 +30,12 @@ export default function Nav() {
 
 	}, []);
 
-
 	const scrollToTop = () => {
 		scroll.scrollToTop();
 	}
 
-	const scrollToAbout = () => {
-		scroller.scrollTo('aboutAnchor', {smooth: true,});
-	}
-
-	const scrollToEdu = () => {
-		scroller.scrollTo('eduAnchor', {smooth: true,});
-	}
-
-	const scrollToSkills = () => {
-		scroller.scrollTo('skillsAnchor', {smooth: true,});
-	}
-
-	const scrollToWork = () => {
-		scroller.scrollTo('workAnchor', {smooth: true,});
-	}
-
-	const scrollToContact = () => {
-		scroller.scrollTo('contactAnchor', {smooth: true,});
+	const scrollerBase = (anchor) => {
+		scroller.scrollTo(anchor, {smooth: true,});
 	}
 
 
@@ -72,7 +55,7 @@ export default function Nav() {
 					key={uuidv4()}
 					liClass=""
 					faIcon={faUser}
-					clickEvent={scrollToAbout}
+					clickEvent={() => scrollerBase('aboutAnchor')}
 					srText="About"
 				/>
 
@@ -80,7 +63,7 @@ export default function Nav() {
 					key={uuidv4()}
 					liClass="nav-li--edu"
 					faIcon={faGraduationCap}
-					clickEvent={scrollToEdu}
+					clickEvent={() => scrollerBase('eduAnchor')}
 					srText="Education"
 				/>
 
@@ -88,7 +71,7 @@ export default function Nav() {
 					key={uuidv4()}
 					liClass=""
 					faIcon={faWrench}
-					clickEvent={scrollToSkills}
+					clickEvent={() => scrollerBase('skillsAnchor')}
 					srText="Skills"
 				/>
 
@@ -96,7 +79,7 @@ export default function Nav() {
 					key={uuidv4()}
 					liClass=""
 					faIcon={faBriefcase}
-					clickEvent={scrollToWork}
+					clickEvent={() => scrollerBase('workAnchor')}
 					srText="Work"
 				/>
 
@@ -104,7 +87,7 @@ export default function Nav() {
 					key={uuidv4()}
 					liClass=""
 					faIcon={faPaperPlane}
-					clickEvent={scrollToContact}
+					clickEvent={() => scrollerBase('contactAnchor')}
 					srText="Contact"
 				/>
 

@@ -1,4 +1,4 @@
-@use "../variables";
+@use "../var";
 
 /*---------------------------------------------------
 	Skills
@@ -31,7 +31,7 @@
 	display: inline-block;
 	width: 100%;
 	clear: both;
-	color: variables.$white;
+	color: var.$white;
 	text-align: center;
 	padding: 1em;
 	margin-bottom: 3em;
@@ -90,7 +90,7 @@
 	&::before {
 		background-image: url(../../img/skills/html5-logo.png);
 		width: 35px;	
-		@include variables.skillsImgs;		
+		@include var.skillsImgs;		
 	}
 }
 
@@ -99,7 +99,7 @@
 	&::before {
 		background-image: url(../../img/skills/css3-logo.png);
 		width: 40px;	
-		@include variables.skillsImgs;		
+		@include var.skillsImgs;		
 	}
 }
 
@@ -108,7 +108,7 @@
 	&::before {
 		background-image: url(../../img/skills/less-logo.png);
 		width: 86px;
-		@include variables.skillsImgs;		
+		@include var.skillsImgs;		
 	}
 }
 
@@ -117,7 +117,7 @@
 	&::before {
 		background-image: url(../../img/skills/sass-logo.png);
 		width: 50px;
-		@include variables.skillsImgs;
+		@include var.skillsImgs;
 	}
 }
 
@@ -137,7 +137,7 @@
 	&::before {
 		background-image: url(../../img/skills/react-logo.png);
 		width: 44px;
-		@include variables.skillsImgs;		
+		@include var.skillsImgs;		
 	}
 }
 
@@ -147,7 +147,7 @@
 	&::before {
 		background-image: url(../../img/skills/foundation-logo.png);
 		width: 49px;
-		@include variables.skillsImgs;		
+		@include var.skillsImgs;		
 	}
 }
 
@@ -156,7 +156,17 @@
 	&::before {
 		background-image: url(../../img/skills/bootstrap-logo.png);
 		width: 39px;
-		@include variables.skillsImgs;		
+		@include var.skillsImgs;		
+	}
+}
+
+.skill--node {
+	background-color: #BADEB5;
+	color: #243E1E;
+	&::before {
+		background-image: url(../../img/skills/node-logo.png);
+		width: 39px;	
+		@include var.skillsImgs;		
 	}
 }
 
@@ -165,81 +175,10 @@
 	&::before {
 		background-image: url(../../img/skills/vue-logo.png);
 		width: 39px;	
-		@include variables.skillsImgs;		
+		@include var.skillsImgs;		
 	}
 }
 
-.skill--ps {
-	color: #4fc8f3;
-	background-color: #2465af;
-	&::before {
-		content: "Ps";
-		font-weight: 700;
-	}
-	span {
-		color: variables.$white;
-	}
-}
-
-
-/******* Content Management Systems *******/
-.skill--cms {
-	background-color: #f6f3f3;
-	
-	&::before {
-		background-size: 100%;
-		width: 1.1em;
-		height: 1.1em;
-		@include variables.skillsImgs;
-	}
-
-	span {
-		color: variables.$white;
-		line-height: 4;
-	}
-
-	&:hover span {
-		z-index: 1;
-		transform: rotate3d(0, 0, 1, 0deg);
-		transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);	
-	}
-}
-
-.skill--drupal {
-	&::before {
-		background-image: url(../../img/skills/drupal-logo.png);
-	}
-	span {
-		background-color: #0073ba;
-	}
-}
-
-.skill--wp {
-	&::before {
-		background-image: url(../../img/skills/wp-logo.png);
-	}
-	span {
-		background-color: #296f88;
-	}
-}
-
-.skill--sitecore {
-	&::before {
-		background-image: url(../../img/skills/sitecore-logo.png);
-	}
-	span {
-		background-color: #c1271e;
-	}
-}
-
-.skill--sharepoint {
-	&::before {
-		background-image: url(../../img/skills/sharepoint-logo.png);
-	}
-	span {
-		background-color: #0072c6;
-	}
-}
 
 
 /*************** MEDIA QUERIES ***************/

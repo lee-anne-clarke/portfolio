@@ -10,19 +10,19 @@ export default function Skills() {
 
 			<div className="skills__set">
 				<div className="skills__set-left">
-					<SkillItem text="HTML5" skillClass="html5" />
 					<SkillItem text="JavaScript" skillClass="js" />
+					<SkillItem text="Vue.js" skillClass="vue" />
+					<SkillItem text="HTML5" skillClass="html5" />
 					<SkillItem text="Less" skillClass="less" />
 					<SkillItem text="Foundation" skillClass="fd" />
-					<SkillItem text="Vue.js" skillClass="vue" />
 				</div>
 
 				<div className="skills__set-right">
-					<SkillItem text="CSS3" skillClass="css3" />
 					<SkillItem text="React" skillClass="react" />
-					<SkillItem text="Sass" skillClass="sass" />		
+					<SkillItem text="Node" skillClass="node" />
+					<SkillItem text="CSS3" skillClass="css3" />
+					<SkillItem text="Sass" skillClass="sass" />	
 					<SkillItem text="Bootstrap" skillClass="bootstrap" />
-					<SkillItem text="Photoshop" skillClass="ps" />
 				</div>
 			</div>
 

@@ -1,4 +1,4 @@
-@use "../variables";
+@use "../var";
 
 /*---------------------------------------------------
 	Forms
@@ -35,7 +35,7 @@
 	float: right;
 	display: block;
 	width: 100%;
-	background-color: variables.$white;
+	background-color: var.$white;
 	color: #6a6c6a;
 	font-family: inherit;
 	font-size: 1.2em;
