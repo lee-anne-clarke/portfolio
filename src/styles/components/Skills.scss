@@ -1,9 +1,8 @@
+@use "../variables";
+
 /*---------------------------------------------------
 	Skills
 ---------------------------------------------------*/	
-
-// @import '../_variables';
-
 
 .skills__set {
 	display: flex;
@@ -32,7 +31,7 @@
 	display: inline-block;
 	width: 100%;
 	clear: both;
-	color: $white;
+	color: variables.$white;
 	text-align: center;
 	padding: 1em;
 	margin-bottom: 3em;
@@ -91,7 +90,7 @@
 	&::before {
 		background-image: url(../../img/skills/html5-logo.png);
 		width: 35px;	
-		@include skillsImgs;		
+		@include variables.skillsImgs;		
 	}
 }
 
@@ -100,7 +99,7 @@
 	&::before {
 		background-image: url(../../img/skills/css3-logo.png);
 		width: 40px;	
-		@include skillsImgs;		
+		@include variables.skillsImgs;		
 	}
 }
 
@@ -109,7 +108,7 @@
 	&::before {
 		background-image: url(../../img/skills/less-logo.png);
 		width: 86px;
-		@include skillsImgs;		
+		@include variables.skillsImgs;		
 	}
 }
 
@@ -118,7 +117,7 @@
 	&::before {
 		background-image: url(../../img/skills/sass-logo.png);
 		width: 50px;
-		@include skillsImgs;
+		@include variables.skillsImgs;
 	}
 }
 
@@ -138,7 +137,7 @@
 	&::before {
 		background-image: url(../../img/skills/react-logo.png);
 		width: 44px;
-		@include skillsImgs;		
+		@include variables.skillsImgs;		
 	}
 }
 
@@ -148,7 +147,7 @@
 	&::before {
 		background-image: url(../../img/skills/foundation-logo.png);
 		width: 49px;
-		@include skillsImgs;		
+		@include variables.skillsImgs;		
 	}
 }
 
@@ -157,7 +156,7 @@
 	&::before {
 		background-image: url(../../img/skills/bootstrap-logo.png);
 		width: 39px;
-		@include skillsImgs;		
+		@include variables.skillsImgs;		
 	}
 }
 
@@ -166,7 +165,7 @@
 	&::before {
 		background-image: url(../../img/skills/vue-logo.png);
 		width: 39px;	
-		@include skillsImgs;		
+		@include variables.skillsImgs;		
 	}
 }
 
@@ -178,7 +177,7 @@
 		font-weight: 700;
 	}
 	span {
-		color: $white;
+		color: variables.$white;
 	}
 }
 
@@ -191,11 +190,11 @@
 		background-size: 100%;
 		width: 1.1em;
 		height: 1.1em;
-		@include skillsImgs;
+		@include variables.skillsImgs;
 	}
 
 	span {
-		color: $white;
+		color: variables.$white;
 		line-height: 4;
 	}
 

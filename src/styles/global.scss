@@ -1,15 +1,15 @@
-@import './variables';
-@import './base';
-@import './typography';
-@import './buttons';
+@use 'variables';
+@use 'base';
+@use 'typography';
+@use 'buttons';
 
-@import './components/Modal';
-@import './components/Form';
-@import './components/Nav';
-@import './components/Header';
-@import './components/About';
-@import './components/Education';
-@import './components/Skills';
-@import './components/Work';
+@use 'components/Modal';
+@use 'components/Form';
+@use 'components/Nav';
+@use 'components/Header';
+@use 'components/About';
+@use 'components/Education';
+@use 'components/Skills';
+@use 'components/Work';
 
-@import './utilities';
+@use 'utilities';

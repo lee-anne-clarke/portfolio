@@ -1,3 +1,5 @@
+@use "../variables";
+
 /*---------------------------------------------------
 	Work
 ---------------------------------------------------*/
@@ -39,7 +41,7 @@
 }
 
 .workitem__caption {
-	background-color: $white;
+	background-color: variables.$white;
 	padding-top: 0.3em;
 	padding-bottom: 0.3em;
 

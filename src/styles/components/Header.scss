@@ -1,3 +1,5 @@
+@use "../variables";
+
 /*---------------------------------------------------
 	Header
 ---------------------------------------------------*/
@@ -19,7 +21,7 @@
 
 .header-jobtitle,
 .header-email {
-	color: $white;
+	color: variables.$white;
 	line-height: 1;
 }
 
