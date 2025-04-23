@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import WorkSorting from './WorkSorting';
 import WorkItemsGrid from './WorkItemsGrid';
 import Divider from './Divider';
