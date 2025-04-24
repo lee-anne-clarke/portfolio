@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useActionState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
 	faUser, 
@@ -7,7 +8,8 @@ import {
 	faPencilAlt,
 	faPaperPlane
 } from '@fortawesome/free-solid-svg-icons';
-import FormItem from './FormItem'
+import FormField from './FormField'
+import FormInvalidMsg from './FormInvalidMsg'
 
 
 export default function Contact() {
@@ -17,8 +19,8 @@ export default function Contact() {
    const [contactWebsite, setContactWebsite] = useState('');
    const [contactMsg, setContactMsg] = useState('');
    const [formSubmitted, setFormSubmitted] = useState(false);
-   const [formInvalid, setFormInvalid] = useState(false);
-   const [msgTooShort, setMsgTooShort] = useState(false);
+   const [isInvalidField, setIsInvalidField] = useState(false);
+   const [isMsgTooShort, setIsMsgTooShort] = useState(false);
    const [formHasError, setFormHasError] = useState(false);
    const [submitBtnText, setSubmitBtnText] = useState('Send')
 
@@ -30,8 +32,8 @@ export default function Contact() {
 		
 			// Hide invalid messages upon form field focus
 			field.addEventListener('focus', () => {
-				setFormInvalid(false);
-				setMsgTooShort(false);
+				setIsInvalidField(false);
+				setIsMsgTooShort(false);
 				setFormHasError(false);
 			});	
 
@@ -48,7 +50,6 @@ export default function Contact() {
 
 
   const handleSubmit = async (event) => {
-  	event.preventDefault();
   	setSubmitBtnText('Sending...');
 
 		if (contactName.length > 1 && contactEmail.length > 4) {
@@ -69,12 +70,12 @@ export default function Contact() {
 		    }
 
 	  	} else {
-	  		setMsgTooShort(true);
+	  		setIsMsgTooShort(true);
 	  		setSubmitBtnText('Send');
 	  	}
 
 	  } else {
-	  	setFormInvalid(true);
+	  	setIsInvalidField(true);
 	  	setSubmitBtnText('Send');
 	  }
   }
@@ -95,16 +96,15 @@ export default function Contact() {
 
 				<form 
 					className="form" 
-					method="post" 
 					id="contactForm" 
-					onSubmit={handleSubmit}>
+					action={handleSubmit}>
 
 					<p className="u-text-center">
 						You can email me at lac @ lee-anne-clarke.com, or use the form below.
 					</p>
 
 					<div className="form-inner">
-						<FormItem 
+						<FormField 
 							itemName="name"
 							itemLabel="Name *"
 							itemType="text"
@@ -113,7 +113,7 @@ export default function Contact() {
 							changeEvent={(e) => setContactName(e.target.value)}
 						/>
 						
-						<FormItem 
+						<FormField 
 							itemName="email"
 							itemLabel="Email *"
 							itemType="email"
@@ -122,7 +122,7 @@ export default function Contact() {
 							changeEvent={(e) => setContactEmail(e.target.value)}
 						/>
 
-						<FormItem 
+						<FormField 
 							itemName="website"
 							itemLabel="Website"
 							itemType="text"
@@ -146,28 +146,16 @@ export default function Contact() {
 							</label>
 						</div>
 
-						{formInvalid && (
-							<div className="form__msg">
-								<p className="form__msg-invalid">
-									Please fill in all required fields.
-								</p>
-							</div>
+						{isInvalidField && (
+							<FormInvalidMsg msg="Please fill in all required fields." />
 						)}
 
-						{msgTooShort && (
-							<div className="form__msg">
-								<p className="form__msg-invalid">
-									Message must be at least 10 characters long.
-								</p>
-							</div>
+						{isMsgTooShort && (
+							<FormInvalidMsg msg="Message must be at least 10 characters long." />
 						)}
 
 						{formHasError && (
-							<div className="form__msg">
-								<p className="form__msg-invalid">
-									Sorry, something went wrong. Please try again.
-								</p>
-							</div>
+							<FormInvalidMsg msg="Sorry, something went wrong. Please try again." />
 						)}
 
 						<button className="btn-submit" type="submit">

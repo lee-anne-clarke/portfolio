@@ -27,23 +27,27 @@
 	margin-bottom: 0;
 }
 
+
 .edu__icon-flag {
 	display: none;
 
 	@media (min-width: 320px) {
-		display: inline-block;
+		flex: 1 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 65px;
+		height: 65px;
+		max-width: 65px;
 		background-color: #8bcadc;
-		color: var.$white;
-		font-size: 2.3em;
-		text-align: center;
-		padding: 0.5em;
 		border-radius: 50%;
 		box-shadow: 0 0 0 0.06em #cce2e8;
 	}
 
-	@media (min-width: 800px) {	
-		font-size: 2.8em;
-		padding: 0.4em;
+	.svg-inline--fa {
+		color: var.$white;
+		font-size: 2.1em;
+		text-align: center;
 	}
 }
 

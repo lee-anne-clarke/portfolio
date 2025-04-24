@@ -12,7 +12,9 @@ export default function Education() {
       <div className="edu__items">
 
         <div className="edu__item">
-          <FontAwesomeIcon className="edu__icon-flag" icon={faFlag} />
+          <div className="edu__icon-flag">
+            <FontAwesomeIcon icon={faFlag} />
+          </div>
           <div className="edu__text">
           	<p className="edu__degree">Advanced Certificate 
           		<span className="edu__br"><br /></span> &mdash; 
@@ -27,7 +29,9 @@ export default function Education() {
 
 
         <div className="edu__item">
-          <FontAwesomeIcon className="edu__icon-flag" icon={faFlag} />
+          <div className="edu__icon-flag">
+            <FontAwesomeIcon icon={faFlag} />
+          </div>
           <div className="edu__text">
             <p className="edu__degree">
             	Bachelor of Arts 

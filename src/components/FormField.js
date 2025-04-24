@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-export default function FormItem(props) {
+export default function FormField(props) {
 	return (
 		<div className="form__group">
 			<input className="form__field" 
