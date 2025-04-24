@@ -112,7 +112,7 @@
 
 		&:hover {
 			background-color: var.$white;
-			color: #1abdda;
+			color: var.$navBgColor;
 			box-shadow: 0 0 0 0.25em rgba(255, 255, 255, 0.3);
 		}
 	} 
