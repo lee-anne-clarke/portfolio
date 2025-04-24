@@ -53,7 +53,6 @@ export default function Nav() {
 
 				<NavItem 
 					key={uuidv4()}
-					liClass=""
 					faIcon={faUser}
 					clickEvent={() => scrollerBase('aboutAnchor')}
 					srText="About"
@@ -69,7 +68,6 @@ export default function Nav() {
 
 				<NavItem 
 					key={uuidv4()}
-					liClass=""
 					faIcon={faWrench}
 					clickEvent={() => scrollerBase('skillsAnchor')}
 					srText="Skills"
@@ -77,7 +75,6 @@ export default function Nav() {
 
 				<NavItem 
 					key={uuidv4()}
-					liClass=""
 					faIcon={faBriefcase}
 					clickEvent={() => scrollerBase('workAnchor')}
 					srText="Work"
@@ -85,7 +82,6 @@ export default function Nav() {
 
 				<NavItem 
 					key={uuidv4()}
-					liClass=""
 					faIcon={faPaperPlane}
 					clickEvent={() => scrollerBase('contactAnchor')}
 					srText="Contact"
