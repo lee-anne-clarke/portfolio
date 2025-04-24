@@ -5,7 +5,7 @@
 ---------------------------------------------------*/
 
 .header {
-	background: #15809D;
+	background: var.$navBgColor; /*Fallback for older browsers*/
 	background: linear-gradient(180deg, rgba(21, 128, 157, 1) 0%, rgba(29, 172, 213, 1) 100%);
 
 	text-align: center;
