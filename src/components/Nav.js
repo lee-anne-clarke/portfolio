@@ -12,7 +12,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 
-// Variables for React Scroll
+// variables for React Scroll
 let Events     = Scroll.Events;
 let scroll     = Scroll.animateScroll;
 let scrollSpy  = Scroll.scrollSpy;
@@ -41,11 +41,11 @@ export default function Nav() {
 
 	return (
 		<nav className="nav">
-			<ul className="nav-list">
+			<ul className="nav__list">
 
 				<NavItem 
 					key={uuidv4()}
-					liClass="nav-li--home"
+					liClass="nav__li--home"
 					faIcon={faHome}
 					clickEvent={scrollToTop}
 					srText="Home"
@@ -60,7 +60,7 @@ export default function Nav() {
 
 				<NavItem 
 					key={uuidv4()}
-					liClass="nav-li--edu"
+					liClass="nav__li--edu"
 					faIcon={faGraduationCap}
 					clickEvent={() => scrollerBase('eduAnchor')}
 					srText="Education"

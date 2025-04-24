@@ -7,7 +7,7 @@ import Divider from './Divider';
 export default function Education() {
   return (  
     <section className="section edu">
-      <h3 className="h3-edu">Education</h3>
+      <h3 className="h3--edu">Education</h3>
 
       <div className="edu__items">
 

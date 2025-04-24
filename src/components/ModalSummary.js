@@ -1,9 +1,9 @@
-// ** SFCs containing the content for each Work item modal **
+// ** Components containing the project summary for each Work item modal **
 
 function ModalSummaryNAHB() {
   return (
     <p>
-			Website created for the NAHB International Builders' Show while on contract at <a className="btn" href="http://www.modernsignal.com/" target="_blank" rel="noreferrer noopener">Modern Signal</a>. Built with Bootstrap, <a className="btn" href="http://lesscss.org/" target="_blank" rel="noreferrer noopener">Less</a>, and JavaScript. <a className="btn" href="http://www.smartmenus.org/" target="_blank" rel="noreferrer noopener">SmartMenus</a> used for primary navigation. <a className="btn" href="https://select2.org/" target="_blank" rel="noreferrer noopener">Select2</a> used for customized select boxes. <a className="btn" href="https://www.npmjs.com/package/react-slick" target="_blank" rel="noreferrer noopener">Slick</a> used for image carousels. Less compiled with <a className="btn" href="http://koala-app.com/" target="_blank" rel="noreferrer noopener">Koala</a>. Design comps provided by client.
+			Website created for the NAHB International Builders' Show while on contract at <a className="btn" href="http://www.modernsignal.com/" target="_blank" rel="noreferrer noopener">Modern Signal</a>. Built with Bootstrap, <a className="btn" href="http://lesscss.org/" target="_blank" rel="noreferrer noopener">Less</a>, and JavaScript. <a className="btn" href="http://www.smartmenus.org/" target="_blank" rel="noreferrer noopener">SmartMenus</a> used for primary navigation. <a className="btn" href="https://select2.org/" target="_blank" rel="noreferrer noopener">Select2</a> used for customized select boxes. <a className="btn" href="https://www.npmjs.com/package/react-slick" target="_blank" rel="noreferrer noopener">Slick</a> used for image carousels. Less compiled with <a className="btn" href="http://koala-app.com/" target="_blank" rel="noreferrer noopener">Koala</a>. Designs provided by client.
     </p>
   );
 }
@@ -12,7 +12,7 @@ function ModalSummaryNAHB() {
 function ModalSummaryGranstand() {
   return (
     <p>
-    	Landing page created for the Grandstand platform, a product of <a className="btn" href="https://www.linkedin.com/company/istrategylabs" target="_blank" rel="noreferrer noopener">iStrategyLabs</a>. Built with Vue.js, Foundation, flexbox, Sass, and jQuery. CSS3 transitions, transforms, and keyframes used for animating the SVG elements. Compiled with <a className="btn" href="http://gulpjs.com/" target="_blank" rel="noreferrer noopener">Gulp</a> and <a className="btn" href="http://browserify.org/" target="_blank" rel="noreferrer noopener">Browserify</a>. Design comps provided by the ISL design team. 
+    	Landing page created for the Grandstand platform, a product of <a className="btn" href="https://www.linkedin.com/company/istrategylabs" target="_blank" rel="noreferrer noopener">iStrategyLabs</a>. Built with Vue.js, Foundation, flexbox, Sass, and jQuery. CSS3 transitions, transforms, and keyframes used for animating the SVG elements. Compiled with <a className="btn" href="http://gulpjs.com/" target="_blank" rel="noreferrer noopener">Gulp</a> and <a className="btn" href="http://browserify.org/" target="_blank" rel="noreferrer noopener">Browserify</a>. Designs provided by the ISL design team. 
     </p>
   );
 }
@@ -20,7 +20,7 @@ function ModalSummaryGranstand() {
 
 function ModalSummaryViable() {
   return (
-    <p>Landing page created for the Viable app, a product of <a className="btn" href="https://www.linkedin.com/company/istrategylabs" target="_blank" rel="noreferrer noopener">iStrategyLabs</a>. Built with Vue.js, Foundation, flexbox, Sass, and jQuery. Compiled with <a className="btn" href="http://gulpjs.com/" target="_blank" rel="noreferrer noopener">Gulp</a> and <a className="btn" href="http://browserify.org/" target="_blank" rel="noreferrer noopener">Browserify</a>. Design comps provided by the ISL design team.
+    <p>Landing page created for the Viable app, a product of <a className="btn" href="https://www.linkedin.com/company/istrategylabs" target="_blank" rel="noreferrer noopener">iStrategyLabs</a>. Built with Vue.js, Foundation, flexbox, Sass, and jQuery. Compiled with <a className="btn" href="http://gulpjs.com/" target="_blank" rel="noreferrer noopener">Gulp</a> and <a className="btn" href="http://browserify.org/" target="_blank" rel="noreferrer noopener">Browserify</a>. Designs provided by the ISL design team.
     </p> 
   );
 }
@@ -58,7 +58,7 @@ function ModalSummaryFresh() {
     <div>
       <p>Built with React and <a className="btn" href="https://nextjs.org/" target="_blank" rel="noreferrer noopener">Next.js</a>. Sass automatically compiled with Next.js. Design by me.</p>
 
-      <ul className="modal-features-list">
+      <ul className="modal__features-list">
         <li>Routing &mdash; Next.js's App Router</li>
 
         <li>UUIDs for React keys &mdash; <a className="btn" href="https://www.npmjs.com/package/uuid" target="_blank" rel="noreferrer noopener">uuid</a> </li>
@@ -75,7 +75,7 @@ function ModalSummaryFresh() {
 function ModalSummaryUpserve() {
   return (
     <p>
-    	Marketing page templates created for <a className="btn" href="https://www.upserve.com/" target="_blank" rel="noreferrer noopener">Upserve</a> (formerly known as Swipely). Built with Upserve's own grid system for use within Marketo. Design comps provided by client.
+    	Marketing page templates created for <a className="btn" href="https://www.upserve.com/" target="_blank" rel="noreferrer noopener">Upserve</a> (formerly known as Swipely). Built with Upserve's own grid system for use within Marketo. Designs provided by client.
     </p>
   );
 }
@@ -84,7 +84,7 @@ function ModalSummaryUpserve() {
 function ModalSummaryITSLContact() {
   return (
     <p>
-    	Global contact page template created for <a className="btn" href="http://www.itslearning.com/" target="_blank" rel="noreferrer noopener">itslearning</a>. Built with HTML, CSS, JavaScript, and Bootstrap. Tested and deployed in <a className="btn" href="http://www.marketo.com/" target="_blank" rel="noreferrer noopener">Marketo</a>. CSS3 multiple background images and background-size used for header, and @font-face used for all fonts. jQuery .toggleClass and .slideToggle used for dropdown list. Design comps provided by client.
+    	Global contact page template created for <a className="btn" href="http://www.itslearning.com/" target="_blank" rel="noreferrer noopener">itslearning</a>. Built with HTML, CSS, JavaScript, and Bootstrap. Tested and deployed in <a className="btn" href="http://www.marketo.com/" target="_blank" rel="noreferrer noopener">Marketo</a>. CSS3 multiple background images and background-size used for header, and @font-face used for all fonts. jQuery .toggleClass and .slideToggle used for dropdown list. Designs provided by client.
     </p>
   );
 }
@@ -93,7 +93,7 @@ function ModalSummaryITSLContact() {
 function ModalSummaryCity() {
   return (
     <p>
-    	Based on a homepage prototype created for a government SharePoint website while on contract with <a className="btn" href="http://www.bixal.com/" target="_blank" rel="noreferrer noopener">Bixal</a>. <a className="btn" href="http://cameronspear.com/blog/bootstrap-dropdown-on-hover-plugin/" target="_blank" rel="noreferrer noopener">Dropdown on hover plugin</a> used for primary navigation links. CSS3  @font-face used for all fonts. <a className="btn" href="https://www.npmjs.com/package/react-slick" target="_blank" rel="noreferrer noopener">Slick</a> used for video carousel. &nbsp;jQuery used for Calendar and "Chat With Us" box. Design comps provided by Bixal design team.
+    	Based on a homepage prototype created for a government SharePoint website while on contract with <a className="btn" href="http://www.bixal.com/" target="_blank" rel="noreferrer noopener">Bixal</a>. <a className="btn" href="http://cameronspear.com/blog/bootstrap-dropdown-on-hover-plugin/" target="_blank" rel="noreferrer noopener">Dropdown on hover plugin</a> used for primary navigation links. CSS3  @font-face used for all fonts. <a className="btn" href="https://www.npmjs.com/package/react-slick" target="_blank" rel="noreferrer noopener">Slick</a> used for video carousel. &nbsp;jQuery used for Calendar and "Chat With Us" box. Designs provided by Bixal design team.
     </p>
   );
 }
@@ -102,7 +102,7 @@ function ModalSummaryCity() {
 function ModalSummaryModSig() {
   return (
     <p>
-    	Company employee page prototype created for a client while on contract at <a className="btn" href="http://www.modernsignal.com/" target="_blank" rel="noreferrer noopener">Modern Signal</a>. Built with Bootstrap. Responsive lightbox created with jQuery. <a className="btn" href="https://mixitup.kunkalabs.com/" target="_blank" rel="noreferrer noopener">MixItUp</a> jQuery plugin used for sorting. Sass compiled with <a className="btn" href="http://koala-app.com/" target="_blank" rel="noreferrer noopener">Koala</a>. Design comps provided by client.
+    	Company employee page prototype created for a client while on contract at <a className="btn" href="http://www.modernsignal.com/" target="_blank" rel="noreferrer noopener">Modern Signal</a>. Built with Bootstrap. Responsive lightbox created with jQuery. <a className="btn" href="https://mixitup.kunkalabs.com/" target="_blank" rel="noreferrer noopener">MixItUp</a> jQuery plugin used for sorting. Sass compiled with <a className="btn" href="http://koala-app.com/" target="_blank" rel="noreferrer noopener">Koala</a>. Designs provided by client.
     </p>
   );
 }
@@ -111,7 +111,7 @@ function ModalSummaryModSig() {
 function ModalSummaryITSLEmail() {
   return (
     <p>
-    	Responsive marketing email templates created for <a className="btn" href="http://www.itslearning.com/" target="_blank" rel="noreferrer noopener">itslearning</a> for use within <a className="btn" href="http://www.marketo.com/" target="_blank" rel="noreferrer noopener">Marketo</a>. Built with HTML and CSS. Design comps provided by client.
+    	Responsive marketing email templates created for <a className="btn" href="http://www.itslearning.com/" target="_blank" rel="noreferrer noopener">itslearning</a> for use within <a className="btn" href="http://www.marketo.com/" target="_blank" rel="noreferrer noopener">Marketo</a>. Built with HTML and CSS. Designs provided by client.
     </p>
   );
 }
@@ -130,7 +130,7 @@ function ModalSummaryLAC() {
     <div>
       <p>Built with React and <a className="btn" href="https://nextjs.org/" target="_blank" rel="noreferrer noopener">Next.js</a>. CSS3 animation used for navigation buttons on hover. Sass automatically compiled with Next.js. Design by me.</p>
 
-      <ul className="modal-features-list">
+      <ul className="modal__features-list">
         <li>Contact form submission &mdash; <a className="btn" href="https://formspree.io/" target="_blank" rel="noreferrer noopener">Formspree API</a> </li>
 
         <li>Smooth-scrolling for navigation &mdash; <a className="btn" href="https://www.npmjs.com/package/react-scroll" target="_blank" rel="noreferrer noopener">React Scroll</a> </li>
@@ -155,7 +155,7 @@ function ModalSummaryGDC() {
       <p>Built with React and <a className="btn" href="https://nextjs.org/" target="_blank" rel="noreferrer noopener">Next.js</a>. CSS3 animation used for navigation buttons. Sass automatically compiled with Next.js. Design by me.
       </p>
 
-      <ul className="modal-features-list">
+      <ul className="modal__features-list">
         <li>Routing &mdash; Next.js's App Router</li>
 
         <li>Image carousels &mdash; <a className="btn" href="https://github.com/akiran/react-slick" target="_blank" rel="noreferrer noopener">react-slick</a> </li>

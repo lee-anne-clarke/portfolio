@@ -48,17 +48,28 @@
 	@media (min-width: 900px) and (max-width: 1000px) {
 		height: 4.5em;
 	}
-}
 
-.workitem__caption p {
-	text-transform: uppercase;
-	margin: 0;
+	p {
+		text-transform: uppercase;
+		margin: 0;
 
-	@media (min-width: 900px) {
-		font-size: 1em; 
-		font-weight: 400;
+		@media (min-width: 900px) {
+			font-size: 1em; 
+			font-weight: 400;
+		}
 	}
 }
+
+.workitem__modal-checkbox {
+	position: absolute;
+	z-index: -10;
+	visibility: hidden;
+}
+
+.workitem__modal-checkbox-lbl {
+	cursor: pointer;
+}
+
 
 
 /********** Work item hover effects (desktop only) **********/
@@ -102,7 +113,7 @@
 	.workitem {
 		width: 49%;
 		padding: 0.5em 1em;
-   	margin-bottom: 5em;
+   		margin-bottom: 5em;
 	}
 
 	.work__inner {

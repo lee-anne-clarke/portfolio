@@ -19,9 +19,9 @@ export default function Contact() {
    const [contactWebsite, setContactWebsite] = useState('');
    const [contactMsg, setContactMsg] = useState('');
    const [formSubmitted, setFormSubmitted] = useState(false);
-   const [isInvalidField, setIsInvalidField] = useState(false);
+   const [hasInvalidFields, setHasInvalidFields] = useState(false);
    const [isMsgTooShort, setIsMsgTooShort] = useState(false);
-   const [formHasError, setFormHasError] = useState(false);
+   const [hasFormError, setHasFormError] = useState(false);
    const [submitBtnText, setSubmitBtnText] = useState('Send')
 
 
@@ -30,11 +30,11 @@ export default function Contact() {
 		
 		for (let field of formFields) {
 		
-			// Hide invalid messages upon form field focus
+			// Hide messages on form field focus
 			field.addEventListener('focus', () => {
-				setIsInvalidField(false);
+				setHasInvalidFields(false);
 				setIsMsgTooShort(false);
-				setFormHasError(false);
+				setHasFormError(false);
 			});	
 
 			// Add a special css class to form field if it's filled in
@@ -52,7 +52,7 @@ export default function Contact() {
   const handleSubmit = async (event) => {
   	setSubmitBtnText('Sending...');
 
-		if (contactName.length > 1 && contactEmail.length > 4) {
+		if (contactName.length >= 2 && contactEmail.length >= 5) {
 			if (contactMsg.length >= 10) {
 		  	const response = await fetch('https://formspree.io/f/mjvqzadp', {
 		      method: 'POST',
@@ -65,7 +65,7 @@ export default function Contact() {
 		    if (response.ok) {
 	      	setFormSubmitted(true);
 		    } else {
-		    	setFormHasError(true);
+		    	setHasFormError(true);
 		    	setSubmitBtnText('Send');
 		    }
 
@@ -75,7 +75,7 @@ export default function Contact() {
 	  	}
 
 	  } else {
-	  	setIsInvalidField(true);
+	  	setHasInvalidFields(true);
 	  	setSubmitBtnText('Send');
 	  }
   }
@@ -105,56 +105,60 @@ export default function Contact() {
 
 					<div className="form-inner">
 						<FormField 
-							itemName="name"
-							itemLabel="Name *"
-							itemType="text"
+							fieldName="name"
+							fieldLabel="Name *"
+							fieldType="text"
+							fieldMinLength="2"
 							inputValue={contactName}
 							iconName={faUser}
 							changeEvent={(e) => setContactName(e.target.value)}
 						/>
 						
 						<FormField 
-							itemName="email"
-							itemLabel="Email *"
-							itemType="email"
+							fieldName="email"
+							fieldLabel="Email *"
+							fieldType="email"
+							fieldMinLength="5"
 							inputValue={contactEmail}
 							iconName={faEnvelope}
 							changeEvent={(e) => setContactEmail(e.target.value)}
 						/>
 
 						<FormField 
-							itemName="website"
-							itemLabel="Website"
-							itemType="text"
+							fieldName="website"
+							fieldLabel="Website"
+							fieldType="text"
 							inputValue={contactWebsite}
-							changeEvent={(e) => setContactWebsite(e.target.value)}
 							iconName={faGlobe}
+							changeEvent={(e) => setContactWebsite(e.target.value)}
 						/>
 
 						<div className="form__group">
 							<textarea 
-								name="message"
 								className="form__field form__field--ta" 
+								name="message"
+								id="message"
 								rows="7" 
+								minLength="10"
 								value={contactMsg}
 								onChange={(e) => setContactMsg(e.target.value)}>
 							</textarea>
 
-							<label className="form__label" htmlFor="contactMsg">
+							<label className="form__label" htmlFor="message">
 								<FontAwesomeIcon className="fa-fw form__label-icon" icon={faPencilAlt} />
 								<span className="form__label-text">Message *</span>
 							</label>
 						</div>
 
-						{isInvalidField && (
-							<FormInvalidMsg msg="Please fill in all required fields." />
+						{hasInvalidFields && (
+							<FormInvalidMsg msg="Please complete all required fields." />
 						)}
 
 						{isMsgTooShort && (
 							<FormInvalidMsg msg="Message must be at least 10 characters long." />
 						)}
 
-						{formHasError && (
+						{hasFormError && (
 							<FormInvalidMsg msg="Sorry, something went wrong. Please try again." />
 						)}
 

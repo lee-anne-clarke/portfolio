@@ -5,8 +5,8 @@
 ---------------------------------------------------*/
 
 .header {
-	background-color: #bae6e8; /* for older browsers */
-	background: linear-gradient(to bottom, #bae6e8 0%,#98d9e4 25%,#7ad5e3 31%,#64d1e1 37%,#4fcce0 45%,#41c7de 52%,#34c1dc 62%,#26b2d4 79%,#1eacd5 100%); 
+	background: #15809D;
+	background: linear-gradient(180deg, rgba(21, 128, 157, 1) 0%, rgba(29, 172, 213, 1) 100%);
 
 	text-align: center;
 	padding: 6em 1em 1em;
@@ -16,13 +16,13 @@
 	}
 }
 
-.header-jobtitle,
-.header-email {
+.header__jobtitle,
+.header__email {
 	color: var.$white;
 	line-height: 1;
 }
 
-.header-jobtitle {
+.header__jobtitle {
 	font-size: 1.7em;
 	letter-spacing: 0;
 
@@ -31,7 +31,7 @@
 	}
 }
 
-.header-email {
+.header__email {
 	font-size: 1.2em;
 	letter-spacing: 0.2em;
 }

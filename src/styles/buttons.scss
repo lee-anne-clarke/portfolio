@@ -4,6 +4,11 @@
 	Buttons and Hyperlinks
 ---------------------------------------------------*/
 
+.button {
+	background: none;
+	border: none;
+}
+
 .btn {
 	color: var.$black;
 	text-decoration: none;
@@ -19,11 +24,6 @@
 	&:active {
 		border-bottom: 2px solid var.$linkColor;
 	}
-}
-
-.button {
-	background: none;
-	border: none;
 }
 
 
@@ -165,7 +165,7 @@
 	cursor: pointer;
 	
 	&.active {
-		background-color: var.$cerulean;
+		background-color: var.$btnBgColor;
 		color: var.$white;
 	}
 }
@@ -226,7 +226,7 @@
 .btn-submit {
 	position: relative;
 	display: block;
-	background-color: var.$cerulean;
+	background-color: var.$btnBgColor;
 	color: var.$white;
 	font-family: inherit;
 	font-size: 1.2em;
@@ -240,7 +240,7 @@
 	cursor: pointer;
 
 	&:hover {
-		background-color: #30cfe5;
+		background-color: #15809D;
 	}
 }
 
