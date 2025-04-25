@@ -33,11 +33,12 @@
 	clear: both;
 	color: var.$white;
 	text-align: center;
-	padding: 1em;
-	margin-bottom: 3em;
+	background-color: #135D71;
 	border: none;
 	border-radius: 0.3em;
 	box-shadow: 0 0.3em #e5ecf4;
+	padding: 1em;
+	margin-bottom: 3em;
 	overflow: hidden;
 	backface-visibility: hidden;
 	transition: all 0.3s;		
@@ -86,7 +87,6 @@
 /******* Programming & Design *******/
 
 .skill--html5 {
-	background-color: #ee652a;
 	&::before {
 		background-image: url(../../img/skills/html5-logo.png);
 		width: 35px;	
@@ -95,7 +95,6 @@
 }
 
 .skill--css3 {
-	background-color: #2162af;
 	&::before {
 		background-image: url(../../img/skills/css3-logo.png);
 		width: 40px;	
@@ -104,7 +103,6 @@
 }
 
 .skill--less {
-	background-color: #5473a2;
 	&::before {
 		background-image: url(../../img/skills/less-logo.png);
 		width: 86px;
@@ -113,7 +111,6 @@
 }
 
 .skill--sass {
-	background-color: #cd679a;
 	&::before {
 		background-image: url(../../img/skills/sass-logo.png);
 		width: 50px;
@@ -122,8 +119,6 @@
 }
 
 .skill--js {
-	color: black;
-	background-color: #f0db4f;
 	&::before {
 		content: "JS";
 		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -132,8 +127,6 @@
 }
 
 .skill--react {
-	color: #61dafb; 
-	background-color: #383838;
 	&::before {
 		background-image: url(../../img/skills/react-logo.png);
 		width: 44px;
@@ -142,8 +135,6 @@
 }
 
 .skill--fd {
-	color: #07609d; 
-	background-color: #eee;
 	&::before {
 		background-image: url(../../img/skills/foundation-logo.png);
 		width: 49px;
@@ -152,17 +143,14 @@
 }
 
 .skill--bootstrap {
-	background-color: #644190;
 	&::before {
 		background-image: url(../../img/skills/bootstrap-logo.png);
-		width: 39px;
+		width: 45px;
 		@include var.skillsImgs;		
 	}
 }
 
 .skill--node {
-	background-color: #BADEB5;
-	color: #243E1E;
 	&::before {
 		background-image: url(../../img/skills/node-logo.png);
 		width: 39px;	
@@ -171,7 +159,6 @@
 }
 
 .skill--vue {
-	background-color: #028559;
 	&::before {
 		background-image: url(../../img/skills/vue-logo.png);
 		width: 39px;	

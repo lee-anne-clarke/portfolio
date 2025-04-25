@@ -162,9 +162,9 @@ export default function Contact() {
 							<FormInvalidMsg msg="Sorry, something went wrong. Please try again." />
 						)}
 
-						<button className="btn-submit" type="submit">
+						<button className="btn btn--submit" type="submit">
 							{submitBtnText}
-							<FontAwesomeIcon className="btn-submit__icon" icon={faPaperPlane} />
+							<FontAwesomeIcon className="btn--submit__icon" icon={faPaperPlane} />
 						</button>
 					</div>
 					

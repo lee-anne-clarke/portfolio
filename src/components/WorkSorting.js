@@ -10,7 +10,7 @@ export default function WorkSorting() {
 		const sortAll = document.querySelectorAll('.sort');
 
 		// Buttons
-		const sortBtns = document.querySelectorAll('.btn-sort');
+		const sortBtns = document.querySelectorAll('.btn--sort');
 		const btnSortAll = document.getElementById('btnSortAll');
 		const btnSortReact = document.getElementById('btnSortReact');
 		const btnSortVue = document.getElementById('btnSortVue');
@@ -88,7 +88,7 @@ export default function WorkSorting() {
 		<ul className="work__sorting">
 			{sortingState.map(({ id, btnClass, btnID, btnText }) => (
 				<li className="ws-li" key={uuidv4()}>
-					<button className={`btn-sort ${btnClass}`} id={btnID}>
+					<button className={`btn btn--sort ${btnClass}`} id={btnID}>
 						{btnText}
 					</button>
 				</li>

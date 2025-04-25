@@ -4,12 +4,13 @@
 	Buttons and Hyperlinks
 ---------------------------------------------------*/
 
-.button {
+.btn {
 	background: none;
 	border: none;
+	cursor: pointer;
 }
 
-.btn {
+.btn--text {
 	color: var.$black;
 	text-decoration: none;
 	transition: border-bottom 0.2s ease-in-out;
@@ -29,7 +30,7 @@
 
 /********** Nav **********/
 
-.btn-nav {
+.btn--nav {
 	position: relative;
 	z-index: 1;
 	display: inline-block;
@@ -44,7 +45,6 @@
 	border: none;
 	border-radius: 50%;
 	box-shadow: 0 0 0 0.05em var.$white;
-	cursor: pointer;
 	transition: 
 		transform ease-out 0.1s, 
 		background 0.2s;
@@ -65,7 +65,7 @@
 
 // Hover effects - mobile
 @media (max-width: 1024px) {
-	.btn-nav {
+	.btn--nav {
 		&::after {
 			content: '';
 			position: absolute;
@@ -106,7 +106,7 @@
 
 // Hover effects - desktop
 @media (min-width: 1025px) {
-	.btn-nav {
+	.btn--nav {
 		overflow: hidden;
 		transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 
@@ -121,9 +121,12 @@
 
 /********** Header **********/
 
-.btn-header {
+.btn--header {
+	background: none;
+	border: none;
 	display: inline-block;
 	color: var.$white;
+	font-size: 1em;
 	transition: opacity 0.3s;
 	text-decoration: none;
 
@@ -136,22 +139,16 @@
 	&:hover {
 		opacity: 1;
 	}
-
-	span {
-		display: block;
-		font-size: .7em;
-		padding-top: 0.2em;
-	}
 }
 
-.btn-header-icon {
+.btn--header-icon {
 	font-size: 1.8em;
 }
 
 
 /********** Work - sort buttons **********/
 
-.btn-sort {
+.btn--sort {
 	width: 7em;
 	background-color: var.$white;
 	color: var.$black;
@@ -162,7 +159,6 @@
 	border-radius: 0.3em;
 	box-shadow: 0 0.4em #e5ecf4;
 	transition: background-color 0.15s, color 0.15s;
-	cursor: pointer;
 	
 	&.active {
 		background-color: var.$btnBgColor;
@@ -173,11 +169,10 @@
 
 /********** Work - modals **********/
 
-.btn-modal-close {
+.btn--modal-close {
 	display: inline-block;
 	padding: 1em 2em;
 	margin-top: 2em;
-	cursor: pointer;
 	transition: color 0.2s ease-in-out;
 
 	&, 
@@ -195,13 +190,13 @@
 	}
 }
 
-.btn-modal-close--bottom {
+.btn--modal-close-btm {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 3em;
 }
 
-.btn-viewproject {
+.btn--viewproject {
 	text-decoration: none;
 	transition: color 0.2s ease-in-out;
 
@@ -223,7 +218,7 @@
 
 /********** Contact - submit button **********/
 
-.btn-submit {
+.btn--submit {
 	position: relative;
 	display: block;
 	background-color: var.$btnBgColor;
@@ -237,13 +232,12 @@
 	box-shadow: 0 0.3em #e5ecf4;
 	border-radius: 0.3em;
 	transition: background-color 0.3s;
-	cursor: pointer;
 
 	&:hover {
 		background-color: #126E87;
 	}
 }
 
-.btn-submit__icon {
+.btn--submit__icon {
 	margin-left: 0.5em;
 }

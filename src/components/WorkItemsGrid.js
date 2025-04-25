@@ -127,7 +127,7 @@ class WorkItemsGrid extends Component {
 				<div className="modal" role="dialog">
 					<div className="modal__inner">
 
-					  <label className="btn-modal-close" htmlFor={`workItem${i}`}>
+					  <label className="btn btn--modal-close" htmlFor={`workItem${i}`}>
 					    <FontAwesomeIcon className="modal__icon" icon={faTimes} />CLOSE
 					  </label>
 
@@ -151,7 +151,7 @@ class WorkItemsGrid extends Component {
 
 					  <div style={modalViewProjStyle}>
 					  	<a 
-					  		className="btn-viewproject" 
+					  		className="btn btn--viewproject" 
 					  		href={item.projectURL} 
 					  		target="_blank" 
 					  		rel="noreferrer noopener">
@@ -161,7 +161,7 @@ class WorkItemsGrid extends Component {
 
 					  <div style={modalViewRepoStyle}>
 							<a 
-								className="btn-viewproject" 
+								className="btn btn--viewproject" 
 								href={`https://github.com/lee-anne-clarke/${item.projectRepo}`} 
 								target="_blank" rel="noreferrer noopener">
 								<FontAwesomeIcon className="modal__icon" icon={faFileCode} />view the repo
@@ -169,24 +169,24 @@ class WorkItemsGrid extends Component {
 					  </div>
 
 					  <div style={modalViewTempOneStyle}>
-							<a className="btn-viewproject" href={item.projTempURLOne} target="_blank" rel="noreferrer noopener">
+							<a className="btn btn--viewproject" href={item.projTempURLOne} target="_blank" rel="noreferrer noopener">
 								<FontAwesomeIcon className="modal__icon" icon={faTint} />template 1
 							</a>
 					  </div>
 
 					  <div style={modalViewTempTwoStyle}>
-							<a className="btn-viewproject" href={item.projTempURLTwo} target="_blank" rel="noreferrer noopener">
+							<a className="btn btn--viewproject" href={item.projTempURLTwo} target="_blank" rel="noreferrer noopener">
 								<FontAwesomeIcon className="modal__icon" icon={faTint} />template 2
 							</a>
 					  </div>
 
 					  <div style={modalViewTempThreeStyle}>
-							<a className="btn-viewproject" href={item.projTempURLThree} target="_blank" rel="noreferrer noopener">
+							<a className="btn btn--viewproject" href={item.projTempURLThree} target="_blank" rel="noreferrer noopener">
 								<FontAwesomeIcon className="modal__icon" icon={faTint} />template 3
 							</a>
 					  </div>
 
-					  <label className="btn-modal-close btn-modal-close--bottom" htmlFor={`workItem${i}`}>
+					  <label className="btn btn--modal-close btn--modal-close-btm" htmlFor={`workItem${i}`}>
 					    <FontAwesomeIcon className="modal__icon" icon={faTimes} />CLOSE
 					  </label>
 

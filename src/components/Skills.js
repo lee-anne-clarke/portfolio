@@ -19,7 +19,7 @@ export default function Skills() {
 
 				<div className="skills__set-right">
 					<SkillItem text="React" skillClass="react" />
-					<SkillItem text="Node" skillClass="node" />
+					<SkillItem text="Node.js" skillClass="node" />
 					<SkillItem text="CSS3" skillClass="css3" />
 					<SkillItem text="Sass" skillClass="sass" />	
 					<SkillItem text="Bootstrap" skillClass="bootstrap" />
