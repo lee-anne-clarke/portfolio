@@ -25,7 +25,7 @@ class WorkItemsGrid extends Component {
 	componentDidMount() {
 		//Add ".u-no-overflow" to <body> when modal is opened; remove when it's closed
 		let openModalBtn = document.querySelectorAll('.workitem__modal-checkbox-lbl');
-		let closeModalBtn = document.querySelectorAll('.btn-modal-close');
+		let closeModalBtn = document.querySelectorAll('.btn--modal-close');
 
 		for (let i of openModalBtn) {
 		  i.addEventListener('click', () => {

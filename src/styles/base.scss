@@ -12,13 +12,6 @@ body {
   margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-      color: inherit !important;
-      background: inherit !important;
-  }
-}
-
 .divider {
   opacity: 0.5;
   color: #339FA3;
