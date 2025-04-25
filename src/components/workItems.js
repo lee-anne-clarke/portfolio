@@ -11,7 +11,6 @@ import gdcFull2 from '../img/gdc-full-2.jpg';
 import freshgrocerThumb from '../img/freshgrocer.jpg';
 import freshgrocerFull from '../img/freshgrocer-full.jpg';
 import portfolioThumb from '../img/portfolio.jpg';
-import portfolioFull from '../img/portfolio-full.jpg';
 import braccoThumb from '../img/bracco.jpg';
 import braccoFull from '../img/bracco-full.jpg';
 import upserveThumb from '../img/upserve.jpg';
