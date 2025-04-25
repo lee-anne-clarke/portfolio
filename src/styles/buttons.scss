@@ -17,7 +17,7 @@
 
 	&,
 	&:focus {
-		border-bottom: 2px solid var.$bodyColor;
+		border-bottom: 2px dashed var.$bodyColor;
 		padding-bottom: 1px;
 	}
 
@@ -122,11 +122,9 @@
 /********** Header **********/
 
 .btn--header {
-	background: none;
-	border: none;
 	display: inline-block;
 	color: var.$white;
-	font-size: 1em;
+	font-size: 4em;
 	transition: opacity 0.3s;
 	text-decoration: none;
 
@@ -139,10 +137,6 @@
 	&:hover {
 		opacity: 1;
 	}
-}
-
-.btn--header-icon {
-	font-size: 1.8em;
 }
 
 

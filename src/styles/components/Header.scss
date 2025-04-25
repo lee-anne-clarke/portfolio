@@ -7,22 +7,20 @@
 .header {
 	background: var.$navBgColor; /* Fallback for older browsers */
 	background: linear-gradient(180deg, rgba(21, 128, 157, 1) 0%, rgba(29, 172, 213, 1) 100%);
-
 	text-align: center;
-	padding: 6em 1em 1em;
+	padding: 6em 1em 4em;
 
 	@media (min-width: 600px) {	
-		padding: 10em 1em 1em;
-		height: 100vh;
+		padding: 10em 1em 4em;	
 	}
 }
 
-.header__item {
+.header__text {
 	color: var.$white;
 	line-height: 1;
 }
 
-.header__item--jobtitle {
+.header__text--jobtitle {
 	font-size: 1.7em;
 	letter-spacing: 0;
 
@@ -31,7 +29,11 @@
 	}
 }
 
-.header__item--email {
+.header__text--email {
 	font-size: 1.2em;
 	letter-spacing: 0.2em;
+}
+
+.header__btn-wrap {
+	padding: 3em 0;
 }
