@@ -9,7 +9,6 @@ export default function FormField(props) {
 		    	   name={props.fieldName} 
 		    	   id={props.fieldName} 
 		    	   minLength={props.fieldMinLength}
-		    	   value={props.inputValue}
 		    	   onChange={props.changeEvent} 
 		   	/>
 

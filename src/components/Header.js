@@ -11,7 +11,7 @@ export default function Header() {
 			<p className="header__text header__text--email">lac @ lee-anne-clarke.com</p>
 
 			<div className="header__btn-wrap">
-				<a className="btn--header" href="https://github.com/lee-anne-clarke/" title="Github" target="blank">
+				<a className="btn--header" href="https://github.com/lee-anne-clarke/" title="Github" target="blank" rel="noreferrer noopener">
 					<FontAwesomeIcon icon={faGithub} />
 					<span className="u-sr">My Github</span>
 				</a>			

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useActionState } from 'react';
+import { useFormStatus } from "react-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
 	faUser, 
@@ -13,16 +14,12 @@ import FormInvalidMsg from './FormInvalidMsg'
 
 
 export default function Contact() {
-
-   const [contactName, setContactName] = useState('');
-   const [contactEmail, setContactEmail] = useState('');
-   const [contactWebsite, setContactWebsite] = useState('');
-   const [contactMsg, setContactMsg] = useState('');
-   const [formSubmitted, setFormSubmitted] = useState(false);
-   const [hasInvalidFields, setHasInvalidFields] = useState(false);
-   const [isMsgTooShort, setIsMsgTooShort] = useState(false);
-   const [hasFormError, setHasFormError] = useState(false);
-   const [submitBtnText, setSubmitBtnText] = useState('Send')
+	
+	const [formSubmitted, setFormSubmitted] = useState(false);
+	const [hasInvalidFields, setHasInvalidFields] = useState(false);
+	const [isMsgTooShort, setIsMsgTooShort] = useState(false);
+	const [hasFormError, setHasFormError] = useState(false);
+	const { pending } = useFormStatus();
 
 
   useEffect(() => {
@@ -49,8 +46,11 @@ export default function Contact() {
   }, []);
 
 
-  const handleSubmit = async (event) => {
-  	setSubmitBtnText('Sending...');
+  const handleSubmit = async (formData) => {
+		let contactName = formData.get("contactName");
+		let contactEmail = formData.get("contactEmail");
+		let contactWebsite = formData.get("contactWebsite");
+		let contactMsg = formData.get("contactMsg");
 
 		if (contactName.length >= 2 && contactEmail.length >= 5) {
 			if (contactMsg.length >= 10) {
@@ -66,17 +66,14 @@ export default function Contact() {
 	      	setFormSubmitted(true);
 		    } else {
 		    	setHasFormError(true);
-		    	setSubmitBtnText('Send');
 		    }
 
 	  	} else {
 	  		setIsMsgTooShort(true);
-	  		setSubmitBtnText('Send');
 	  	}
 
 	  } else {
 	  	setHasInvalidFields(true);
-	  	setSubmitBtnText('Send');
 	  }
   }
 
@@ -105,43 +102,35 @@ export default function Contact() {
 
 					<div className="form-inner">
 						<FormField 
-							fieldName="name"
+							fieldName="contactName"
 							fieldLabel="Name *"
 							fieldType="text"
 							fieldMinLength="2"
-							inputValue={contactName}
 							iconName={faUser}
-							changeEvent={(e) => setContactName(e.target.value)}
 						/>
 						
 						<FormField 
-							fieldName="email"
+							fieldName="contactEmail"
 							fieldLabel="Email *"
 							fieldType="email"
 							fieldMinLength="5"
-							inputValue={contactEmail}
 							iconName={faEnvelope}
-							changeEvent={(e) => setContactEmail(e.target.value)}
 						/>
 
 						<FormField 
-							fieldName="website"
+							fieldName="contactWebsite"
 							fieldLabel="Website"
 							fieldType="text"
-							inputValue={contactWebsite}
 							iconName={faGlobe}
-							changeEvent={(e) => setContactWebsite(e.target.value)}
 						/>
 
 						<div className="form__group">
 							<textarea 
 								className="form__field form__field--ta" 
-								name="message"
+								name="contactMsg"
 								id="message"
 								rows="7" 
-								minLength="10"
-								value={contactMsg}
-								onChange={(e) => setContactMsg(e.target.value)}>
+								minLength="10">
 							</textarea>
 
 							<label className="form__label" htmlFor="message">
@@ -162,8 +151,8 @@ export default function Contact() {
 							<FormInvalidMsg msg="Sorry, something went wrong. Please try again." />
 						)}
 
-						<button className="btn btn--submit" type="submit">
-							{submitBtnText}
+						<button className="btn btn--submit" type="submit" disabled={pending}>
+							{pending ? "Sending..." : "Submit"}
 							<FontAwesomeIcon className="btn--submit__icon" icon={faPaperPlane} />
 						</button>
 					</div>
