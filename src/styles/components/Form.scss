@@ -106,7 +106,7 @@
 }
 
 .form__field:focus + .form__label .form__label-icon,
-.form__field--filled + .form__label .form__label-icon, {
+.form__field--filled + .form__label .form__label-icon {
 	transform: translate3d(-0.4em, 0, 0);
 }
 

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useActionState } from 'react';
 import { useFormStatus } from "react-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
@@ -10,7 +9,19 @@ import {
 	faPaperPlane
 } from '@fortawesome/free-solid-svg-icons';
 import FormField from './FormField'
-import FormInvalidMsg from './FormInvalidMsg'
+import FormMsg from './FormMsg'
+
+
+function SubmitBtn() {
+	const { pending } = useFormStatus();
+
+	return(
+		<button className="btn btn--submit" type="submit" disabled={pending}>
+			{pending ? "Sending..." : "Submit"}
+			<FontAwesomeIcon className="btn--submit__icon" icon={faPaperPlane} />
+		</button>
+	);
+}
 
 
 export default function Contact() {
@@ -18,8 +29,7 @@ export default function Contact() {
 	const [formSubmitted, setFormSubmitted] = useState(false);
 	const [hasInvalidFields, setHasInvalidFields] = useState(false);
 	const [isMsgTooShort, setIsMsgTooShort] = useState(false);
-	const [hasFormError, setHasFormError] = useState(false);
-	const { pending } = useFormStatus();
+	const [hasGeneralError, setHasGeneralError] = useState(false);
 
 
   useEffect(() => {
@@ -31,7 +41,7 @@ export default function Contact() {
 			field.addEventListener('focus', () => {
 				setHasInvalidFields(false);
 				setIsMsgTooShort(false);
-				setHasFormError(false);
+				setHasGeneralError(false);
 			});	
 
 			// Add a special css class to form field if it's filled in
@@ -65,7 +75,7 @@ export default function Contact() {
 		    if (response.ok) {
 	      	setFormSubmitted(true);
 		    } else {
-		    	setHasFormError(true);
+		    	setHasGeneralError(true);
 		    }
 
 	  	} else {
@@ -81,9 +91,7 @@ export default function Contact() {
 
   if (formSubmitted) {
   	return(
-  		<div className="form__msg form__msg--valid">
-				<p>Thank you!</p>
-			</div>
+  		<FormMsg isValidMsg={true} msg="Thank you!" />
   	);
 
   } else {
@@ -140,21 +148,18 @@ export default function Contact() {
 						</div>
 
 						{hasInvalidFields && (
-							<FormInvalidMsg msg="Please complete all required fields." />
+							<FormMsg isValidMsg={false} msg="Please complete all required fields." />
 						)}
 
 						{isMsgTooShort && (
-							<FormInvalidMsg msg="Message must be at least 10 characters long." />
+							<FormMsg isValidMsg={false} msg="Message must be at least 10 characters long." />
 						)}
 
-						{hasFormError && (
-							<FormInvalidMsg msg="Sorry, something went wrong. Please try again." />
+						{hasGeneralError && (
+							<FormMsg isValidMsg={false} msg="Sorry, something went wrong. Please try again." />
 						)}
 
-						<button className="btn btn--submit" type="submit" disabled={pending}>
-							{pending ? "Sending..." : "Submit"}
-							<FontAwesomeIcon className="btn--submit__icon" icon={faPaperPlane} />
-						</button>
+						<SubmitBtn />
 					</div>
 					
 				</form>
