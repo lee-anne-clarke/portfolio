@@ -27,21 +27,16 @@ function SubmitBtn() {
 export default function Contact() {
 	
 	const [formSubmitted, setFormSubmitted] = useState(false);
-	const [hasInvalidFields, setHasInvalidFields] = useState(false);
-	const [isMsgTooShort, setIsMsgTooShort] = useState(false);
-	const [hasGeneralError, setHasGeneralError] = useState(false);
-
+	const [formHasError, setFormHasError] = useState(false);
 
   useEffect(() => {
     const formFields = document.querySelectorAll(".form__field");
 		
 		for (let field of formFields) {
 		
-			// Hide messages on form field focus
+			// Hide error message on form field focus
 			field.addEventListener('focus', () => {
-				setHasInvalidFields(false);
-				setIsMsgTooShort(false);
-				setHasGeneralError(false);
+				setFormHasError(false);
 			});	
 
 			// Add a special css class to form field if it's filled in
@@ -62,32 +57,20 @@ export default function Contact() {
 		let contactWebsite = formData.get("contactWebsite");
 		let contactMsg = formData.get("contactMsg");
 
-		if (contactName.length >= 2 && contactEmail.length >= 5) {
-			if (contactMsg.length >= 10) {
-		  	const response = await fetch('https://formspree.io/f/mjvqzadp', {
-		      method: 'POST',
-		      headers: {
-		        'Content-Type': 'application/json',
-		      },
-		      body: JSON.stringify({ contactName, contactEmail, contactWebsite, contactMsg }),
-		    });
+    const response = await fetch('https://formspree.io/f/mjvqzadp', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ contactName, contactEmail, contactWebsite, contactMsg }),
+    });
 
-		    if (response.ok) {
-	      	setFormSubmitted(true);
-		    } else {
-		    	setHasGeneralError(true);
-		    }
-
-	  	} else {
-	  		setIsMsgTooShort(true);
-	  	}
-
-	  } else {
-	  	setHasInvalidFields(true);
-	  }
+    if (response.ok) {
+      setFormSubmitted(true);
+    } else {
+      setFormHasError(true);
+    }
   }
-
-
 
   if (formSubmitted) {
   	return(
@@ -96,7 +79,7 @@ export default function Contact() {
 
   } else {
 	  return (
-			<section className="section contact">
+      <section className="section contact">
 				<h2>Contact</h2>
 
 				<form 
@@ -115,6 +98,7 @@ export default function Contact() {
 							fieldType="text"
 							fieldMinLength="2"
 							iconName={faUser}
+							fieldIsRequired={true}
 						/>
 						
 						<FormField 
@@ -123,6 +107,7 @@ export default function Contact() {
 							fieldType="email"
 							fieldMinLength="5"
 							iconName={faEnvelope}
+							fieldIsRequired={true}
 						/>
 
 						<FormField 
@@ -130,6 +115,7 @@ export default function Contact() {
 							fieldLabel="Website"
 							fieldType="text"
 							iconName={faGlobe}
+							fieldIsRequired={false}
 						/>
 
 						<div className="form__group">
@@ -138,7 +124,8 @@ export default function Contact() {
 								name="contactMsg"
 								id="message"
 								rows="7" 
-								minLength="10">
+								minLength="10"
+								required>
 							</textarea>
 
 							<label className="form__label" htmlFor="message">
@@ -147,23 +134,14 @@ export default function Contact() {
 							</label>
 						</div>
 
-						{hasInvalidFields && (
-							<FormMsg isValidMsg={false} msg="Please complete all required fields." />
-						)}
-
-						{isMsgTooShort && (
-							<FormMsg isValidMsg={false} msg="Message must be at least 10 characters long." />
-						)}
-
-						{hasGeneralError && (
+						{formHasError && (
 							<FormMsg isValidMsg={false} msg="Sorry, something went wrong. Please try again." />
 						)}
 
 						<SubmitBtn />
-					</div>
-					
-				</form>
 
+					</div>
+				</form>
 			</section>
 	  );
   }

@@ -9,7 +9,7 @@ export default function FormField(props) {
 		    	   name={props.fieldName} 
 		    	   id={props.fieldName} 
 		    	   minLength={props.fieldMinLength}
-		    	   onChange={props.changeEvent} 
+		    	   required={props.fieldIsRequired}
 		   	/>
 
 		    <label className="form__label" htmlFor={props.fieldName}>
