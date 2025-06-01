@@ -14,6 +14,7 @@ export default function WorkSorting() {
 		const btnSortAll = document.getElementById('btnSortAll');
 		const btnSortReact = document.getElementById('btnSortReact');
 		const btnSortVue = document.getElementById('btnSortVue');
+		const btnSortPython = document.getElementById('btnSortPython');
 		const btnSortBootstrap = document.getElementById('btnSortBootstrap');
 		const btnSortFoundation = document.getElementById('btnSortFoundation');
 		const btnSortEmails = document.getElementById('btnSortEmails');
@@ -64,6 +65,10 @@ export default function WorkSorting() {
 
 		btnSortVue.addEventListener('click', () => {
 			sortItems('sort-vue', btnSortVue);
+		});
+
+		btnSortPython.addEventListener('click', () => {
+			sortItems('sort-python', btnSortPython);
 		});
 		
 		btnSortBootstrap.addEventListener('click', () => {

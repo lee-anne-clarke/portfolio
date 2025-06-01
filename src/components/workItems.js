@@ -31,14 +31,16 @@ import silversparkFull1 from '../img/silverspark-full-1.jpg';
 import silversparkFull2 from '../img/silverspark-full-2.jpg';
 import photosearchThumb from '../img/photosearch.jpg';
 import photosearchFull from '../img/photosearch-full.jpg';
+import socializeThumb from '../img/socialize.jpg';
+import socializeFull1 from '../img/socialize-full-1.jpg';
+import socializeFull2 from '../img/socialize-full-2.jpg';
 
 import {
 	ModalSummaryNAHB,
-	ModalSummaryGranstand,
+	ModalSummaryGrandstand,
 	ModalSummaryViable,
 	ModalSummaryBracco,
 	ModalSummaryFiserv,
-	ModalSummarySilver,
 	ModalSummaryFresh,
 	ModalSummaryUpserve,
 	ModalSummaryITSLContact,
@@ -47,7 +49,8 @@ import {
 	ModalSummaryITSLEmail,
 	ModalSummaryLAC,
 	ModalSummaryPhotoSearch,
-	ModalSummaryGDC
+	ModalSummaryGDC,
+  ModalSummarySocialize
 } from './ModalSummary';
 
 
@@ -64,16 +67,16 @@ const workItems = [
     projectRepo: "greatdesignco"
   },
 
-  {
-    titleShort: "The Fresh Grocer",
-    imgSource: freshgrocerThumb,
-    description: "mock website redesign",
-    sortClasses: "sort-react",
-    modalImgOneSrc: freshgrocerFull,
-      modalImgOneAlt: "The Fresh Grocer screen cap - full",
-      modalSummary: <ModalSummaryFresh />,
-      projectURL: "/work/freshgrocer/",
-      projectRepo: "freshgrocer"
+    {
+    titleShort: "Socialize",
+    imgSource: socializeThumb,
+    description: "mock social media app",
+    sortClasses: "sort-python sort-bs",
+    modalImgOneSrc: socializeFull1,
+    modalImgOneAlt: "Socialize - homepage",
+    modalImgTwoSrc: socializeFull2,
+    modalImgTwoAlt: "Socialize - post detail page",
+    modalSummary: <ModalSummarySocialize />,
   },
   
   {
@@ -83,7 +86,7 @@ const workItems = [
     sortClasses: "sort-foundation sort-vue",
     modalImgOneSrc: grandstandFull,
     modalImgOneAlt: "Grandstand landing page screen cap - full",
-    modalSummary: <ModalSummaryGranstand />,
+    modalSummary: <ModalSummaryGrandstand />,
   },
 
   {
@@ -94,6 +97,18 @@ const workItems = [
     modalImgOneSrc: viableFull,
     modalImgOneAlt: "Viable landing page screen cap - full",
     modalSummary: <ModalSummaryViable />,
+  },
+
+  {
+    titleShort: "The Fresh Grocer",
+    imgSource: freshgrocerThumb,
+    description: "mock website redesign",
+    sortClasses: "sort-react",
+    modalImgOneSrc: freshgrocerFull,
+      modalImgOneAlt: "The Fresh Grocer screen cap - full",
+      modalSummary: <ModalSummaryFresh />,
+      projectURL: "/work/freshgrocer/",
+      projectRepo: "freshgrocer"
   },
 
   {

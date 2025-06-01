@@ -17,6 +17,11 @@ const workSortBtnList = [
 	},
 	{
 		btnClass: '',
+		btnID: 'btnSortPython',
+		btnText: 'Python',
+	},
+	{
+		btnClass: '',
 		btnID: 'btnSortBootstrap',
 		btnText: 'Bootstrap',
 	},
