@@ -47,7 +47,7 @@ function ModalSummaryFiserv() {
 function ModalSummaryFresh() {
   return (
     <div>
-      <p>Built with React and <a className="btn--text" href="https://nextjs.org/" target="_blank" rel="noreferrer noopener">Next.js</a>. Sass automatically compiled with Next.js. Design by me.</p>
+      <p>A mock website redesign. Built with React and <a className="btn--text" href="https://nextjs.org/" target="_blank" rel="noreferrer noopener">Next.js</a>. Sass automatically compiled with Next.js. Design by me.</p>
 
       <ul className="modal__features-list">
         <li>Routing &mdash; Next.js's App Router</li>
@@ -135,7 +135,7 @@ function ModalSummaryPhotoSearch() {
 function ModalSummaryGDC() {
   return (
     <div>
-      <p>Built with React and <a className="btn--text" href="https://nextjs.org/" target="_blank" rel="noreferrer noopener">Next.js</a>. CSS3 animation used for navigation buttons. Sass automatically compiled with Next.js. Design by me.
+      <p>A mock site for a design agency. Built with React and <a className="btn--text" href="https://nextjs.org/" target="_blank" rel="noreferrer noopener">Next.js</a>. CSS3 animation used for navigation buttons. Sass automatically compiled with Next.js. Design by me.
       </p>
 
       <ul className="modal__features-list">
@@ -154,7 +154,7 @@ function ModalSummaryGDC() {
 function ModalSummarySocialize() {
   return (
     <div>
-      <p>A Threads-like social networking site. Features include making posts, liking posts, bookmarks, and following users. Built with Python/Django, JavaScript, HTML, CSS, and Bootstrap. Design by me.</p>
+      <p>A Threads-like social networking app. Features include making posts, liking posts, bookmarks, and following users. Built with Python/Django, SQLite, JavaScript, HTML, CSS, and Bootstrap. Design by me.</p>
 
       <p>Please contact me for access to the project repository.</p>
     </div>

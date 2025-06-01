@@ -58,7 +58,7 @@ const workItems = [
   {
     titleShort: "Great Design Co.",
     imgSource: gdcThumb,
-    description: "mock design agency",
+    description: "independent project",
     sortClasses: "sort-react",
     modalImgOneSrc: gdcFull1,
     modalImgOneAlt: "Great Design Co. screen cap - homepage",
@@ -70,7 +70,7 @@ const workItems = [
     {
     titleShort: "Socialize",
     imgSource: socializeThumb,
-    description: "mock social media app",
+    description: "academic project",
     sortClasses: "sort-python sort-bs",
     modalImgOneSrc: socializeFull1,
     modalImgOneAlt: "Socialize - homepage",
@@ -102,7 +102,7 @@ const workItems = [
   {
     titleShort: "The Fresh Grocer",
     imgSource: freshgrocerThumb,
-    description: "mock website redesign",
+    description: "independent project",
     sortClasses: "sort-react",
     modalImgOneSrc: freshgrocerFull,
       modalImgOneAlt: "The Fresh Grocer screen cap - full",
