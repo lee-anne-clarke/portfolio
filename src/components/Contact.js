@@ -119,7 +119,16 @@ export default function Contact() {
 							fieldIsRequired={false}
 						/>
 
-						<div className="form__group">
+						<FormField 
+							isTextarea={true}
+							fieldName="contactMsg"
+							fieldLabel="Message *"
+							fieldMinLength="10"
+							iconName={faPencilAlt}
+							fieldIsRequired={true}
+						/>
+
+{/*						<div className="form__group">
 							<textarea 
 								className="form__field form__field--ta" 
 								name="contactMsg"
@@ -133,7 +142,7 @@ export default function Contact() {
 								<FontAwesomeIcon className="fa-fw form__label-icon" icon={faPencilAlt} />
 								<span className="form__label-text">Message *</span>
 							</label>
-						</div>
+						</div>*/}
 
 						{formHasError && (
 							<FormMsg isValidMsg={false} msg="Sorry, something went wrong. Please try again." />
