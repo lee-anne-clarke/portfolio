@@ -134,6 +134,47 @@ class WorkItemsGrid extends Component {
 					  <h3 className="h3--modal">{item.titleShort}</h3>
 					  <h4>{item.description}</h4> 
 
+					  {item.modalSummary}
+
+					  <div className="modal__view_proj">
+						<div style={modalViewProjStyle}>
+							<a 
+								className="btn btn--viewproject" 
+								href={item.projectURL} 
+								target="_blank" 
+								rel="noreferrer noopener">
+								<FontAwesomeIcon className="modal__icon" icon={faExternalLinkAlt} />view the project
+							</a>
+						</div>
+
+						<div style={modalViewRepoStyle}>
+							<a 
+								className="btn btn--viewproject" 
+								href={`https://github.com/lee-anne-clarke/${item.projectRepo}`} 
+								target="_blank" rel="noreferrer noopener">
+								<FontAwesomeIcon className="modal__icon" icon={faFileCode} />view the repo
+							</a>
+						</div>
+
+						<div style={modalViewTempOneStyle}>
+							<a className="btn btn--viewproject" href={item.projTempURLOne} target="_blank" rel="noreferrer noopener">
+								<FontAwesomeIcon className="modal__icon" icon={faTint} />template 1
+							</a>
+						</div>
+
+						<div style={modalViewTempTwoStyle}>
+							<a className="btn btn--viewproject" href={item.projTempURLTwo} target="_blank" rel="noreferrer noopener">
+								<FontAwesomeIcon className="modal__icon" icon={faTint} />template 2
+							</a>
+						</div>
+
+						<div style={modalViewTempThreeStyle}>
+							<a className="btn btn--viewproject" href={item.projTempURLThree} target="_blank" rel="noreferrer noopener">
+								<FontAwesomeIcon className="modal__icon" icon={faTint} />template 3
+							</a>
+						</div>
+					  </div>
+
 					  {/* The code below is necessary because the image has to load first and THEN the Image component. Otherwise, there will be errors in the console. */}
 					  	
 					  { 
@@ -145,48 +186,7 @@ class WorkItemsGrid extends Component {
 					  	<Image className="modal__img" style={modalImgTwoStyle} src={item.modalImgTwoSrc} alt={item.modalImgTwoAlt} /> 
 					  }
 
-					  	
-					  {item.modalSummary}
-				
-
-					  <div style={modalViewProjStyle}>
-					  	<a 
-					  		className="btn btn--viewproject" 
-					  		href={item.projectURL} 
-					  		target="_blank" 
-					  		rel="noreferrer noopener">
-					  		<FontAwesomeIcon className="modal__icon" icon={faExternalLinkAlt} />view the project
-					  	</a>
-					  </div>
-
-					  <div style={modalViewRepoStyle}>
-							<a 
-								className="btn btn--viewproject" 
-								href={`https://github.com/lee-anne-clarke/${item.projectRepo}`} 
-								target="_blank" rel="noreferrer noopener">
-								<FontAwesomeIcon className="modal__icon" icon={faFileCode} />view the repo
-							</a>
-					  </div>
-
-					  <div style={modalViewTempOneStyle}>
-							<a className="btn btn--viewproject" href={item.projTempURLOne} target="_blank" rel="noreferrer noopener">
-								<FontAwesomeIcon className="modal__icon" icon={faTint} />template 1
-							</a>
-					  </div>
-
-					  <div style={modalViewTempTwoStyle}>
-							<a className="btn btn--viewproject" href={item.projTempURLTwo} target="_blank" rel="noreferrer noopener">
-								<FontAwesomeIcon className="modal__icon" icon={faTint} />template 2
-							</a>
-					  </div>
-
-					  <div style={modalViewTempThreeStyle}>
-							<a className="btn btn--viewproject" href={item.projTempURLThree} target="_blank" rel="noreferrer noopener">
-								<FontAwesomeIcon className="modal__icon" icon={faTint} />template 3
-							</a>
-					  </div>
-
-					  <label className="btn btn--modal-close btn--modal-close-btm" htmlFor={`workItem${i}`}>
+						<label className="btn btn--modal-close btn--modal-close-btm" htmlFor={`workItem${i}`}>
 					    <FontAwesomeIcon className="modal__icon" icon={faTimes} />CLOSE
 					  </label>
 
