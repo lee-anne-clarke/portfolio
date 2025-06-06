@@ -35,15 +35,6 @@ function ModalSummaryBracco() {
 }
 
 
-function ModalSummaryFiserv() {
-  return (
-    <p>
-    	A mock financial services website created for my degree program at Sessions College. Built in WordPress 4 with base theme Vantage. <a className="btn--text" href="http://siteorigin.com/page-builder/" target="_blank" rel="noreferrer noopener">Page Builder</a> used to create and modify pages. <a className="btn--text" href="http://wordpress.org/plugins/ml-slider/" target="_blank" rel="noreferrer noopener">Meta Slider</a> used for page headers. <a className="btn--text" href="http://wordpress.org/plugins/custom-wp-login-widget/" target="_blank" rel="noreferrer noopener">Custom WP Login Widget</a> used for login box on homepage. <a className="btn--text" href="http://wordpress.org/plugins/basic-google-maps-placemarks/" target="_blank" rel="noreferrer noopener">Basic Google Maps Placemarks</a> used to create map on "Find a Branch" page. Design by me.
-    </p>
-  );
-}
-
-
 function ModalSummaryFresh() {
   return (
     <div>
@@ -167,7 +158,6 @@ export {
   ModalSummaryGrandstand,
   ModalSummaryViable,
   ModalSummaryBracco,
-  ModalSummaryFiserv,
   ModalSummaryFresh,
 	ModalSummaryUpserve,
 	ModalSummaryITSLContact,

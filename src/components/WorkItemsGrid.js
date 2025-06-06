@@ -114,7 +114,7 @@ class WorkItemsGrid extends Component {
 			  
 				<label className="workitem__modal-checkbox-lbl" htmlFor={`workItem${i}`}>
 					<figure className="workitem__fig">
-					    <Image className="workitem__img" src={item.imgSource} alt={`${item.titleShort} screen cap`} />
+					    <Image className="workitem__img" src={item.imgSource} alt={`${item.titleShort} screenshot`} />
 					    
 					    <figcaption className="workitem__caption">
 					      <h3 className="h3--workitem">{item.titleShort}</h3>
