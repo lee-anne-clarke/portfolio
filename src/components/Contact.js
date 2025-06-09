@@ -128,22 +128,6 @@ export default function Contact() {
 							fieldIsRequired={true}
 						/>
 
-{/*						<div className="form__group">
-							<textarea 
-								className="form__field form__field--ta" 
-								name="contactMsg"
-								id="message"
-								rows="7" 
-								minLength="10"
-								required>
-							</textarea>
-
-							<label className="form__label" htmlFor="message">
-								<FontAwesomeIcon className="fa-fw form__label-icon" icon={faPencilAlt} />
-								<span className="form__label-text">Message *</span>
-							</label>
-						</div>*/}
-
 						{formHasError && (
 							<FormMsg isValidMsg={false} msg="Sorry, something went wrong. Please try again." />
 						)}
