@@ -152,9 +152,9 @@ const workItems = [
     modalImgOneSrc: upserveFull,
     modalImgOneAlt: "Upserve marketing landing page template screenshot - full",
     modalSummary: <ModalSummaryUpserve />,
-    projTempURLOne: "/work/upserve/upserve1.html",
-    projTempURLTwo: "/work/upserve/upserve2.html",
-    projTempURLThree: "/work/upserve/upserve3.html",
+    projTemplateURLOne: "/work/upserve/upserve1.html",
+    projTemplateURLTwo: "/work/upserve/upserve2.html",
+    projTemplateURLThree: "/work/upserve/upserve3.html",
   },
 
   {
@@ -199,8 +199,8 @@ const workItems = [
     modalImgOneSrc: itsEmailFull,
     modalImgOneAlt: "itslearning email template screenshot - full",
     modalSummary: <ModalSummaryITSLEmail />,
-    projTempURLOne: "/work/itslearning/emailtemplates/emailtemp1.html",
-    projTempURLTwo: "/work/itslearning/emailtemplates/emailtemp2.html"
+    projTemplateURLOne: "/work/itslearning/emailtemplates/emailtemp1.html",
+    projTemplateURLTwo: "/work/itslearning/emailtemplates/emailtemp2.html"
   },
 
   {

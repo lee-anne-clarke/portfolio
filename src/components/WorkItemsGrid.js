@@ -13,12 +13,11 @@ import { faFileCode } from '@fortawesome/free-regular-svg-icons';
 import workItems from './workItems'
 
 
-
 export default function WorkItemsGrid() {
 	const [workItemsList] = useState(workItems);
 
 	useEffect(() => {
-		//Add ".u-no-overflow" to <body> when modal is opened; remove when it's closed
+		//Add "u-no-overflow" class to <body> when modal is opened; remove when modal is closed
 		let openModalBtn = document.querySelectorAll('.workitem__modal-checkbox-lbl');
 		let closeModalBtn = document.querySelectorAll('.btn--modal-close');
 
@@ -36,7 +35,7 @@ export default function WorkItemsGrid() {
 	}, []);
 
 
-	const eachWorkItem = (item, i) => {
+	const renderWorkItemContent = (item, i) => {
 
 		let modalViewProjStyle,
 				modalImgTwoStyle,
@@ -44,55 +43,6 @@ export default function WorkItemsGrid() {
 				modalViewTempOneStyle,
 				modalViewTempTwoStyle,
 				modalViewTempThreeStyle
-
-		// ** Show/hide project content as needed **
-
-		if (item.modalImgTwoSrc) {
-			modalImgTwoStyle = {display: 'inline'}
-		} else {
-			modalImgTwoStyle = {display: 'none'}
-		}
-
-		if (!item.projectURL) {
-			modalViewProjStyle = {display: 'none'}
-		}
-
-		if (item.projectRepo) {
-			modalViewRepoStyle = {
-				display: 'block',
-				marginTop: '2em'
-			}
-		} else {
-			modalViewRepoStyle = {display: 'none'}
-		}
-
-		if (item.projTempURLOne) {
-			modalViewTempOneStyle = {
-				display: 'block',
-				marginTop: '2em'
-			}
-			modalViewProjStyle = {display: 'none'}
-		} else {
-			modalViewTempOneStyle = {display: 'none'}
-		}
-
-		if (item.projTempURLTwo) {
-			modalViewTempTwoStyle = {
-				display: 'block',
-				marginTop: '2em'
-			}
-		} else {
-			modalViewTempTwoStyle = {display: 'none'}
-		}
-
-		if (item.projTempURLThree) {
-			modalViewTempThreeStyle = {
-				display: 'block',
-				marginTop: '2em'
-			}
-		} else {
-			modalViewTempThreeStyle = {display: 'none'}
-		}
 	  
 
 	  // ** Generate modal content for each Work item with the content from the workItems.js array **
@@ -122,83 +72,95 @@ export default function WorkItemsGrid() {
 				<div className="modal" role="dialog">
 					<div className="modal__inner">
 
-					  <label className="btn btn--modal-close" htmlFor={`workItem${i}`}>
-					    <FontAwesomeIcon className="modal__icon" icon={faTimes} />CLOSE
-					  </label>
+						<label className="btn btn--modal-close" htmlFor={`workItem${i}`}>
+					    	<FontAwesomeIcon className="modal__icon" icon={faTimes} />CLOSE
+					    </label>
 
-					  <h3 className="h3--modal">{item.titleShort}</h3>
-					  <h4>{item.description}</h4> 
+						<h3 className="h3--modal">{item.titleShort}</h3>
+						<h4>{item.description}</h4> 
 
-					  {item.modalSummary}
+						{item.modalSummary}
 
-					  <div className="modal__view_proj">
-						<div style={modalViewProjStyle}>
-							<a 
-								className="btn btn--viewproject" 
-								href={item.projectURL} 
-								target="_blank" 
-								rel="noreferrer noopener">
-								<FontAwesomeIcon className="modal__icon" icon={faExternalLinkAlt} />view the project
-							</a>
-						</div>
+						<div className="modal__view_proj">
+							{ item.projectURL && 
+								<div>
+									<a 
+										className="btn btn--viewproject" 
+										href={item.projectURL} 
+										target="_blank" 
+										rel="noreferrer noopener">
+										<FontAwesomeIcon className="modal__icon" icon={faExternalLinkAlt} />view the project
+									</a>
+								</div>
+							}
 
-						<div style={modalViewRepoStyle}>
-							<a 
-								className="btn btn--viewproject" 
-								href={`https://github.com/lee-anne-clarke/${item.projectRepo}`} 
-								target="_blank" rel="noreferrer noopener">
-								<FontAwesomeIcon className="modal__icon" icon={faFileCode} />view the repo
-							</a>
-						</div>
+							{ item.projectRepo && 
+								<div className="u-mt-2">
+									<a 
+										className="btn btn--viewproject" 
+										href={`https://github.com/lee-anne-clarke/${item.projectRepo}`} 
+										target="_blank" 
+										rel="noreferrer noopener">
+										<FontAwesomeIcon className="modal__icon" icon={faFileCode} />view the repo
+									</a>
+								</div>
+							}
 
-						<div style={modalViewTempOneStyle}>
-							<a className="btn btn--viewproject" href={item.projTempURLOne} target="_blank" rel="noreferrer noopener">
-								<FontAwesomeIcon className="modal__icon" icon={faTint} />template 1
-							</a>
-						</div>
+							{ item.projTemplateURLOne && 
+								<div>
+									<a className="btn btn--viewproject" href={item.projTemplateURLOne} target="_blank" rel="noreferrer noopener">
+										<FontAwesomeIcon className="modal__icon" icon={faTint} />template 1
+									</a>
+								</div>
+							}
 
-						<div style={modalViewTempTwoStyle}>
-							<a className="btn btn--viewproject" href={item.projTempURLTwo} target="_blank" rel="noreferrer noopener">
-								<FontAwesomeIcon className="modal__icon" icon={faTint} />template 2
-							</a>
-						</div>
+							{ item.projTemplateURLTwo &&
+								<div className="u-mt-2">
+									<a className="btn btn--viewproject" href={item.projTemplateURLTwo} target="_blank" rel="noreferrer noopener">
+										<FontAwesomeIcon className="modal__icon" icon={faTint} />template 2
+									</a>
+								</div>
+							}
 
-						<div style={modalViewTempThreeStyle}>
-							<a className="btn btn--viewproject" href={item.projTempURLThree} target="_blank" rel="noreferrer noopener">
-								<FontAwesomeIcon className="modal__icon" icon={faTint} />template 3
-							</a>
-						</div>
-					  </div>
+							{ item.projTemplateURLThree && 
+								<div className="u-mt-2">
+									<a className="btn btn--viewproject" href={item.projTemplateURLThree} target="_blank" rel="noreferrer noopener">
+									<FontAwesomeIcon className="modal__icon" icon={faTint} />template 3
+									</a>
+								</div>
+							}
 
-					  {/* The code below is necessary because the image has to load first and THEN the Image component. Otherwise, there will be errors in the console. */}
-					  	
-					  { 
-					  	item.modalImgOneSrc &&
-					  	<Image className="modal__img" src={item.modalImgOneSrc} alt={item.modalImgOneAlt} /> 
-					  }
-					  	
-					  { item.modalImgTwoSrc && 
-					  	<Image className="modal__img" style={modalImgTwoStyle} src={item.modalImgTwoSrc} alt={item.modalImgTwoAlt} /> 
-					  }
+						</div> {/* END .modal__view_proj*/}
+
+						{/* The code below is necessary because the image has to load first and THEN the Image component. Otherwise, there will be errors in the console. */}
+
+						{ item.modalImgOneSrc &&
+							<Image className="modal__img" src={item.modalImgOneSrc} alt={item.modalImgOneAlt} /> 
+						}
+
+						{ item.modalImgTwoSrc && 
+							<Image className="modal__img" src={item.modalImgTwoSrc} alt={item.modalImgTwoAlt} /> 
+						}
 
 						<label className="btn btn--modal-close btn--modal-close-btm" htmlFor={`workItem${i}`}>
-					    <FontAwesomeIcon className="modal__icon" icon={faTimes} />CLOSE
-					  </label>
+						<FontAwesomeIcon className="modal__icon" icon={faTimes} />CLOSE
+						</label>
 
 					</div>
-				</div>
+
+				</div> {/* END .modal */}
 
 			</div> // END .workitem
 		);
-	} // END OF eachWorkItem()
+	} // END OF renderWorkItemContent()
 
 
 
-  return (
-  	<div>
-  		{workItemsList.map(eachWorkItem)}
-  	</div>
-  );
+	return (
+		<div>
+			{workItemsList.map(renderWorkItemContent)}
+		</div>
+	);
 	
 }
 
