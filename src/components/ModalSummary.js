@@ -12,7 +12,7 @@ function ModalSummaryNAHB() {
 function ModalSummaryGrandstand() {
   return (
     <p>
-    	Landing page created for the Grandstand platform, a product of <a className="btn--text" href="https://www.linkedin.com/company/istrategylabs" target="_blank" rel="noreferrer noopener">iStrategyLabs</a>. Built with Vue.js, Foundation, flexbox, Sass, and jQuery. CSS3 transitions, transforms, and keyframes used for animating the SVG elements. Compiled with <a className="btn--text" href="http://gulpjs.com/" target="_blank" rel="noreferrer noopener">Gulp</a> and <a className="btn--text" href="http://browserify.org/" target="_blank" rel="noreferrer noopener">Browserify</a>. Designs provided by the ISL design team. 
+      Landing page created for the Grandstand platform, a product of <a className="btn--text" href="https://www.linkedin.com/company/istrategylabs" target="_blank" rel="noreferrer noopener">iStrategyLabs</a>. Built with Vue.js, Foundation, flexbox, Sass, and jQuery. CSS3 transitions, transforms, and keyframes used for animating the SVG elements. Compiled with <a className="btn--text" href="http://gulpjs.com/" target="_blank" rel="noreferrer noopener">Gulp</a> and <a className="btn--text" href="http://browserify.org/" target="_blank" rel="noreferrer noopener">Browserify</a>. Designs provided by the ISL design team. 
     </p>
   );
 }

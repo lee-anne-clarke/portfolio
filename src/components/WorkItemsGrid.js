@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -14,15 +14,10 @@ import workItems from './workItems'
 
 
 
-class WorkItemsGrid extends Component {
-	constructor(props) {
-		super(props);
-		this.state = { workItems }
-		
-		this.eachWorkItem = this.eachWorkItem.bind(this)
-	}
+export default function WorkItemsGrid() {
+	const [workItemsList] = useState(workItems);
 
-	componentDidMount() {
+	useEffect(() => {
 		//Add ".u-no-overflow" to <body> when modal is opened; remove when it's closed
 		let openModalBtn = document.querySelectorAll('.workitem__modal-checkbox-lbl');
 		let closeModalBtn = document.querySelectorAll('.btn--modal-close');
@@ -38,10 +33,10 @@ class WorkItemsGrid extends Component {
 		    document.body.classList.remove('u-no-overflow');
 		  });
 		}
-	}
+	}, []);
 
 
-	eachWorkItem(item, i) {
+	const eachWorkItem = (item, i) => {
 
 		let modalViewProjStyle,
 				modalImgTwoStyle,
@@ -195,17 +190,15 @@ class WorkItemsGrid extends Component {
 
 			</div> // END .workitem
 		);
-	} // END OF eachWorkItem
+	} // END OF eachWorkItem()
 
 
-	render() {
-	  return (
-	  	<div>
-	  		{this.state.workItems.map(this.eachWorkItem)}
-	  	</div>
-	  );
-	}
+
+  return (
+  	<div>
+  		{workItemsList.map(eachWorkItem)}
+  	</div>
+  );
+	
 }
 
-
-export default WorkItemsGrid;

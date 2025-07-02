@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import workSortBtnList from './workSortBtnList'
+import workSortBtnList from './workSortBtnList';
 
 
 export default function WorkSorting() {

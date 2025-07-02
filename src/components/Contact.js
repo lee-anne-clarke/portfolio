@@ -8,8 +8,8 @@ import {
 	faPencilAlt,
 	faPaperPlane
 } from '@fortawesome/free-solid-svg-icons';
-import FormField from './FormField'
-import FormMsg from './FormMsg'
+import FormField from './FormField';
+import FormMsg from './FormMsg';
 
 
 // useFormStatus() will only return status information for a parent <form> component. Therefore, the hook must be called from a component that is rendered inside a <form>.
