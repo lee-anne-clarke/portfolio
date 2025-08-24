@@ -35,19 +35,11 @@ export default function WorkItemsGrid() {
 	}, []);
 
 
+	// ** Generate modal content for each item with the content from the workItems.js array **
+
 	const renderWorkItemContent = (item, i) => {
 
-		let modalViewProjStyle,
-				modalImgTwoStyle,
-				modalViewRepoStyle,
-				modalViewTempOneStyle,
-				modalViewTempTwoStyle,
-				modalViewTempThreeStyle
-	  
-
-	  // ** Generate modal content for each Work item with the content from the workItems.js array **
-
-	  i += 1; //start index at 1 instead of 0
+		i += 1; //start index at 1 instead of 0
 
 		return (
 			<div className={`workitem sort ${item.sortClasses}`} key={i}>
@@ -132,8 +124,6 @@ export default function WorkItemsGrid() {
 
 						</div> {/* END .modal__view_proj*/}
 
-						{/* The code below is necessary because the image has to load first and THEN the Image component. Otherwise, there will be errors in the console. */}
-
 						{ item.modalImgOneSrc &&
 							<Image className="modal__img" src={item.modalImgOneSrc} alt={item.modalImgOneAlt} /> 
 						}
@@ -143,7 +133,7 @@ export default function WorkItemsGrid() {
 						}
 
 						<label className="btn btn--modal-close btn--modal-close-btm" htmlFor={`workItem${i}`}>
-						<FontAwesomeIcon className="modal__icon" icon={faTimes} />CLOSE
+							<FontAwesomeIcon className="modal__icon" icon={faTimes} />CLOSE
 						</label>
 
 					</div>
