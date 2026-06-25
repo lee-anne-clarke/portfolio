@@ -18,7 +18,7 @@ export default function Education() {
           <div className="edu__text">
           	<p className="edu__degree">Graduate Certificate 
           		<span className="edu__br"><br /></span> &mdash; 
-          		Front-End Web Development
+          		Front-End Web Development 
           	</p>
 
           	<p className="edu__uni">
