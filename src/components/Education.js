@@ -16,13 +16,13 @@ export default function Education() {
             <FontAwesomeIcon icon={faFlag} />
           </div>
           <div className="edu__text">
-          	<p className="edu__degree">Advanced Certificate 
+          	<p className="edu__degree">Graduate Certificate 
           		<span className="edu__br"><br /></span> &mdash; 
-          		Web Design and Development
+          		Front-End Web Development
           	</p>
 
           	<p className="edu__uni">
-            	<FontAwesomeIcon className="edu__icon-uni" icon={faUniversity} /> Sessions College for Professional Design
+            	<FontAwesomeIcon className="edu__icon-uni" icon={faUniversity} /> Harvard Extension School
             </p>
           </div>
         </div>
