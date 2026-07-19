@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { 
 	faTimes,
 	faTint,
 	faExternalLinkAlt
 } from '@fortawesome/free-solid-svg-icons';
-
 import { faFileCode } from '@fortawesome/free-regular-svg-icons';
-
 import workItems from './workItems'
 
 
@@ -35,7 +32,7 @@ export default function WorkItemsGrid() {
 	}, []);
 
 
-	// ** Generate modal content for each item with the content from the workItems.js array **
+	// ** Generate content for each modal with the data from `workItems.js` **
 
 	const renderWorkItemContent = (item, i) => {
 

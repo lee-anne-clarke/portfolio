@@ -24,7 +24,7 @@ export default function WorkSorting() {
 		btnSortAll.addEventListener('click', () => {
 			// Show all Work items 
 	    	for (let i of sortAll) {
-					i.style.display = 'inline-block';  
+	    		i.style.display = 'inline-block';  
 	    	}
 
 	    	// Add the 'active' class to the button and remove it from every other button

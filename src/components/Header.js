@@ -7,7 +7,7 @@ export default function Header() {
 	return (  
 		<header className="header">
 			<h1>Lee-Anne Clarke</h1>
-			<p className="header__text header__text--jobtitle">Front-End Software Engineer</p>
+			<p className="header__text header__text--jobtitle">Software Engineer</p>
 			<p className="header__text header__text--email">lac @ lee-anne-clarke.com</p>
 
 			<div className="header__btn-wrap">
