@@ -7,46 +7,60 @@ import {
 	faExternalLinkAlt
 } from '@fortawesome/free-solid-svg-icons';
 import { faFileCode } from '@fortawesome/free-regular-svg-icons';
+import { v4 as uuidv4 } from 'uuid';
 import workItems from './workItems'
 
 
 export default function WorkItemsGrid() {
 	const [workItemsList] = useState(workItems);
 
+	// Track the ID or index of the currently open modal (null if none are open)
+  const [openModalId, setOpenModalId] = useState(null);
+
+  // Functions to close and open the modal
+	const handleOpenModal = (id) => {
+		setOpenModalId(id);
+		document.body.classList.add('u-no-overflow'); // Prevent <body> scrolling when modal is open
+	};
+
+	const handleCloseModal = () => {
+		setOpenModalId(null);
+		document.body.classList.remove('u-no-overflow');
+	};
+
+	// Close modal on 'Escape' key press for better accessibility
 	useEffect(() => {
-		//Add "u-no-overflow" class to <body> when modal is opened; remove when modal is closed
-		let openModalBtn = document.querySelectorAll('.workitem__modal-checkbox-lbl');
-		let closeModalBtn = document.querySelectorAll('.btn--modal-close');
+		const handleKeyDown = (e) => {
+			if (e.key === 'Escape') {
+				handleCloseModal();
+			}
+		};
 
-		for (let i of openModalBtn) {
-		  i.addEventListener('click', () => {
-		    document.body.classList.add('u-no-overflow');
-		  });
+		if (openModalId) {
+			window.addEventListener('keydown', handleKeyDown);
 		}
 
-		for (let i of closeModalBtn) {
-		  i.addEventListener('click', () => {
-		    document.body.classList.remove('u-no-overflow');
-		  });
-		}
-	}, []);
+		return () => {
+			window.removeEventListener('keydown', handleKeyDown);
+		};
+	}, [openModalId]);
 
 
 	// ** Generate content for each modal with the data from `workItems.js` **
 
 	const renderWorkItemContent = (item, i) => {
 
-		i += 1; //start index at 1 instead of 0
+		const modalId = `workItem${i}`;
+		const isOpen = openModalId === modalId;
 
 		return (
-			<div className={`workitem sort ${item.sortClasses}`} key={i}>
-				<input 
-					type="checkbox" 
-					className="workitem__modal-checkbox" 
-					id={`workItem${i}`} 
-				/>
+			<div className={`workitem sort ${item.sortClasses}`} key={uuidv4()}>
 			  
-				<label className="workitem__modal-checkbox-lbl" htmlFor={`workItem${i}`}>
+				<button 
+					type="button"
+					className="workitem__modal-open-btn"
+					onClick={() => handleOpenModal(modalId)} 
+				>
 					<figure className="workitem__fig">
 					    <Image className="workitem__img" src={item.imgSource} alt={`${item.titleShort} screenshot`} />
 					    
@@ -55,87 +69,97 @@ export default function WorkItemsGrid() {
 					      <p>{item.description}</p>                 
 					    </figcaption>
 					</figure>
-				</label>
+				</button>
 
 
-				<div className="modal" role="dialog">
-					<div className="modal__inner">
+				{ isOpen && (
+					<div className="modal" id={modalId}>
+						<div className="modal__inner">
 
-						<label className="btn btn--modal-close" htmlFor={`workItem${i}`}>
-					    	<FontAwesomeIcon className="modal__icon" icon={faTimes} />CLOSE
-					    </label>
+							<button 
+								type="button" 
+								className="btn btn--modal-close" 
+								onClick={handleCloseModal}
+							>
+								<FontAwesomeIcon className="modal__icon" icon={faTimes} />CLOSE
+							</button>
 
-						<h3 className="h3--modal">{item.titleShort}</h3>
-						<h4>{item.description}</h4> 
+							<h3 className="h3--modal">{item.titleShort}</h3>
+							<h4>{item.description}</h4> 
 
-						{item.modalSummary}
+							{item.modalSummary}
 
-						<div className="modal__view_proj">
-							{ item.projectURL && 
-								<div>
-									<a 
-										className="btn btn--viewproject" 
-										href={item.projectURL} 
-										target="_blank" 
-										rel="noreferrer noopener">
-										<FontAwesomeIcon className="modal__icon" icon={faExternalLinkAlt} />view the project
-									</a>
-								</div>
+							<div className="modal__view_proj">
+								{ item.projectURL && 
+									<div>
+										<a 
+											className="btn btn--viewproject" 
+											href={item.projectURL} 
+											target="_blank" 
+											rel="noreferrer noopener">
+											<FontAwesomeIcon className="modal__icon" icon={faExternalLinkAlt} />view the project
+										</a>
+									</div>
+								}
+
+								{ item.projectRepo && 
+									<div className="u-mt-2">
+										<a 
+											className="btn btn--viewproject" 
+											href={`https://github.com/lee-anne-clarke/${item.projectRepo}`} 
+											target="_blank" 
+											rel="noreferrer noopener">
+											<FontAwesomeIcon className="modal__icon" icon={faFileCode} />view the repo
+										</a>
+									</div>
+								}
+
+								{ item.projTemplateURLOne && 
+									<div>
+										<a className="btn btn--viewproject" href={item.projTemplateURLOne} target="_blank" rel="noreferrer noopener">
+											<FontAwesomeIcon className="modal__icon" icon={faTint} />template 1
+										</a>
+									</div>
+								}
+
+								{ item.projTemplateURLTwo &&
+									<div className="u-mt-2">
+										<a className="btn btn--viewproject" href={item.projTemplateURLTwo} target="_blank" rel="noreferrer noopener">
+											<FontAwesomeIcon className="modal__icon" icon={faTint} />template 2
+										</a>
+									</div>
+								}
+
+								{ item.projTemplateURLThree && 
+									<div className="u-mt-2">
+										<a className="btn btn--viewproject" href={item.projTemplateURLThree} target="_blank" rel="noreferrer noopener">
+										<FontAwesomeIcon className="modal__icon" icon={faTint} />template 3
+										</a>
+									</div>
+								}
+
+							</div> {/* END .modal__view_proj*/}
+
+							{ item.modalImgOneSrc &&
+								<Image className="modal__img" src={item.modalImgOneSrc} alt={item.modalImgOneAlt} /> 
 							}
 
-							{ item.projectRepo && 
-								<div className="u-mt-2">
-									<a 
-										className="btn btn--viewproject" 
-										href={`https://github.com/lee-anne-clarke/${item.projectRepo}`} 
-										target="_blank" 
-										rel="noreferrer noopener">
-										<FontAwesomeIcon className="modal__icon" icon={faFileCode} />view the repo
-									</a>
-								</div>
+							{ item.modalImgTwoSrc && 
+								<Image className="modal__img" src={item.modalImgTwoSrc} alt={item.modalImgTwoAlt} /> 
 							}
 
-							{ item.projTemplateURLOne && 
-								<div>
-									<a className="btn btn--viewproject" href={item.projTemplateURLOne} target="_blank" rel="noreferrer noopener">
-										<FontAwesomeIcon className="modal__icon" icon={faTint} />template 1
-									</a>
-								</div>
-							}
+							<button 
+								type="button" 
+								className="btn btn--modal-close" 
+								onClick={handleCloseModal}
+							>
+								<FontAwesomeIcon className="modal__icon" icon={faTimes} />CLOSE
+							</button>
 
-							{ item.projTemplateURLTwo &&
-								<div className="u-mt-2">
-									<a className="btn btn--viewproject" href={item.projTemplateURLTwo} target="_blank" rel="noreferrer noopener">
-										<FontAwesomeIcon className="modal__icon" icon={faTint} />template 2
-									</a>
-								</div>
-							}
-
-							{ item.projTemplateURLThree && 
-								<div className="u-mt-2">
-									<a className="btn btn--viewproject" href={item.projTemplateURLThree} target="_blank" rel="noreferrer noopener">
-									<FontAwesomeIcon className="modal__icon" icon={faTint} />template 3
-									</a>
-								</div>
-							}
-
-						</div> {/* END .modal__view_proj*/}
-
-						{ item.modalImgOneSrc &&
-							<Image className="modal__img" src={item.modalImgOneSrc} alt={item.modalImgOneAlt} /> 
-						}
-
-						{ item.modalImgTwoSrc && 
-							<Image className="modal__img" src={item.modalImgTwoSrc} alt={item.modalImgTwoAlt} /> 
-						}
-
-						<label className="btn btn--modal-close btn--modal-close-btm" htmlFor={`workItem${i}`}>
-							<FontAwesomeIcon className="modal__icon" icon={faTimes} />CLOSE
-						</label>
+						</div>
 
 					</div>
-
-				</div> {/* END .modal */}
+				)} {/* END .modal */}
 
 			</div> // END .workitem
 		);

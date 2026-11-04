@@ -119,7 +119,9 @@ function ModalSummaryLAC() {
 
 function ModalSummaryPhotoSearch() {
   return (
-    <p>A simple Flickr photo search. Photos fetched from Flickr API through its <a className="btn--text" href="https://www.flickr.com/services/feeds/docs/photos_public/" target="_blank" rel="noreferrer noopener">public feed</a> by utilizing jQuery and AJAX. CSS3 transitions used for form label, submit button, text input focus, and image hovers. CSS3 gradients and transformations used for submit button. Build tools include <a className="btn--text" href="https://babeljs.io/" target="_blank" rel="noreferrer noopener">Babel</a>, <a className="btn--text" href="http://browserify.org/" target="_blank" rel="noreferrer noopener">Browserify</a>, <a className="btn--text" href="https://github.com/mishoo/UglifyJS2" target="_blank" rel="noreferrer noopener">UglifyJS</a>, and <a className="btn--text" href="http://koala-app.com/" target="_blank" rel="noreferrer noopener">Koala</a>. Design by me.</p>
+    <p>
+      A simple Flickr photo search. Photos fetched from Flickr API through its <a className="btn--text" href="https://www.flickr.com/services/feeds/docs/photos_public/" target="_blank" rel="noreferrer noopener">public feed</a> by utilizing jQuery and AJAX. CSS3 transitions used for form label, submit button, text input focus, and image hovers. CSS3 gradients and transformations used for submit button. Build tools include <a className="btn--text" href="https://babeljs.io/" target="_blank" rel="noreferrer noopener">Babel</a>, <a className="btn--text" href="http://browserify.org/" target="_blank" rel="noreferrer noopener">Browserify</a>, <a className="btn--text" href="https://github.com/mishoo/UglifyJS2" target="_blank" rel="noreferrer noopener">UglifyJS</a>, and <a className="btn--text" href="http://koala-app.com/" target="_blank" rel="noreferrer noopener">Koala</a>. Design by me.
+    </p>
   );
 }
 
