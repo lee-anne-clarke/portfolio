@@ -58,7 +58,7 @@ export default function WorkSorting() {
 	    	}
 	    }
 
-	  // Add a click event listener to each category button
+	    
 		btnSortReact.addEventListener('click', () => {
 			sortItems('sort-react', btnSortReact);
 		});
@@ -92,7 +92,7 @@ export default function WorkSorting() {
 	return (
 		<ul className="work__sorting">
 			{sortingState.map(({ id, btnClass, btnID, btnText }) => (
-				<li className="ws-li" key={btnID}>
+				<li className="ws-li" key={uuidv4()}>
 					<button className={`btn btn--sort ${btnClass}`} id={btnID}>
 						{btnText}
 					</button>
@@ -101,4 +101,3 @@ export default function WorkSorting() {
 		</ul>
 	);
 }
-

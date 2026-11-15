@@ -60,8 +60,13 @@
 	}
 }
 
-.workitem__modal-open-btn {
-	border: none;
+.workitem__modal-checkbox {
+	position: absolute;
+	z-index: -10;
+	visibility: hidden;
+}
+
+.workitem__modal-checkbox-lbl {
 	cursor: pointer;
 }
 
@@ -136,6 +141,5 @@
 		padding-bottom: 4em;
 	}
 }
-
 
 

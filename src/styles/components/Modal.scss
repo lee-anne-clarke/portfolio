@@ -5,43 +5,29 @@
 ---------------------------------------------------*/
 
 // Closed modal
-// .modal {
-// 	opacity: 0;
-// 	position: fixed;
-// 	bottom: 0;
-// 	left: 0;
-// 	right: 0;
-// 	top: 0;
-// 	z-index: -800;
-// 	background-color: #e4f4f9;
-// 	color: var.$black;
-// 	padding-left: 2em;
-// 	padding-right: 2em;
-// 	overflow-y: auto;
-// 	transform: scale(0.5);
-// 	transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
-// }
-
-// // Open modal
-// .modal.modal--open {
-// 	opacity: 1;
-// 	z-index: 9000;
-// 	transform: scale(1);
-// 	transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);  
-// }
-
 .modal {
+	opacity: 0;
 	position: fixed;
-	z-index: 9000;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	top: 0;
+	z-index: -800;
 	background-color: #e4f4f9;
 	color: var.$black;
 	padding-left: 2em;
 	padding-right: 2em;
 	overflow-y: auto;
+	transform: scale(0.5);
+	transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+// Open modal
+.workitem input:checked ~ .modal {
+	opacity: 1;
+	z-index: 9000;
+	transform: scale(1);
+	transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);  
 }
 
 .modal__icon {
@@ -95,4 +81,3 @@
 		margin-top: 3em;
 	}
 }
-
